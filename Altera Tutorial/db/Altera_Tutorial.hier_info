@@ -1,0 +1,314 @@
+|Altera_Tutorial_Schematic
+tx <= tx:inst.so
+clk50Mhz => BOUD_RATE:3.clk
+d[0] => tx:inst.data[0]
+d[0] => SPLITER:inst3.data[0]
+d[1] => tx:inst.data[1]
+d[1] => SPLITER:inst3.data[1]
+d[2] => tx:inst.data[2]
+d[2] => SPLITER:inst3.data[2]
+d[3] => tx:inst.data[3]
+d[3] => SPLITER:inst3.data[3]
+d[4] => tx:inst.data[4]
+d[4] => SPLITER:inst3.data[4]
+d[5] => tx:inst.data[5]
+d[5] => SPLITER:inst3.data[5]
+d[6] => tx:inst.data[6]
+d[6] => SPLITER:inst3.data[6]
+d[7] => tx:inst.data[7]
+d[7] => SPLITER:inst3.data[7]
+M_segH[0] <= bin2hex:inst1.seg[0]
+M_segH[1] <= bin2hex:inst1.seg[1]
+M_segH[2] <= bin2hex:inst1.seg[2]
+M_segH[3] <= bin2hex:inst1.seg[3]
+M_segH[4] <= bin2hex:inst1.seg[4]
+M_segH[5] <= bin2hex:inst1.seg[5]
+M_segH[6] <= bin2hex:inst1.seg[6]
+M_segL[0] <= bin2hex:inst2.seg[0]
+M_segL[1] <= bin2hex:inst2.seg[1]
+M_segL[2] <= bin2hex:inst2.seg[2]
+M_segL[3] <= bin2hex:inst2.seg[3]
+M_segL[4] <= bin2hex:inst2.seg[4]
+M_segL[5] <= bin2hex:inst2.seg[5]
+M_segL[6] <= bin2hex:inst2.seg[6]
+r_segH[0] <= bin2hex:inst5.seg[0]
+r_segH[1] <= bin2hex:inst5.seg[1]
+r_segH[2] <= bin2hex:inst5.seg[2]
+r_segH[3] <= bin2hex:inst5.seg[3]
+r_segH[4] <= bin2hex:inst5.seg[4]
+r_segH[5] <= bin2hex:inst5.seg[5]
+r_segH[6] <= bin2hex:inst5.seg[6]
+si => RX:5.si
+r_segL[0] <= bin2hex:inst4.seg[0]
+r_segL[1] <= bin2hex:inst4.seg[1]
+r_segL[2] <= bin2hex:inst4.seg[2]
+r_segL[3] <= bin2hex:inst4.seg[3]
+r_segL[4] <= bin2hex:inst4.seg[4]
+r_segL[5] <= bin2hex:inst4.seg[5]
+r_segL[6] <= bin2hex:inst4.seg[6]
+
+
+|Altera_Tutorial_Schematic|tx:inst
+clk => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+so <= <GND>
+
+
+|Altera_Tutorial_Schematic|BOUD_RATE:3
+clk => fout~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+fout <= fout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|bin2hex:inst1
+number[0] => Mux0.IN19
+number[0] => Mux1.IN19
+number[0] => Mux2.IN19
+number[0] => Mux3.IN19
+number[0] => Mux4.IN19
+number[0] => Mux5.IN19
+number[0] => Mux6.IN19
+number[1] => Mux0.IN18
+number[1] => Mux1.IN18
+number[1] => Mux2.IN18
+number[1] => Mux3.IN18
+number[1] => Mux4.IN18
+number[1] => Mux5.IN18
+number[1] => Mux6.IN18
+number[2] => Mux0.IN17
+number[2] => Mux1.IN17
+number[2] => Mux2.IN17
+number[2] => Mux3.IN17
+number[2] => Mux4.IN17
+number[2] => Mux5.IN17
+number[2] => Mux6.IN17
+number[3] => Mux0.IN16
+number[3] => Mux1.IN16
+number[3] => Mux2.IN16
+number[3] => Mux3.IN16
+number[3] => Mux4.IN16
+number[3] => Mux5.IN16
+number[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|SPLITER:inst3
+data[0] => low[0].DATAIN
+data[1] => low[1].DATAIN
+data[2] => low[2].DATAIN
+data[3] => low[3].DATAIN
+data[4] => high[0].DATAIN
+data[5] => high[1].DATAIN
+data[6] => high[2].DATAIN
+data[7] => high[3].DATAIN
+high[0] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
+high[1] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
+high[2] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
+high[3] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+low[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+low[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+low[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+low[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|bin2hex:inst2
+number[0] => Mux0.IN19
+number[0] => Mux1.IN19
+number[0] => Mux2.IN19
+number[0] => Mux3.IN19
+number[0] => Mux4.IN19
+number[0] => Mux5.IN19
+number[0] => Mux6.IN19
+number[1] => Mux0.IN18
+number[1] => Mux1.IN18
+number[1] => Mux2.IN18
+number[1] => Mux3.IN18
+number[1] => Mux4.IN18
+number[1] => Mux5.IN18
+number[1] => Mux6.IN18
+number[2] => Mux0.IN17
+number[2] => Mux1.IN17
+number[2] => Mux2.IN17
+number[2] => Mux3.IN17
+number[2] => Mux4.IN17
+number[2] => Mux5.IN17
+number[2] => Mux6.IN17
+number[3] => Mux0.IN16
+number[3] => Mux1.IN16
+number[3] => Mux2.IN16
+number[3] => Mux3.IN16
+number[3] => Mux4.IN16
+number[3] => Mux5.IN16
+number[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|bin2hex:inst5
+number[0] => Mux0.IN19
+number[0] => Mux1.IN19
+number[0] => Mux2.IN19
+number[0] => Mux3.IN19
+number[0] => Mux4.IN19
+number[0] => Mux5.IN19
+number[0] => Mux6.IN19
+number[1] => Mux0.IN18
+number[1] => Mux1.IN18
+number[1] => Mux2.IN18
+number[1] => Mux3.IN18
+number[1] => Mux4.IN18
+number[1] => Mux5.IN18
+number[1] => Mux6.IN18
+number[2] => Mux0.IN17
+number[2] => Mux1.IN17
+number[2] => Mux2.IN17
+number[2] => Mux3.IN17
+number[2] => Mux4.IN17
+number[2] => Mux5.IN17
+number[2] => Mux6.IN17
+number[3] => Mux0.IN16
+number[3] => Mux1.IN16
+number[3] => Mux2.IN16
+number[3] => Mux3.IN16
+number[3] => Mux4.IN16
+number[3] => Mux5.IN16
+number[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|SPLITER:inst6
+data[0] => low[0].DATAIN
+data[1] => low[1].DATAIN
+data[2] => low[2].DATAIN
+data[3] => low[3].DATAIN
+data[4] => high[0].DATAIN
+data[5] => high[1].DATAIN
+data[6] => high[2].DATAIN
+data[7] => high[3].DATAIN
+high[0] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
+high[1] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
+high[2] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
+high[3] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+low[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+low[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+low[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+low[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|rx:5
+clk => data[0]~reg0.CLK
+clk => data[1]~reg0.CLK
+clk => data[2]~reg0.CLK
+clk => data[3]~reg0.CLK
+clk => data[4]~reg0.CLK
+clk => data[5]~reg0.CLK
+clk => data[6]~reg0.CLK
+clk => data[7]~reg0.CLK
+clk => stop_bit.CLK
+clk => tmp[0].CLK
+clk => tmp[1].CLK
+clk => tmp[2].CLK
+clk => tmp[3].CLK
+clk => tmp[4].CLK
+clk => tmp[5].CLK
+clk => tmp[6].CLK
+clk => tmp[7].CLK
+clk => start_bit.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+si => start_bit.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => tmp.DATAB
+si => stop_bit.DATAB
+si => start.CLK
+data[0] <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|bin2hex:inst4
+number[0] => Mux0.IN19
+number[0] => Mux1.IN19
+number[0] => Mux2.IN19
+number[0] => Mux3.IN19
+number[0] => Mux4.IN19
+number[0] => Mux5.IN19
+number[0] => Mux6.IN19
+number[1] => Mux0.IN18
+number[1] => Mux1.IN18
+number[1] => Mux2.IN18
+number[1] => Mux3.IN18
+number[1] => Mux4.IN18
+number[1] => Mux5.IN18
+number[1] => Mux6.IN18
+number[2] => Mux0.IN17
+number[2] => Mux1.IN17
+number[2] => Mux2.IN17
+number[2] => Mux3.IN17
+number[2] => Mux4.IN17
+number[2] => Mux5.IN17
+number[2] => Mux6.IN17
+number[3] => Mux0.IN16
+number[3] => Mux1.IN16
+number[3] => Mux2.IN16
+number[3] => Mux3.IN16
+number[3] => Mux4.IN16
+number[3] => Mux5.IN16
+number[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,161 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "M_segH[6]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segH[5]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segH[4]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segH[3]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segH[2]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segH[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segH[0]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M_segL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[5]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[4]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segH[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r_segL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d[7]",
+					"strict" : false
+				},
+				{
+					"name" : "si",
+					"strict" : false
+				},
+				{
+					"name" : "clk50Mhz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
