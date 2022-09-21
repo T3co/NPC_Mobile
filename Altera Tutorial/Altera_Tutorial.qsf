@@ -63,8 +63,6 @@ set_location_assignment PIN_B12 -to d[5]
 set_location_assignment PIN_A13 -to d[6]
 set_location_assignment PIN_A14 -to d[7]
 set_location_assignment PIN_P11 -to clk50Mhz
-set_location_assignment PIN_V10 -to si
-set_location_assignment PIN_W10 -to tx
 set_location_assignment PIN_B17 -to M_segL[0]
 set_location_assignment PIN_A18 -to M_segL[1]
 set_location_assignment PIN_A17 -to M_segL[2]
@@ -79,11 +77,10 @@ set_location_assignment PIN_C16 -to M_segH[3]
 set_location_assignment PIN_C15 -to M_segH[4]
 set_location_assignment PIN_E15 -to M_segH[5]
 set_location_assignment PIN_C14 -to M_segH[6]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_N20 -to r_segL[0]
 set_location_assignment PIN_N19 -to r_segL[1]
 set_location_assignment PIN_M20 -to r_segL[2]
-set_location_assignment PIN_M18 -to r_segL[3]
+set_location_assignment PIN_N18 -to r_segL[3]
 set_location_assignment PIN_L18 -to r_segL[4]
 set_location_assignment PIN_K20 -to r_segL[5]
 set_location_assignment PIN_J20 -to r_segL[6]
@@ -94,3 +91,8 @@ set_location_assignment PIN_J18 -to r_segH[3]
 set_location_assignment PIN_E19 -to r_segH[4]
 set_location_assignment PIN_E20 -to r_segH[5]
 set_location_assignment PIN_F18 -to r_segH[6]
+set_global_assignment -name VHDL_FILE led.vhd
+set_location_assignment PIN_V5 -to esp_rx
+set_location_assignment PIN_AA15 -to esp_tx
+set_location_assignment PIN_D22 -to breatheLED
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -4,6 +4,14 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "esp_rx",
+					"strict" : false
+				},
+				{
+					"name" : "breatheLED",
+					"strict" : false
+				},
+				{
 					"name" : "M_segH[6]",
 					"strict" : false
 				},
@@ -148,11 +156,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "si",
+					"name" : "clk50Mhz",
 					"strict" : false
 				},
 				{
-					"name" : "clk50Mhz",
+					"name" : "esp_tx",
 					"strict" : false
 				}
 			]
