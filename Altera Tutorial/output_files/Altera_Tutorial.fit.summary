@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Sep 21 19:02:53 2022
+Fitter Status : Successful - Fri Sep 30 16:58:57 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Altera_Tutorial
 Top-level Entity Name : Altera_Tutorial_Schematic
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 149 / 49,760 ( < 1 % )
+Total logic elements : 152 / 49,760 ( < 1 % )
     Total combinational functions : 145 / 49,760 ( < 1 % )
     Dedicated logic registers : 72 / 49,760 ( < 1 % )
 Total registers : 72

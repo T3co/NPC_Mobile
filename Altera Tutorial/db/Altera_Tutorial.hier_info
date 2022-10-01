@@ -1,24 +1,26 @@
 |Altera_Tutorial_Schematic
-esp_rx <= tx:inst.so
+esp_rx <= my_tx:inst.so
 clk50Mhz => BOUD_RATE:3.clk
 clk50Mhz => led:inst7.clk
-d[0] => tx:inst.data[0]
+clk50Mhz => PWM_Motor:inst9.clk
+d[0] => my_tx:inst.di[0]
 d[0] => SPLITER:inst3.data[0]
-d[1] => tx:inst.data[1]
+d[1] => my_tx:inst.di[1]
 d[1] => SPLITER:inst3.data[1]
-d[2] => tx:inst.data[2]
+d[2] => my_tx:inst.di[2]
 d[2] => SPLITER:inst3.data[2]
-d[3] => tx:inst.data[3]
+d[3] => my_tx:inst.di[3]
 d[3] => SPLITER:inst3.data[3]
-d[4] => tx:inst.data[4]
+d[4] => my_tx:inst.di[4]
 d[4] => SPLITER:inst3.data[4]
-d[5] => tx:inst.data[5]
+d[5] => my_tx:inst.di[5]
 d[5] => SPLITER:inst3.data[5]
-d[6] => tx:inst.data[6]
+d[6] => my_tx:inst.di[6]
 d[6] => SPLITER:inst3.data[6]
-d[7] => tx:inst.data[7]
+d[7] => my_tx:inst.di[7]
 d[7] => SPLITER:inst3.data[7]
 breatheLED <= led:inst7.ledOUT
+pwm_output <= PWM_Motor:inst9.pOut
 M_segH[0] <= bin2hex:inst1.seg[0]
 M_segH[1] <= bin2hex:inst1.seg[1]
 M_segH[2] <= bin2hex:inst1.seg[2]
@@ -50,7 +52,7 @@ r_segL[5] <= bin2hex:inst4.seg[5]
 r_segL[6] <= bin2hex:inst4.seg[6]
 
 
-|Altera_Tutorial_Schematic|tx:inst
+|Altera_Tutorial_Schematic|my_tx:inst
 clk => so~reg0.CLK
 clk => cnt[0].CLK
 clk => cnt[1].CLK
@@ -60,14 +62,15 @@ clk => cnt[4].CLK
 clk => cnt[5].CLK
 clk => cnt[6].CLK
 clk => cnt[7].CLK
-data[0] => so.DATAB
-data[1] => so.DATAB
-data[2] => so.DATAB
-data[3] => so.DATAB
-data[4] => so.DATAB
-data[5] => so.DATAB
-data[6] => so.DATAB
-data[7] => so.DATAB
+rst => process_0.IN1
+di[0] => so.DATAB
+di[1] => so.DATAB
+di[2] => so.DATAB
+di[3] => so.DATAB
+di[4] => so.DATAB
+di[5] => so.DATAB
+di[6] => so.DATAB
+di[7] => so.DATAB
 so <= so~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -113,6 +116,15 @@ clk => count[23].CLK
 clk => count[24].CLK
 clk => count[25].CLK
 ledOUT <= pulse.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|PWM_Motor:inst9
+clk => pulse.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+pOut <= pulse.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Altera_Tutorial_Schematic|bin2hex:inst1

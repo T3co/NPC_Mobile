@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity PWM_Motor is
+port ( clk: in bit;  
+       pOut : out bit);
+end;
+architecture RTL of PWM_Motor is
+signal cnt : integer range 0 to 49999;
+begin
+process (clk)
+begin
+if clk'event and clk = '1'  then    
+	if cnt < 49998 then cnt <= cnt + 1; else cnt <= 0; end if; 
+	if cnt < 39999  then pOut <= '1'; else pOut <= '0'; end if;
+end if;
+end process;
+end RTL;
+

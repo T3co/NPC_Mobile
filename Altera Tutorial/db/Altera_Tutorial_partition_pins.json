@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "pwm_output",
+					"strict" : false
+				},
+				{
 					"name" : "M_segH[6]",
 					"strict" : false
 				},
