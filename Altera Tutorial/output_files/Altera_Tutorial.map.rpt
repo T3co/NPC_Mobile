@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Sun Oct 02 20:39:49 2022
+Sun Oct 02 21:49:17 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,22 +37,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 02 20:39:49 2022       ;
+; Analysis & Synthesis Status        ; Failed - Sun Oct 02 21:49:17 2022           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 185                                         ;
-;     Total combinational functions  ; 176                                         ;
-;     Dedicated logic registers      ; 89                                          ;
-; Total registers                    ; 89                                          ;
-; Total pins                         ; 41                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -158,143 +151,11 @@ agreement for further details.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; Altera_Tutorial_Schematic.bdf    ; yes             ; User Block Diagram/Schematic File  ; D:/GitHub/Project_Moob/Altera Tutorial/Altera_Tutorial_Schematic.bdf ;         ;
-; rx.vhd                           ; yes             ; User VHDL File                     ; D:/GitHub/Project_Moob/Altera Tutorial/rx.vhd                        ;         ;
-; BOUD_RATE.vhd                    ; yes             ; User VHDL File                     ; D:/GitHub/Project_Moob/Altera Tutorial/BOUD_RATE.vhd                 ;         ;
-; led.vhd                          ; yes             ; User VHDL File                     ; D:/GitHub/Project_Moob/Altera Tutorial/led.vhd                       ;         ;
-; my_tx.vhd                        ; yes             ; Auto-Found VHDL File               ; D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd                     ;         ;
-; pwm_motor.vhd                    ; yes             ; Auto-Found VHDL File               ; D:/GitHub/Project_Moob/Altera Tutorial/pwm_motor.vhd                 ;         ;
-; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File               ; D:/GitHub/Project_Moob/Altera Tutorial/bin2hex.vhd                   ;         ;
-; spliter.vhd                      ; yes             ; Auto-Found VHDL File               ; D:/GitHub/Project_Moob/Altera Tutorial/spliter.vhd                   ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 185            ;
-;                                             ;                ;
-; Total combinational functions               ; 176            ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 75             ;
-;     -- 3 input functions                    ; 5              ;
-;     -- <=2 input functions                  ; 96             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 115            ;
-;     -- arithmetic mode                      ; 61             ;
-;                                             ;                ;
-; Total registers                             ; 89             ;
-;     -- Dedicated logic registers            ; 89             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 41             ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; clk50Mhz~input ;
-; Maximum fan-out                             ; 53             ;
-; Total fan-out                               ; 808            ;
-; Average fan-out                             ; 2.33           ;
-+---------------------------------------------+----------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name               ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic ; 176 (0)             ; 89 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                 ; Altera_Tutorial_Schematic ; work         ;
-;    |BOUD_RATE:3|           ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3     ; BOUD_RATE                 ; work         ;
-;    |PWM_Motor:inst9|       ; 33 (33)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9 ; PWM_Motor                 ; work         ;
-;    |bin2hex:inst1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1   ; bin2hex                   ; work         ;
-;    |bin2hex:inst2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2   ; bin2hex                   ; work         ;
-;    |bin2hex:inst4|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4   ; bin2hex                   ; work         ;
-;    |bin2hex:inst5|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5   ; bin2hex                   ; work         ;
-;    |led:inst7|             ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|led:inst7       ; led                       ; work         ;
-;    |my_tx:inst|            ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst      ; my_tx                     ; work         ;
-;    |rx:5|                  ; 36 (36)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:5            ; rx                        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 89    ;
-; Number of registers using Synchronous Clear  ; 24    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 18    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; my_tx:inst|so                          ; 2       ;
-; PWM_Motor:inst9|pulse                  ; 2       ;
-; PWM_Motor:inst9|count[0]               ; 2       ;
-; Total number of inverted registers = 3 ;         ;
-+----------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
-; cycloneiii_ff         ; 89                          ;
-;     CLR               ; 2                           ;
-;     CLR SCLR          ; 8                           ;
-;     ENA               ; 8                           ;
-;     ENA CLR SCLR      ; 8                           ;
-;     SCLR              ; 8                           ;
-;     plain             ; 55                          ;
-; cycloneiii_lcell_comb ; 182                         ;
-;     arith             ; 61                          ;
-;         2 data inputs ; 61                          ;
-;     normal            ; 121                         ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 75                          ;
-;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.80                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -303,7 +164,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct 02 20:39:40 2022
+    Info: Processing started: Sun Oct 02 21:49:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -319,45 +180,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file boud_ra
 Info (12021): Found 2 design units, including 1 entities, in source file led.vhd
     Info (12022): Found design unit 1: led-behave File: D:/GitHub/Project_Moob/Altera Tutorial/led.vhd Line: 10
     Info (12023): Found entity 1: led File: D:/GitHub/Project_Moob/Altera Tutorial/led.vhd Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file pwm_controller.vhd
-    Info (12023): Found entity 1: PWM_Controller File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 3
-Info (12127): Elaborating entity "Altera_Tutorial_Schematic" for the top level hierarchy
-Warning (12125): Using design file my_tx.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: my_tx-behave File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 8
-    Info (12023): Found entity 1: my_tx File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 3
-Info (12128): Elaborating entity "my_tx" for hierarchy "my_tx:inst"
-Warning (10492): VHDL Process Statement warning at my_tx.vhd(14): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 14
-Info (12128): Elaborating entity "BOUD_RATE" for hierarchy "BOUD_RATE:3"
-Info (12128): Elaborating entity "led" for hierarchy "led:inst7"
-Warning (12125): Using design file pwm_motor.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: PWM_Motor-RTL File: D:/GitHub/Project_Moob/Altera Tutorial/pwm_motor.vhd Line: 7
-    Info (12023): Found entity 1: PWM_Motor File: D:/GitHub/Project_Moob/Altera Tutorial/pwm_motor.vhd Line: 3
-Info (12128): Elaborating entity "PWM_Motor" for hierarchy "PWM_Motor:inst9"
-Warning (10492): VHDL Process Statement warning at pwm_motor.vhd(33): signal "pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/GitHub/Project_Moob/Altera Tutorial/pwm_motor.vhd Line: 33
-Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: bin2hex-behave File: D:/GitHub/Project_Moob/Altera Tutorial/bin2hex.vhd Line: 7
-    Info (12023): Found entity 1: bin2hex File: D:/GitHub/Project_Moob/Altera Tutorial/bin2hex.vhd Line: 3
-Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:inst1"
-Warning (12125): Using design file spliter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SPLITER-behave File: D:/GitHub/Project_Moob/Altera Tutorial/spliter.vhd Line: 7
-    Info (12023): Found entity 1: SPLITER File: D:/GitHub/Project_Moob/Altera Tutorial/spliter.vhd Line: 3
-Info (12128): Elaborating entity "SPLITER" for hierarchy "SPLITER:inst3"
-Info (12128): Elaborating entity "rx" for hierarchy "rx:5"
-Info (13000): Registers with preset signals will power-up high File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 6
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register my_tx:inst|so will power up to High File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 6
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 226 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 185 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Sun Oct 02 20:39:49 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+Error (10500): VHDL syntax error at PWM_Controller.vhd(5) near text "2";  expecting ";", or ")" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 5
+Error (10500): VHDL syntax error at PWM_Controller.vhd(15) near text "if";  expecting "end", or "(", or an identifier ("if" is a reserved keyword), or a concurrent statement File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 15
+Error (10500): VHDL syntax error at PWM_Controller.vhd(15) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 15
+Error (10500): VHDL syntax error at PWM_Controller.vhd(16) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 16
+Error (10500): VHDL syntax error at PWM_Controller.vhd(17) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 17
+Error (10500): VHDL syntax error at PWM_Controller.vhd(18) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 18
+Error (10500): VHDL syntax error at PWM_Controller.vhd(19) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 19
+Error (10500): VHDL syntax error at PWM_Controller.vhd(20) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 20
+Error (10500): VHDL syntax error at PWM_Controller.vhd(21) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 21
+Error (10500): VHDL syntax error at PWM_Controller.vhd(22) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 22
+Info (12021): Found 0 design units, including 0 entities, in source file pwm_controller.vhd
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 10 errors, 2 warnings
+    Error: Peak virtual memory: 4774 megabytes
+    Error: Processing ended: Sun Oct 02 21:49:17 2022
+    Error: Elapsed time: 00:00:08
+    Error: Total CPU time (on all processors): 00:00:18
 
 

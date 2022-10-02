@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 entity PWM_Motor is
-port ( clk: in bit;  
+port ( clk: in bit;
        pOut : out STD_LOGIC);
 end;
 architecture RTL of PWM_Motor is
@@ -15,10 +15,12 @@ begin
   if clk'event and clk = '1' then
   
   count <= count + 1;
+		
   
     if(count < 40000) then 
       pulse <= '1';
 		end if;
+		
 	 
 	 if(count > 40000) then
 		pulse <= '0';
