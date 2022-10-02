@@ -406,42 +406,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 776 240 912 352)
-	(text "my_tx" (rect 5 0 36 12)(font "Arial" ))
-	(text "inst" (rect 8 96 25 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 43 33 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "di[7..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "di[7..0]" (rect 21 59 55 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "so" (rect 0 0 11 12)(font "Arial" ))
-		(text "so" (rect 106 27 117 39)(font "Arial" ))
-		(line (pt 136 32)(pt 120 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 120 96))
-	)
-)
-(symbol
 	(rect 272 -32 400 48)
 	(text "PWM_Motor" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst9" (rect 8 64 30 81)(font "Intel Clear" ))
@@ -461,6 +425,35 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 112 64))
+	)
+)
+(symbol
+	(rect 776 240 912 320)
+	(text "my_tx" (rect 5 0 36 12)(font "Arial" ))
+	(text "inst" (rect 8 64 25 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "di[7..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "di[7..0]" (rect 21 43 55 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "so" (rect 0 0 11 12)(font "Arial" ))
+		(text "so" (rect 106 27 117 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 64))
 	)
 )
 (connector
@@ -580,64 +573,9 @@ agreement for further details.
 	(pt 296 128)
 )
 (connector
-	(pt 640 80)
-	(pt 416 80)
-)
-(connector
-	(pt 416 80)
-	(pt 416 128)
-)
-(connector
-	(pt 400 128)
-	(pt 416 128)
-)
-(connector
-	(pt 416 128)
-	(pt 440 128)
-)
-(connector
 	(pt 672 336)
 	(pt 576 336)
 	(bus)
-)
-(connector
-	(pt 640 272)
-	(pt 776 272)
-)
-(connector
-	(pt 640 80)
-	(pt 640 272)
-)
-(connector
-	(pt 672 304)
-	(pt 776 304)
-	(bus)
-)
-(connector
-	(pt 672 304)
-	(pt 672 336)
-	(bus)
-)
-(connector
-	(pt 672 336)
-	(pt 672 496)
-	(bus)
-)
-(connector
-	(pt 424 288)
-	(pt 776 288)
-)
-(connector
-	(pt 424 248)
-	(pt 424 288)
-)
-(connector
-	(pt 416 248)
-	(pt 424 248)
-)
-(connector
-	(pt 424 248)
-	(pt 448 248)
 )
 (connector
 	(pt 912 272)
@@ -659,9 +597,51 @@ agreement for further details.
 	(pt 272 128)
 	(pt 272 248)
 )
+(connector
+	(pt 776 272)
+	(pt 640 272)
+)
+(connector
+	(pt 640 272)
+	(pt 640 192)
+)
+(connector
+	(pt 408 192)
+	(pt 640 192)
+)
+(connector
+	(pt 408 192)
+	(pt 408 128)
+)
+(connector
+	(pt 400 128)
+	(pt 408 128)
+)
+(connector
+	(pt 408 128)
+	(pt 440 128)
+)
+(connector
+	(pt 416 248)
+	(pt 448 248)
+)
+(connector
+	(pt 672 288)
+	(pt 776 288)
+	(bus)
+)
+(connector
+	(pt 672 288)
+	(pt 672 336)
+	(bus)
+)
+(connector
+	(pt 672 336)
+	(pt 672 496)
+	(bus)
+)
 (junction (pt 680 128))
 (junction (pt 272 128))
-(junction (pt 416 128))
 (junction (pt 672 336))
-(junction (pt 424 248))
 (junction (pt 920 272))
+(junction (pt 408 128))

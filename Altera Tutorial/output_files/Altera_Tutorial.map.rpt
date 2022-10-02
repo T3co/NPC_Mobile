@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Sat Oct 01 22:20:18 2022
+Sun Oct 02 20:39:49 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,15 +44,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 01 22:20:18 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 02 20:39:49 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 158                                         ;
-;     Total combinational functions  ; 149                                         ;
-;     Dedicated logic registers      ; 77                                          ;
-; Total registers                    ; 77                                          ;
+; Total logic elements               ; 185                                         ;
+;     Total combinational functions  ; 176                                         ;
+;     Dedicated logic registers      ; 89                                          ;
+; Total registers                    ; 89                                          ;
 ; Total pins                         ; 41                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -188,20 +188,20 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 158            ;
+; Estimated Total logic elements              ; 185            ;
 ;                                             ;                ;
-; Total combinational functions               ; 149            ;
+; Total combinational functions               ; 176            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 70             ;
-;     -- 3 input functions                    ; 6              ;
-;     -- <=2 input functions                  ; 73             ;
+;     -- 4 input functions                    ; 75             ;
+;     -- 3 input functions                    ; 5              ;
+;     -- <=2 input functions                  ; 96             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 103            ;
-;     -- arithmetic mode                      ; 46             ;
+;     -- normal mode                          ; 115            ;
+;     -- arithmetic mode                      ; 61             ;
 ;                                             ;                ;
-; Total registers                             ; 77             ;
-;     -- Dedicated logic registers            ; 77             ;
+; Total registers                             ; 89             ;
+;     -- Dedicated logic registers            ; 89             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 41             ;
@@ -209,9 +209,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50Mhz~input ;
-; Maximum fan-out                             ; 41             ;
-; Total fan-out                               ; 722            ;
-; Average fan-out                             ; 2.34           ;
+; Maximum fan-out                             ; 53             ;
+; Total fan-out                               ; 808            ;
+; Average fan-out                             ; 2.33           ;
 +---------------------------------------------+----------------+
 
 
@@ -220,9 +220,9 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name               ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic ; 149 (0)             ; 77 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                 ; Altera_Tutorial_Schematic ; work         ;
+; |Altera_Tutorial_Schematic ; 176 (0)             ; 89 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                 ; Altera_Tutorial_Schematic ; work         ;
 ;    |BOUD_RATE:3|           ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3     ; BOUD_RATE                 ; work         ;
-;    |PWM_Motor:inst9|       ; 6 (6)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9 ; PWM_Motor                 ; work         ;
+;    |PWM_Motor:inst9|       ; 33 (33)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9 ; PWM_Motor                 ; work         ;
 ;    |bin2hex:inst1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1   ; bin2hex                   ; work         ;
 ;    |bin2hex:inst2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2   ; bin2hex                   ; work         ;
 ;    |bin2hex:inst4|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4   ; bin2hex                   ; work         ;
@@ -239,7 +239,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 77    ;
+; Total registers                              ; 89    ;
 ; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 18    ;
@@ -256,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; my_tx:inst|so                          ; 2       ;
 ; PWM_Motor:inst9|pulse                  ; 2       ;
-; PWM_Motor:inst9|count[0]               ; 5       ;
+; PWM_Motor:inst9|count[0]               ; 2       ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
@@ -267,24 +267,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 41                          ;
-; cycloneiii_ff         ; 77                          ;
+; cycloneiii_ff         ; 89                          ;
 ;     CLR               ; 2                           ;
 ;     CLR SCLR          ; 8                           ;
 ;     ENA               ; 8                           ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     SCLR              ; 8                           ;
-;     plain             ; 43                          ;
-; cycloneiii_lcell_comb ; 155                         ;
-;     arith             ; 46                          ;
-;         2 data inputs ; 46                          ;
-;     normal            ; 109                         ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 70                          ;
+;     plain             ; 55                          ;
+; cycloneiii_lcell_comb ; 182                         ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 61                          ;
+;     normal            ; 121                         ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 75                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.58                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -303,7 +303,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Oct 01 22:20:09 2022
+    Info: Processing started: Sun Oct 02 20:39:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -319,6 +319,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file boud_ra
 Info (12021): Found 2 design units, including 1 entities, in source file led.vhd
     Info (12022): Found design unit 1: led-behave File: D:/GitHub/Project_Moob/Altera Tutorial/led.vhd Line: 10
     Info (12023): Found entity 1: led File: D:/GitHub/Project_Moob/Altera Tutorial/led.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file pwm_controller.vhd
+    Info (12023): Found entity 1: PWM_Controller File: D:/GitHub/Project_Moob/Altera Tutorial/PWM_Controller.vhd Line: 3
 Info (12127): Elaborating entity "Altera_Tutorial_Schematic" for the top level hierarchy
 Warning (12125): Using design file my_tx.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: my_tx-behave File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 8
@@ -348,14 +350,14 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register my_tx:inst|so will power up to High File: D:/GitHub/Project_Moob/Altera Tutorial/my_tx.vhd Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 199 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 226 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 158 logic cells
+    Info (21061): Implemented 185 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Sat Oct 01 22:20:18 2022
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Sun Oct 02 20:39:49 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:18
 
 
