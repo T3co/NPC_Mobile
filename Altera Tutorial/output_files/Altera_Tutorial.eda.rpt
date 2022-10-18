@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Altera_Tutorial
-Sat Oct 01 22:22:13 2022
+Thu Oct 06 19:38:17 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Oct 01 22:22:13 2022 ;
+; EDA Netlist Writer Status ; Successful - Thu Oct 06 19:38:17 2022 ;
 ; Revision Name             ; Altera_Tutorial                       ;
-; Top-level Entity Name     ; Altera_Tutorial_Schematic             ;
+; Top-level Entity Name     ; PWM_ctrl_example                      ;
 ; Family                    ; MAX 10                                ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,13 +66,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Simulation Generated Files                                                  ;
-+-----------------------------------------------------------------------------+
-; Generated Files                                                             ;
-+-----------------------------------------------------------------------------+
-; D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim//Altera_Tutorial.vho ;
-+-----------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                            ;
++---------------------------------------------------------------------------------------+
+; Generated Files                                                                       ;
++---------------------------------------------------------------------------------------+
+; D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim//Altera_Tutorial.vho ;
++---------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,15 +95,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Oct 01 22:22:13 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
+    Info: Processing started: Thu Oct 06 19:38:17 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Altera_Tutorial.vho in folder "D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file Altera_Tutorial.vho in folder "D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Sat Oct 01 22:22:13 2022
+    Info: Processing ended: Thu Oct 06 19:38:17 2022
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

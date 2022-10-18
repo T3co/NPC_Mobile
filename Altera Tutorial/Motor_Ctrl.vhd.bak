@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity PWM_Ctrl is
+port(PWM_1KHz: in std_logic;
+		Ma0: in bit;
+		Ma1: in bit;
+		Mb0: in bit;
+		Mb1: in bit;
+		LwheelF: out std_logic;
+		LwheelB: out std_logic;
+		RwheelF: out std_logic;
+		RwheelB: out std_logic;
+end;
+architecture behave of PWM_Ctrl is 
+begin 
+
+case_processLwheel:process(PWM_1KHz,LwheelF,LwheelB)
+begin
+when Ma0 = '0' and Ma1 = '0' => LwheelF <= '0' and LwheelB <= '0';
+when Ma0 = '1' and Ma1 = '0' => LwheelF <= '1' and LwheelB <= '0';
+when Ma0 = '0' and Ma1 = '1' => LwheelF <= '0' and LwheelB <= '1';
+when Ma0 = '1' and Ma1 = '1' => LwheelF <= '1' and LwheelB <= '1';
+end case;
+end process case_processLwheel;
+
+case_processRwheel:process(PWM_1KHz,RwheelF,LwheelB)
+begin
+when Mb0 = '0' and Mb1 ='0' => RwheelF <= '0' and RwheelB <= '0';
+when Mb0 = '1' and Mb1 = '0' => RwheelF <= '1' and RwheelB <= '0';
+when Mb0 = '0' and Mb1 = '1' => RwheelF <= '0' and RwheelB <= '1';
+when Mb0 = '1' and Mb1 = '1' => RwheelF <= '1' and RwheelB <= '1';
+end case;
+end process case_processRwheel;
+
+		

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY Altera_Tutorial_Schematic
+set_global_assignment -name TOP_LEVEL_ENTITY PWM_ctrl_example
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:34:41  SEPTEMBER 19, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -47,13 +47,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name BDF_FILE Altera_Tutorial_Schematic.bdf
-set_global_assignment -name VHDL_FILE RX_ALTERA.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE rx.vhd
-set_global_assignment -name VHDL_FILE BOUD_RATE.vhd
 set_location_assignment PIN_C10 -to d[0]
 set_location_assignment PIN_C11 -to d[1]
 set_location_assignment PIN_D12 -to d[2]
@@ -91,10 +84,21 @@ set_location_assignment PIN_J18 -to r_segH[3]
 set_location_assignment PIN_E19 -to r_segH[4]
 set_location_assignment PIN_E20 -to r_segH[5]
 set_location_assignment PIN_F18 -to r_segH[6]
-set_global_assignment -name VHDL_FILE led.vhd
 set_location_assignment PIN_V5 -to esp_rx
 set_location_assignment PIN_AA15 -to esp_tx
 set_location_assignment PIN_D22 -to breatheLED
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE Motor_Ctrl.vhd
+set_global_assignment -name VHDL_FILE PWM_Motor.vhd
+set_global_assignment -name BDF_FILE Altera_Tutorial_Schematic.bdf
+set_global_assignment -name VHDL_FILE RX_ALTERA.vhd
+set_global_assignment -name VHDL_FILE rx.vhd
+set_global_assignment -name VHDL_FILE BOUD_RATE.vhd
+set_global_assignment -name VHDL_FILE led.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VHDL_FILE PWM_Controller.vhd
+set_global_assignment -name BDF_FILE PWM_ctrl_example.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

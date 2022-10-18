@@ -1,13 +1,13 @@
 Determining the location of the ModelSim executable...
 
-Using: d:/oryam/intelfpga/modelsim_ase/win32aloem/
+Using: c:/intelfpga_lite/17.0/modelsim_ase/win32aloem/
 
 To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
 Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/GitHub/Project_Moob/Altera Tutorial/Waveform.vwf" --testbench_file="D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/Quartus Projects/Project_Moob/Altera Tutorial/Waveform.vwf" --testbench_file="D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/Waveform.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Oct 01 22:22:12 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/GitHub/Project_Moob/Altera Tutorial/Waveform.vwf" --testbench_file="D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/Waveform.vwf.vht"
+    Info: Processing started: Thu Oct 06 19:38:15 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/Quartus Projects/Project_Moob/Altera Tutorial/Waveform.vwf" --testbench_file="D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/Waveform.vwf.vht"
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -35,7 +35,7 @@ Completed successfully.
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -54,30 +54,30 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Oct 01 22:22:13 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
+    Info: Processing started: Thu Oct 06 19:38:17 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Altera_Tutorial.vho in folder "D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file Altera_Tutorial.vho in folder "D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Sat Oct 01 22:22:13 2022
+    Info: Processing ended: Thu Oct 06 19:38:17 2022
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/Altera_Tutorial.do generated.
+D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/Altera_Tutorial.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-d:/oryam/intelfpga/modelsim_ase/win32aloem//vsim -c -do Altera_Tutorial.do
+c:/intelfpga_lite/17.0/modelsim_ase/win32aloem//vsim -c -do Altera_Tutorial.do
 
-Reading D:/oryam/IntelFPGA/modelsim_ase/tcl/vsim/pref.tcl
+Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
@@ -85,69 +85,62 @@ Reading D:/oryam/IntelFPGA/modelsim_ase/tcl/vsim/pref.tcl
 # do Altera_Tutorial.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:22:14 on Oct 01,2022
+
+# Start time: 19:38:18 on Oct 06,2022
 # vcom -work work Altera_Tutorial.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
 # -- Loading package fiftyfivenm_atom_pack
 # -- Loading package fiftyfivenm_components
-# -- Compiling entity Altera_Tutorial_Schematic
-# -- Compiling architecture structure of Altera_Tutorial_Schematic
-
-# End time: 22:22:14 on Oct 01,2022, Elapsed time: 0:00:00
+# -- Compiling entity PWM_ctrl_example
+# -- Compiling architecture structure of PWM_ctrl_example
+# End time: 19:38:18 on Oct 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:22:14 on Oct 01,2022
+
+# Start time: 19:38:18 on Oct 06,2022
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Altera_Tutorial_Schematic_vhd_vec_tst
-# -- Compiling architecture Altera_Tutorial_Schematic_arch of Altera_Tutorial_Schematic_vhd_vec_tst
-# End time: 22:22:15 on Oct 01,2022, Elapsed time: 0:00:01
+# -- Compiling entity PWM_ctrl_example_vhd_vec_tst
+# -- Compiling architecture PWM_ctrl_example_arch of PWM_ctrl_example_vhd_vec_tst
+# End time: 19:38:18 on Oct 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Altera_Tutorial_Schematic_vhd_vec_tst 
-# Start time: 22:22:15 on Oct 01,2022
+# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PWM_ctrl_example_vhd_vec_tst 
+# Start time: 19:38:18 on Oct 06,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.altera_tutorial_schematic_vhd_vec_tst(altera_tutorial_schematic_arch)
+# Loading work.pwm_ctrl_example_vhd_vec_tst(pwm_ctrl_example_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
 # Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
 # Loading fiftyfivenm.fiftyfivenm_components
-# Loading work.altera_tutorial_schematic(structure)
+# Loading work.pwm_ctrl_example(structure)
 # Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
 # Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
 # Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 30547 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#33
+# after#31
 
-# End time: 22:22:15 on Oct 01,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 19:38:19 on Oct 06,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/GitHub/Project_Moob/Altera Tutorial/Waveform.vwf...
+Reading D:/Quartus Projects/Project_Moob/Altera Tutorial/Waveform.vwf...
 
-Reading D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/Altera_Tutorial.msim.vcd...
+Reading D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/Altera_Tutorial.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/GitHub/Project_Moob/Altera Tutorial/simulation/qsim/Altera_Tutorial_20221001222215.sim.vwf
+Writing the resulting VWF to D:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim/Altera_Tutorial_20221006193819.sim.vwf
 
 Finished VCD to VWF conversion.
 

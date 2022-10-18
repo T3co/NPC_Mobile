@@ -83,7 +83,7 @@ R18
 Aaltera_tutorial_schematic_arch
 R7
 R8
-Z24 DEx4 work 37 altera_tutorial_schematic_vhd_vec_tst 0 22 G<[fl8TiX9YVP2U7mJW7z2
+DEx4 work 37 altera_tutorial_schematic_vhd_vec_tst 0 22 G<[fl8TiX9YVP2U7mJW7z2
 l61
 L34
 VF@`YI5WQ?TYolXA[VDOk;2
@@ -93,6 +93,178 @@ R12
 R21
 !i10b 1
 R14
+R22
+R23
+!i113 1
+R17
+R18
+Emotor_ctrl
+Z24 w1664997642
+R4
+R2
+R6
+R7
+R8
+R3
+Z25 dD:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim
+R10
+R11
+l0
+L37
+Vgi:U=dMMIcV9fEmF:l@>O3
+!s100 DSdJA5OK:Z]RY:;W0ocQe0
+R12
+32
+Z26 !s110 1664997643
+!i10b 1
+Z27 !s108 1664997643.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 motor_ctrl 0 22 gi:U=dMMIcV9fEmF:l@>O3
+l76
+L49
+VEf`aNNaXQJoK`m7c]D_H;2
+!s100 Z7@VR<b`JKYnMR>KdcE_l2
+R12
+32
+R26
+!i10b 1
+R27
+R15
+R16
+!i113 1
+R17
+R18
+Emotor_ctrl_vhd_vec_tst
+Z28 w1664997641
+R7
+R8
+R25
+R19
+R20
+l0
+L32
+V71oD]P0if:i9RMiPA6L?T2
+!s100 ]ZYUJHmP0IdQJ2P9i:>fD0
+R12
+32
+R26
+!i10b 1
+R27
+R22
+R23
+!i113 1
+R17
+R18
+Amotor_ctrl_arch
+R7
+R8
+DEx4 work 22 motor_ctrl_vhd_vec_tst 0 22 71oD]P0if:i9RMiPA6L?T2
+l55
+L34
+Vg_nm`H<2ZhE_FoYAXAnA>3
+!s100 XU<Y=o0DAMQIDN_=BTYIB2
+R12
+32
+R26
+!i10b 1
+R27
+R22
+R23
+!i113 1
+R17
+R18
+Epwm_ctrl_example
+Z29 w1665074297
+R4
+R2
+R6
+R7
+R8
+R3
+R25
+R10
+R11
+l0
+L35
+V>9U7EIHfNdgGRUhT^eSc63
+!s100 ik^kfF]9FF<;oaPTB7A5e1
+R12
+32
+Z30 !s110 1665074298
+!i10b 1
+Z31 !s108 1665074298.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 16 pwm_ctrl_example 0 22 >9U7EIHfNdgGRUhT^eSc63
+l82
+L49
+VkSO6Tok_^UR@4<OYa^c@B0
+!s100 W2gZz0MjRiJVVR1LSP6Jo3
+R12
+32
+R30
+!i10b 1
+R31
+R15
+R16
+!i113 1
+R17
+R18
+Epwm_ctrl_example_vhd_vec_tst
+Z32 w1665074296
+R7
+R8
+R25
+R19
+R20
+l0
+L32
+VeeZAIi3d[m0mQK>5nF5<J2
+!s100 95ERO8<e<]F;1of:SnQPj2
+R12
+32
+R30
+!i10b 1
+R31
+R22
+R23
+!i113 1
+R17
+R18
+Apwm_ctrl_example_arch
+R7
+R8
+Z33 DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
+l59
+L34
+VfQ]LUjLR_`H0`jW`4ac3B3
+!s100 [_iiO?;nA68O021AHT`3N2
+R12
+32
+R30
+!i10b 1
+R31
 R22
 R23
 !i113 1

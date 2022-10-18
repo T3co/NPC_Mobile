@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity Motor_Ctrl is
+port(PWM_Motor_1KHz: in bit;
+		Ma0: in bit;
+		Ma1: in bit;
+		Mb0: in bit;
+		Mb1: in bit;
+		Lwheel: buffer bit;
+		Rwheel: buffer bit);
+end;
+architecture behave of Motor_Ctrl is 
+begin 
+process(PWM_Motor_1KHz,Ma0,Ma1)-- Left wheel
+begin
+if Ma0 = '0' then if Ma1 = '0' then Lwheel <= '0'; -- no movement
+end if; 
+end if;
+
+if Ma0 = '0' then if Ma1 = '1' then Lwheel <= PWM_Motor_1KHz; -- forward
+end if; 
+end if;
+
+if Ma0 = '1' then if Ma1 = '0' then Lwheel <= PWM_Motor_1KHz; -- backward
+end if; 
+end if;
+
+if Ma0 = '1' then if Ma1 = '1' then Lwheel <= '0'; -- no movement
+end if; 
+end if;
+end process;
+
+process(PWM_Motor_1KHz,Mb0,Mb1)-- Right wheel
+begin
+if Mb0 = '0' then if Mb1 = '0' then Rwheel <= '0'; -- no movement
+end if; 
+end if;
+
+if Mb0 = '0' then if Mb1 = '1' then Rwheel <= PWM_Motor_1KHz; -- forward
+end if; 
+end if;
+
+if Mb0 = '1' then if Mb1 = '0' then Rwheel <= PWM_Motor_1KHz; -- backward
+end if; 
+end if;
+
+if Mb0 = '1' then if Mb1 = '1' then Rwheel <= '0'; -- no movement
+end if; 
+end if;
+end process;
+
+end behave;
+		
