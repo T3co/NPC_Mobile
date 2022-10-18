@@ -534,11 +534,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 680 208)
-	(pt 680 128)
-	(bus)
-)
-(connector
 	(pt 1552 272)
 	(pt 1560 272)
 	(bus)
@@ -556,11 +551,6 @@ agreement for further details.
 (connector
 	(pt 592 128)
 	(pt 680 128)
-	(bus)
-)
-(connector
-	(pt 680 128)
-	(pt 696 128)
 	(bus)
 )
 (connector
@@ -640,7 +630,11 @@ agreement for further details.
 	(pt 672 496)
 	(bus)
 )
-(junction (pt 680 128))
+(connector
+	(pt 680 128)
+	(pt 680 208)
+	(bus)
+)
 (junction (pt 272 128))
 (junction (pt 672 336))
 (junction (pt 920 272))
