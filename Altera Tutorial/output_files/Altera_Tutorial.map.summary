@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Oct 06 19:03:22 2022
+Analysis & Synthesis Status : Successful - Fri Oct 21 12:59:24 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Altera_Tutorial
 Top-level Entity Name : PWM_ctrl_example
 Family : MAX 10
-Total logic elements : 4
-    Total combinational functions : 4
+Total logic elements : 13
+    Total combinational functions : 13
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 9

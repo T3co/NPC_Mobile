@@ -99,7 +99,7 @@ R23
 R17
 R18
 Emotor_ctrl
-Z24 w1664997642
+Z24 w1666345806
 R4
 R2
 R6
@@ -111,13 +111,13 @@ R10
 R11
 l0
 L37
-Vgi:U=dMMIcV9fEmF:l@>O3
-!s100 DSdJA5OK:Z]RY:;W0ocQe0
+VF:TDOD75W7_U<G7bK8eCJ3
+!s100 f>b@D<A[mVa2KRkzWAReA2
 R12
 32
-Z26 !s110 1664997643
+Z26 !s110 1666345807
 !i10b 1
-Z27 !s108 1664997643.000000
+Z27 !s108 1666345807.000000
 R15
 R16
 !i113 1
@@ -130,11 +130,11 @@ R6
 R7
 R8
 R3
-DEx4 work 10 motor_ctrl 0 22 gi:U=dMMIcV9fEmF:l@>O3
-l76
-L49
-VEf`aNNaXQJoK`m7c]D_H;2
-!s100 Z7@VR<b`JKYnMR>KdcE_l2
+DEx4 work 10 motor_ctrl 0 22 F:TDOD75W7_U<G7bK8eCJ3
+l92
+L51
+VcK[N4SOlKl0=UYZ97Sb300
+!s100 kg14NJij0D?9nY63TT:S21
 R12
 32
 R26
@@ -146,12 +146,12 @@ R16
 R17
 R18
 Emotor_ctrl_vhd_vec_tst
-Z28 w1664997641
+Z28 w1666345805
 R7
 R8
 R25
-R19
-R20
+Z29 8Waveform1.vwf.vht
+Z30 FWaveform1.vwf.vht
 l0
 L32
 V71oD]P0if:i9RMiPA6L?T2
@@ -161,8 +161,8 @@ R12
 R26
 !i10b 1
 R27
-R22
-R23
+Z31 !s90 -work|work|Waveform1.vwf.vht|
+Z32 !s107 Waveform1.vwf.vht|
 !i113 1
 R17
 R18
@@ -170,22 +170,22 @@ Amotor_ctrl_arch
 R7
 R8
 DEx4 work 22 motor_ctrl_vhd_vec_tst 0 22 71oD]P0if:i9RMiPA6L?T2
-l55
+l59
 L34
-Vg_nm`H<2ZhE_FoYAXAnA>3
-!s100 XU<Y=o0DAMQIDN_=BTYIB2
+VShoZkN47LIM:X;KbGbmd71
+!s100 ;eiHS7SL=0:S>URS@lAR11
 R12
 32
 R26
 !i10b 1
 R27
-R22
-R23
+R31
+R32
 !i113 1
 R17
 R18
 Epwm_ctrl_example
-Z29 w1665074297
+Z33 w1666346472
 R4
 R2
 R6
@@ -201,9 +201,9 @@ V>9U7EIHfNdgGRUhT^eSc63
 !s100 ik^kfF]9FF<;oaPTB7A5e1
 R12
 32
-Z30 !s110 1665074298
+Z34 !s110 1666346472
 !i10b 1
-Z31 !s108 1665074298.000000
+Z35 !s108 1666346472.000000
 R15
 R16
 !i113 1
@@ -217,22 +217,22 @@ R7
 R8
 R3
 DEx4 work 16 pwm_ctrl_example 0 22 >9U7EIHfNdgGRUhT^eSc63
-l82
+l91
 L49
-VkSO6Tok_^UR@4<OYa^c@B0
-!s100 W2gZz0MjRiJVVR1LSP6Jo3
+V]6cU=:YCBEC4QC_czdagf2
+!s100 =1gRd1d3@aHmA6llh`Ml[1
 R12
 32
-R30
+R34
 !i10b 1
-R31
+R35
 R15
 R16
 !i113 1
 R17
 R18
 Epwm_ctrl_example_vhd_vec_tst
-Z32 w1665074296
+Z36 w1666346471
 R7
 R8
 R25
@@ -244,9 +244,9 @@ VeeZAIi3d[m0mQK>5nF5<J2
 !s100 95ERO8<e<]F;1of:SnQPj2
 R12
 32
-R30
+R34
 !i10b 1
-R31
+R35
 R22
 R23
 !i113 1
@@ -255,16 +255,16 @@ R18
 Apwm_ctrl_example_arch
 R7
 R8
-Z33 DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
+Z37 DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
 l59
 L34
-VfQ]LUjLR_`H0`jW`4ac3B3
-!s100 [_iiO?;nA68O021AHT`3N2
+VOC4Wz@P7eD[7iO>`^=PDX1
+!s100 NYklnOSIkRf_;oJCD>n8P3
 R12
 32
-R30
+R34
 !i10b 1
-R31
+R35
 R22
 R23
 !i113 1

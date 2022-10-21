@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Thu Oct 06 19:03:22 2022
+Fri Oct 21 12:59:24 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 06 19:03:22 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 21 12:59:24 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; PWM_ctrl_example                            ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4                                           ;
-;     Total combinational functions  ; 4                                           ;
+; Total logic elements               ; 13                                          ;
+;     Total combinational functions  ; 13                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 9                                           ;
@@ -157,10 +158,12 @@ agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -174,36 +177,36 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                        ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Estimated Total logic elements              ; 4                    ;
-;                                             ;                      ;
-; Total combinational functions               ; 4                    ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 0                    ;
-;     -- 3 input functions                    ; 4                    ;
-;     -- <=2 input functions                  ; 0                    ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 4                    ;
-;     -- arithmetic mode                      ; 0                    ;
-;                                             ;                      ;
-; Total registers                             ; 0                    ;
-;     -- Dedicated logic registers            ; 0                    ;
-;     -- I/O registers                        ; 0                    ;
-;                                             ;                      ;
-; I/O pins                                    ; 9                    ;
-;                                             ;                      ;
-; Embedded Multiplier 9-bit elements          ; 0                    ;
-;                                             ;                      ;
-; Maximum fan-out node                        ; PWM_Motor_1KHz~input ;
-; Maximum fan-out                             ; 4                    ;
-; Total fan-out                               ; 25                   ;
-; Average fan-out                             ; 1.14                 ;
-+---------------------------------------------+----------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 13        ;
+;                                             ;           ;
+; Total combinational functions               ; 13        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 5         ;
+;     -- 3 input functions                    ; 6         ;
+;     -- <=2 input functions                  ; 2         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 13        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 0         ;
+;     -- Dedicated logic registers            ; 0         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 9         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Ma1~input ;
+; Maximum fan-out                             ; 7         ;
+; Total fan-out                               ; 55        ;
+; Average fan-out                             ; 1.77      ;
++---------------------------------------------+-----------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,10 +214,24 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name               ; Entity Name      ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------+------------------+--------------+
-; |PWM_ctrl_example          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |PWM_ctrl_example                 ; PWM_ctrl_example ; work         ;
-;    |Motor_Ctrl:inst|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PWM_ctrl_example|Motor_Ctrl:inst ; Motor_Ctrl       ; work         ;
+; |PWM_ctrl_example          ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |PWM_ctrl_example                 ; PWM_ctrl_example ; work         ;
+;    |Motor_Ctrl:inst|       ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PWM_ctrl_example|Motor_Ctrl:inst ; Motor_Ctrl       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------+------------------------+
+; Motor_Ctrl:inst|RwheelF                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
+; Motor_Ctrl:inst|LwheelF                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
+; Motor_Ctrl:inst|LwheelB                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
+; Motor_Ctrl:inst|RwheelB                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                         ;                        ;
++----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -238,12 +255,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 9                           ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
-;         3 data inputs ; 4                           ;
+; cycloneiii_lcell_comb ; 13                          ;
+;     normal            ; 13                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 5                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -262,10 +281,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 06 19:03:10 2022
+    Info: Processing started: Fri Oct 21 12:59:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file my_tx.vhd
+    Info (12022): Found design unit 1: my_tx-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 8
+    Info (12023): Found entity 1: my_tx File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file motor_ctrl.vhd
     Info (12022): Found design unit 1: Motor_Ctrl-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 14
     Info (12023): Found entity 1: Motor_Ctrl File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 3
@@ -288,21 +310,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file pwm_ctr
     Info (12023): Found entity 1: PWM_ctrl_example
 Info (12127): Elaborating entity "PWM_ctrl_example" for the top level hierarchy
 Info (12128): Elaborating entity "Motor_Ctrl" for hierarchy "Motor_Ctrl:inst"
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(16): inferring latch(es) for signal or variable "LwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 16
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(16): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 16
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(48): inferring latch(es) for signal or variable "RwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 48
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(48): inferring latch(es) for signal or variable "RwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "RwheelB" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "RwheelF" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "LwheelB" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "LwheelF" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (13012): Latch Motor_Ctrl:inst|RwheelF has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 12
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Mb0
+Warning (13012): Latch Motor_Ctrl:inst|LwheelF has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ma0
+Warning (13012): Latch Motor_Ctrl:inst|LwheelB has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ma0
+Warning (13012): Latch Motor_Ctrl:inst|RwheelB has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ma0
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Thu Oct 06 19:03:22 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21061): Implemented 13 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Fri Oct 21 12:59:24 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -1,5 +1,5 @@
 Flow report for Altera_Tutorial
-Thu Oct 06 19:38:17 2022
+Fri Oct 21 13:01:12 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 06 19:38:17 2022       ;
+; Flow Status                        ; Successful - Fri Oct 21 13:01:12 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; PWM_ctrl_example                            ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4                                           ;
-;     Total combinational functions  ; 4                                           ;
+; Total logic elements               ; 13                                          ;
+;     Total combinational functions  ; 13                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 9                                           ;
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/06/2022 19:03:11 ;
+; Start date & time ; 10/21/2022 12:59:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Altera_Tutorial     ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+-----------------+------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name      ; Section Id ;
 +-------------------------------------+----------------------------------------+-----------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 53447175500142.166507219110416         ; --              ; --               ; --         ;
+; COMPILER_SIGNATURE_ID               ; 53447175500142.166634635313156         ; --              ; --               ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --               ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --               ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; PWM_ctrl_example ; Top        ;
@@ -96,12 +96,12 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4789 MB             ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4805 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4641 MB             ; 00:00:00                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:00                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

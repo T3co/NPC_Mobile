@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/06/2022 19:38:16"
+-- Generated on "10/21/2022 13:01:11"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          PWM_ctrl_example
 -- 
@@ -100,12 +100,12 @@ END PROCESS t_prcs_Ma0;
 -- Ma1
 t_prcs_Ma1: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
+	FOR i IN 1 TO 8
 	LOOP
 		Ma1 <= '0';
-		WAIT FOR 40000 ps;
+		WAIT FOR 60000 ps;
 		Ma1 <= '1';
-		WAIT FOR 40000 ps;
+		WAIT FOR 60000 ps;
 	END LOOP;
 	Ma1 <= '0';
 WAIT;
@@ -114,12 +114,12 @@ END PROCESS t_prcs_Ma1;
 -- Mb0
 t_prcs_Mb0: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
+	FOR i IN 1 TO 12
 	LOOP
 		Mb0 <= '0';
-		WAIT FOR 80000 ps;
+		WAIT FOR 40000 ps;
 		Mb0 <= '1';
-		WAIT FOR 80000 ps;
+		WAIT FOR 40000 ps;
 	END LOOP;
 	Mb0 <= '0';
 WAIT;
@@ -128,14 +128,12 @@ END PROCESS t_prcs_Mb0;
 -- Mb1
 t_prcs_Mb1: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		Mb1 <= '0';
-		WAIT FOR 40000 ps;
-		Mb1 <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+LOOP
 	Mb1 <= '0';
-WAIT;
+	WAIT FOR 20000 ps;
+	Mb1 <= '1';
+	WAIT FOR 20000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_Mb1;
 END PWM_ctrl_example_arch;

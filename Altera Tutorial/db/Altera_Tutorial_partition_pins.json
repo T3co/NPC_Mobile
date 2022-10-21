@@ -28,15 +28,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "Mb0",
-					"strict" : false
-				},
-				{
 					"name" : "Ma1",
 					"strict" : false
 				},
 				{
 					"name" : "Ma0",
+					"strict" : false
+				},
+				{
+					"name" : "Mb0",
 					"strict" : false
 				}
 			]
