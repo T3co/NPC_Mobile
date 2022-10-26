@@ -168,7 +168,7 @@ agreement for further details.
 	(output)
 	(rect 752 560 928 576)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "Lwheel[1..0]" (rect 90 0 149 12)(font "Arial" ))
+	(text "LWheelB" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -184,7 +184,39 @@ agreement for further details.
 	(output)
 	(rect 752 576 928 592)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "Rwheel[1..0]" (rect 90 0 150 17)(font "Intel Clear" ))
+	(text "LWheelF" (rect 90 0 133 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 752 592 928 608)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "RWheelB" (rect 90 0 136 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 752 608 928 624)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "RWheelF" (rect 90 0 134 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -451,64 +483,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 504 496 704 640)
-	(text "Motor_Ctrl" (rect 5 0 55 12)(font "Arial" ))
-	(text "inst8" (rect 8 128 30 145)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "PWM_1KHz" (rect 0 0 57 12)(font "Arial" ))
-		(text "PWM_1KHz" (rect 21 27 78 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "Ma0" (rect 0 0 20 12)(font "Arial" ))
-		(text "Ma0" (rect 21 43 41 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "Ma1" (rect 0 0 20 12)(font "Arial" ))
-		(text "Ma1" (rect 21 59 41 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "Mb0" (rect 0 0 20 12)(font "Arial" ))
-		(text "Mb0" (rect 21 75 41 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "Mb1" (rect 0 0 20 12)(font "Arial" ))
-		(text "Mb1" (rect 21 91 41 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 200 32)
-		(output)
-		(text "Lwheel[1..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "Lwheel[1..0]" (rect 130 27 189 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32)(line_width 3))
-	)
-	(port
-		(pt 200 48)
-		(output)
-		(text "Rwheel[1..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "Rwheel[1..0]" (rect 128 43 189 55)(font "Arial" ))
-		(line (pt 200 48)(pt 184 48)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 184 128))
-	)
-)
-(symbol
-	(rect 320 448 448 528)
+	(rect 320 440 448 520)
 	(text "PWM_Motor" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst9" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
@@ -530,14 +505,14 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 280 528 448 640)
+	(rect 288 512 456 624)
 	(text "fb2bin" (rect 5 0 35 12)(font "Arial" ))
-	(text "inst10" (rect 8 96 36 113)(font "Intel Clear" ))
+	(text "inst12" (rect 8 96 36 113)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "number[2..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "number[2..0]" (rect 21 27 83 39)(font "Arial" ))
+		(text "number[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "number[7..0]" (rect 21 27 83 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -570,6 +545,77 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 152 96))
+	)
+)
+(symbol
+	(rect 472 496 688 640)
+	(text "Motor_Ctrl" (rect 5 0 55 12)(font "Arial" ))
+	(text "inst13" (rect 8 128 36 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PWM_Motor_1KHz" (rect 0 0 90 12)(font "Arial" ))
+		(text "PWM_Motor_1KHz" (rect 21 27 111 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Ma0" (rect 0 0 20 12)(font "Arial" ))
+		(text "Ma0" (rect 21 43 41 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Ma1" (rect 0 0 20 12)(font "Arial" ))
+		(text "Ma1" (rect 21 59 41 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Mb0" (rect 0 0 20 12)(font "Arial" ))
+		(text "Mb0" (rect 21 75 41 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "Mb1" (rect 0 0 20 12)(font "Arial" ))
+		(text "Mb1" (rect 21 91 41 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "LwheelB" (rect 0 0 40 12)(font "Arial" ))
+		(text "LwheelB" (rect 162 27 202 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "LwheelF" (rect 0 0 40 12)(font "Arial" ))
+		(text "LwheelF" (rect 162 43 202 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "RwheelB" (rect 0 0 42 12)(font "Arial" ))
+		(text "RwheelB" (rect 160 59 202 71)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "RwheelF" (rect 0 0 42 12)(font "Arial" ))
+		(text "RwheelF" (rect 160 75 202 87)(font "Arial" ))
+		(line (pt 216 80)(pt 200 80))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 128))
 	)
 )
 (connector
@@ -640,114 +686,6 @@ agreement for further details.
 (connector
 	(pt 456 384)
 	(pt 472 384)
-)
-(connector
-	(pt 280 480)
-	(pt 320 480)
-)
-(connector
-	(pt 280 128)
-	(pt 280 384)
-)
-(connector
-	(pt 280 384)
-	(pt 280 480)
-)
-(connector
-	(pt 704 528)
-	(pt 744 528)
-	(bus)
-)
-(connector
-	(pt 704 544)
-	(pt 712 544)
-	(bus)
-)
-(connector
-	(pt 744 528)
-	(pt 744 568)
-	(bus)
-)
-(connector
-	(pt 744 568)
-	(pt 752 568)
-	(bus)
-)
-(connector
-	(pt 712 584)
-	(pt 752 584)
-	(bus)
-)
-(connector
-	(pt 712 544)
-	(pt 712 584)
-	(bus)
-)
-(connector
-	(pt 448 480)
-	(pt 472 480)
-)
-(connector
-	(pt 472 480)
-	(pt 472 528)
-)
-(connector
-	(pt 504 528)
-	(pt 472 528)
-)
-(connector
-	(pt 504 544)
-	(pt 448 544)
-)
-(connector
-	(pt 504 560)
-	(pt 456 560)
-)
-(connector
-	(pt 504 576)
-	(pt 464 576)
-)
-(connector
-	(pt 504 592)
-	(pt 472 592)
-)
-(connector
-	(pt 448 544)
-	(pt 448 560)
-)
-(connector
-	(pt 456 560)
-	(pt 456 576)
-)
-(connector
-	(pt 456 576)
-	(pt 448 576)
-)
-(connector
-	(pt 464 576)
-	(pt 464 592)
-)
-(connector
-	(pt 464 592)
-	(pt 448 592)
-)
-(connector
-	(pt 472 592)
-	(pt 472 608)
-)
-(connector
-	(pt 472 608)
-	(pt 448 608)
-)
-(connector
-	(pt 280 560)
-	(pt 264 560)
-	(bus)
-)
-(connector
-	(pt 264 560)
-	(pt 264 256)
-	(bus)
 )
 (connector
 	(pt 680 256)
@@ -865,6 +803,100 @@ agreement for further details.
 	(pt 1088 272)
 	(pt 1104 272)
 	(bus)
+)
+(connector
+	(pt 280 472)
+	(pt 320 472)
+)
+(connector
+	(pt 472 472)
+	(pt 448 472)
+)
+(connector
+	(pt 280 128)
+	(pt 280 384)
+)
+(connector
+	(pt 280 384)
+	(pt 280 472)
+)
+(connector
+	(pt 288 544)
+	(pt 264 544)
+	(bus)
+)
+(connector
+	(pt 264 256)
+	(pt 264 544)
+	(bus)
+)
+(connector
+	(pt 472 472)
+	(pt 472 528)
+)
+(connector
+	(pt 456 544)
+	(pt 472 544)
+)
+(connector
+	(pt 456 560)
+	(pt 472 560)
+)
+(connector
+	(pt 456 576)
+	(pt 472 576)
+)
+(connector
+	(pt 456 592)
+	(pt 472 592)
+)
+(connector
+	(pt 752 568)
+	(pt 728 568)
+)
+(connector
+	(pt 728 568)
+	(pt 728 528)
+)
+(connector
+	(pt 728 528)
+	(pt 688 528)
+)
+(connector
+	(pt 688 544)
+	(pt 720 544)
+)
+(connector
+	(pt 752 584)
+	(pt 720 584)
+)
+(connector
+	(pt 720 544)
+	(pt 720 584)
+)
+(connector
+	(pt 688 560)
+	(pt 712 560)
+)
+(connector
+	(pt 712 560)
+	(pt 712 600)
+)
+(connector
+	(pt 752 600)
+	(pt 712 600)
+)
+(connector
+	(pt 752 616)
+	(pt 696 616)
+)
+(connector
+	(pt 696 616)
+	(pt 696 576)
+)
+(connector
+	(pt 688 576)
+	(pt 696 576)
 )
 (junction (pt 408 128))
 (junction (pt 280 128))
