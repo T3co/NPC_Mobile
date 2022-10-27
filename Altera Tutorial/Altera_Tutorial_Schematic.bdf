@@ -166,7 +166,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 560 928 576)
+	(rect 752 568 928 584)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LWheelB" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -182,7 +182,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 576 928 592)
+	(rect 752 584 928 600)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LWheelF" (rect 90 0 133 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -198,7 +198,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 592 928 608)
+	(rect 752 600 928 616)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "RWheelB" (rect 90 0 136 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -214,7 +214,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 608 928 624)
+	(rect 752 616 928 632)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "RWheelF" (rect 90 0 134 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -432,7 +432,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 776 328 912 408)
+	(rect 784 328 920 408)
 	(text "my_tx" (rect 5 0 36 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
@@ -505,7 +505,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 288 512 456 624)
+	(rect 288 560 456 672)
 	(text "fb2bin" (rect 5 0 35 12)(font "Arial" ))
 	(text "inst12" (rect 8 96 36 113)(font "Intel Clear" ))
 	(port
@@ -548,7 +548,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 472 496 688 640)
+	(rect 472 544 688 688)
 	(text "Motor_Ctrl" (rect 5 0 55 12)(font "Arial" ))
 	(text "inst13" (rect 8 128 36 145)(font "Intel Clear" ))
 	(port
@@ -651,22 +651,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 408 192)
-	(pt 640 192)
-)
-(connector
-	(pt 408 192)
-	(pt 408 128)
-)
-(connector
-	(pt 400 128)
-	(pt 408 128)
-)
-(connector
-	(pt 408 128)
-	(pt 440 128)
-)
-(connector
 	(pt 256 128)
 	(pt 280 128)
 )
@@ -691,33 +675,6 @@ agreement for further details.
 	(pt 680 256)
 	(pt 264 256)
 	(bus)
-)
-(connector
-	(pt 640 360)
-	(pt 776 360)
-)
-(connector
-	(pt 640 192)
-	(pt 640 360)
-)
-(connector
-	(pt 672 376)
-	(pt 776 376)
-	(bus)
-)
-(connector
-	(pt 672 336)
-	(pt 672 376)
-	(bus)
-)
-(connector
-	(pt 672 376)
-	(pt 672 496)
-	(bus)
-)
-(connector
-	(pt 912 360)
-	(pt 928 360)
 )
 (connector
 	(pt 888 224)
@@ -809,10 +766,6 @@ agreement for further details.
 	(pt 320 472)
 )
 (connector
-	(pt 472 472)
-	(pt 448 472)
-)
-(connector
 	(pt 280 128)
 	(pt 280 384)
 )
@@ -821,82 +774,101 @@ agreement for further details.
 	(pt 280 472)
 )
 (connector
-	(pt 288 544)
-	(pt 264 544)
+	(pt 928 360)
+	(pt 920 360)
+)
+(connector
+	(pt 672 336)
+	(pt 672 376)
+	(bus)
+)
+(connector
+	(pt 672 376)
+	(pt 672 496)
+	(bus)
+)
+(connector
+	(pt 672 376)
+	(pt 784 376)
+	(bus)
+)
+(connector
+	(pt 784 360)
+	(pt 696 360)
+)
+(connector
+	(pt 408 128)
+	(pt 408 280)
+)
+(connector
+	(pt 408 280)
+	(pt 696 280)
+)
+(connector
+	(pt 696 360)
+	(pt 696 280)
+)
+(connector
+	(pt 400 128)
+	(pt 408 128)
+)
+(connector
+	(pt 408 128)
+	(pt 440 128)
+)
+(connector
+	(pt 264 592)
+	(pt 288 592)
 	(bus)
 )
 (connector
 	(pt 264 256)
-	(pt 264 544)
+	(pt 264 592)
 	(bus)
-)
-(connector
-	(pt 472 472)
-	(pt 472 528)
-)
-(connector
-	(pt 456 544)
-	(pt 472 544)
-)
-(connector
-	(pt 456 560)
-	(pt 472 560)
-)
-(connector
-	(pt 456 576)
-	(pt 472 576)
 )
 (connector
 	(pt 456 592)
 	(pt 472 592)
 )
 (connector
-	(pt 752 568)
-	(pt 728 568)
+	(pt 456 608)
+	(pt 472 608)
 )
 (connector
-	(pt 728 568)
-	(pt 728 528)
+	(pt 456 624)
+	(pt 472 624)
 )
 (connector
-	(pt 728 528)
-	(pt 688 528)
+	(pt 456 640)
+	(pt 472 640)
 )
 (connector
-	(pt 688 544)
-	(pt 720 544)
+	(pt 448 472)
+	(pt 464 472)
 )
 (connector
-	(pt 752 584)
-	(pt 720 584)
+	(pt 464 472)
+	(pt 464 576)
 )
 (connector
-	(pt 720 544)
-	(pt 720 584)
-)
-(connector
-	(pt 688 560)
-	(pt 712 560)
-)
-(connector
-	(pt 712 560)
-	(pt 712 600)
-)
-(connector
-	(pt 752 600)
-	(pt 712 600)
-)
-(connector
-	(pt 752 616)
-	(pt 696 616)
-)
-(connector
-	(pt 696 616)
-	(pt 696 576)
+	(pt 464 576)
+	(pt 472 576)
 )
 (connector
 	(pt 688 576)
-	(pt 696 576)
+	(pt 752 576)
+)
+(connector
+	(pt 688 592)
+	(pt 752 592)
+)
+(connector
+	(pt 688 608)
+	(pt 752 608)
+)
+(connector
+	(pt 688 624)
+	(pt 752 624)
 )
 (junction (pt 408 128))
 (junction (pt 280 128))
