@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY PWM_ctrl_example
+set_global_assignment -name TOP_LEVEL_ENTITY Altera_Tutorial_Schematic
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:34:41  SEPTEMBER 19, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -89,6 +89,7 @@ set_location_assignment PIN_AA15 -to esp_tx
 set_location_assignment PIN_D22 -to breatheLED
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE my_tx.vhd
 set_global_assignment -name VHDL_FILE Motor_Ctrl.vhd
 set_global_assignment -name VHDL_FILE PWM_Motor.vhd
 set_global_assignment -name BDF_FILE Altera_Tutorial_Schematic.bdf
@@ -98,6 +99,7 @@ set_global_assignment -name VHDL_FILE BOUD_RATE.vhd
 set_global_assignment -name VHDL_FILE led.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name BDF_FILE PWM_ctrl_example.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
