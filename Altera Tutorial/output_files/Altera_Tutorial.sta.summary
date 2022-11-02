@@ -2,41 +2,49 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'fb2bin:inst10|Ma0'
+Slack : -5.350
+TNS   : -19.936
+
 Type  : Slow 1200mV 85C Model Setup 'clk50Mhz'
-Slack : -3.723
-TNS   : -98.836
+Slack : -3.644
+TNS   : -337.446
 
 Type  : Slow 1200mV 85C Model Setup 'BOUD_RATE:3|fout'
-Slack : -2.149
-TNS   : -56.413
-
-Type  : Slow 1200mV 85C Model Hold 'BOUD_RATE:3|fout'
-Slack : 0.341
-TNS   : 0.000
+Slack : -2.330
+TNS   : -59.456
 
 Type  : Slow 1200mV 85C Model Hold 'clk50Mhz'
-Slack : 0.341
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'BOUD_RATE:3|fout'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fb2bin:inst10|Ma0'
+Slack : 0.465
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'esp_tx'
-Slack : -2.096
-TNS   : -2.096
+Slack : -2.035
+TNS   : -2.035
 
 Type  : Slow 1200mV 85C Model Recovery 'BOUD_RATE:3|fout'
-Slack : -1.690
-TNS   : -26.586
+Slack : -1.532
+TNS   : -24.676
 
 Type  : Slow 1200mV 85C Model Removal 'BOUD_RATE:3|fout'
-Slack : 1.496
+Slack : 1.622
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'esp_tx'
-Slack : 1.907
+Slack : 2.178
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk50Mhz'
 Slack : -3.000
-TNS   : -77.359
+TNS   : -216.256
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'esp_tx'
 Slack : -3.000
@@ -46,41 +54,53 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BOUD_RATE:3|fout'
 Slack : -1.403
 TNS   : -49.105
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fb2bin:inst10|Ma0'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'fb2bin:inst10|Ma0'
+Slack : -5.171
+TNS   : -19.049
+
 Type  : Slow 1200mV 0C Model Setup 'clk50Mhz'
-Slack : -3.395
-TNS   : -85.464
+Slack : -3.322
+TNS   : -296.532
 
 Type  : Slow 1200mV 0C Model Setup 'BOUD_RATE:3|fout'
-Slack : -1.911
-TNS   : -49.517
+Slack : -2.091
+TNS   : -51.995
 
 Type  : Slow 1200mV 0C Model Hold 'clk50Mhz'
-Slack : 0.306
+Slack : 0.290
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'BOUD_RATE:3|fout'
-Slack : 0.307
+Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fb2bin:inst10|Ma0'
+Slack : 0.415
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'esp_tx'
-Slack : -1.849
-TNS   : -1.849
+Slack : -1.777
+TNS   : -1.777
 
 Type  : Slow 1200mV 0C Model Recovery 'BOUD_RATE:3|fout'
-Slack : -1.471
-TNS   : -22.935
+Slack : -1.323
+TNS   : -21.187
 
 Type  : Slow 1200mV 0C Model Removal 'BOUD_RATE:3|fout'
-Slack : 1.380
+Slack : 1.482
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'esp_tx'
-Slack : 1.762
+Slack : 1.983
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk50Mhz'
 Slack : -3.000
-TNS   : -77.359
+TNS   : -216.256
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'esp_tx'
 Slack : -3.000
@@ -90,48 +110,64 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BOUD_RATE:3|fout'
 Slack : -1.403
 TNS   : -49.105
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fb2bin:inst10|Ma0'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'fb2bin:inst10|Ma0'
+Slack : -2.105
+TNS   : -7.736
+
 Type  : Fast 1200mV 0C Model Setup 'clk50Mhz'
-Slack : -1.190
-TNS   : -12.101
+Slack : -1.092
+TNS   : -59.393
 
 Type  : Fast 1200mV 0C Model Setup 'BOUD_RATE:3|fout'
-Slack : -0.998
-TNS   : -17.143
+Slack : -1.030
+TNS   : -17.850
 
 Type  : Fast 1200mV 0C Model Hold 'clk50Mhz'
-Slack : 0.148
+Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'BOUD_RATE:3|fout'
-Slack : 0.149
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fb2bin:inst10|Ma0'
+Slack : 0.217
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'esp_tx'
-Slack : -0.490
-TNS   : -0.490
+Slack : -0.531
+TNS   : -0.531
 
 Type  : Fast 1200mV 0C Model Recovery 'BOUD_RATE:3|fout'
-Slack : -0.152
-TNS   : -1.544
+Slack : -0.067
+TNS   : -0.755
 
 Type  : Fast 1200mV 0C Model Removal 'BOUD_RATE:3|fout'
-Slack : 0.634
+Slack : 0.684
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'esp_tx'
-Slack : 0.950
+Slack : 1.118
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk50Mhz'
 Slack : -3.000
-TNS   : -57.910
+TNS   : -160.083
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'esp_tx'
 Slack : -3.000
-TNS   : -4.092
+TNS   : -4.091
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BOUD_RATE:3|fout'
 Slack : -1.000
 TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fb2bin:inst10|Ma0'
+Slack : 0.322
+TNS   : 0.000
 
 ------------------------------------------------------------

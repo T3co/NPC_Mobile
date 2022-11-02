@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("D:/Quartus Projects/Project_Moob/Altera Tutorial/output_files/") File("Altera_Tutorial.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/output_files/") File("Altera_Tutorial.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Fri Oct 21 12:59:24 2022
+Wed Nov 02 15:23:59 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,11 +13,19 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. State Machine - |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|state
+  9. State Machine - |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: pmod_temp_sensor_tcn75a:inst11
+ 17. Parameter Settings for User Entity Instance: pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +52,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 21 12:59:24 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 02 15:23:59 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
-; Top-level Entity Name              ; PWM_ctrl_example                            ;
+; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 13                                          ;
-;     Total combinational functions  ; 13                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 9                                           ;
+; Total logic elements               ; 373                                         ;
+;     Total combinational functions  ; 338                                         ;
+;     Dedicated logic registers      ; 188                                         ;
+; Total registers                    ; 188                                         ;
+; Total pins                         ; 39                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -63,90 +71,90 @@ agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                                      ; PWM_ctrl_example   ; Altera_Tutorial    ;
-; Family name                                                                ; MAX 10             ; Cyclone V          ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                               ;
++----------------------------------------------------------------------------+---------------------------+--------------------+
+; Option                                                                     ; Setting                   ; Default Value      ;
++----------------------------------------------------------------------------+---------------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C7G            ;                    ;
+; Top-level entity name                                                      ; Altera_Tutorial_Schematic ; Altera_Tutorial    ;
+; Family name                                                                ; MAX 10                    ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                       ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                        ; On                 ;
+; Enable compact report table                                                ; Off                       ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                      ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                       ; Off                ;
+; Preserve fewer node names                                                  ; On                        ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable                    ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001              ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993                 ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                      ; Auto               ;
+; Safe State Machine                                                         ; Off                       ; Off                ;
+; Extract Verilog State Machines                                             ; On                        ; On                 ;
+; Extract VHDL State Machines                                                ; On                        ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                       ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                      ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                       ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                        ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                        ; On                 ;
+; Parallel Synthesis                                                         ; On                        ; On                 ;
+; DSP Block Balancing                                                        ; Auto                      ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                        ; On                 ;
+; Power-Up Don't Care                                                        ; On                        ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                       ; Off                ;
+; Remove Duplicate Registers                                                 ; On                        ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                       ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                       ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                       ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                       ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                       ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                        ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                       ; Off                ;
+; Optimization Technique                                                     ; Balanced                  ; Balanced           ;
+; Carry Chain Length                                                         ; 70                        ; 70                 ;
+; Auto Carry Chains                                                          ; On                        ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                        ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                       ; Off                ;
+; Auto ROM Replacement                                                       ; On                        ; On                 ;
+; Auto RAM Replacement                                                       ; On                        ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                        ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                      ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                      ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                        ; On                 ;
+; Strict RAM Replacement                                                     ; Off                       ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                        ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                       ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                        ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                       ; Off                ;
+; Auto Resource Sharing                                                      ; Off                       ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                       ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                       ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                       ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                        ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                       ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                        ; On                 ;
+; Report Parameter Settings                                                  ; On                        ; On                 ;
+; Report Source Assignments                                                  ; On                        ; On                 ;
+; Report Connectivity Checks                                                 ; On                        ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                       ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                         ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation        ; Normal compilation ;
+; HDL message level                                                          ; Level2                    ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                       ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                      ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                      ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                       ; 100                ;
+; Clock MUX Protection                                                       ; On                        ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                       ; Off                ;
+; Block Design Naming                                                        ; Auto                      ; Auto               ;
+; SDC constraint protection                                                  ; Off                       ; Off                ;
+; Synthesis Effort                                                           ; Auto                      ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                        ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                       ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium                    ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                      ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                        ; On                 ;
++----------------------------------------------------------------------------+---------------------------+--------------------+
 
 
 +------------------------------------------+
@@ -154,7 +162,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -167,71 +175,157 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
-; Motor_Ctrl.vhd                   ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd       ;         ;
-; PWM_ctrl_example.bdf             ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus Projects/Project_Moob/Altera Tutorial/PWM_ctrl_example.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; bit_9_to_8.vhd                   ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/bit_9_to_8.vhd                ;         ;
+; my_tx.vhd                        ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/my_tx.vhd                     ;         ;
+; Motor_Ctrl.vhd                   ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd                ;         ;
+; PWM_Motor.vhd                    ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/PWM_Motor.vhd                 ;         ;
+; Altera_Tutorial_Schematic.bdf    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Altera_Tutorial_Schematic.bdf ;         ;
+; rx.vhd                           ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/rx.vhd                        ;         ;
+; BOUD_RATE.vhd                    ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/BOUD_RATE.vhd                 ;         ;
+; led.vhd                          ; yes             ; User VHDL File                     ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/led.vhd                       ;         ;
+; pmod_temp_sensor_tcn75a.vhd      ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd   ;         ;
+; i2c_master.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/i2c_master.vhd                ;         ;
+; fb2bin.vhd                       ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd                    ;         ;
+; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/bin2hex.vhd                   ;         ;
+; spliter.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/spliter.vhd                   ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 13        ;
-;                                             ;           ;
-; Total combinational functions               ; 13        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 5         ;
-;     -- 3 input functions                    ; 6         ;
-;     -- <=2 input functions                  ; 2         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 13        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 9         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; Ma1~input ;
-; Maximum fan-out                             ; 7         ;
-; Total fan-out                               ; 55        ;
-; Average fan-out                             ; 1.77      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 373            ;
+;                                             ;                ;
+; Total combinational functions               ; 338            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 143            ;
+;     -- 3 input functions                    ; 65             ;
+;     -- <=2 input functions                  ; 130            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 249            ;
+;     -- arithmetic mode                      ; 89             ;
+;                                             ;                ;
+; Total registers                             ; 188            ;
+;     -- Dedicated logic registers            ; 188            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 39             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; clk50Mhz~input ;
+; Maximum fan-out                             ; 152            ;
+; Total fan-out                               ; 1637           ;
+; Average fan-out                             ; 2.70           ;
++---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name               ; Entity Name      ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------+------------------+--------------+
-; |PWM_ctrl_example          ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |PWM_ctrl_example                 ; PWM_ctrl_example ; work         ;
-;    |Motor_Ctrl:inst|       ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PWM_ctrl_example|Motor_Ctrl:inst ; Motor_Ctrl       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------+------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name               ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
+; |Altera_Tutorial_Schematic          ; 338 (0)             ; 188 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 39   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
+;    |BOUD_RATE:3|                    ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3                                            ; BOUD_RATE                 ; work         ;
+;    |Motor_Ctrl:inst13|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
+;    |PWM_Motor:inst9|                ; 24 (24)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
+;    |bin2hex:inst1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
+;    |bin2hex:inst2|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
+;    |bin2hex:inst4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4                                          ; bin2hex                   ; work         ;
+;    |bin2hex:inst5|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5                                          ; bin2hex                   ; work         ;
+;    |fb2bin:inst10|                  ; 8 (8)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|fb2bin:inst10                                          ; fb2bin                    ; work         ;
+;    |led:inst7|                      ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|led:inst7                                              ; led                       ; work         ;
+;    |my_tx:inst|                     ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst                                             ; my_tx                     ; work         ;
+;    |pmod_temp_sensor_tcn75a:inst11| ; 151 (61)            ; 95 (50)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
+;       |i2c_master:i2c_master_0|     ; 90 (90)             ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
+;    |rx:5|                           ; 36 (36)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                   ;
-+----------------------------------------------------+-------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
-+----------------------------------------------------+-------------------------+------------------------+
-; Motor_Ctrl:inst|RwheelF                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
-; Motor_Ctrl:inst|LwheelF                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
-; Motor_Ctrl:inst|LwheelB                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
-; Motor_Ctrl:inst|RwheelB                            ; Motor_Ctrl:inst|RwheelF ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                         ;                        ;
-+----------------------------------------------------+-------------------------+------------------------+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|state                                            ;
++-----------------------+---------------------+-----------------+-----------------------+----------------------+-------------+
+; Name                  ; state.output_result ; state.read_data ; state.set_reg_pointer ; state.set_resolution ; state.start ;
++-----------------------+---------------------+-----------------+-----------------------+----------------------+-------------+
+; state.start           ; 0                   ; 0               ; 0                     ; 0                    ; 0           ;
+; state.set_resolution  ; 0                   ; 0               ; 0                     ; 1                    ; 1           ;
+; state.set_reg_pointer ; 0                   ; 0               ; 1                     ; 0                    ; 1           ;
+; state.read_data       ; 0                   ; 1               ; 0                     ; 0                    ; 1           ;
+; state.output_result   ; 1                   ; 0               ; 0                     ; 0                    ; 1           ;
++-----------------------+---------------------+-----------------+-----------------------+----------------------+-------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|state                                          ;
++----------------+------------+----------------+----------------+----------+----------+----------------+---------------+-------------+-------------+
+; Name           ; state.stop ; state.mstr_ack ; state.slv_ack2 ; state.rd ; state.wr ; state.slv_ack1 ; state.command ; state.start ; state.ready ;
++----------------+------------+----------------+----------------+----------+----------+----------------+---------------+-------------+-------------+
+; state.ready    ; 0          ; 0              ; 0              ; 0        ; 0        ; 0              ; 0             ; 0           ; 0           ;
+; state.start    ; 0          ; 0              ; 0              ; 0        ; 0        ; 0              ; 0             ; 1           ; 1           ;
+; state.command  ; 0          ; 0              ; 0              ; 0        ; 0        ; 0              ; 1             ; 0           ; 1           ;
+; state.slv_ack1 ; 0          ; 0              ; 0              ; 0        ; 0        ; 1              ; 0             ; 0           ; 1           ;
+; state.wr       ; 0          ; 0              ; 0              ; 0        ; 1        ; 0              ; 0             ; 0           ; 1           ;
+; state.rd       ; 0          ; 0              ; 0              ; 1        ; 0        ; 0              ; 0             ; 0           ; 1           ;
+; state.slv_ack2 ; 0          ; 0              ; 1              ; 0        ; 0        ; 0              ; 0             ; 0           ; 1           ;
+; state.mstr_ack ; 0          ; 1              ; 0              ; 0        ; 0        ; 0              ; 0             ; 0           ; 1           ;
+; state.stop     ; 1          ; 0              ; 0              ; 0        ; 0        ; 0              ; 0             ; 0           ; 1           ;
++----------------+------------+----------------+----------------+----------+----------+----------------+---------------+-------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; Motor_Ctrl:inst13|LwheelB                          ; Motor_Ctrl:inst13|LwheelB ; yes                    ;
+; Motor_Ctrl:inst13|LwheelF                          ; Motor_Ctrl:inst13|LwheelB ; yes                    ;
+; Motor_Ctrl:inst13|RwheelB                          ; Motor_Ctrl:inst13|LwheelB ; yes                    ;
+; Motor_Ctrl:inst13|RwheelF                          ; Motor_Ctrl:inst13|LwheelB ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                     ;
++------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; Register name                                                          ; Reason for Removal                                                            ;
++------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; pmod_temp_sensor_tcn75a:inst11|i2c_addr[3]                             ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_addr[0..2,4]                        ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_addr[5]                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[1..6]                       ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7]                     ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[4]      ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7] ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[1..3,5] ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[6] ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[1..6]   ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7] ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_addr[5]                             ; Stuck at GND due to stuck port data_in                                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[6]      ; Stuck at GND due to stuck port data_in                                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                             ; Stuck at VCC due to stuck port data_in                                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7]      ; Stuck at VCC due to stuck port data_in                                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7]                          ; Stuck at GND due to stuck port data_in                                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7]      ; Stuck at GND due to stuck port data_in                                        ;
+; Total Number of Removed Registers = 28                                 ;                                                                               ;
++------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                   ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register                            ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------+
+; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7] ; Stuck at GND              ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7] ;
+;                                               ; due to stuck port data_in ;                                                                   ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -239,14 +333,64 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 188   ;
+; Number of registers using Synchronous Clear  ; 63    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 84    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Inverted Register Statistics                                                ;
++-------------------------------------------------------------------+---------+
+; Inverted Register                                                 ; Fan out ;
++-------------------------------------------------------------------+---------+
+; my_tx:inst|so                                                     ; 2       ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[2] ; 15      ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[1] ; 17      ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[0] ; 18      ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|sda_int    ; 2       ;
+; Total number of inverted registers = 5                            ;         ;
++-------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|fb2bin:inst10|Mb1                                                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[0] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|Selector0                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pmod_temp_sensor_tcn75a:inst11 ;
++------------------+----------+-----------------------------------------------+
+; Parameter Name   ; Value    ; Type                                          ;
++------------------+----------+-----------------------------------------------+
+; sys_clk_freq     ; 50000000 ; Signed Integer                                ;
+; resolution       ; 9        ; Signed Integer                                ;
+; temp_sensor_addr ; 1001000  ; Unsigned Binary                               ;
++------------------+----------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ;
++----------------+----------+-------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                    ;
++----------------+----------+-------------------------------------------------------------------------+
+; input_clk      ; 50000000 ; Signed Integer                                                          ;
+; bus_clk        ; 400000   ; Signed Integer                                                          ;
++----------------+----------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -254,15 +398,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 9                           ;
-; cycloneiii_lcell_comb ; 13                          ;
-;     normal            ; 13                          ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 5                           ;
+; boundary_port         ; 39                          ;
+; cycloneiii_ff         ; 188                         ;
+;     CLR               ; 2                           ;
+;     CLR SCLR          ; 8                           ;
+;     ENA               ; 53                          ;
+;     ENA CLR SCLR      ; 8                           ;
+;     ENA SCLR          ; 23                          ;
+;     SCLR              ; 24                          ;
+;     plain             ; 70                          ;
+; cycloneiii_io_obuf    ; 2                           ;
+; cycloneiii_lcell_comb ; 343                         ;
+;     arith             ; 89                          ;
+;         2 data inputs ; 88                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 254                         ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 64                          ;
+;         4 data inputs ; 143                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.27                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 2.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,7 +428,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -281,62 +438,100 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Oct 21 12:59:13 2022
+    Info: Processing started: Wed Nov 02 15:23:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file bit_9_to_8.vhd
+    Info (12022): Found design unit 1: bit_9_to_8-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/bit_9_to_8.vhd Line: 8
+    Info (12023): Found entity 1: bit_9_to_8 File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/bit_9_to_8.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file my_tx.vhd
-    Info (12022): Found design unit 1: my_tx-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 8
-    Info (12023): Found entity 1: my_tx File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 3
+    Info (12022): Found design unit 1: my_tx-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/my_tx.vhd Line: 8
+    Info (12023): Found entity 1: my_tx File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/my_tx.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file motor_ctrl.vhd
-    Info (12022): Found design unit 1: Motor_Ctrl-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 14
-    Info (12023): Found entity 1: Motor_Ctrl File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 3
+    Info (12022): Found design unit 1: Motor_Ctrl-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 14
+    Info (12023): Found entity 1: Motor_Ctrl File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file pwm_motor.vhd
-    Info (12022): Found design unit 1: PWM_Motor-RTL File: D:/Quartus Projects/Project_Moob/Altera Tutorial/PWM_Motor.vhd Line: 7
-    Info (12023): Found entity 1: PWM_Motor File: D:/Quartus Projects/Project_Moob/Altera Tutorial/PWM_Motor.vhd Line: 3
+    Info (12022): Found design unit 1: PWM_Motor-RTL File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/PWM_Motor.vhd Line: 7
+    Info (12023): Found entity 1: PWM_Motor File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/PWM_Motor.vhd Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file altera_tutorial_schematic.bdf
     Info (12023): Found entity 1: Altera_Tutorial_Schematic
 Warning (12019): Can't analyze file -- file RX_ALTERA.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
-    Info (12022): Found design unit 1: rx-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/rx.vhd Line: 7
-    Info (12023): Found entity 1: rx File: D:/Quartus Projects/Project_Moob/Altera Tutorial/rx.vhd Line: 3
+    Info (12022): Found design unit 1: rx-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/rx.vhd Line: 7
+    Info (12023): Found entity 1: rx File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/rx.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file boud_rate.vhd
-    Info (12022): Found design unit 1: BOUD_RATE-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/BOUD_RATE.vhd Line: 7
-    Info (12023): Found entity 1: BOUD_RATE File: D:/Quartus Projects/Project_Moob/Altera Tutorial/BOUD_RATE.vhd Line: 3
+    Info (12022): Found design unit 1: BOUD_RATE-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/BOUD_RATE.vhd Line: 7
+    Info (12023): Found entity 1: BOUD_RATE File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/BOUD_RATE.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file led.vhd
-    Info (12022): Found design unit 1: led-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/led.vhd Line: 10
-    Info (12023): Found entity 1: led File: D:/Quartus Projects/Project_Moob/Altera Tutorial/led.vhd Line: 5
+    Info (12022): Found design unit 1: led-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/led.vhd Line: 10
+    Info (12023): Found entity 1: led File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/led.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_ctrl_example.bdf
     Info (12023): Found entity 1: PWM_ctrl_example
-Info (12127): Elaborating entity "PWM_ctrl_example" for the top level hierarchy
-Info (12128): Elaborating entity "Motor_Ctrl" for hierarchy "Motor_Ctrl:inst"
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "RwheelB" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "RwheelF" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "LwheelB" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "LwheelF" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (13012): Latch Motor_Ctrl:inst|RwheelF has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 12
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Mb0
-Warning (13012): Latch Motor_Ctrl:inst|LwheelF has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ma0
-Warning (13012): Latch Motor_Ctrl:inst|LwheelB has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ma0
-Warning (13012): Latch Motor_Ctrl:inst|RwheelB has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ma0
+Info (12021): Found 2 design units, including 1 entities, in source file mt.vhd
+    Info (12022): Found design unit 1: MT-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/MT.vhd Line: 12
+    Info (12023): Found entity 1: MT File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/MT.vhd Line: 4
+Info (12127): Elaborating entity "Altera_Tutorial_Schematic" for the top level hierarchy
+Info (12128): Elaborating entity "my_tx" for hierarchy "my_tx:inst"
+Warning (10492): VHDL Process Statement warning at my_tx.vhd(14): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/my_tx.vhd Line: 14
+Info (12128): Elaborating entity "BOUD_RATE" for hierarchy "BOUD_RATE:3"
+Info (12128): Elaborating entity "bit_9_to_8" for hierarchy "bit_9_to_8:inst20"
+Warning (12125): Using design file pmod_temp_sensor_tcn75a.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: pmod_temp_sensor_tcn75a-behavior File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 21
+    Info (12023): Found entity 1: pmod_temp_sensor_tcn75a File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 7
+Info (12128): Elaborating entity "pmod_temp_sensor_tcn75a" for hierarchy "pmod_temp_sensor_tcn75a:inst11"
+Warning (12125): Using design file i2c_master.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/i2c_master.vhd Line: 54
+    Info (12023): Found entity 1: i2c_master File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/i2c_master.vhd Line: 36
+Info (12128): Elaborating entity "i2c_master" for hierarchy "pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0" File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 55
+Info (12128): Elaborating entity "led" for hierarchy "led:inst7"
+Info (12128): Elaborating entity "Motor_Ctrl" for hierarchy "Motor_Ctrl:inst13"
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelF", which holds its previous value in one or more paths through the process File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelF", which holds its previous value in one or more paths through the process File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelB", which holds its previous value in one or more paths through the process File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "RwheelB" at Motor_Ctrl.vhd(17) File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "RwheelF" at Motor_Ctrl.vhd(17) File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "LwheelB" at Motor_Ctrl.vhd(17) File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "LwheelF" at Motor_Ctrl.vhd(17) File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (12128): Elaborating entity "PWM_Motor" for hierarchy "PWM_Motor:inst9"
+Warning (12125): Using design file fb2bin.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: fb2bin-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd Line: 14
+    Info (12023): Found entity 1: fb2bin File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd Line: 4
+Info (12128): Elaborating entity "fb2bin" for hierarchy "fb2bin:inst10"
+Info (12128): Elaborating entity "rx" for hierarchy "rx:5"
+Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: bin2hex-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/bin2hex.vhd Line: 7
+    Info (12023): Found entity 1: bin2hex File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/bin2hex.vhd Line: 3
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:inst1"
+Warning (12125): Using design file spliter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SPLITER-behave File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/spliter.vhd Line: 7
+    Info (12023): Found entity 1: SPLITER File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/spliter.vhd Line: 3
+Info (12128): Elaborating entity "SPLITER" for hierarchy "SPLITER:inst3"
+Warning (13012): Latch Motor_Ctrl:inst13|LwheelB has unsafe behavior File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd Line: 8
+Warning (13012): Latch Motor_Ctrl:inst13|LwheelF has unsafe behavior File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd Line: 8
+Warning (13012): Latch Motor_Ctrl:inst13|RwheelB has unsafe behavior File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd Line: 8
+Warning (13012): Latch Motor_Ctrl:inst13|RwheelF has unsafe behavior File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/Motor_Ctrl.vhd Line: 12
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/fb2bin.vhd Line: 8
+Info (13000): Registers with preset signals will power-up high File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/my_tx.vhd Line: 6
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register my_tx:inst|so will power up to High File: C:/Users/School/Desktop/Project_Moob-main/Altera Tutorial/my_tx.vhd Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Fri Oct 21 12:59:24 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:03
+Info (21057): Implemented 416 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 35 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 377 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Wed Nov 02 15:23:59 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

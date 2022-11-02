@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity 9to8bit is
+port(temp: in bit_Vector(9 downto 0);
+		tout: buffer bit_Vector(7 downto 0));
+end;
+
+architecture behave of 9to8bit is 
+begin
+process(temp)
+begin
+tout(0) <= temp(0);
+tout(1) <= temp(1);
+tout(2) <= temp(2);
+tout(3) <= temp(3);
+tout(4) <= temp(4);
+tout(5) <= temp(5);
+tout(6) <= temp(6);
+tout(7) <= temp(7);
+
+end process;
+end behave;
