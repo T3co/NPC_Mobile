@@ -1,6 +1,6 @@
 IOT robot
 
-using DE10-Lite, ESP32, ESP32-CAM ,LM75(temperature sensor) and LED lights etc...
+using DE10-Lite, ESP32, ESP32-CAM ,LM75(temperature sensor) and LED lights
 
 programing languages : c++,Java,VHDL
 
