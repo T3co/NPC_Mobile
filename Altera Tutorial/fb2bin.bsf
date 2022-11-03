@@ -27,9 +27,16 @@ agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "number[2..0]" (rect 0 0 50 12)(font "Arial" ))
-		(text "number[2..0]" (rect 21 27 71 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
+		(text "CLK" (rect 0 0 20 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "number[7..0]" (rect 0 0 50 12)(font "Arial" ))
+		(text "number[7..0]" (rect 21 43 71 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 168 32)
