@@ -5,17 +5,19 @@
 #define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
 
-#define WIFI_SSID "upstairs"
-#define WIFI_PASSWORD "10203040"
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
 #define RXD2 16
 #define TXD2 17
+#define LED_TX 1
+#define RX1 3
 
 #define ledpin 2
 
 FirebaseData fbdo;
 int rx0;
-int FromFB, FromAlt;
+int FromFB, FromAlt, Led_state;
 
 bool a = false;
 void blink();
@@ -23,8 +25,9 @@ void blink();
 void setup()
 {
   Serial.begin(115200);
-  Serial.println("Setup");
   Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
+ Serial1.begin(9600, SERIAL_8N1, RX1, LED_TX);
+
 
   pinMode(ledpin, OUTPUT);
 
@@ -46,30 +49,39 @@ void setup()
 
 void loop()
 {
-  if (Firebase.getInt(fbdo, "fromfb"))
+
+  if (Firebase.getInt(fbdo, "messages/fromfb"))
   {
     FromFB = fbdo.intData();
   }
-  delay(10);
+  delay(20);
+
+  if (Firebase.getInt(fbdo, "messages/lights"))
+  {
+    Led_state = fbdo.intData();
+  }
+  delay(20);
 
   if (Serial2.available())
   {
     Serial2.write(FromFB);
-    delay(10);
   }
+  delay(20);
+
+   if (Serial1.available())
+  {
+    Serial1.write(Led_state);
+  }
+  delay(20);
 
   while (Serial2.available())
   {
     FromAlt = Serial2.read();
+    delay(2);
+    Firebase.setInt(fbdo, "messages/fromAltera", FromAlt);
   }
-  
-  if (Firebase.ready())
-  {
-    Firebase.setInt(fbdo, "fromAltera", FromAlt);
-  }
-
-  fbdo.clear();
   blink();
+  delay(50);
 }
 
 void blink()

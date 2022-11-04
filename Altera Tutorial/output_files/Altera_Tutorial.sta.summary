@@ -3,48 +3,60 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'fb2bin:inst10|Ma0'
-Slack : -5.350
-TNS   : -19.936
+Slack : -4.747
+TNS   : -18.659
 
 Type  : Slow 1200mV 85C Model Setup 'clk50Mhz'
-Slack : -3.644
-TNS   : -337.446
+Slack : -3.645
+TNS   : -318.965
 
 Type  : Slow 1200mV 85C Model Setup 'BOUD_RATE:3|fout'
-Slack : -2.330
-TNS   : -59.456
-
-Type  : Slow 1200mV 85C Model Hold 'clk50Mhz'
-Slack : 0.323
-TNS   : 0.000
+Slack : -2.331
+TNS   : -104.531
 
 Type  : Slow 1200mV 85C Model Hold 'BOUD_RATE:3|fout'
 Slack : 0.340
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'fb2bin:inst10|Ma0'
-Slack : 0.465
+Type  : Slow 1200mV 85C Model Hold 'clk50Mhz'
+Slack : 0.341
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fb2bin:inst10|Ma0'
+Slack : 0.588
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'TX_LED_CAR'
+Slack : -2.408
+TNS   : -2.408
 
 Type  : Slow 1200mV 85C Model Recovery 'esp_tx'
-Slack : -2.035
-TNS   : -2.035
+Slack : -1.614
+TNS   : -1.614
 
 Type  : Slow 1200mV 85C Model Recovery 'BOUD_RATE:3|fout'
-Slack : -1.532
-TNS   : -24.676
-
-Type  : Slow 1200mV 85C Model Removal 'BOUD_RATE:3|fout'
-Slack : 1.622
-TNS   : 0.000
+Slack : -1.567
+TNS   : -38.725
 
 Type  : Slow 1200mV 85C Model Removal 'esp_tx'
-Slack : 2.178
+Slack : 1.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'BOUD_RATE:3|fout'
+Slack : 1.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'TX_LED_CAR'
+Slack : 2.335
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk50Mhz'
 Slack : -3.000
-TNS   : -216.256
+TNS   : -227.480
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TX_LED_CAR'
+Slack : -3.000
+TNS   : -4.403
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'esp_tx'
 Slack : -3.000
@@ -52,55 +64,67 @@ TNS   : -4.403
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BOUD_RATE:3|fout'
 Slack : -1.403
-TNS   : -49.105
+TNS   : -82.777
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fb2bin:inst10|Ma0'
-Slack : 0.361
+Slack : 0.436
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'fb2bin:inst10|Ma0'
-Slack : -5.171
-TNS   : -19.049
+Slack : -4.623
+TNS   : -17.627
 
 Type  : Slow 1200mV 0C Model Setup 'clk50Mhz'
-Slack : -3.322
-TNS   : -296.532
+Slack : -3.308
+TNS   : -278.626
 
 Type  : Slow 1200mV 0C Model Setup 'BOUD_RATE:3|fout'
-Slack : -2.091
-TNS   : -51.995
-
-Type  : Slow 1200mV 0C Model Hold 'clk50Mhz'
-Slack : 0.290
-TNS   : 0.000
+Slack : -2.097
+TNS   : -92.424
 
 Type  : Slow 1200mV 0C Model Hold 'BOUD_RATE:3|fout'
 Slack : 0.305
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'fb2bin:inst10|Ma0'
-Slack : 0.415
+Type  : Slow 1200mV 0C Model Hold 'clk50Mhz'
+Slack : 0.306
 TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fb2bin:inst10|Ma0'
+Slack : 0.534
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'TX_LED_CAR'
+Slack : -2.130
+TNS   : -2.130
 
 Type  : Slow 1200mV 0C Model Recovery 'esp_tx'
-Slack : -1.777
-TNS   : -1.777
+Slack : -1.412
+TNS   : -1.412
 
 Type  : Slow 1200mV 0C Model Recovery 'BOUD_RATE:3|fout'
-Slack : -1.323
-TNS   : -21.187
-
-Type  : Slow 1200mV 0C Model Removal 'BOUD_RATE:3|fout'
-Slack : 1.482
-TNS   : 0.000
+Slack : -1.356
+TNS   : -33.467
 
 Type  : Slow 1200mV 0C Model Removal 'esp_tx'
-Slack : 1.983
+Slack : 1.316
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'BOUD_RATE:3|fout'
+Slack : 1.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'TX_LED_CAR'
+Slack : 2.129
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk50Mhz'
 Slack : -3.000
-TNS   : -216.256
+TNS   : -227.480
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TX_LED_CAR'
+Slack : -3.000
+TNS   : -4.403
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'esp_tx'
 Slack : -3.000
@@ -108,66 +132,78 @@ TNS   : -4.403
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BOUD_RATE:3|fout'
 Slack : -1.403
-TNS   : -49.105
+TNS   : -82.777
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fb2bin:inst10|Ma0'
-Slack : 0.392
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'fb2bin:inst10|Ma0'
-Slack : -2.105
-TNS   : -7.736
+Slack : -1.989
+TNS   : -7.447
 
 Type  : Fast 1200mV 0C Model Setup 'clk50Mhz'
-Slack : -1.092
-TNS   : -59.393
+Slack : -1.096
+TNS   : -52.696
 
 Type  : Fast 1200mV 0C Model Setup 'BOUD_RATE:3|fout'
-Slack : -1.030
-TNS   : -17.850
-
-Type  : Fast 1200mV 0C Model Hold 'clk50Mhz'
-Slack : 0.141
-TNS   : 0.000
+Slack : -1.045
+TNS   : -33.382
 
 Type  : Fast 1200mV 0C Model Hold 'BOUD_RATE:3|fout'
 Slack : 0.147
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'fb2bin:inst10|Ma0'
-Slack : 0.217
+Type  : Fast 1200mV 0C Model Hold 'clk50Mhz'
+Slack : 0.148
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'fb2bin:inst10|Ma0'
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'TX_LED_CAR'
+Slack : -0.648
+TNS   : -0.648
+
 Type  : Fast 1200mV 0C Model Recovery 'esp_tx'
-Slack : -0.531
-TNS   : -0.531
+Slack : -0.283
+TNS   : -0.283
 
 Type  : Fast 1200mV 0C Model Recovery 'BOUD_RATE:3|fout'
-Slack : -0.067
-TNS   : -0.755
+Slack : -0.091
+TNS   : -2.011
 
 Type  : Fast 1200mV 0C Model Removal 'BOUD_RATE:3|fout'
-Slack : 0.684
+Slack : 0.637
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'esp_tx'
-Slack : 1.118
+Slack : 0.749
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'TX_LED_CAR'
+Slack : 1.167
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk50Mhz'
 Slack : -3.000
-TNS   : -160.083
+TNS   : -168.605
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'esp_tx'
 Slack : -3.000
-TNS   : -4.091
+TNS   : -4.116
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TX_LED_CAR'
+Slack : -3.000
+TNS   : -4.094
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BOUD_RATE:3|fout'
 Slack : -1.000
-TNS   : -35.000
+TNS   : -59.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fb2bin:inst10|Ma0'
-Slack : 0.322
+Slack : 0.362
 TNS   : 0.000
 
 ------------------------------------------------------------

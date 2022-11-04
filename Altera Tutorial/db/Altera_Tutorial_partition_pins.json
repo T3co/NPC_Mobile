@@ -32,6 +32,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "CAR_LEDS",
+					"strict" : false
+				},
+				{
 					"name" : "M_segH[6]",
 					"strict" : false
 				},
@@ -153,6 +157,10 @@
 				},
 				{
 					"name" : "clk50Mhz",
+					"strict" : false
+				},
+				{
+					"name" : "TX_LED_CAR",
 					"strict" : false
 				},
 				{

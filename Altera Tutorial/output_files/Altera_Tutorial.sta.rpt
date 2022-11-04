@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Altera_Tutorial
-Wed Nov 02 15:24:19 2022
+Fri Nov 04 16:11:55 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -91,17 +91,16 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
+; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
+; Average used               ; 1.20        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
-;     Processor 3            ;   3.7%      ;
-;     Processors 4-6         ;   3.7%      ;
+;     Processor 2            ;   4.0%      ;
+;     Processors 3-6         ;   3.9%      ;
 +----------------------------+-------------+
 
 
@@ -114,6 +113,7 @@ agreement for further details.
 ; clk50Mhz          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk50Mhz }          ;
 ; esp_tx            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { esp_tx }            ;
 ; fb2bin:inst10|Ma0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fb2bin:inst10|Ma0 } ;
+; TX_LED_CAR        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { TX_LED_CAR }        ;
 +-------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------+
 
 
@@ -122,9 +122,9 @@ agreement for further details.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 175.32 MHz ; 175.32 MHz      ; fb2bin:inst10|Ma0 ;      ;
-; 215.33 MHz ; 215.33 MHz      ; clk50Mhz          ;      ;
-; 349.16 MHz ; 349.16 MHz      ; BOUD_RATE:3|fout  ;      ;
+; 180.18 MHz ; 180.18 MHz      ; fb2bin:inst10|Ma0 ;      ;
+; 215.29 MHz ; 215.29 MHz      ; clk50Mhz          ;      ;
+; 329.82 MHz ; 329.82 MHz      ; BOUD_RATE:3|fout  ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -134,9 +134,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; fb2bin:inst10|Ma0 ; -5.350 ; -19.936       ;
-; clk50Mhz          ; -3.644 ; -337.446      ;
-; BOUD_RATE:3|fout  ; -2.330 ; -59.456       ;
+; fb2bin:inst10|Ma0 ; -4.747 ; -18.659       ;
+; clk50Mhz          ; -3.645 ; -318.965      ;
+; BOUD_RATE:3|fout  ; -2.331 ; -104.531      ;
 +-------------------+--------+---------------+
 
 
@@ -145,9 +145,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk50Mhz          ; 0.323 ; 0.000         ;
 ; BOUD_RATE:3|fout  ; 0.340 ; 0.000         ;
-; fb2bin:inst10|Ma0 ; 0.465 ; 0.000         ;
+; clk50Mhz          ; 0.341 ; 0.000         ;
+; fb2bin:inst10|Ma0 ; 0.588 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -156,8 +156,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; esp_tx           ; -2.035 ; -2.035        ;
-; BOUD_RATE:3|fout ; -1.532 ; -24.676       ;
+; TX_LED_CAR       ; -2.408 ; -2.408        ;
+; esp_tx           ; -1.614 ; -1.614        ;
+; BOUD_RATE:3|fout ; -1.567 ; -38.725       ;
 +------------------+--------+---------------+
 
 
@@ -166,8 +167,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; BOUD_RATE:3|fout ; 1.622 ; 0.000         ;
-; esp_tx           ; 2.178 ; 0.000         ;
+; esp_tx           ; 1.419 ; 0.000         ;
+; BOUD_RATE:3|fout ; 1.497 ; 0.000         ;
+; TX_LED_CAR       ; 2.335 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -176,10 +178,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; clk50Mhz          ; -3.000 ; -216.256             ;
+; clk50Mhz          ; -3.000 ; -227.480             ;
+; TX_LED_CAR        ; -3.000 ; -4.403               ;
 ; esp_tx            ; -3.000 ; -4.403               ;
-; BOUD_RATE:3|fout  ; -1.403 ; -49.105              ;
-; fb2bin:inst10|Ma0 ; 0.361  ; 0.000                ;
+; BOUD_RATE:3|fout  ; -1.403 ; -82.777              ;
+; fb2bin:inst10|Ma0 ; 0.436  ; 0.000                ;
 +-------------------+--------+----------------------+
 
 
@@ -194,9 +197,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 175.75 MHz ; 175.75 MHz      ; fb2bin:inst10|Ma0 ;      ;
-; 231.37 MHz ; 231.37 MHz      ; clk50Mhz          ;      ;
-; 385.36 MHz ; 385.36 MHz      ; BOUD_RATE:3|fout  ;      ;
+; 181.42 MHz ; 181.42 MHz      ; fb2bin:inst10|Ma0 ;      ;
+; 232.13 MHz ; 232.13 MHz      ; clk50Mhz          ;      ;
+; 361.4 MHz  ; 361.4 MHz       ; BOUD_RATE:3|fout  ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -206,9 +209,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; fb2bin:inst10|Ma0 ; -5.171 ; -19.049       ;
-; clk50Mhz          ; -3.322 ; -296.532      ;
-; BOUD_RATE:3|fout  ; -2.091 ; -51.995       ;
+; fb2bin:inst10|Ma0 ; -4.623 ; -17.627       ;
+; clk50Mhz          ; -3.308 ; -278.626      ;
+; BOUD_RATE:3|fout  ; -2.097 ; -92.424       ;
 +-------------------+--------+---------------+
 
 
@@ -217,9 +220,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk50Mhz          ; 0.290 ; 0.000         ;
 ; BOUD_RATE:3|fout  ; 0.305 ; 0.000         ;
-; fb2bin:inst10|Ma0 ; 0.415 ; 0.000         ;
+; clk50Mhz          ; 0.306 ; 0.000         ;
+; fb2bin:inst10|Ma0 ; 0.534 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -228,8 +231,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; esp_tx           ; -1.777 ; -1.777        ;
-; BOUD_RATE:3|fout ; -1.323 ; -21.187       ;
+; TX_LED_CAR       ; -2.130 ; -2.130        ;
+; esp_tx           ; -1.412 ; -1.412        ;
+; BOUD_RATE:3|fout ; -1.356 ; -33.467       ;
 +------------------+--------+---------------+
 
 
@@ -238,8 +242,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; BOUD_RATE:3|fout ; 1.482 ; 0.000         ;
-; esp_tx           ; 1.983 ; 0.000         ;
+; esp_tx           ; 1.316 ; 0.000         ;
+; BOUD_RATE:3|fout ; 1.380 ; 0.000         ;
+; TX_LED_CAR       ; 2.129 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -248,10 +253,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk50Mhz          ; -3.000 ; -216.256            ;
+; clk50Mhz          ; -3.000 ; -227.480            ;
+; TX_LED_CAR        ; -3.000 ; -4.403              ;
 ; esp_tx            ; -3.000 ; -4.403              ;
-; BOUD_RATE:3|fout  ; -1.403 ; -49.105             ;
-; fb2bin:inst10|Ma0 ; 0.392  ; 0.000               ;
+; BOUD_RATE:3|fout  ; -1.403 ; -82.777             ;
+; fb2bin:inst10|Ma0 ; 0.354  ; 0.000               ;
 +-------------------+--------+---------------------+
 
 
@@ -266,9 +272,9 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; fb2bin:inst10|Ma0 ; -2.105 ; -7.736        ;
-; clk50Mhz          ; -1.092 ; -59.393       ;
-; BOUD_RATE:3|fout  ; -1.030 ; -17.850       ;
+; fb2bin:inst10|Ma0 ; -1.989 ; -7.447        ;
+; clk50Mhz          ; -1.096 ; -52.696       ;
+; BOUD_RATE:3|fout  ; -1.045 ; -33.382       ;
 +-------------------+--------+---------------+
 
 
@@ -277,9 +283,9 @@ No synchronizer chains to report.
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk50Mhz          ; 0.141 ; 0.000         ;
 ; BOUD_RATE:3|fout  ; 0.147 ; 0.000         ;
-; fb2bin:inst10|Ma0 ; 0.217 ; 0.000         ;
+; clk50Mhz          ; 0.148 ; 0.000         ;
+; fb2bin:inst10|Ma0 ; 0.214 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -288,8 +294,9 @@ No synchronizer chains to report.
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; esp_tx           ; -0.531 ; -0.531        ;
-; BOUD_RATE:3|fout ; -0.067 ; -0.755        ;
+; TX_LED_CAR       ; -0.648 ; -0.648        ;
+; esp_tx           ; -0.283 ; -0.283        ;
+; BOUD_RATE:3|fout ; -0.091 ; -2.011        ;
 +------------------+--------+---------------+
 
 
@@ -298,8 +305,9 @@ No synchronizer chains to report.
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; BOUD_RATE:3|fout ; 0.684 ; 0.000         ;
-; esp_tx           ; 1.118 ; 0.000         ;
+; BOUD_RATE:3|fout ; 0.637 ; 0.000         ;
+; esp_tx           ; 0.749 ; 0.000         ;
+; TX_LED_CAR       ; 1.167 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -308,10 +316,11 @@ No synchronizer chains to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk50Mhz          ; -3.000 ; -160.083            ;
-; esp_tx            ; -3.000 ; -4.091              ;
-; BOUD_RATE:3|fout  ; -1.000 ; -35.000             ;
-; fb2bin:inst10|Ma0 ; 0.322  ; 0.000               ;
+; clk50Mhz          ; -3.000 ; -168.605            ;
+; esp_tx            ; -3.000 ; -4.116              ;
+; TX_LED_CAR        ; -3.000 ; -4.094              ;
+; BOUD_RATE:3|fout  ; -1.000 ; -59.000             ;
+; fb2bin:inst10|Ma0 ; 0.362  ; 0.000               ;
 +-------------------+--------+---------------------+
 
 
@@ -326,16 +335,18 @@ No synchronizer chains to report.
 +--------------------+----------+-------+----------+---------+---------------------+
 ; Clock              ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack   ; -5.350   ; 0.141 ; -2.035   ; 0.684   ; -3.000              ;
-;  BOUD_RATE:3|fout  ; -2.330   ; 0.147 ; -1.532   ; 0.684   ; -1.403              ;
-;  clk50Mhz          ; -3.644   ; 0.141 ; N/A      ; N/A     ; -3.000              ;
-;  esp_tx            ; N/A      ; N/A   ; -2.035   ; 1.118   ; -3.000              ;
-;  fb2bin:inst10|Ma0 ; -5.350   ; 0.217 ; N/A      ; N/A     ; 0.322               ;
-; Design-wide TNS    ; -416.838 ; 0.0   ; -26.711  ; 0.0     ; -269.764            ;
-;  BOUD_RATE:3|fout  ; -59.456  ; 0.000 ; -24.676  ; 0.000   ; -49.105             ;
-;  clk50Mhz          ; -337.446 ; 0.000 ; N/A      ; N/A     ; -216.256            ;
-;  esp_tx            ; N/A      ; N/A   ; -2.035   ; 0.000   ; -4.403              ;
-;  fb2bin:inst10|Ma0 ; -19.936  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+; Worst-case Slack   ; -4.747   ; 0.147 ; -2.408   ; 0.637   ; -3.000              ;
+;  BOUD_RATE:3|fout  ; -2.331   ; 0.147 ; -1.567   ; 0.637   ; -1.403              ;
+;  TX_LED_CAR        ; N/A      ; N/A   ; -2.408   ; 1.167   ; -3.000              ;
+;  clk50Mhz          ; -3.645   ; 0.148 ; N/A      ; N/A     ; -3.000              ;
+;  esp_tx            ; N/A      ; N/A   ; -1.614   ; 0.749   ; -3.000              ;
+;  fb2bin:inst10|Ma0 ; -4.747   ; 0.214 ; N/A      ; N/A     ; 0.354               ;
+; Design-wide TNS    ; -442.155 ; 0.0   ; -42.747  ; 0.0     ; -319.063            ;
+;  BOUD_RATE:3|fout  ; -104.531 ; 0.000 ; -38.725  ; 0.000   ; -82.777             ;
+;  TX_LED_CAR        ; N/A      ; N/A   ; -2.408   ; 0.000   ; -4.403              ;
+;  clk50Mhz          ; -318.965 ; 0.000 ; N/A      ; N/A     ; -227.480            ;
+;  esp_tx            ; N/A      ; N/A   ; -1.614   ; 0.000   ; -4.403              ;
+;  fb2bin:inst10|Ma0 ; -18.659  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +--------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -351,6 +362,7 @@ No synchronizer chains to report.
 ; RWheelB      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; RWheelF      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; error_dp     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; CAR_LEDS     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; M_segH[6]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; M_segH[5]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; M_segH[4]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -393,6 +405,7 @@ No synchronizer chains to report.
 ; scl_lm75            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; sda_lm75            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk50Mhz            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; TX_LED_CAR          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; esp_tx              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -416,6 +429,7 @@ No synchronizer chains to report.
 ; RWheelB      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; RWheelF      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; error_dp     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; CAR_LEDS     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; M_segH[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; M_segH[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; M_segH[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -462,6 +476,7 @@ No synchronizer chains to report.
 ; RWheelB      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; RWheelF      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; error_dp     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; CAR_LEDS     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; M_segH[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; M_segH[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; M_segH[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -508,6 +523,7 @@ No synchronizer chains to report.
 ; RWheelB      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; RWheelF      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; error_dp     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; CAR_LEDS     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; M_segH[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; M_segH[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; M_segH[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -547,11 +563,12 @@ No synchronizer chains to report.
 +-------------------+-------------------+----------+----------+----------+----------+
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
-; BOUD_RATE:3|fout  ; BOUD_RATE:3|fout  ; 315      ; 0        ; 0        ; 0        ;
+; BOUD_RATE:3|fout  ; BOUD_RATE:3|fout  ; 533      ; 0        ; 0        ; 0        ;
 ; clk50Mhz          ; BOUD_RATE:3|fout  ; 8        ; 0        ; 0        ; 0        ;
 ; esp_tx            ; BOUD_RATE:3|fout  ; 10       ; 36       ; 0        ; 0        ;
-; BOUD_RATE:3|fout  ; clk50Mhz          ; 63       ; 1        ; 0        ; 0        ;
-; clk50Mhz          ; clk50Mhz          ; 2837     ; 0        ; 0        ; 0        ;
+; TX_LED_CAR        ; BOUD_RATE:3|fout  ; 9        ; 33       ; 0        ; 0        ;
+; BOUD_RATE:3|fout  ; clk50Mhz          ; 9        ; 1        ; 0        ; 0        ;
+; clk50Mhz          ; clk50Mhz          ; 2951     ; 0        ; 0        ; 0        ;
 ; clk50Mhz          ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 12       ; 0        ;
 ; fb2bin:inst10|Ma0 ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 4        ; 4        ;
 +-------------------+-------------------+----------+----------+----------+----------+
@@ -563,11 +580,12 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------+-------------------+----------+----------+----------+----------+
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
-; BOUD_RATE:3|fout  ; BOUD_RATE:3|fout  ; 315      ; 0        ; 0        ; 0        ;
+; BOUD_RATE:3|fout  ; BOUD_RATE:3|fout  ; 533      ; 0        ; 0        ; 0        ;
 ; clk50Mhz          ; BOUD_RATE:3|fout  ; 8        ; 0        ; 0        ; 0        ;
 ; esp_tx            ; BOUD_RATE:3|fout  ; 10       ; 36       ; 0        ; 0        ;
-; BOUD_RATE:3|fout  ; clk50Mhz          ; 63       ; 1        ; 0        ; 0        ;
-; clk50Mhz          ; clk50Mhz          ; 2837     ; 0        ; 0        ; 0        ;
+; TX_LED_CAR        ; BOUD_RATE:3|fout  ; 9        ; 33       ; 0        ; 0        ;
+; BOUD_RATE:3|fout  ; clk50Mhz          ; 9        ; 1        ; 0        ; 0        ;
+; clk50Mhz          ; clk50Mhz          ; 2951     ; 0        ; 0        ; 0        ;
 ; clk50Mhz          ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 12       ; 0        ;
 ; fb2bin:inst10|Ma0 ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 4        ; 4        ;
 +-------------------+-------------------+----------+----------+----------+----------+
@@ -579,8 +597,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------+------------------+----------+----------+----------+----------+
 ; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------+------------------+----------+----------+----------+----------+
-; BOUD_RATE:3|fout ; BOUD_RATE:3|fout ; 136      ; 0        ; 0        ; 0        ;
+; BOUD_RATE:3|fout ; BOUD_RATE:3|fout ; 200      ; 0        ; 0        ; 0        ;
 ; BOUD_RATE:3|fout ; esp_tx           ; 0        ; 0        ; 8        ; 0        ;
+; BOUD_RATE:3|fout ; TX_LED_CAR       ; 0        ; 0        ; 8        ; 0        ;
 +------------------+------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -590,8 +609,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------+------------------+----------+----------+----------+----------+
 ; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------+------------------+----------+----------+----------+----------+
-; BOUD_RATE:3|fout ; BOUD_RATE:3|fout ; 136      ; 0        ; 0        ; 0        ;
+; BOUD_RATE:3|fout ; BOUD_RATE:3|fout ; 200      ; 0        ; 0        ; 0        ;
 ; BOUD_RATE:3|fout ; esp_tx           ; 0        ; 0        ; 8        ; 0        ;
+; BOUD_RATE:3|fout ; TX_LED_CAR       ; 0        ; 0        ; 8        ; 0        ;
 +------------------+------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -617,8 +637,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
 ; Unconstrained Input Port Paths  ; 10    ; 10   ;
-; Unconstrained Output Ports      ; 37    ; 37   ;
-; Unconstrained Output Port Paths ; 125   ; 125  ;
+; Unconstrained Output Ports      ; 38    ; 38   ;
+; Unconstrained Output Port Paths ; 132   ; 132  ;
 +---------------------------------+-------+------+
 
 
@@ -628,6 +648,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target            ; Clock             ; Type ; Status      ;
 +-------------------+-------------------+------+-------------+
 ; BOUD_RATE:3|fout  ; BOUD_RATE:3|fout  ; Base ; Constrained ;
+; TX_LED_CAR        ; TX_LED_CAR        ; Base ; Constrained ;
 ; clk50Mhz          ; clk50Mhz          ; Base ; Constrained ;
 ; esp_tx            ; esp_tx            ; Base ; Constrained ;
 ; fb2bin:inst10|Ma0 ; fb2bin:inst10|Ma0 ; Base ; Constrained ;
@@ -649,6 +670,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; CAR_LEDS    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LWheelB     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LWheelF     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; M_segH[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -704,6 +726,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; CAR_LEDS    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LWheelB     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LWheelF     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; M_segH[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -750,7 +773,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Nov 02 15:24:16 2022
+    Info: Processing started: Fri Nov 04 16:11:51 2022
 Info: Command: quartus_sta Altera_Tutorial -c Altera_Tutorial
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -763,127 +786,137 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name BOUD_RATE:3|fout BOUD_RATE:3|fout
     Info (332105): create_clock -period 1.000 -name clk50Mhz clk50Mhz
+    Info (332105): create_clock -period 1.000 -name TX_LED_CAR TX_LED_CAR
     Info (332105): create_clock -period 1.000 -name esp_tx esp_tx
     Info (332105): create_clock -period 1.000 -name fb2bin:inst10|Ma0 fb2bin:inst10|Ma0
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst13|LwheelB~1  from: datab  to: combout
-    Info (332098): Cell: inst13|LwheelB~2  from: dataa  to: combout
-    Info (332098): Cell: inst13|LwheelB~3  from: dataa  to: combout
+    Info (332098): Cell: inst13|LwheelB~1  from: datac  to: combout
+    Info (332098): Cell: inst13|LwheelB~2  from: datac  to: combout
+    Info (332098): Cell: inst13|LwheelB~3  from: datac  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.350
+Info (332146): Worst-case setup slack is -4.747
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.350             -19.936 fb2bin:inst10|Ma0 
-    Info (332119):    -3.644            -337.446 clk50Mhz 
-    Info (332119):    -2.330             -59.456 BOUD_RATE:3|fout 
-Info (332146): Worst-case hold slack is 0.323
+    Info (332119):    -4.747             -18.659 fb2bin:inst10|Ma0 
+    Info (332119):    -3.645            -318.965 clk50Mhz 
+    Info (332119):    -2.331            -104.531 BOUD_RATE:3|fout 
+Info (332146): Worst-case hold slack is 0.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.323               0.000 clk50Mhz 
     Info (332119):     0.340               0.000 BOUD_RATE:3|fout 
-    Info (332119):     0.465               0.000 fb2bin:inst10|Ma0 
-Info (332146): Worst-case recovery slack is -2.035
+    Info (332119):     0.341               0.000 clk50Mhz 
+    Info (332119):     0.588               0.000 fb2bin:inst10|Ma0 
+Info (332146): Worst-case recovery slack is -2.408
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.035              -2.035 esp_tx 
-    Info (332119):    -1.532             -24.676 BOUD_RATE:3|fout 
-Info (332146): Worst-case removal slack is 1.622
+    Info (332119):    -2.408              -2.408 TX_LED_CAR 
+    Info (332119):    -1.614              -1.614 esp_tx 
+    Info (332119):    -1.567             -38.725 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 1.419
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.622               0.000 BOUD_RATE:3|fout 
-    Info (332119):     2.178               0.000 esp_tx 
+    Info (332119):     1.419               0.000 esp_tx 
+    Info (332119):     1.497               0.000 BOUD_RATE:3|fout 
+    Info (332119):     2.335               0.000 TX_LED_CAR 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -216.256 clk50Mhz 
+    Info (332119):    -3.000            -227.480 clk50Mhz 
+    Info (332119):    -3.000              -4.403 TX_LED_CAR 
     Info (332119):    -3.000              -4.403 esp_tx 
-    Info (332119):    -1.403             -49.105 BOUD_RATE:3|fout 
-    Info (332119):     0.361               0.000 fb2bin:inst10|Ma0 
+    Info (332119):    -1.403             -82.777 BOUD_RATE:3|fout 
+    Info (332119):     0.436               0.000 fb2bin:inst10|Ma0 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst13|LwheelB~1  from: datab  to: combout
-    Info (332098): Cell: inst13|LwheelB~2  from: dataa  to: combout
-    Info (332098): Cell: inst13|LwheelB~3  from: dataa  to: combout
+    Info (332098): Cell: inst13|LwheelB~1  from: datac  to: combout
+    Info (332098): Cell: inst13|LwheelB~2  from: datac  to: combout
+    Info (332098): Cell: inst13|LwheelB~3  from: datac  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.171
+Info (332146): Worst-case setup slack is -4.623
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.171             -19.049 fb2bin:inst10|Ma0 
-    Info (332119):    -3.322            -296.532 clk50Mhz 
-    Info (332119):    -2.091             -51.995 BOUD_RATE:3|fout 
-Info (332146): Worst-case hold slack is 0.290
+    Info (332119):    -4.623             -17.627 fb2bin:inst10|Ma0 
+    Info (332119):    -3.308            -278.626 clk50Mhz 
+    Info (332119):    -2.097             -92.424 BOUD_RATE:3|fout 
+Info (332146): Worst-case hold slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.290               0.000 clk50Mhz 
     Info (332119):     0.305               0.000 BOUD_RATE:3|fout 
-    Info (332119):     0.415               0.000 fb2bin:inst10|Ma0 
-Info (332146): Worst-case recovery slack is -1.777
+    Info (332119):     0.306               0.000 clk50Mhz 
+    Info (332119):     0.534               0.000 fb2bin:inst10|Ma0 
+Info (332146): Worst-case recovery slack is -2.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.777              -1.777 esp_tx 
-    Info (332119):    -1.323             -21.187 BOUD_RATE:3|fout 
-Info (332146): Worst-case removal slack is 1.482
+    Info (332119):    -2.130              -2.130 TX_LED_CAR 
+    Info (332119):    -1.412              -1.412 esp_tx 
+    Info (332119):    -1.356             -33.467 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 1.316
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.482               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.983               0.000 esp_tx 
+    Info (332119):     1.316               0.000 esp_tx 
+    Info (332119):     1.380               0.000 BOUD_RATE:3|fout 
+    Info (332119):     2.129               0.000 TX_LED_CAR 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -216.256 clk50Mhz 
+    Info (332119):    -3.000            -227.480 clk50Mhz 
+    Info (332119):    -3.000              -4.403 TX_LED_CAR 
     Info (332119):    -3.000              -4.403 esp_tx 
-    Info (332119):    -1.403             -49.105 BOUD_RATE:3|fout 
-    Info (332119):     0.392               0.000 fb2bin:inst10|Ma0 
+    Info (332119):    -1.403             -82.777 BOUD_RATE:3|fout 
+    Info (332119):     0.354               0.000 fb2bin:inst10|Ma0 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst13|LwheelB~1  from: datab  to: combout
-    Info (332098): Cell: inst13|LwheelB~2  from: dataa  to: combout
-    Info (332098): Cell: inst13|LwheelB~3  from: dataa  to: combout
+    Info (332098): Cell: inst13|LwheelB~1  from: datac  to: combout
+    Info (332098): Cell: inst13|LwheelB~2  from: datac  to: combout
+    Info (332098): Cell: inst13|LwheelB~3  from: datac  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.105
+Info (332146): Worst-case setup slack is -1.989
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.105              -7.736 fb2bin:inst10|Ma0 
-    Info (332119):    -1.092             -59.393 clk50Mhz 
-    Info (332119):    -1.030             -17.850 BOUD_RATE:3|fout 
-Info (332146): Worst-case hold slack is 0.141
+    Info (332119):    -1.989              -7.447 fb2bin:inst10|Ma0 
+    Info (332119):    -1.096             -52.696 clk50Mhz 
+    Info (332119):    -1.045             -33.382 BOUD_RATE:3|fout 
+Info (332146): Worst-case hold slack is 0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.141               0.000 clk50Mhz 
     Info (332119):     0.147               0.000 BOUD_RATE:3|fout 
-    Info (332119):     0.217               0.000 fb2bin:inst10|Ma0 
-Info (332146): Worst-case recovery slack is -0.531
+    Info (332119):     0.148               0.000 clk50Mhz 
+    Info (332119):     0.214               0.000 fb2bin:inst10|Ma0 
+Info (332146): Worst-case recovery slack is -0.648
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.531              -0.531 esp_tx 
-    Info (332119):    -0.067              -0.755 BOUD_RATE:3|fout 
-Info (332146): Worst-case removal slack is 0.684
+    Info (332119):    -0.648              -0.648 TX_LED_CAR 
+    Info (332119):    -0.283              -0.283 esp_tx 
+    Info (332119):    -0.091              -2.011 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 0.637
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.684               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.118               0.000 esp_tx 
+    Info (332119):     0.637               0.000 BOUD_RATE:3|fout 
+    Info (332119):     0.749               0.000 esp_tx 
+    Info (332119):     1.167               0.000 TX_LED_CAR 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -160.083 clk50Mhz 
-    Info (332119):    -3.000              -4.091 esp_tx 
-    Info (332119):    -1.000             -35.000 BOUD_RATE:3|fout 
-    Info (332119):     0.322               0.000 fb2bin:inst10|Ma0 
+    Info (332119):    -3.000            -168.605 clk50Mhz 
+    Info (332119):    -3.000              -4.116 esp_tx 
+    Info (332119):    -3.000              -4.094 TX_LED_CAR 
+    Info (332119):    -1.000             -59.000 BOUD_RATE:3|fout 
+    Info (332119):     0.362               0.000 fb2bin:inst10|Ma0 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Wed Nov 02 15:24:19 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Fri Nov 04 16:11:55 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 

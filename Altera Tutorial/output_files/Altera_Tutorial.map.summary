@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Nov 02 15:23:59 2022
+Analysis & Synthesis Status : Successful - Fri Nov 04 16:11:31 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Altera_Tutorial
 Top-level Entity Name : Altera_Tutorial_Schematic
 Family : MAX 10
-Total logic elements : 373
-    Total combinational functions : 338
-    Dedicated logic registers : 188
-Total registers : 188
-Total pins : 39
+Total logic elements : 424
+    Total combinational functions : 373
+    Dedicated logic registers : 221
+Total registers : 221
+Total pins : 41
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

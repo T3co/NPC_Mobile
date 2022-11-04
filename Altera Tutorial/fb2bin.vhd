@@ -11,7 +11,7 @@ port ( CLK: IN BIT;
 end;
 
 
-architecture behave of fb2bin is ד
+architecture behave of fb2bin is
 SIGNAL DATA :  bit_vector (7 downto 0);
 begin 
 
