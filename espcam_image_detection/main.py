@@ -1,5 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
+import cv2
 import cvlib as cv
 import urllib.request
 import numpy as np

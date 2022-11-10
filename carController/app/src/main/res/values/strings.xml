@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">carController</string>
+    <string name="f">F</string>
+    <string name="b">B</string>
+    <string name="r">R</string>
+    <string name="l">L</string>
+    <string name="textview">TextView</string>
+    <string name="s">S</string>
+    <string name="_255">255</string>
+    <string name="lights">Lights</string>
+</resources>
