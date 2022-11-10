@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId "com.carcontroller"
-        minSdk 31
-        targetSdk 32
+        minSdk 30
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
