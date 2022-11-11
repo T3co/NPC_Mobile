@@ -1,13 +1,12 @@
 import cv2
 import matplotlib.pyplot as plt
-import cv2
 import cvlib as cv
 import urllib.request
 import numpy as np
 from cvlib.object_detection import draw_bbox
 import concurrent.futures
 
-url = "http://192.168.1.34:81/stream" #cam url stream
+url = "http://192.168.1.34/320x240.jpg" #cam url stream
 im = None #sets the var im to NULL
 
 def run1():
