@@ -93,6 +93,17 @@ set_location_assignment PIN_AB2 -to RWheelB
 set_location_assignment PIN_AA2 -to RWheelF
 set_location_assignment PIN_AB3 -to LWheelB
 set_location_assignment PIN_Y3 -to LWheelF
+set_location_assignment PIN_Y5 -to sda_lm75
+set_location_assignment PIN_AA6 -to scl_lm75
+set_location_assignment PIN_L19 -to error_dp
+set_location_assignment PIN_W5 -to CAR_LEDS
+set_location_assignment PIN_AA15 -to TX_LED_CAR
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_A19 -to led_car
+set_global_assignment -name VHDL_FILE data_spliter.vhd
+set_global_assignment -name VHDL_FILE fb2bin.vhd
 set_global_assignment -name VHDL_FILE bit_9_to_8.vhd
 set_global_assignment -name VHDL_FILE my_tx.vhd
 set_global_assignment -name VHDL_FILE Motor_Ctrl.vhd
@@ -106,13 +117,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name BDF_FILE PWM_ctrl_example.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE MT.vhd
-set_location_assignment PIN_Y5 -to sda_lm75
-set_location_assignment PIN_AA6 -to scl_lm75
-set_location_assignment PIN_L19 -to error_dp
 set_global_assignment -name VHDL_FILE LED_CAR.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_W5 -to CAR_LEDS
-set_location_assignment PIN_AA15 -to TX_LED_CAR
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

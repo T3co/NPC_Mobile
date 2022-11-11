@@ -2,14 +2,14 @@ Library ieee;
 use ieee.std_logic_1164.all;
 
 entity LED_CAR is 
-port( checkBox: in bit_vector(7 downto 0);
+port( Leds: in bit_vector(4 downto 3);
 		Lout: out bit);
 end;
 architecture behave of LED_CAR is 
 begin 
-process(checkBox)
+process(Leds)
 begin
-if checkBox <= "00000001" then Lout <= '0'; else Lout <= '1';
+if Leds <= "1" then Lout <= '1'; else Lout <= '0';
 end if;
 end process;
 end behave;
