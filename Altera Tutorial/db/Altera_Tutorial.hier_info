@@ -14,8 +14,7 @@ LWheelF <= Motor_Ctrl:inst13.LwheelF
 RWheelB <= Motor_Ctrl:inst13.RwheelB
 RWheelF <= Motor_Ctrl:inst13.RwheelF
 error_dp <= pmod_temp_sensor_tcn75a:inst11.i2c_ack_err
-CAR_LEDS <= LED_CAR:inst14.Lout
-TX_LED_CAR => rx:inst12.si
+led_car <= LED_CAR:inst17.Lout
 M_segH[0] <= bin2hex:inst1.seg[0]
 M_segH[1] <= bin2hex:inst1.seg[1]
 M_segH[2] <= bin2hex:inst1.seg[2]
@@ -528,22 +527,37 @@ CLK => DATA[0].CLK
 CLK => DATA[1].CLK
 CLK => DATA[2].CLK
 CLK => DATA[3].CLK
-CLK => DATA[4].CLK
-CLK => DATA[5].CLK
-CLK => DATA[6].CLK
-CLK => DATA[7].CLK
 number[0] => DATA[0].DATAIN
 number[1] => DATA[1].DATAIN
 number[2] => DATA[2].DATAIN
 number[3] => DATA[3].DATAIN
-number[4] => DATA[4].DATAIN
-number[5] => DATA[5].DATAIN
-number[6] => DATA[6].DATAIN
-number[7] => DATA[7].DATAIN
 Ma0 <= Ma0~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Ma1 <= Ma1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Mb0 <= Mb0~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Mb1 <= Mb1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Altera_Tutorial_Schematic|data_spliter:inst16
+data[0] => motor[0].DATAIN
+data[1] => motor[1].DATAIN
+data[2] => motor[2].DATAIN
+data[3] => led[3].DATAIN
+data[3] => motor[3].DATAIN
+data[4] => TBA[4].DATAIN
+data[4] => led[4].DATAIN
+data[5] => TBA[5].DATAIN
+data[6] => TBA[6].DATAIN
+data[7] => TBA[7].DATAIN
+motor[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+motor[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+motor[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+motor[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
+TBA[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
+TBA[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
+TBA[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
+TBA[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Altera_Tutorial_Schematic|rx:5
@@ -594,64 +608,10 @@ data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Altera_Tutorial_Schematic|LED_CAR:inst14
-checkBox[0] => LessThan0.IN16
-checkBox[1] => LessThan0.IN15
-checkBox[2] => LessThan0.IN14
-checkBox[3] => LessThan0.IN13
-checkBox[4] => LessThan0.IN12
-checkBox[5] => LessThan0.IN11
-checkBox[6] => LessThan0.IN10
-checkBox[7] => LessThan0.IN9
+|Altera_Tutorial_Schematic|LED_CAR:inst17
+Leds[3] => ~NO_FANOUT~
+Leds[4] => LessThan0.IN2
 Lout <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Altera_Tutorial_Schematic|rx:inst12
-clk => data[0]~reg0.CLK
-clk => data[1]~reg0.CLK
-clk => data[2]~reg0.CLK
-clk => data[3]~reg0.CLK
-clk => data[4]~reg0.CLK
-clk => data[5]~reg0.CLK
-clk => data[6]~reg0.CLK
-clk => data[7]~reg0.CLK
-clk => stop_bit.CLK
-clk => tmp[0].CLK
-clk => tmp[1].CLK
-clk => tmp[2].CLK
-clk => tmp[3].CLK
-clk => tmp[4].CLK
-clk => tmp[5].CLK
-clk => tmp[6].CLK
-clk => tmp[7].CLK
-clk => start_bit.CLK
-clk => cnt[0].CLK
-clk => cnt[1].CLK
-clk => cnt[2].CLK
-clk => cnt[3].CLK
-clk => cnt[4].CLK
-clk => cnt[5].CLK
-clk => cnt[6].CLK
-clk => cnt[7].CLK
-si => start_bit.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => tmp.DATAB
-si => stop_bit.DATAB
-si => start.CLK
-data[0] <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[1] <= data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[2] <= data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[3] <= data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[4] <= data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[5] <= data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Altera_Tutorial_Schematic|bin2hex:inst1

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Fri Nov 04 16:11:31 2022
+Mon Nov 07 13:57:16 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,16 +52,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 04 16:11:31 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 07 13:57:16 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 424                                         ;
-;     Total combinational functions  ; 373                                         ;
-;     Dedicated logic registers      ; 221                                         ;
-; Total registers                    ; 221                                         ;
-; Total pins                         ; 41                                          ;
+; Total logic elements               ; 375                                         ;
+;     Total combinational functions  ; 336                                         ;
+;     Dedicated logic registers      ; 192                                         ;
+; Total registers                    ; 192                                         ;
+; Total pins                         ; 40                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,7 +162,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -170,31 +170,31 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; bit_9_to_8.vhd                   ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/bit_9_to_8.vhd                ;         ;
-; my_tx.vhd                        ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd                     ;         ;
-; Motor_Ctrl.vhd                   ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd                ;         ;
-; PWM_Motor.vhd                    ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/PWM_Motor.vhd                 ;         ;
-; Altera_Tutorial_Schematic.bdf    ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus Projects/Project_Moob/Altera Tutorial/Altera_Tutorial_Schematic.bdf ;         ;
-; rx.vhd                           ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/rx.vhd                        ;         ;
-; BOUD_RATE.vhd                    ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/BOUD_RATE.vhd                 ;         ;
-; led.vhd                          ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/led.vhd                       ;         ;
-; LED_CAR.vhd                      ; yes             ; User VHDL File                     ; D:/Quartus Projects/Project_Moob/Altera Tutorial/LED_CAR.vhd                   ;         ;
-; pmod_temp_sensor_tcn75a.vhd      ; yes             ; Auto-Found VHDL File               ; D:/Quartus Projects/Project_Moob/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd   ;         ;
-; i2c_master.vhd                   ; yes             ; Auto-Found VHDL File               ; D:/Quartus Projects/Project_Moob/Altera Tutorial/i2c_master.vhd                ;         ;
-; fb2bin.vhd                       ; yes             ; Auto-Found VHDL File               ; D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd                    ;         ;
-; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File               ; D:/Quartus Projects/Project_Moob/Altera Tutorial/bin2hex.vhd                   ;         ;
-; spliter.vhd                      ; yes             ; Auto-Found VHDL File               ; D:/Quartus Projects/Project_Moob/Altera Tutorial/spliter.vhd                   ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; data_spliter.vhd                 ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/data_spliter.vhd              ;         ;
+; fb2bin.vhd                       ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd                    ;         ;
+; bit_9_to_8.vhd                   ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/bit_9_to_8.vhd                ;         ;
+; my_tx.vhd                        ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/my_tx.vhd                     ;         ;
+; Motor_Ctrl.vhd                   ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd                ;         ;
+; PWM_Motor.vhd                    ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/PWM_Motor.vhd                 ;         ;
+; Altera_Tutorial_Schematic.bdf    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Altera_Tutorial_Schematic.bdf ;         ;
+; rx.vhd                           ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/rx.vhd                        ;         ;
+; BOUD_RATE.vhd                    ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd                 ;         ;
+; led.vhd                          ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/led.vhd                       ;         ;
+; LED_CAR.vhd                      ; yes             ; User VHDL File                     ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/LED_CAR.vhd                   ;         ;
+; pmod_temp_sensor_tcn75a.vhd      ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd   ;         ;
+; i2c_master.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/i2c_master.vhd                ;         ;
+; bin2hex.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/bin2hex.vhd                   ;         ;
+; spliter.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/spliter.vhd                   ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -202,30 +202,30 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 424            ;
+; Estimated Total logic elements              ; 375            ;
 ;                                             ;                ;
-; Total combinational functions               ; 373            ;
+; Total combinational functions               ; 336            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 164            ;
-;     -- 3 input functions                    ; 65             ;
-;     -- <=2 input functions                  ; 144            ;
+;     -- 4 input functions                    ; 143            ;
+;     -- 3 input functions                    ; 61             ;
+;     -- <=2 input functions                  ; 132            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 277            ;
-;     -- arithmetic mode                      ; 96             ;
+;     -- normal mode                          ; 247            ;
+;     -- arithmetic mode                      ; 89             ;
 ;                                             ;                ;
-; Total registers                             ; 221            ;
-;     -- Dedicated logic registers            ; 221            ;
+; Total registers                             ; 192            ;
+;     -- Dedicated logic registers            ; 192            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 41             ;
+; I/O pins                                    ; 40             ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50Mhz~input ;
-; Maximum fan-out                             ; 160            ;
-; Total fan-out                               ; 1848           ;
-; Average fan-out                             ; 2.73           ;
+; Maximum fan-out                             ; 156            ;
+; Total fan-out                               ; 1639           ;
+; Average fan-out                             ; 2.69           ;
 +---------------------------------------------+----------------+
 
 
@@ -234,22 +234,20 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name               ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic          ; 373 (0)             ; 221 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
+; |Altera_Tutorial_Schematic          ; 336 (0)             ; 192 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
 ;    |BOUD_RATE:3|                    ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3                                            ; BOUD_RATE                 ; work         ;
-;    |LED_CAR:inst14|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|LED_CAR:inst14                                         ; LED_CAR                   ; work         ;
 ;    |Motor_Ctrl:inst13|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
 ;    |PWM_Motor:inst9|                ; 24 (24)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
 ;    |bin2hex:inst1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst2|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst5|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5                                          ; bin2hex                   ; work         ;
-;    |fb2bin:inst10|                  ; 8 (8)               ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|fb2bin:inst10                                          ; fb2bin                    ; work         ;
+;    |fb2bin:inst10|                  ; 5 (5)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|fb2bin:inst10                                          ; fb2bin                    ; work         ;
 ;    |led:inst7|                      ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|led:inst7                                              ; led                       ; work         ;
 ;    |my_tx:inst|                     ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst                                             ; my_tx                     ; work         ;
 ;    |pmod_temp_sensor_tcn75a:inst11| ; 151 (61)            ; 95 (50)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
 ;       |i2c_master:i2c_master_0|     ; 90 (90)             ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
-;    |rx:5|                           ; 36 (36)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
-;    |rx:inst12|                      ; 33 (33)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:inst12                                              ; rx                        ; work         ;
+;    |rx:5|                           ; 37 (37)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -311,15 +309,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[4]      ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7] ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[1..3,5] ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[6] ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[1..6]   ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7] ;
-; rx:inst12|data[0]                                                      ; Lost fanout                                                                   ;
-; rx:inst12|tmp[0]                                                       ; Lost fanout                                                                   ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_addr[5]                             ; Stuck at GND due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[6]      ; Stuck at GND due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                             ; Stuck at VCC due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7]      ; Stuck at VCC due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7]                          ; Stuck at GND due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7]      ; Stuck at GND due to stuck port data_in                                        ;
-; Total Number of Removed Registers = 30                                 ;                                                                               ;
+; Total Number of Removed Registers = 28                                 ;                                                                               ;
 +------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 
@@ -328,7 +324,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------------+---------------------------+-------------------------------------------------------------------+
 ; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register                            ;
 +-----------------------------------------------+---------------------------+-------------------------------------------------------------------+
-; rx:inst12|data[0]                             ; Lost Fanouts              ; rx:inst12|tmp[0]                                                  ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7] ; Stuck at GND              ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7] ;
 ;                                               ; due to stuck port data_in ;                                                                   ;
 +-----------------------------------------------+---------------------------+-------------------------------------------------------------------+
@@ -339,12 +334,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 221   ;
-; Number of registers using Synchronous Clear  ; 71    ;
+; Total registers                              ; 192   ;
+; Number of registers using Synchronous Clear  ; 63    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 99    ;
+; Number of registers using Clock Enable       ; 84    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -369,8 +364,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 ; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7] ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|fb2bin:inst10|Mb0                                                 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_addr[5]                        ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 12 LEs               ; 28 LEs                 ; Yes        ; |Altera_Tutorial_Schematic|fb2bin:inst10|Mb1                                                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                        ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[0] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|Selector0                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
@@ -404,28 +399,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
-; cycloneiii_ff         ; 221                         ;
-;     CLR               ; 3                           ;
+; boundary_port         ; 40                          ;
+; cycloneiii_ff         ; 192                         ;
+;     CLR               ; 2                           ;
 ;     CLR SCLR          ; 8                           ;
-;     ENA               ; 60                          ;
-;     ENA CLR SCLR      ; 16                          ;
+;     ENA               ; 53                          ;
+;     ENA CLR SCLR      ; 8                           ;
 ;     ENA SCLR          ; 23                          ;
 ;     SCLR              ; 24                          ;
-;     plain             ; 87                          ;
+;     plain             ; 74                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 378                         ;
-;     arith             ; 96                          ;
-;         2 data inputs ; 95                          ;
+; cycloneiii_lcell_comb ; 342                         ;
+;     arith             ; 89                          ;
+;         2 data inputs ; 88                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 282                         ;
+;     normal            ; 253                         ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 64                          ;
-;         4 data inputs ; 164                         ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 60                          ;
+;         4 data inputs ; 143                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.78                        ;
+; Average LUT depth     ; 2.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -444,105 +439,108 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 04 16:11:12 2022
+    Info: Processing started: Mon Nov 07 13:57:05 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file data_spliter.vhd
+    Info (12022): Found design unit 1: data_spliter-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/data_spliter.vhd Line: 9
+    Info (12023): Found entity 1: data_spliter File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/data_spliter.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file fb2bin.vhd
+    Info (12022): Found design unit 1: fb2bin-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 14
+    Info (12023): Found entity 1: fb2bin File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bit_9_to_8.vhd
-    Info (12022): Found design unit 1: bit_9_to_8-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/bit_9_to_8.vhd Line: 8
-    Info (12023): Found entity 1: bit_9_to_8 File: D:/Quartus Projects/Project_Moob/Altera Tutorial/bit_9_to_8.vhd Line: 3
+    Info (12022): Found design unit 1: bit_9_to_8-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/bit_9_to_8.vhd Line: 8
+    Info (12023): Found entity 1: bit_9_to_8 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/bit_9_to_8.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file my_tx.vhd
-    Info (12022): Found design unit 1: my_tx-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 8
-    Info (12023): Found entity 1: my_tx File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 3
+    Info (12022): Found design unit 1: my_tx-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/my_tx.vhd Line: 8
+    Info (12023): Found entity 1: my_tx File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/my_tx.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file motor_ctrl.vhd
-    Info (12022): Found design unit 1: Motor_Ctrl-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 14
-    Info (12023): Found entity 1: Motor_Ctrl File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 3
+    Info (12022): Found design unit 1: Motor_Ctrl-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 14
+    Info (12023): Found entity 1: Motor_Ctrl File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file pwm_motor.vhd
-    Info (12022): Found design unit 1: PWM_Motor-RTL File: D:/Quartus Projects/Project_Moob/Altera Tutorial/PWM_Motor.vhd Line: 7
-    Info (12023): Found entity 1: PWM_Motor File: D:/Quartus Projects/Project_Moob/Altera Tutorial/PWM_Motor.vhd Line: 3
+    Info (12022): Found design unit 1: PWM_Motor-RTL File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/PWM_Motor.vhd Line: 7
+    Info (12023): Found entity 1: PWM_Motor File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/PWM_Motor.vhd Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file altera_tutorial_schematic.bdf
     Info (12023): Found entity 1: Altera_Tutorial_Schematic
 Warning (12019): Can't analyze file -- file RX_ALTERA.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
-    Info (12022): Found design unit 1: rx-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/rx.vhd Line: 7
-    Info (12023): Found entity 1: rx File: D:/Quartus Projects/Project_Moob/Altera Tutorial/rx.vhd Line: 3
+    Info (12022): Found design unit 1: rx-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/rx.vhd Line: 7
+    Info (12023): Found entity 1: rx File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/rx.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file boud_rate.vhd
-    Info (12022): Found design unit 1: BOUD_RATE-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/BOUD_RATE.vhd Line: 7
-    Info (12023): Found entity 1: BOUD_RATE File: D:/Quartus Projects/Project_Moob/Altera Tutorial/BOUD_RATE.vhd Line: 3
+    Info (12022): Found design unit 1: BOUD_RATE-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd Line: 7
+    Info (12023): Found entity 1: BOUD_RATE File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file led.vhd
-    Info (12022): Found design unit 1: led-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/led.vhd Line: 10
-    Info (12023): Found entity 1: led File: D:/Quartus Projects/Project_Moob/Altera Tutorial/led.vhd Line: 5
+    Info (12022): Found design unit 1: led-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/led.vhd Line: 10
+    Info (12023): Found entity 1: led File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/led.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_ctrl_example.bdf
     Info (12023): Found entity 1: PWM_ctrl_example
 Info (12021): Found 2 design units, including 1 entities, in source file mt.vhd
-    Info (12022): Found design unit 1: MT-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/MT.vhd Line: 12
-    Info (12023): Found entity 1: MT File: D:/Quartus Projects/Project_Moob/Altera Tutorial/MT.vhd Line: 4
+    Info (12022): Found design unit 1: MT-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/MT.vhd Line: 12
+    Info (12023): Found entity 1: MT File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/MT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file led_car.vhd
-    Info (12022): Found design unit 1: LED_CAR-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/LED_CAR.vhd Line: 8
-    Info (12023): Found entity 1: LED_CAR File: D:/Quartus Projects/Project_Moob/Altera Tutorial/LED_CAR.vhd Line: 4
+    Info (12022): Found design unit 1: LED_CAR-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/LED_CAR.vhd Line: 8
+    Info (12023): Found entity 1: LED_CAR File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/LED_CAR.vhd Line: 4
 Info (12127): Elaborating entity "Altera_Tutorial_Schematic" for the top level hierarchy
 Info (12128): Elaborating entity "my_tx" for hierarchy "my_tx:inst"
-Warning (10492): VHDL Process Statement warning at my_tx.vhd(14): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at my_tx.vhd(14): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/my_tx.vhd Line: 14
 Info (12128): Elaborating entity "BOUD_RATE" for hierarchy "BOUD_RATE:3"
 Info (12128): Elaborating entity "bit_9_to_8" for hierarchy "bit_9_to_8:inst20"
 Warning (12125): Using design file pmod_temp_sensor_tcn75a.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: pmod_temp_sensor_tcn75a-behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 21
-    Info (12023): Found entity 1: pmod_temp_sensor_tcn75a File: D:/Quartus Projects/Project_Moob/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 7
+    Info (12022): Found design unit 1: pmod_temp_sensor_tcn75a-behavior File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 21
+    Info (12023): Found entity 1: pmod_temp_sensor_tcn75a File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 7
 Info (12128): Elaborating entity "pmod_temp_sensor_tcn75a" for hierarchy "pmod_temp_sensor_tcn75a:inst11"
 Warning (12125): Using design file i2c_master.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: i2c_master-logic File: D:/Quartus Projects/Project_Moob/Altera Tutorial/i2c_master.vhd Line: 54
-    Info (12023): Found entity 1: i2c_master File: D:/Quartus Projects/Project_Moob/Altera Tutorial/i2c_master.vhd Line: 36
-Info (12128): Elaborating entity "i2c_master" for hierarchy "pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0" File: D:/Quartus Projects/Project_Moob/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 55
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/i2c_master.vhd Line: 54
+    Info (12023): Found entity 1: i2c_master File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/i2c_master.vhd Line: 36
+Info (12128): Elaborating entity "i2c_master" for hierarchy "pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0" File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 55
 Info (12128): Elaborating entity "led" for hierarchy "led:inst7"
 Info (12128): Elaborating entity "Motor_Ctrl" for hierarchy "Motor_Ctrl:inst13"
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelF", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelB", which holds its previous value in one or more paths through the process File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "RwheelB" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "RwheelF" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "LwheelB" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
-Info (10041): Inferred latch for "LwheelF" at Motor_Ctrl.vhd(17) File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelF", which holds its previous value in one or more paths through the process File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelF", which holds its previous value in one or more paths through the process File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(17): inferring latch(es) for signal or variable "RwheelB", which holds its previous value in one or more paths through the process File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "RwheelB" at Motor_Ctrl.vhd(17) File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "RwheelF" at Motor_Ctrl.vhd(17) File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "LwheelB" at Motor_Ctrl.vhd(17) File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
+Info (10041): Inferred latch for "LwheelF" at Motor_Ctrl.vhd(17) File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 17
 Info (12128): Elaborating entity "PWM_Motor" for hierarchy "PWM_Motor:inst9"
-Warning (12125): Using design file fb2bin.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: fb2bin-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 14
-    Info (12023): Found entity 1: fb2bin File: D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 4
 Info (12128): Elaborating entity "fb2bin" for hierarchy "fb2bin:inst10"
+Info (12128): Elaborating entity "data_spliter" for hierarchy "data_spliter:inst16"
 Info (12128): Elaborating entity "rx" for hierarchy "rx:5"
-Info (12128): Elaborating entity "LED_CAR" for hierarchy "LED_CAR:inst14"
+Info (12128): Elaborating entity "LED_CAR" for hierarchy "LED_CAR:inst17"
 Warning (12125): Using design file bin2hex.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: bin2hex-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/bin2hex.vhd Line: 7
-    Info (12023): Found entity 1: bin2hex File: D:/Quartus Projects/Project_Moob/Altera Tutorial/bin2hex.vhd Line: 3
+    Info (12022): Found design unit 1: bin2hex-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/bin2hex.vhd Line: 7
+    Info (12023): Found entity 1: bin2hex File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/bin2hex.vhd Line: 3
 Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:inst1"
 Warning (12125): Using design file spliter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SPLITER-behave File: D:/Quartus Projects/Project_Moob/Altera Tutorial/spliter.vhd Line: 7
-    Info (12023): Found entity 1: SPLITER File: D:/Quartus Projects/Project_Moob/Altera Tutorial/spliter.vhd Line: 3
+    Info (12022): Found design unit 1: SPLITER-behave File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/spliter.vhd Line: 7
+    Info (12023): Found entity 1: SPLITER File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/spliter.vhd Line: 3
 Info (12128): Elaborating entity "SPLITER" for hierarchy "SPLITER:inst3"
-Warning (13012): Latch Motor_Ctrl:inst13|LwheelB has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 8
-Warning (13012): Latch Motor_Ctrl:inst13|LwheelF has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 10
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 8
-Warning (13012): Latch Motor_Ctrl:inst13|RwheelB has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 8
-Warning (13012): Latch Motor_Ctrl:inst13|RwheelF has unsafe behavior File: D:/Quartus Projects/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 12
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: D:/Quartus Projects/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 8
-Info (13000): Registers with preset signals will power-up high File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 6
+Warning (13012): Latch Motor_Ctrl:inst13|LwheelB has unsafe behavior File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 8
+Warning (13012): Latch Motor_Ctrl:inst13|LwheelF has unsafe behavior File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 8
+Warning (13012): Latch Motor_Ctrl:inst13|RwheelB has unsafe behavior File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 11
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 8
+Warning (13012): Latch Motor_Ctrl:inst13|RwheelF has unsafe behavior File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 12
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fb2bin:inst10|Ma1 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 8
+Info (13000): Registers with preset signals will power-up high File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/my_tx.vhd Line: 6
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register my_tx:inst|so will power up to High File: D:/Quartus Projects/Project_Moob/Altera Tutorial/my_tx.vhd Line: 6
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+    Critical Warning (18010): Register my_tx:inst|so will power up to High File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/my_tx.vhd Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 468 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 419 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 36 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 427 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Fri Nov 04 16:11:31 2022
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (21061): Implemented 379 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Mon Nov 07 13:57:16 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
