@@ -9,7 +9,7 @@ architecture behave of LED_CAR is
 begin 
 process(Leds)
 begin
-if Leds <= "1" then Lout <= '1'; else Lout <= '0';
+if Leds <= "1" then Lout <= '0'; else Lout <= '1';
 end if;
 end process;
 end behave;

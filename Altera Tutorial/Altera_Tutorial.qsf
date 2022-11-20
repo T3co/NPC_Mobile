@@ -89,19 +89,17 @@ set_location_assignment PIN_W10 -to esp_tx
 set_location_assignment PIN_D22 -to breatheLED
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_AB2 -to RWheelB
-set_location_assignment PIN_AA2 -to RWheelF
-set_location_assignment PIN_AB3 -to LWheelB
-set_location_assignment PIN_Y3 -to LWheelF
-set_location_assignment PIN_Y5 -to sda_lm75
-set_location_assignment PIN_AA6 -to scl_lm75
+set_location_assignment PIN_W7 -to RWheelB
+set_location_assignment PIN_V5 -to RWheelF
+set_location_assignment PIN_AA15 -to LWheelB
+set_location_assignment PIN_W13 -to LWheelF
+set_location_assignment PIN_Y11 -to sda_lm75
+set_location_assignment PIN_AB13 -to scl_lm75
 set_location_assignment PIN_L19 -to error_dp
-set_location_assignment PIN_W5 -to CAR_LEDS
-set_location_assignment PIN_AA15 -to TX_LED_CAR
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_A19 -to led_car
+set_location_assignment PIN_W11 -to led_car
 set_global_assignment -name VHDL_FILE data_spliter.vhd
 set_global_assignment -name VHDL_FILE fb2bin.vhd
 set_global_assignment -name VHDL_FILE bit_9_to_8.vhd
