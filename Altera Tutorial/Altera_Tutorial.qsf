@@ -84,8 +84,8 @@ set_location_assignment PIN_J18 -to r_segH[3]
 set_location_assignment PIN_E19 -to r_segH[4]
 set_location_assignment PIN_E20 -to r_segH[5]
 set_location_assignment PIN_F18 -to r_segH[6]
-set_location_assignment PIN_W9 -to esp_rx
-set_location_assignment PIN_W10 -to esp_tx
+set_location_assignment PIN_W10 -to esp_rx
+set_location_assignment PIN_V10 -to esp_tx
 set_location_assignment PIN_D22 -to breatheLED
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
