@@ -4,163 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "esp_rx",
+					"name" : "LwheelB",
 					"strict" : false
 				},
 				{
-					"name" : "breatheLED",
+					"name" : "LwheelF",
 					"strict" : false
 				},
 				{
-					"name" : "LWheelB",
+					"name" : "RwheelB",
 					"strict" : false
 				},
 				{
-					"name" : "LWheelF",
+					"name" : "RwheelF",
 					"strict" : false
 				},
 				{
-					"name" : "RWheelB",
+					"name" : "PWM_Motor_1KHz",
 					"strict" : false
 				},
 				{
-					"name" : "RWheelF",
+					"name" : "Ma0",
 					"strict" : false
 				},
 				{
-					"name" : "error_dp",
+					"name" : "Ma1",
 					"strict" : false
 				},
 				{
-					"name" : "led_car",
+					"name" : "Mb1",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[6]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segH[5]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segH[4]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segH[3]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segH[2]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segH[1]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segH[0]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[6]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[5]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[4]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[3]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[2]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[1]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[0]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[6]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[5]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[4]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[3]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[2]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[1]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[0]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[6]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[5]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[4]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[3]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[2]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[1]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[0]",
-					"strict" : false
-				},
-				{
-					"name" : "scl_lm75",
-					"strict" : false
-				},
-				{
-					"name" : "sda_lm75",
-					"strict" : false
-				},
-				{
-					"name" : "clk50Mhz",
-					"strict" : false
-				},
-				{
-					"name" : "esp_tx",
+					"name" : "Mb0",
 					"strict" : false
 				}
 			]
