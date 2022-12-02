@@ -94,9 +94,9 @@ set_location_assignment PIN_V5 -to RWheelF
 set_location_assignment PIN_AA15 -to LWheelB
 set_location_assignment PIN_W13 -to LWheelF
 set_location_assignment PIN_Y11 -to sda_lm75
-set_location_assignment PIN_AB13 -to scl_lm75
+set_location_assignment PIN_W11 -to scl_lm75
 set_location_assignment PIN_L19 -to error_dp
-set_location_assignment PIN_W11 -to led_car
+set_location_assignment PIN_Y7 -to led_car
 set_global_assignment -name VHDL_FILE data_spliter.vhd
 set_global_assignment -name VHDL_FILE fb2bin.vhd
 set_global_assignment -name VHDL_FILE bit_9_to_8.vhd

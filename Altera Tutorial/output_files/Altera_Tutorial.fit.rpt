@@ -1,5 +1,5 @@
 Fitter report for Altera_Tutorial
-Thu Nov 24 20:11:58 2022
+Mon Nov 28 14:40:31 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -70,15 +70,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 24 20:11:58 2022       ;
+; Fitter Status                      ; Successful - Mon Nov 28 14:40:31 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 367 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 338 / 49,760 ( < 1 % )                      ;
+; Total logic elements               ; 363 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 340 / 49,760 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 192 / 49,760 ( < 1 % )                      ;
 ; Total registers                    ; 192                                         ;
 ; Total pins                         ; 40 / 360 ( 11 % )                           ;
@@ -153,16 +153,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.09        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processors 3-8         ;   1.4%      ;
+;     Processors 2-6         ;   1.8%      ;
 +----------------------------+-------------+
 
 
@@ -188,8 +187,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 633 ) ; 0.00 % ( 0 / 633 )         ; 0.00 % ( 0 / 633 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 633 ) ; 0.00 % ( 0 / 633 )         ; 0.00 % ( 0 / 633 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 635 ) ; 0.00 % ( 0 / 635 )         ; 0.00 % ( 0 / 635 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 635 ) ; 0.00 % ( 0 / 635 )         ; 0.00 % ( 0 / 635 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -212,7 +211,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 617 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 619 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -220,7 +219,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_files/Altera_Tutorial.pin.
+The pin-out file can be found in C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.pin.
 
 
 +----------------------------------------------------------------------+
@@ -228,26 +227,26 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 367 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 175                    ;
-;     -- Register only                        ; 29                     ;
-;     -- Combinational with a register        ; 163                    ;
+; Total logic elements                        ; 363 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 171                    ;
+;     -- Register only                        ; 23                     ;
+;     -- Combinational with a register        ; 169                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 143                    ;
-;     -- 3 input functions                    ; 61                     ;
+;     -- 4 input functions                    ; 144                    ;
+;     -- 3 input functions                    ; 62                     ;
 ;     -- <=2 input functions                  ; 134                    ;
-;     -- Register only                        ; 29                     ;
+;     -- Register only                        ; 23                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 249                    ;
+;     -- normal mode                          ; 251                    ;
 ;     -- arithmetic mode                      ; 89                     ;
 ;                                             ;                        ;
 ; Total registers*                            ; 192 / 51,509 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 192 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 31 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 30 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 40 / 360 ( 11 % )      ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )         ;
@@ -268,11 +267,11 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.3%     ;
-; Peak interconnect usage (total/H/V)         ; 1.3% / 1.6% / 1.1%     ;
+; Peak interconnect usage (total/H/V)         ; 1.6% / 1.9% / 1.3%     ;
 ; Maximum fan-out                             ; 153                    ;
-; Highest non-global fan-out                  ; 31                     ;
-; Total fan-out                               ; 1680                   ;
-; Average fan-out                             ; 2.55                   ;
+; Highest non-global fan-out                  ; 30                     ;
+; Total fan-out                               ; 1679                   ;
+; Average fan-out                             ; 2.57                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -285,26 +284,26 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 367 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 175                   ; 0                              ;
-;     -- Register only                        ; 29                    ; 0                              ;
-;     -- Combinational with a register        ; 163                   ; 0                              ;
+; Total logic elements                        ; 363 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 171                   ; 0                              ;
+;     -- Register only                        ; 23                    ; 0                              ;
+;     -- Combinational with a register        ; 169                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 143                   ; 0                              ;
-;     -- 3 input functions                    ; 61                    ; 0                              ;
+;     -- 4 input functions                    ; 144                   ; 0                              ;
+;     -- 3 input functions                    ; 62                    ; 0                              ;
 ;     -- <=2 input functions                  ; 134                   ; 0                              ;
-;     -- Register only                        ; 29                    ; 0                              ;
+;     -- Register only                        ; 23                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 249                   ; 0                              ;
+;     -- normal mode                          ; 251                   ; 0                              ;
 ;     -- arithmetic mode                      ; 89                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 192                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 192 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 31 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 30 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 40                    ; 0                              ;
@@ -322,8 +321,8 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1686                  ; 8                              ;
-;     -- Registered Connections               ; 740                   ; 0                              ;
+;     -- Total Connections                    ; 1685                  ; 8                              ;
+;     -- Registered Connections               ; 747                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 4                     ; 0                              ;
@@ -386,7 +385,7 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ; breatheLED ; D22   ; 6        ; 78           ; 35           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; error_dp   ; L19   ; 6        ; 78           ; 37           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; esp_rx     ; W10   ; 3        ; 24           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; led_car    ; W11   ; 4        ; 36           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; led_car    ; Y7    ; 3        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; r_segH[0]  ; F20   ; 6        ; 78           ; 35           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; r_segH[1]  ; F19   ; 6        ; 78           ; 40           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; r_segH[2]  ; H19   ; 6        ; 78           ; 45           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -409,7 +408,7 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------------------------------------------------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group                                                            ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------------------------------------------------------------+
-; scl_lm75 ; AB13  ; 4        ; 40           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|scl~1 (inverted)        ;
+; scl_lm75 ; W11   ; 4        ; 36           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|scl~1 (inverted)        ;
 ; sda_lm75 ; Y11   ; 4        ; 36           ; 0            ; 0            ; 9                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|Selector29~0 (inverted) ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+--------------------------------------------------------------------------------+
 
@@ -438,8 +437,8 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ; 1A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ;
 ; 1B       ; 4 / 24 ( 17 % )  ; 2.5V          ; --           ;
 ; 2        ; 0 / 36 ( 0 % )   ; 2.5V          ; --           ;
-; 3        ; 5 / 48 ( 10 % )  ; 2.5V          ; --           ;
-; 4        ; 5 / 48 ( 10 % )  ; 2.5V          ; --           ;
+; 3        ; 6 / 48 ( 13 % )  ; 2.5V          ; --           ;
+; 4        ; 4 / 48 ( 8 % )   ; 2.5V          ; --           ;
 ; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
 ; 6        ; 18 / 60 ( 30 % ) ; 2.5V          ; --           ;
 ; 7        ; 12 / 52 ( 23 % ) ; 2.5V          ; --           ;
@@ -508,7 +507,7 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ; AB10     ; 177        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB11     ; 179        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB12     ; 181        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AB13     ; 183        ; 4        ; scl_lm75                                       ; bidir  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AB13     ; 183        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB14     ; 199        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB15     ; 203        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB16     ; 209        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -902,7 +901,7 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ; W8       ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W9       ; 144        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W10      ; 146        ; 3        ; esp_rx                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
-; W11      ; 173        ; 4        ; led_car                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; W11      ; 173        ; 4        ; scl_lm75                                       ; bidir  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W12      ; 193        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W13      ; 195        ; 4        ; LWheelF                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W14      ; 194        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -920,7 +919,7 @@ The pin-out file can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_f
 ; Y4       ; 151        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y5       ; 137        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y6       ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; Y7       ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; Y7       ; 141        ; 3        ; led_car                                        ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y8       ; 143        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 168        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -993,20 +992,20 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name               ; Library Name ;
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic          ; 367 (1)     ; 192 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 40   ; 0            ; 175 (1)      ; 29 (0)            ; 163 (0)          ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
+; |Altera_Tutorial_Schematic          ; 363 (1)     ; 192 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 40   ; 0            ; 171 (1)      ; 23 (0)            ; 169 (0)          ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
 ;    |BOUD_RATE:3|                    ; 12 (12)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 1 (1)             ; 8 (8)            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3                                            ; BOUD_RATE                 ; work         ;
-;    |Motor_Ctrl:inst13|              ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 3 (3)            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
-;    |PWM_Motor:inst9|                ; 27 (27)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 3 (3)             ; 14 (14)          ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
-;    |bin2hex:inst1|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
-;    |bin2hex:inst2|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
-;    |bin2hex:inst4|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4                                          ; bin2hex                   ; work         ;
+;    |Motor_Ctrl:inst13|              ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 4 (4)            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
+;    |PWM_Motor:inst9|                ; 30 (30)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 5 (5)             ; 12 (12)          ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
+;    |bin2hex:inst1|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
+;    |bin2hex:inst2|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
+;    |bin2hex:inst4|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst5|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5                                          ; bin2hex                   ; work         ;
 ;    |fb2bin:inst10|                  ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0          ; |Altera_Tutorial_Schematic|fb2bin:inst10                                          ; fb2bin                    ; work         ;
 ;    |led:inst7|                      ; 48 (48)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 27 (27)          ; 0          ; |Altera_Tutorial_Schematic|led:inst7                                              ; led                       ; work         ;
 ;    |my_tx:inst|                     ; 20 (20)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 9 (9)            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst                                             ; my_tx                     ; work         ;
-;    |pmod_temp_sensor_tcn75a:inst11| ; 175 (77)    ; 95 (50)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (27)      ; 19 (11)           ; 76 (39)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
-;       |i2c_master:i2c_master_0|     ; 98 (98)     ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 53 (53)      ; 8 (8)             ; 37 (37)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
-;    |rx:5|                           ; 45 (45)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 6 (6)             ; 21 (21)          ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
+;    |pmod_temp_sensor_tcn75a:inst11| ; 174 (77)    ; 95 (50)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 79 (27)      ; 15 (8)            ; 80 (42)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
+;       |i2c_master:i2c_master_0|     ; 97 (97)     ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 52 (52)      ; 7 (7)             ; 38 (38)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
+;    |rx:5|                           ; 44 (44)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 2 (2)             ; 25 (25)          ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1052,8 +1051,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; r_segL[2]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; r_segL[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; r_segL[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; scl_lm75   ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; sda_lm75   ; Bidir    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; scl_lm75   ; Bidir    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; sda_lm75   ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; clk50Mhz   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; esp_tx     ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
@@ -1065,22 +1064,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                        ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------------------------+-------------------+---------+
 ; scl_lm75                                                                   ;                   ;         ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|stretch~0    ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|stretch~0    ; 0                 ; 6       ;
 ; sda_lm75                                                                   ;                   ;         ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|Selector28~0 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[7]~0 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[0]~1 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[1]~2 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[2]~3 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[3]~4 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[4]~5 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[5]~6 ; 0                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[6]~7 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|Selector28~0 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[7]~0 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[0]~1 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[1]~2 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[2]~3 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[3]~4 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[4]~5 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[5]~6 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[6]~7 ; 1                 ; 6       ;
 ; clk50Mhz                                                                   ;                   ;         ;
 ; esp_tx                                                                     ;                   ;         ;
-;      - rx:5|start                                                          ; 0                 ; 0       ;
 ;      - rx:5|tmp[4]~6                                                       ; 1                 ; 0       ;
-;      - rx:5|start_bit~1                                                    ; 1                 ; 0       ;
+;      - rx:5|start_bit~2                                                    ; 1                 ; 0       ;
 ;      - rx:5|stop_bit~0                                                     ; 1                 ; 0       ;
 ;      - rx:5|tmp[0]~9                                                       ; 1                 ; 0       ;
 ;      - rx:5|tmp[1]~10                                                      ; 1                 ; 0       ;
@@ -1097,31 +1095,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; BOUD_RATE:3|LessThan0~1                                             ; LCCOMB_X45_Y53_N2  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; BOUD_RATE:3|fout                                                    ; FF_X45_Y53_N5      ; 35      ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~1                                         ; LCCOMB_X40_Y3_N22  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~2                                         ; LCCOMB_X40_Y3_N16  ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~3                                         ; LCCOMB_X40_Y3_N24  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; PWM_Motor:inst9|LessThan0~3                                         ; LCCOMB_X40_Y4_N22  ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; BOUD_RATE:3|LessThan0~1                                             ; LCCOMB_X77_Y39_N24 ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; BOUD_RATE:3|fout                                                    ; FF_X77_Y39_N29     ; 35      ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~1                                         ; LCCOMB_X54_Y4_N24  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~2                                         ; LCCOMB_X54_Y4_N10  ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~3                                         ; LCCOMB_X54_Y4_N2   ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; PWM_Motor:inst9|LessThan0~3                                         ; LCCOMB_X63_Y18_N20 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; clk50Mhz                                                            ; PIN_P11            ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clk50Mhz                                                            ; PIN_P11            ; 153     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 ; esp_tx                                                              ; PIN_V10            ; 11      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; fb2bin:inst10|Mb1~0                                                 ; LCCOMB_X40_Y3_N2   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; my_tx:inst|Equal0~2                                                 ; LCCOMB_X56_Y47_N20 ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; my_tx:inst|LessThan9~0                                              ; LCCOMB_X56_Y47_N18 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|LessThan0~5                          ; LCCOMB_X45_Y34_N26 ; 26      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[0]~0 ; LCCOMB_X46_Y34_N16 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[2]~5 ; LCCOMB_X50_Y34_N18 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rd[2]~3 ; LCCOMB_X49_Y34_N26 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~0  ; LCCOMB_X49_Y34_N30 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~1  ; LCCOMB_X49_Y34_N28 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|state.output_result                  ; FF_X46_Y35_N9      ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|state.start                          ; FF_X46_Y35_N17     ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|temp_data[10]~1                      ; LCCOMB_X52_Y34_N16 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; rx:5|Equal11~1                                                      ; LCCOMB_X31_Y3_N26  ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; rx:5|LessThan0~0                                                    ; LCCOMB_X32_Y3_N12  ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; rx:5|data[4]~3                                                      ; LCCOMB_X32_Y3_N2   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; rx:5|start                                                          ; FF_X31_Y3_N21      ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; fb2bin:inst10|Ma1~0                                                 ; LCCOMB_X54_Y4_N30  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; my_tx:inst|Equal0~2                                                 ; LCCOMB_X63_Y51_N28 ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; my_tx:inst|LessThan9~0                                              ; LCCOMB_X63_Y51_N18 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|LessThan0~6                          ; LCCOMB_X56_Y45_N4  ; 24      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[0]~0 ; LCCOMB_X50_Y41_N0  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[2]~5 ; LCCOMB_X47_Y41_N30 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rd[2]~3 ; LCCOMB_X51_Y41_N16 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~0  ; LCCOMB_X50_Y40_N18 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~1  ; LCCOMB_X50_Y41_N30 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|state.output_result                  ; FF_X55_Y45_N19     ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|state.start                          ; FF_X55_Y45_N9      ; 30      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|temp_data[10]~1                      ; LCCOMB_X54_Y45_N14 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rx:5|Equal11~1                                                      ; LCCOMB_X46_Y4_N30  ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; rx:5|LessThan0~0                                                    ; LCCOMB_X47_Y4_N24  ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; rx:5|data[4]~3                                                      ; LCCOMB_X47_Y4_N22  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rx:5|start                                                          ; FF_X46_Y4_N29      ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +---------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1130,9 +1128,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                        ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; BOUD_RATE:3|fout            ; FF_X45_Y53_N5     ; 35      ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~2 ; LCCOMB_X40_Y3_N16 ; 2       ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
-; clk50Mhz                    ; PIN_P11           ; 153     ; 5                                    ; Global Clock         ; GCLK19           ; --                        ;
+; BOUD_RATE:3|fout            ; FF_X77_Y39_N29    ; 35      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~2 ; LCCOMB_X54_Y4_N10 ; 2       ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
+; clk50Mhz                    ; PIN_P11           ; 153     ; 4                                    ; Global Clock         ; GCLK19           ; --                        ;
 +-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1141,38 +1139,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 357 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 41 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 190 / 106,704 ( < 1 % ) ;
-; Direct links          ; 167 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 351 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 40 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 192 / 106,704 ( < 1 % ) ;
+; Direct links          ; 144 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 3 / 20 ( 15 % )         ;
-; Local interconnects   ; 251 / 49,760 ( < 1 % )  ;
+; Local interconnects   ; 256 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 41 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 246 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 35 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 233 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.84) ; Number of LABs  (Total = 31) ;
+; Number of Logic Elements  (Average = 12.10) ; Number of LABs  (Total = 30) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 3                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 2                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
+; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 2                            ;
+; 13                                          ; 3                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 4                            ;
 ; 16                                          ; 14                           ;
 +---------------------------------------------+------------------------------+
 
@@ -1180,12 +1178,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.16) ; Number of LABs  (Total = 31) ;
+; LAB-wide Signals  (Average = 1.20) ; Number of LABs  (Total = 30) ;
 +------------------------------------+------------------------------+
 ; 1 Clock                            ; 24                           ;
-; 1 Clock enable                     ; 6                            ;
+; 1 Clock enable                     ; 7                            ;
 ; 1 Sync. clear                      ; 3                            ;
-; 2 Clock enables                    ; 1                            ;
 ; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
@@ -1193,94 +1190,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.94) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced  (Average = 18.33) ; Number of LABs  (Total = 30) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 2                            ;
 ; 2                                            ; 1                            ;
 ; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 2                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 1                            ;
-; 21                                           ; 3                            ;
-; 22                                           ; 4                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 2                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 4                            ;
+; 25                                           ; 4                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 3                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.29) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced Out  (Average = 7.37) ; Number of LABs  (Total = 30) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 4                            ;
-; 2                                               ; 1                            ;
+; 2                                               ; 2                            ;
 ; 3                                               ; 2                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 3                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 4                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 4                            ;
-; 14                                              ; 2                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 6                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 2                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 3                            ;
+; 14                                              ; 1                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 0                            ;
-; 17                                              ; 1                            ;
+; 17                                              ; 0                            ;
+; 18                                              ; 0                            ;
+; 19                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.19) ; Number of LABs  (Total = 31) ;
+; Number of Distinct Inputs  (Average = 8.47) ; Number of LABs  (Total = 30) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 1                            ;
 ; 2                                           ; 1                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 5                            ;
-; 5                                           ; 3                            ;
-; 6                                           ; 3                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 3                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 7                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 3                            ;
+; 10                                          ; 2                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 2                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 2                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 0                            ;
 ; 17                                          ; 0                            ;
 ; 18                                          ; 0                            ;
-; 19                                          ; 1                            ;
+; 19                                          ; 0                            ;
 ; 20                                          ; 0                            ;
 ; 21                                          ; 1                            ;
+; 22                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1430,10 +1430,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+----------------------+-------------------+
 ; Source Clock(s)  ; Destination Clock(s) ; Delay Added in ns ;
 +------------------+----------------------+-------------------+
-; I/O              ; BOUD_RATE:3|fout     ; 29.4              ;
-; clk50Mhz         ; fb2bin:inst10|Ma0    ; 10.3              ;
+; I/O              ; BOUD_RATE:3|fout     ; 26.9              ;
+; clk50Mhz         ; fb2bin:inst10|Ma0    ; 12.0              ;
 ; clk50Mhz         ; clk50Mhz             ; 4.5               ;
-; BOUD_RATE:3|fout ; clk50Mhz             ; 1.5               ;
+; BOUD_RATE:3|fout ; clk50Mhz             ; 3.1               ;
 +------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
@@ -1444,25 +1444,25 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------+---------------------------+-------------------+
 ; Source Register       ; Destination Register      ; Delay Added in ns ;
 +-----------------------+---------------------------+-------------------+
-; fb2bin:inst10|Ma0     ; Motor_Ctrl:inst13|LwheelF ; 4.554             ;
-; BOUD_RATE:3|fout      ; BOUD_RATE:3|fout          ; 4.452             ;
-; esp_tx                ; rx:5|tmp[6]               ; 3.002             ;
-; fb2bin:inst10|Mb1     ; Motor_Ctrl:inst13|RwheelF ; 2.786             ;
-; fb2bin:inst10|Ma1     ; Motor_Ctrl:inst13|RwheelF ; 2.786             ;
-; PWM_Motor:inst9|pulse ; Motor_Ctrl:inst13|RwheelF ; 2.786             ;
-; BOUD_RATE:3|cnt[6]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; BOUD_RATE:3|cnt[5]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; BOUD_RATE:3|cnt[4]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; BOUD_RATE:3|cnt[3]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; BOUD_RATE:3|cnt[2]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; BOUD_RATE:3|cnt[1]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; BOUD_RATE:3|cnt[7]    ; BOUD_RATE:3|fout          ; 2.196             ;
-; fb2bin:inst10|Mb0     ; Motor_Ctrl:inst13|RwheelF ; 1.393             ;
-; clk50Mhz              ; fb2bin:inst10|Ma1         ; 0.783             ;
-; rx:5|data[2]          ; fb2bin:inst10|DATA[2]     ; 0.428             ;
-; rx:5|data[0]          ; fb2bin:inst10|DATA[0]     ; 0.428             ;
-; rx:5|data[3]          ; fb2bin:inst10|DATA[3]     ; 0.339             ;
-; rx:5|data[1]          ; fb2bin:inst10|DATA[1]     ; 0.339             ;
+; fb2bin:inst10|Ma0     ; Motor_Ctrl:inst13|LwheelF ; 5.203             ;
+; BOUD_RATE:3|fout      ; BOUD_RATE:3|fout          ; 4.461             ;
+; fb2bin:inst10|Mb1     ; Motor_Ctrl:inst13|RwheelF ; 3.380             ;
+; fb2bin:inst10|Ma1     ; Motor_Ctrl:inst13|RwheelF ; 3.380             ;
+; PWM_Motor:inst9|pulse ; Motor_Ctrl:inst13|RwheelF ; 3.380             ;
+; esp_tx                ; rx:5|tmp[6]               ; 2.742             ;
+; BOUD_RATE:3|cnt[6]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; BOUD_RATE:3|cnt[5]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; BOUD_RATE:3|cnt[4]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; BOUD_RATE:3|cnt[3]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; BOUD_RATE:3|cnt[2]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; BOUD_RATE:3|cnt[1]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; BOUD_RATE:3|cnt[7]    ; BOUD_RATE:3|fout          ; 2.151             ;
+; fb2bin:inst10|Mb0     ; Motor_Ctrl:inst13|RwheelF ; 1.690             ;
+; rx:5|data[3]          ; fb2bin:inst10|DATA[3]     ; 0.774             ;
+; rx:5|data[2]          ; fb2bin:inst10|DATA[2]     ; 0.774             ;
+; rx:5|data[1]          ; fb2bin:inst10|DATA[1]     ; 0.774             ;
+; rx:5|data[0]          ; fb2bin:inst10|DATA[0]     ; 0.774             ;
+; clk50Mhz              ; fb2bin:inst10|Ma1         ; 0.587             ;
 +-----------------------+---------------------------+-------------------+
 Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
 
@@ -1471,7 +1471,7 @@ Note: This table only shows the top 19 path(s) that have the largest delay added
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1507,22 +1507,22 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Alt
 Info (332144): No user constrained base clocks found in the design
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: inst13|LwheelB~1  from: dataa  to: combout
-    Info (332098): Cell: inst13|LwheelB~2  from: datad  to: combout
-    Info (332098): Cell: inst13|LwheelB~3  from: dataa  to: combout
+    Info (332098): Cell: inst13|LwheelB~2  from: datab  to: combout
+    Info (332098): Cell: inst13|LwheelB~3  from: datad  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk50Mhz~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node fb2bin:inst10|Ma1 File: D:/GitHub/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 8
-        Info (176357): Destination node fb2bin:inst10|Mb0 File: D:/GitHub/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 9
-        Info (176357): Destination node fb2bin:inst10|Mb1 File: D:/GitHub/Project_Moob/Altera Tutorial/fb2bin.vhd Line: 10
-Info (176353): Automatically promoted node BOUD_RATE:3|fout  File: D:/GitHub/Project_Moob/Altera Tutorial/BOUD_RATE.vhd Line: 5
+        Info (176357): Destination node fb2bin:inst10|Ma1 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 8
+        Info (176357): Destination node fb2bin:inst10|Mb0 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 9
+        Info (176357): Destination node fb2bin:inst10|Mb1 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 10
+Info (176353): Automatically promoted node BOUD_RATE:3|fout  File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd Line: 5
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node BOUD_RATE:3|fout~0 File: D:/GitHub/Project_Moob/Altera Tutorial/BOUD_RATE.vhd Line: 5
-Info (176353): Automatically promoted node Motor_Ctrl:inst13|LwheelB~2  File: D:/GitHub/Project_Moob/Altera Tutorial/Motor_Ctrl.vhd Line: 9
+        Info (176357): Destination node BOUD_RATE:3|fout~0 File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd Line: 5
+Info (176353): Automatically promoted node Motor_Ctrl:inst13|LwheelB~2  File: C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1542,31 +1542,31 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.37 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file D:/GitHub/Project_Moob/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 5916 megabytes
-    Info: Processing ended: Thu Nov 24 20:11:58 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 5771 megabytes
+    Info: Processing ended: Mon Nov 28 14:40:32 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/GitHub/Project_Moob/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg.
+The suppressed messages can be found in C:/Users/School/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg.
 
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Altera_Tutorial
-Thu Nov 24 20:12:05 2022
+Mon Nov 28 14:40:39 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -91,17 +91,16 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.16        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.7%      ;
-;     Processor 3            ;   2.4%      ;
-;     Processors 4-8         ;   2.3%      ;
+;     Processor 2            ;   3.4%      ;
+;     Processors 3-6         ;   3.0%      ;
 +----------------------------+-------------+
 
 
@@ -122,9 +121,9 @@ agreement for further details.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 198.18 MHz ; 198.18 MHz      ; fb2bin:inst10|Ma0 ;      ;
-; 212.31 MHz ; 212.31 MHz      ; clk50Mhz          ;      ;
-; 357.4 MHz  ; 357.4 MHz       ; BOUD_RATE:3|fout  ;      ;
+; 170.71 MHz ; 170.71 MHz      ; fb2bin:inst10|Ma0 ;      ;
+; 224.27 MHz ; 224.27 MHz      ; clk50Mhz          ;      ;
+; 350.02 MHz ; 350.02 MHz      ; BOUD_RATE:3|fout  ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -134,9 +133,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; fb2bin:inst10|Ma0 ; -5.235 ; -18.386       ;
-; clk50Mhz          ; -3.710 ; -324.921      ;
-; BOUD_RATE:3|fout  ; -2.314 ; -57.833       ;
+; fb2bin:inst10|Ma0 ; -5.790 ; -18.290       ;
+; clk50Mhz          ; -3.459 ; -335.267      ;
+; BOUD_RATE:3|fout  ; -2.367 ; -55.549       ;
 +-------------------+--------+---------------+
 
 
@@ -145,9 +144,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; fb2bin:inst10|Ma0 ; 0.311 ; 0.000         ;
-; BOUD_RATE:3|fout  ; 0.340 ; 0.000         ;
-; clk50Mhz          ; 0.340 ; 0.000         ;
+; BOUD_RATE:3|fout  ; 0.341 ; 0.000         ;
+; clk50Mhz          ; 0.341 ; 0.000         ;
+; fb2bin:inst10|Ma0 ; 0.436 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -156,8 +155,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; esp_tx           ; -2.159 ; -2.159        ;
-; BOUD_RATE:3|fout ; -1.584 ; -25.896       ;
+; esp_tx           ; -1.960 ; -1.960        ;
+; BOUD_RATE:3|fout ; -1.532 ; -24.876       ;
 +------------------+--------+---------------+
 
 
@@ -166,8 +165,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; BOUD_RATE:3|fout ; 1.555 ; 0.000         ;
-; esp_tx           ; 2.136 ; 0.000         ;
+; BOUD_RATE:3|fout ; 1.619 ; 0.000         ;
+; esp_tx           ; 2.083 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -179,7 +178,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; clk50Mhz          ; -3.000 ; -221.868             ;
 ; esp_tx            ; -3.000 ; -4.403               ;
 ; BOUD_RATE:3|fout  ; -1.403 ; -49.105              ;
-; fb2bin:inst10|Ma0 ; 0.408  ; 0.000                ;
+; fb2bin:inst10|Ma0 ; 0.387  ; 0.000                ;
 +-------------------+--------+----------------------+
 
 
@@ -194,9 +193,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 198.57 MHz ; 198.57 MHz      ; fb2bin:inst10|Ma0 ;      ;
-; 228.26 MHz ; 228.26 MHz      ; clk50Mhz          ;      ;
-; 396.04 MHz ; 396.04 MHz      ; BOUD_RATE:3|fout  ;      ;
+; 170.53 MHz ; 170.53 MHz      ; fb2bin:inst10|Ma0 ;      ;
+; 242.25 MHz ; 242.25 MHz      ; clk50Mhz          ;      ;
+; 386.25 MHz ; 386.25 MHz      ; BOUD_RATE:3|fout  ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -206,9 +205,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; fb2bin:inst10|Ma0 ; -4.805 ; -17.092       ;
-; clk50Mhz          ; -3.381 ; -285.543      ;
-; BOUD_RATE:3|fout  ; -2.069 ; -50.388       ;
+; fb2bin:inst10|Ma0 ; -5.308 ; -17.132       ;
+; clk50Mhz          ; -3.128 ; -295.987      ;
+; BOUD_RATE:3|fout  ; -2.088 ; -48.040       ;
 +-------------------+--------+---------------+
 
 
@@ -217,9 +216,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; fb2bin:inst10|Ma0 ; 0.277 ; 0.000         ;
-; BOUD_RATE:3|fout  ; 0.305 ; 0.000         ;
-; clk50Mhz          ; 0.305 ; 0.000         ;
+; BOUD_RATE:3|fout  ; 0.306 ; 0.000         ;
+; clk50Mhz          ; 0.306 ; 0.000         ;
+; fb2bin:inst10|Ma0 ; 0.385 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -228,8 +227,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; esp_tx           ; -1.908 ; -1.908        ;
-; BOUD_RATE:3|fout ; -1.342 ; -22.190       ;
+; esp_tx           ; -1.703 ; -1.703        ;
+; BOUD_RATE:3|fout ; -1.326 ; -21.350       ;
 +------------------+--------+---------------+
 
 
@@ -238,8 +237,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; BOUD_RATE:3|fout ; 1.430 ; 0.000         ;
-; esp_tx           ; 1.955 ; 0.000         ;
+; BOUD_RATE:3|fout ; 1.476 ; 0.000         ;
+; esp_tx           ; 1.895 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -251,7 +250,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; clk50Mhz          ; -3.000 ; -221.868            ;
 ; esp_tx            ; -3.000 ; -4.403              ;
 ; BOUD_RATE:3|fout  ; -1.403 ; -49.105             ;
-; fb2bin:inst10|Ma0 ; 0.357  ; 0.000               ;
+; fb2bin:inst10|Ma0 ; 0.358  ; 0.000               ;
 +-------------------+--------+---------------------+
 
 
@@ -266,9 +265,9 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; fb2bin:inst10|Ma0 ; -2.166 ; -7.418        ;
-; clk50Mhz          ; -1.108 ; -54.216       ;
-; BOUD_RATE:3|fout  ; -0.991 ; -15.262       ;
+; fb2bin:inst10|Ma0 ; -2.457 ; -7.244        ;
+; clk50Mhz          ; -0.995 ; -60.683       ;
+; BOUD_RATE:3|fout  ; -0.877 ; -14.845       ;
 +-------------------+--------+---------------+
 
 
@@ -277,9 +276,9 @@ No synchronizer chains to report.
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; fb2bin:inst10|Ma0 ; 0.141 ; 0.000         ;
-; BOUD_RATE:3|fout  ; 0.147 ; 0.000         ;
+; BOUD_RATE:3|fout  ; 0.148 ; 0.000         ;
 ; clk50Mhz          ; 0.148 ; 0.000         ;
+; fb2bin:inst10|Ma0 ; 0.188 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -288,8 +287,8 @@ No synchronizer chains to report.
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; esp_tx           ; -0.578 ; -0.578        ;
-; BOUD_RATE:3|fout ; -0.138 ; -1.634        ;
+; esp_tx           ; -0.423 ; -0.423        ;
+; BOUD_RATE:3|fout ; -0.071 ; -0.855        ;
 +------------------+--------+---------------+
 
 
@@ -298,8 +297,8 @@ No synchronizer chains to report.
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; BOUD_RATE:3|fout ; 0.646 ; 0.000         ;
-; esp_tx           ; 1.096 ; 0.000         ;
+; BOUD_RATE:3|fout ; 0.687 ; 0.000         ;
+; esp_tx           ; 1.007 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -308,10 +307,10 @@ No synchronizer chains to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk50Mhz          ; -3.000 ; -164.794            ;
-; esp_tx            ; -3.000 ; -4.097              ;
+; clk50Mhz          ; -3.000 ; -164.397            ;
+; esp_tx            ; -3.000 ; -4.034              ;
 ; BOUD_RATE:3|fout  ; -1.000 ; -35.000             ;
-; fb2bin:inst10|Ma0 ; 0.372  ; 0.000               ;
+; fb2bin:inst10|Ma0 ; 0.327  ; 0.000               ;
 +-------------------+--------+---------------------+
 
 
@@ -326,16 +325,16 @@ No synchronizer chains to report.
 +--------------------+----------+-------+----------+---------+---------------------+
 ; Clock              ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack   ; -5.235   ; 0.141 ; -2.159   ; 0.646   ; -3.000              ;
-;  BOUD_RATE:3|fout  ; -2.314   ; 0.147 ; -1.584   ; 0.646   ; -1.403              ;
-;  clk50Mhz          ; -3.710   ; 0.148 ; N/A      ; N/A     ; -3.000              ;
-;  esp_tx            ; N/A      ; N/A   ; -2.159   ; 1.096   ; -3.000              ;
-;  fb2bin:inst10|Ma0 ; -5.235   ; 0.141 ; N/A      ; N/A     ; 0.357               ;
-; Design-wide TNS    ; -401.14  ; 0.0   ; -28.055  ; 0.0     ; -275.376            ;
-;  BOUD_RATE:3|fout  ; -57.833  ; 0.000 ; -25.896  ; 0.000   ; -49.105             ;
-;  clk50Mhz          ; -324.921 ; 0.000 ; N/A      ; N/A     ; -221.868            ;
-;  esp_tx            ; N/A      ; N/A   ; -2.159   ; 0.000   ; -4.403              ;
-;  fb2bin:inst10|Ma0 ; -18.386  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+; Worst-case Slack   ; -5.790   ; 0.148 ; -1.960   ; 0.687   ; -3.000              ;
+;  BOUD_RATE:3|fout  ; -2.367   ; 0.148 ; -1.532   ; 0.687   ; -1.403              ;
+;  clk50Mhz          ; -3.459   ; 0.148 ; N/A      ; N/A     ; -3.000              ;
+;  esp_tx            ; N/A      ; N/A   ; -1.960   ; 1.007   ; -3.000              ;
+;  fb2bin:inst10|Ma0 ; -5.790   ; 0.188 ; N/A      ; N/A     ; 0.327               ;
+; Design-wide TNS    ; -409.106 ; 0.0   ; -26.836  ; 0.0     ; -275.376            ;
+;  BOUD_RATE:3|fout  ; -55.549  ; 0.000 ; -24.876  ; 0.000   ; -49.105             ;
+;  clk50Mhz          ; -335.267 ; 0.000 ; N/A      ; N/A     ; -221.868            ;
+;  esp_tx            ; N/A      ; N/A   ; -1.960   ; 0.000   ; -4.403              ;
+;  fb2bin:inst10|Ma0 ; -18.290  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +--------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -446,7 +445,7 @@ No synchronizer chains to report.
 ; r_segL[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; r_segL[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; r_segL[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; scl_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; scl_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; sda_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -493,7 +492,7 @@ No synchronizer chains to report.
 ; r_segL[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; r_segL[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; r_segL[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; scl_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; scl_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; sda_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -540,7 +539,7 @@ No synchronizer chains to report.
 ; r_segL[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; r_segL[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; r_segL[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; scl_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; scl_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; sda_lm75     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -555,8 +554,8 @@ No synchronizer chains to report.
 ; clk50Mhz          ; BOUD_RATE:3|fout  ; 8        ; 0        ; 0        ; 0        ;
 ; esp_tx            ; BOUD_RATE:3|fout  ; 10       ; 36       ; 0        ; 0        ;
 ; BOUD_RATE:3|fout  ; clk50Mhz          ; 5        ; 1        ; 0        ; 0        ;
-; clk50Mhz          ; clk50Mhz          ; 2915     ; 0        ; 0        ; 0        ;
-; clk50Mhz          ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 12       ; 0        ;
+; clk50Mhz          ; clk50Mhz          ; 2945     ; 0        ; 0        ; 0        ;
+; clk50Mhz          ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 11       ; 0        ;
 ; fb2bin:inst10|Ma0 ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 4        ; 4        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -571,8 +570,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clk50Mhz          ; BOUD_RATE:3|fout  ; 8        ; 0        ; 0        ; 0        ;
 ; esp_tx            ; BOUD_RATE:3|fout  ; 10       ; 36       ; 0        ; 0        ;
 ; BOUD_RATE:3|fout  ; clk50Mhz          ; 5        ; 1        ; 0        ; 0        ;
-; clk50Mhz          ; clk50Mhz          ; 2915     ; 0        ; 0        ; 0        ;
-; clk50Mhz          ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 12       ; 0        ;
+; clk50Mhz          ; clk50Mhz          ; 2945     ; 0        ; 0        ; 0        ;
+; clk50Mhz          ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 11       ; 0        ;
 ; fb2bin:inst10|Ma0 ; fb2bin:inst10|Ma0 ; 0        ; 0        ; 4        ; 4        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -756,11 +755,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 24 20:12:03 2022
+    Info: Processing started: Mon Nov 28 14:40:37 2022
 Info: Command: quartus_sta Altera_Tutorial -c Altera_Tutorial
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -781,35 +780,35 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.235
+Info (332146): Worst-case setup slack is -5.790
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.235             -18.386 fb2bin:inst10|Ma0 
-    Info (332119):    -3.710            -324.921 clk50Mhz 
-    Info (332119):    -2.314             -57.833 BOUD_RATE:3|fout 
-Info (332146): Worst-case hold slack is 0.311
+    Info (332119):    -5.790             -18.290 fb2bin:inst10|Ma0 
+    Info (332119):    -3.459            -335.267 clk50Mhz 
+    Info (332119):    -2.367             -55.549 BOUD_RATE:3|fout 
+Info (332146): Worst-case hold slack is 0.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.311               0.000 fb2bin:inst10|Ma0 
-    Info (332119):     0.340               0.000 BOUD_RATE:3|fout 
-    Info (332119):     0.340               0.000 clk50Mhz 
-Info (332146): Worst-case recovery slack is -2.159
+    Info (332119):     0.341               0.000 BOUD_RATE:3|fout 
+    Info (332119):     0.341               0.000 clk50Mhz 
+    Info (332119):     0.436               0.000 fb2bin:inst10|Ma0 
+Info (332146): Worst-case recovery slack is -1.960
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.159              -2.159 esp_tx 
-    Info (332119):    -1.584             -25.896 BOUD_RATE:3|fout 
-Info (332146): Worst-case removal slack is 1.555
+    Info (332119):    -1.960              -1.960 esp_tx 
+    Info (332119):    -1.532             -24.876 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 1.619
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.555               0.000 BOUD_RATE:3|fout 
-    Info (332119):     2.136               0.000 esp_tx 
+    Info (332119):     1.619               0.000 BOUD_RATE:3|fout 
+    Info (332119):     2.083               0.000 esp_tx 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -221.868 clk50Mhz 
     Info (332119):    -3.000              -4.403 esp_tx 
     Info (332119):    -1.403             -49.105 BOUD_RATE:3|fout 
-    Info (332119):     0.408               0.000 fb2bin:inst10|Ma0 
+    Info (332119):     0.387               0.000 fb2bin:inst10|Ma0 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -819,35 +818,35 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): Cell: inst13|LwheelB~3  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.805
+Info (332146): Worst-case setup slack is -5.308
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.805             -17.092 fb2bin:inst10|Ma0 
-    Info (332119):    -3.381            -285.543 clk50Mhz 
-    Info (332119):    -2.069             -50.388 BOUD_RATE:3|fout 
-Info (332146): Worst-case hold slack is 0.277
+    Info (332119):    -5.308             -17.132 fb2bin:inst10|Ma0 
+    Info (332119):    -3.128            -295.987 clk50Mhz 
+    Info (332119):    -2.088             -48.040 BOUD_RATE:3|fout 
+Info (332146): Worst-case hold slack is 0.306
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.277               0.000 fb2bin:inst10|Ma0 
-    Info (332119):     0.305               0.000 BOUD_RATE:3|fout 
-    Info (332119):     0.305               0.000 clk50Mhz 
-Info (332146): Worst-case recovery slack is -1.908
+    Info (332119):     0.306               0.000 BOUD_RATE:3|fout 
+    Info (332119):     0.306               0.000 clk50Mhz 
+    Info (332119):     0.385               0.000 fb2bin:inst10|Ma0 
+Info (332146): Worst-case recovery slack is -1.703
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.908              -1.908 esp_tx 
-    Info (332119):    -1.342             -22.190 BOUD_RATE:3|fout 
-Info (332146): Worst-case removal slack is 1.430
+    Info (332119):    -1.703              -1.703 esp_tx 
+    Info (332119):    -1.326             -21.350 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 1.476
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.430               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.955               0.000 esp_tx 
+    Info (332119):     1.476               0.000 BOUD_RATE:3|fout 
+    Info (332119):     1.895               0.000 esp_tx 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -221.868 clk50Mhz 
     Info (332119):    -3.000              -4.403 esp_tx 
     Info (332119):    -1.403             -49.105 BOUD_RATE:3|fout 
-    Info (332119):     0.357               0.000 fb2bin:inst10|Ma0 
+    Info (332119):     0.358               0.000 fb2bin:inst10|Ma0 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: inst13|LwheelB~1  from: datab  to: combout
@@ -855,41 +854,41 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): Cell: inst13|LwheelB~3  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.166
+Info (332146): Worst-case setup slack is -2.457
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.166              -7.418 fb2bin:inst10|Ma0 
-    Info (332119):    -1.108             -54.216 clk50Mhz 
-    Info (332119):    -0.991             -15.262 BOUD_RATE:3|fout 
-Info (332146): Worst-case hold slack is 0.141
+    Info (332119):    -2.457              -7.244 fb2bin:inst10|Ma0 
+    Info (332119):    -0.995             -60.683 clk50Mhz 
+    Info (332119):    -0.877             -14.845 BOUD_RATE:3|fout 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.141               0.000 fb2bin:inst10|Ma0 
-    Info (332119):     0.147               0.000 BOUD_RATE:3|fout 
+    Info (332119):     0.148               0.000 BOUD_RATE:3|fout 
     Info (332119):     0.148               0.000 clk50Mhz 
-Info (332146): Worst-case recovery slack is -0.578
+    Info (332119):     0.188               0.000 fb2bin:inst10|Ma0 
+Info (332146): Worst-case recovery slack is -0.423
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.578              -0.578 esp_tx 
-    Info (332119):    -0.138              -1.634 BOUD_RATE:3|fout 
-Info (332146): Worst-case removal slack is 0.646
+    Info (332119):    -0.423              -0.423 esp_tx 
+    Info (332119):    -0.071              -0.855 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 0.687
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.646               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.096               0.000 esp_tx 
+    Info (332119):     0.687               0.000 BOUD_RATE:3|fout 
+    Info (332119):     1.007               0.000 esp_tx 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -164.794 clk50Mhz 
-    Info (332119):    -3.000              -4.097 esp_tx 
+    Info (332119):    -3.000            -164.397 clk50Mhz 
+    Info (332119):    -3.000              -4.034 esp_tx 
     Info (332119):    -1.000             -35.000 BOUD_RATE:3|fout 
-    Info (332119):     0.372               0.000 fb2bin:inst10|Ma0 
+    Info (332119):     0.327               0.000 fb2bin:inst10|Ma0 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4870 megabytes
-    Info: Processing ended: Thu Nov 24 20:12:05 2022
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Mon Nov 28 14:40:39 2022
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
