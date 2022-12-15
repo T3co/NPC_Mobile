@@ -5,6 +5,7 @@ clk50Mhz => pmod_temp_sensor_tcn75a:inst11.clk
 clk50Mhz => led:inst7.clk
 clk50Mhz => PWM_Motor:inst9.clk
 clk50Mhz => fb2bin:inst10.CLK
+clk50Mhz => servo_control:inst14.clk
 scl_lm75 <> pmod_temp_sensor_tcn75a:inst11.scl
 sda_lm75 <> pmod_temp_sensor_tcn75a:inst11.sda
 breatheLED <= led:inst7.ledOUT
@@ -14,7 +15,7 @@ LWheelF <= Motor_Ctrl:inst13.LwheelF
 RWheelB <= Motor_Ctrl:inst13.RwheelB
 RWheelF <= Motor_Ctrl:inst13.RwheelF
 error_dp <= pmod_temp_sensor_tcn75a:inst11.i2c_ack_err
-led_car <= LED_CAR:inst17.Lout
+servo_pwm <= servo_control:inst14.fOut
 M_segH[0] <= bin2hex:inst1.seg[0]
 M_segH[1] <= bin2hex:inst1.seg[1]
 M_segH[2] <= bin2hex:inst1.seg[2]
@@ -539,23 +540,19 @@ Mb1 <= Mb1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[0] => motor[0].DATAIN
 data[1] => motor[1].DATAIN
 data[2] => motor[2].DATAIN
-data[3] => led[3].DATAIN
 data[3] => motor[3].DATAIN
-data[4] => TBA[4].DATAIN
-data[4] => led[4].DATAIN
-data[5] => TBA[5].DATAIN
-data[6] => TBA[6].DATAIN
-data[7] => TBA[7].DATAIN
+data[4] => laserPointer[4].DATAIN
+data[5] => laserPointer[5].DATAIN
+data[6] => laserPointer[6].DATAIN
+data[7] => TBA.DATAIN
 motor[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 motor[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
 motor[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
 motor[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
-led[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
-TBA[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
-TBA[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
-TBA[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
-TBA[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+laserPointer[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
+laserPointer[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
+laserPointer[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
+TBA <= data[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Altera_Tutorial_Schematic|rx:5
@@ -606,10 +603,53 @@ data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Altera_Tutorial_Schematic|LED_CAR:inst17
-Leds[3] => ~NO_FANOUT~
-Leds[4] => LessThan0.IN2
-Lout <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+|Altera_Tutorial_Schematic|servo_control:inst14
+clk => fOut~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+degree[0] => Equal0.IN2
+degree[0] => Equal1.IN0
+degree[0] => Equal2.IN2
+degree[0] => Equal3.IN1
+degree[0] => Equal4.IN2
+degree[0] => Equal5.IN1
+degree[0] => Equal6.IN2
+degree[0] => Equal7.IN2
+degree[1] => Equal0.IN1
+degree[1] => Equal1.IN2
+degree[1] => Equal2.IN0
+degree[1] => Equal3.IN0
+degree[1] => Equal4.IN1
+degree[1] => Equal5.IN2
+degree[1] => Equal6.IN1
+degree[1] => Equal7.IN1
+degree[2] => Equal0.IN0
+degree[2] => Equal1.IN1
+degree[2] => Equal2.IN1
+degree[2] => Equal3.IN2
+degree[2] => Equal4.IN0
+degree[2] => Equal5.IN0
+degree[2] => Equal6.IN0
+degree[2] => Equal7.IN0
+fOut <= fOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Altera_Tutorial_Schematic|bin2hex:inst1

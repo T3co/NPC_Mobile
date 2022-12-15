@@ -32,7 +32,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "led_car",
+					"name" : "servo_pwm",
 					"strict" : false
 				},
 				{
