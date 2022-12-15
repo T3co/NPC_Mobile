@@ -15,7 +15,7 @@
 
 FirebaseData fbdo;
 int rx0;
-int motors, temperature, leds, packet;
+int motors, temperature, leds, packet, ServoMotors;
 
 bool a = false;
 void blink();
@@ -64,6 +64,13 @@ void loop()
       {
         leds = fbdo.intData();
       }
+      
+      if (Firebase.getInt(fbdo, "messages/ServoMotors"))
+      {
+        ServoMotors = fbdo.intData();
+      }
+
+
    
   }
   
@@ -71,7 +78,7 @@ void loop()
 
   if (Serial2.available())
   {
-    packet = leds * 16 + motors;
+    packet = leds * 16 + motors + ServoMotors;
     Serial2.write(packet);
     delay(10);
   }
