@@ -230,9 +230,25 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 88 840 264 856)
+	(rect 88 648 264 664)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "servo_pwm" (rect 90 0 146 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect -176 704 0 720)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "laser" (rect 90 0 113 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -780,7 +796,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -88 816 80 896)
+	(rect -88 624 80 704)
 	(text "servo_control" (rect 5 0 72 12)(font "Arial" ))
 	(text "inst14" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
@@ -809,9 +825,9 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -376 576 -168 688)
+	(rect -376 576 -192 688)
 	(text "data_spliter" (rect 5 0 61 12)(font "Arial" ))
-	(text "inst16" (rect 8 96 37 108)(font "Arial" ))
+	(text "inst8" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -820,28 +836,28 @@ agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 208 32)
+		(pt 184 32)
 		(output)
 		(text "motor[3..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "motor[3..0]" (rect 142 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
+		(text "motor[3..0]" (rect 118 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(port
-		(pt 208 48)
+		(pt 184 48)
 		(output)
-		(text "laserPointer[6..4]" (rect 0 0 83 12)(font "Arial" ))
-		(text "laserPointer[6..4]" (rect 117 43 187 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48)(line_width 3))
+		(text "servo[7..5]" (rect 0 0 54 12)(font "Arial" ))
+		(text "servo[7..5]" (rect 118 43 163 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
 	)
 	(port
-		(pt 208 64)
+		(pt 184 64)
 		(output)
-		(text "TBA" (rect 0 0 21 12)(font "Arial" ))
-		(text "TBA" (rect 170 59 187 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64))
+		(text "Laser" (rect 0 0 27 12)(font "Arial" ))
+		(text "Laser" (rect 141 59 163 71)(font "Arial" ))
+		(line (pt 184 64)(pt 168 64))
 	)
 	(drawing
-		(rectangle (rect 16 16 192 96))
+		(rectangle (rect 16 16 168 96))
 	)
 )
 (connector
@@ -1156,16 +1172,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt -168 608)
-	(pt 288 608)
-	(bus)
-)
-(connector
-	(pt -168 624)
-	(pt -120 624)
-	(bus)
-)
-(connector
 	(pt 280 208)
 	(pt 280 384)
 )
@@ -1182,26 +1188,48 @@ agreement for further details.
 	(pt 312 384)
 )
 (connector
+	(pt 288 608)
+	(pt -192 608)
+	(bus)
+)
+(connector
 	(pt -120 624)
-	(pt -120 864)
+	(pt -192 624)
 	(bus)
 )
 (connector
-	(pt -120 864)
-	(pt -88 864)
-	(bus)
+	(pt 80 656)
+	(pt 88 656)
 )
 (connector
-	(pt 80 848)
-	(pt 88 848)
-)
-(connector
-	(pt -112 848)
-	(pt -88 848)
+	(pt -112 656)
+	(pt -88 656)
 )
 (connector
 	(pt -112 384)
-	(pt -112 848)
+	(pt -112 656)
+)
+(connector
+	(pt -120 672)
+	(pt -88 672)
+	(bus)
+)
+(connector
+	(pt -120 624)
+	(pt -120 672)
+	(bus)
+)
+(connector
+	(pt -192 640)
+	(pt -184 640)
+)
+(connector
+	(pt -184 640)
+	(pt -184 712)
+)
+(connector
+	(pt -184 712)
+	(pt -176 712)
 )
 (junction (pt 784 496))
 (junction (pt 280 472))

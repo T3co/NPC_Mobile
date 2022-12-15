@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "739076654495",
+    "firebase_url": "https://alteratutorial-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "alteratutorial",
+    "storage_bucket": "alteratutorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739076654495:android:9a1a20c1d6bcb35188e9aa",
+        "android_client_info": {
+          "package_name": "com.moob.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739076654495-2h42psm5mj3qnhm6tkvnakmul9no312b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB99wgtiHQbWgOdk269nCg36KB63BRRDXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739076654495-2h42psm5mj3qnhm6tkvnakmul9no312b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

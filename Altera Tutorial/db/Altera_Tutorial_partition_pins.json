@@ -36,6 +36,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "laser",
+					"strict" : false
+				},
+				{
 					"name" : "M_segH[6]",
 					"strict" : false
 				},

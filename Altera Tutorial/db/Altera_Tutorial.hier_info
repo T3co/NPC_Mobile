@@ -16,6 +16,7 @@ RWheelB <= Motor_Ctrl:inst13.RwheelB
 RWheelF <= Motor_Ctrl:inst13.RwheelF
 error_dp <= pmod_temp_sensor_tcn75a:inst11.i2c_ack_err
 servo_pwm <= servo_control:inst14.fOut
+laser <= data_spliter:inst8.Laser
 M_segH[0] <= bin2hex:inst1.seg[0]
 M_segH[1] <= bin2hex:inst1.seg[1]
 M_segH[2] <= bin2hex:inst1.seg[2]
@@ -536,23 +537,23 @@ Mb0 <= Mb0~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Mb1 <= Mb1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Altera_Tutorial_Schematic|data_spliter:inst16
+|Altera_Tutorial_Schematic|data_spliter:inst8
 data[0] => motor[0].DATAIN
 data[1] => motor[1].DATAIN
 data[2] => motor[2].DATAIN
 data[3] => motor[3].DATAIN
-data[4] => laserPointer[4].DATAIN
-data[5] => laserPointer[5].DATAIN
-data[6] => laserPointer[6].DATAIN
-data[7] => TBA.DATAIN
+data[4] => Laser.DATAIN
+data[5] => servo[5].DATAIN
+data[6] => servo[6].DATAIN
+data[7] => servo[7].DATAIN
 motor[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 motor[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
 motor[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
 motor[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
-laserPointer[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
-laserPointer[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
-laserPointer[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
-TBA <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+servo[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
+servo[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
+servo[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+Laser <= data[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Altera_Tutorial_Schematic|rx:5
