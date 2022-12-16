@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         tempText = findViewById(R.id.tempText);
         camView = findViewById(R.id.camView);
 
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("messages");
 
@@ -50,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if(angle < 135 && angle > 45) //forward
-                    myRef.child("motors").setValue(1);
+                    myRef.child("motors").setValue(2);
 
                 if(angle < 315 && angle > 225)//backward
-                    myRef.child("motors").setValue(2);
+                    myRef.child("motors").setValue(1);
 
                 if(angle < 45 && angle > 0 || angle > 315 && angle < 360)//right
                     myRef.child("motors").setValue(3);
