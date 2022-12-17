@@ -1,0 +1,133 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.moob.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+8-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:24:5-79
+13-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:24:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:25:5-67
+14-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:25:22-64
+15
+16    <application
+16-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:5:5-24:19
+17        android:allowBackup="true"
+17-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.8.0] C:\Users\oryam\.gradle\caches\transforms-3\b7c904756afa260cc739f539c2e9413e\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:extractNativeLibs="false"
+21        android:icon="@mipmap/ic_launcher"
+21-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:7:9-43
+22        android:label="@string/app_name"
+22-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:8:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:9:9-54
+24        android:supportsRtl="true"
+24-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:10:9-35
+25        android:testOnly="true"
+26        android:theme="@style/Theme.Moob" >
+26-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:11:9-42
+27        <activity
+27-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:12:9-14:40
+28            android:name="com.moob.app.ServoController"
+28-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:13:13-44
+29            android:exported="false" />
+29-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:14:13-37
+30        <activity
+30-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:15:9-23:20
+31            android:name="com.moob.app.MainActivity"
+31-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:16:13-41
+32            android:exported="true" >
+32-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:17:13-36
+33            <intent-filter>
+33-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:18:13-22:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:19:17-69
+34-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:19:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:21:17-77
+36-->D:\GitHub\Project_Moob\app\src\main\AndroidManifest.xml:21:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <service
+40-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:28:9-34:19
+41            android:name="com.google.firebase.components.ComponentDiscoveryService"
+41-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:29:13-84
+42            android:directBootAware="true"
+42-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+43            android:exported="false" >
+43-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:30:13-37
+44            <meta-data
+44-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+45                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+45-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+46                android:value="com.google.firebase.components.ComponentRegistrar" />
+46-->[com.google.firebase:firebase-database:20.1.0] C:\Users\oryam\.gradle\caches\transforms-3\b7f1945cc5d9636a4c3113a9bfe1f552\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+47        </service>
+48
+49        <activity
+49-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\oryam\.gradle\caches\transforms-3\57b067bbfd387d2d86bb61db05319db9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+50            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+50-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\oryam\.gradle\caches\transforms-3\57b067bbfd387d2d86bb61db05319db9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+51            android:exported="false"
+51-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\oryam\.gradle\caches\transforms-3\57b067bbfd387d2d86bb61db05319db9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+52            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+52-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\oryam\.gradle\caches\transforms-3\57b067bbfd387d2d86bb61db05319db9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+53
+54        <provider
+54-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+55            android:name="com.google.firebase.provider.FirebaseInitProvider"
+55-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+56            android:authorities="com.moob.app.firebaseinitprovider"
+56-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+57            android:directBootAware="true"
+57-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+58            android:exported="false"
+58-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+59            android:initOrder="100" />
+59-->[com.google.firebase:firebase-common:20.2.0] C:\Users\oryam\.gradle\caches\transforms-3\05027bf91a36b9a130be90cc7a4a7e81\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+60
+61        <meta-data
+61-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\oryam\.gradle\caches\transforms-3\cf892a3cbe871b12a0ac0df9fb77a5d2\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+62            android:name="com.google.android.gms.version"
+62-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\oryam\.gradle\caches\transforms-3\cf892a3cbe871b12a0ac0df9fb77a5d2\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+63            android:value="@integer/google_play_services_version" />
+63-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\oryam\.gradle\caches\transforms-3\cf892a3cbe871b12a0ac0df9fb77a5d2\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+67            android:authorities="com.moob.app.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oryam\.gradle\caches\transforms-3\4cab81956ef127d51b7368ff2d4764f1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oryam\.gradle\caches\transforms-3\edbe25655b63b7cc20f46cd4670814ed\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oryam\.gradle\caches\transforms-3\edbe25655b63b7cc20f46cd4670814ed\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oryam\.gradle\caches\transforms-3\edbe25655b63b7cc20f46cd4670814ed\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+75        </provider>
+76    </application>
+77
+78</manifest>
