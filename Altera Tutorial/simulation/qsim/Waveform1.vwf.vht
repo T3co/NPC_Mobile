@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/21/2022 12:50:05"
+-- Generated on "12/17/2022 17:05:02"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          Motor_Ctrl
+-- Vhdl Test Bench(with test vectors) for design  :          PWM_ctrl_example
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,43 +29,34 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY Motor_Ctrl_vhd_vec_tst IS
-END Motor_Ctrl_vhd_vec_tst;
-ARCHITECTURE Motor_Ctrl_arch OF Motor_Ctrl_vhd_vec_tst IS
+ENTITY PWM_ctrl_example_vhd_vec_tst IS
+END PWM_ctrl_example_vhd_vec_tst;
+ARCHITECTURE PWM_ctrl_example_arch OF PWM_ctrl_example_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL LwheelB : STD_LOGIC;
 SIGNAL LwheelF : STD_LOGIC;
-SIGNAL Ma0 : STD_LOGIC;
-SIGNAL Ma1 : STD_LOGIC;
-SIGNAL Mb0 : STD_LOGIC;
-SIGNAL Mb1 : STD_LOGIC;
+SIGNAL Motors : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL PWM_Motor_1KHz : STD_LOGIC;
 SIGNAL RwheelB : STD_LOGIC;
 SIGNAL RwheelF : STD_LOGIC;
-COMPONENT Motor_Ctrl
+COMPONENT PWM_ctrl_example
 	PORT (
-	LwheelB : BUFFER STD_LOGIC;
-	LwheelF : BUFFER STD_LOGIC;
-	Ma0 : IN STD_LOGIC;
-	Ma1 : IN STD_LOGIC;
-	Mb0 : IN STD_LOGIC;
-	Mb1 : IN STD_LOGIC;
+	LwheelB : OUT STD_LOGIC;
+	LwheelF : OUT STD_LOGIC;
+	Motors : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	PWM_Motor_1KHz : IN STD_LOGIC;
-	RwheelB : BUFFER STD_LOGIC;
-	RwheelF : BUFFER STD_LOGIC
+	RwheelB : OUT STD_LOGIC;
+	RwheelF : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : Motor_Ctrl
+	i1 : PWM_ctrl_example
 	PORT MAP (
 -- list connections between master ports and signals
 	LwheelB => LwheelB,
 	LwheelF => LwheelF,
-	Ma0 => Ma0,
-	Ma1 => Ma1,
-	Mb0 => Mb0,
-	Mb1 => Mb1,
+	Motors => Motors,
 	PWM_Motor_1KHz => PWM_Motor_1KHz,
 	RwheelB => RwheelB,
 	RwheelF => RwheelF
@@ -82,56 +73,52 @@ LOOP
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_PWM_Motor_1KHz;
-
--- Ma0
-t_prcs_Ma0: PROCESS
+-- Motors[3]
+t_prcs_Motors_3: PROCESS
+BEGIN
+	FOR i IN 1 TO 6
+	LOOP
+		Motors(3) <= '0';
+		WAIT FOR 80000 ps;
+		Motors(3) <= '1';
+		WAIT FOR 80000 ps;
+	END LOOP;
+	Motors(3) <= '0';
+WAIT;
+END PROCESS t_prcs_Motors_3;
+-- Motors[2]
+t_prcs_Motors_2: PROCESS
 BEGIN
 	FOR i IN 1 TO 12
 	LOOP
-		Ma0 <= '0';
+		Motors(2) <= '0';
 		WAIT FOR 40000 ps;
-		Ma0 <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
-	Ma0 <= '0';
-WAIT;
-END PROCESS t_prcs_Ma0;
-
--- Ma1
-t_prcs_Ma1: PROCESS
-BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		Ma1 <= '0';
-		WAIT FOR 40000 ps;
-		Ma1 <= '1';
+		Motors(2) <= '1';
 		WAIT FOR 40000 ps;
 	END LOOP;
-	Ma1 <= '0';
+	Motors(2) <= '0';
 WAIT;
-END PROCESS t_prcs_Ma1;
-
--- Mb0
-t_prcs_Mb0: PROCESS
+END PROCESS t_prcs_Motors_2;
+-- Motors[1]
+t_prcs_Motors_1: PROCESS
 BEGIN
 LOOP
-	Mb0 <= '0';
+	Motors(1) <= '0';
 	WAIT FOR 20000 ps;
-	Mb0 <= '1';
+	Motors(1) <= '1';
 	WAIT FOR 20000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_Mb0;
-
--- Mb1
-t_prcs_Mb1: PROCESS
+END PROCESS t_prcs_Motors_1;
+-- Motors[0]
+t_prcs_Motors_0: PROCESS
 BEGIN
 LOOP
-	Mb1 <= '0';
-	WAIT FOR 20000 ps;
-	Mb1 <= '1';
-	WAIT FOR 20000 ps;
+	Motors(0) <= '0';
+	WAIT FOR 10000 ps;
+	Motors(0) <= '1';
+	WAIT FOR 10000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_Mb1;
-END Motor_Ctrl_arch;
+END PROCESS t_prcs_Motors_0;
+END PWM_ctrl_example_arch;

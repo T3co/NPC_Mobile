@@ -185,25 +185,25 @@ R32
 R17
 R18
 Epwm_ctrl_example
-Z33 w1666346472
+Z33 w1671289503
 R4
 R2
 R6
 R7
 R8
 R3
-R25
+Z34 dD:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim
 R10
 R11
 l0
 L35
-V>9U7EIHfNdgGRUhT^eSc63
-!s100 ik^kfF]9FF<;oaPTB7A5e1
+VNRF?n:;YaoZ:E7c4^7BJ`2
+!s100 U`k3FmGSYRQJNY2JjimlF2
 R12
 32
-Z34 !s110 1666346472
+Z35 !s110 1671289503
 !i10b 1
-Z35 !s108 1666346472.000000
+Z36 !s108 1671289503.000000
 R15
 R16
 !i113 1
@@ -216,57 +216,57 @@ R6
 R7
 R8
 R3
-DEx4 work 16 pwm_ctrl_example 0 22 >9U7EIHfNdgGRUhT^eSc63
-l91
-L49
-V]6cU=:YCBEC4QC_czdagf2
-!s100 =1gRd1d3@aHmA6llh`Ml[1
+DEx4 work 16 pwm_ctrl_example 0 22 NRF?n:;YaoZ:E7c4^7BJ`2
+l88
+L46
+VaDI7OmAj4Yl1FOH3E7Mm`1
+!s100 Y<oZ:ckQO?UN9I@Z2KMkS2
 R12
 32
-R34
-!i10b 1
 R35
+!i10b 1
+R36
 R15
 R16
 !i113 1
 R17
 R18
 Epwm_ctrl_example_vhd_vec_tst
-Z36 w1666346471
+Z37 w1671289502
 R7
 R8
-R25
-R19
-R20
+R34
+R29
+R30
 l0
 L32
 VeeZAIi3d[m0mQK>5nF5<J2
 !s100 95ERO8<e<]F;1of:SnQPj2
 R12
 32
-R34
-!i10b 1
 R35
-R22
-R23
+!i10b 1
+R36
+R31
+R32
 !i113 1
 R17
 R18
 Apwm_ctrl_example_arch
 R7
 R8
-Z37 DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
-l59
+Z38 DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
+l53
 L34
-VOC4Wz@P7eD[7iO>`^=PDX1
-!s100 NYklnOSIkRf_;oJCD>n8P3
+V:??dBK2Zh6dO@TgjfG=e>2
+!s100 0ToH1_J3GAK6Z`ULlTL`^1
 R12
 32
-R34
-!i10b 1
 R35
-R22
-R23
+!i10b 1
+R36
+R31
+R32
 !i113 1
 R17
 R18

@@ -1,5 +1,5 @@
 Flow report for Altera_Tutorial
-Thu Dec 15 21:57:38 2022
+Sat Dec 17 17:05:03 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 15 21:57:38 2022       ;
+; Flow Status                        ; Successful - Sat Dec 17 17:05:03 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
-; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
+; Top-level Entity Name              ; PWM_ctrl_example                            ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 446                                         ;
-;     Total combinational functions  ; 407                                         ;
-;     Dedicated logic registers      ; 213                                         ;
-; Total registers                    ; 213                                         ;
-; Total pins                         ; 41                                          ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 16                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,28 +67,28 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/15/2022 21:57:28 ;
+; Start date & time ; 12/17/2022 17:00:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Altera_Tutorial     ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                        ;
-+-------------------------------------+----------------------------------------+-----------------+---------------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name               ; Section Id ;
-+-------------------------------------+----------------------------------------+-----------------+---------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 5311868110993.167113424816484          ; --              ; --                        ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --                        ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --                        ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; Altera_Tutorial_Schematic ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; Altera_Tutorial_Schematic ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; Altera_Tutorial_Schematic ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --                        ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --                        ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --                        ; --         ;
-; TOP_LEVEL_ENTITY                    ; Altera_Tutorial_Schematic              ; Altera_Tutorial ; --                        ; --         ;
-+-------------------------------------+----------------------------------------+-----------------+---------------------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+----------------------------------------+-----------------+------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name      ; Section Id ;
++-------------------------------------+----------------------------------------+-----------------+------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 53447175500142.167128921816100         ; --              ; --               ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --               ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --               ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; PWM_ctrl_example ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; PWM_ctrl_example ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; PWM_ctrl_example ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --               ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --               ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --               ; --         ;
+; TOP_LEVEL_ENTITY                    ; PWM_ctrl_example                       ; Altera_Tutorial ; --               ; --         ;
++-------------------------------------+----------------------------------------+-----------------+------------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -96,8 +96,12 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4822 MB             ; 00:00:20                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4802 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4638 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:00                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,7 +110,11 @@ agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-QV2P73F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Korzack          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Korzack          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Korzack          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Korzack          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Korzack          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -114,6 +122,10 @@ agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/Waveform1.vwf" --testbench_file="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/Waveform1.vwf" --testbench_file="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
 
 
 
