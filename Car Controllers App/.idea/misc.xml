@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GitHub/Project_Moob/Car Controllers App/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/GitHub/Project_Moob/Car Controllers App/app/src/main/res/layout/activity_servo_controller.xml" value="0.3625" />
         <entry key="..\:/GitHub/Project_Moob/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
         <entry key="..\:/GitHub/Project_Moob/app/src/main/res/layout/activity_servo_controller.xml" value="0.3625" />
         <entry key="..\:/GitHub/Project_Moob/app/src/main/res/layout/fragment_canon_controller_layout.xml" value="0.3625" />

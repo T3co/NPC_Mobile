@@ -1,29 +1,28 @@
 #include "esp_camera.h"
 #include <WiFi.h>
+#include <FirebaseESP32.h>
 
-#define CAMERA_MODEL_AI_THINKER // Has PSRAM
-
-
+#define CAMERA_MODEL_AI_THINKER
 #include "camera_pins.h"
 
-// ===========================
-// Enter your WiFi credentials
-// ===========================
-const char* ssid = ORYAM
-const char* password = 12345678
+#define ssid "ORYAM"
+#define password "12345678"
 
 void startCameraServer();
 
-const int touchPin = 14; 
-const int ledPin = 4;
-const int threshold = 20;
-int touchValue;
+#define flashlightPin 4
+
+#define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
+#define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
+FirebaseData fbdo;
 
 void setup() {
+  
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
 
+//start camera settings
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
@@ -63,18 +62,8 @@ void setup() {
       config.frame_size = FRAMESIZE_SVGA;
       config.fb_location = CAMERA_FB_IN_DRAM;
     }
-  } else {
-    // Best option for face detection/recognition
-    config.frame_size = FRAMESIZE_240X240;
-#if CONFIG_IDF_TARGET_ESP32S3
-    config.fb_count = 2;
-#endif
   }
 
-#if defined(CAMERA_MODEL_ESP_EYE)
-  pinMode(13, INPUT_PULLUP);
-  pinMode(14, INPUT_PULLUP);
-#endif
 
   // camera init
   esp_err_t err = esp_camera_init(&config);
@@ -94,15 +83,7 @@ void setup() {
   if(config.pixel_format == PIXFORMAT_JPEG){
     s->set_framesize(s, FRAMESIZE_QVGA);
   }
-
-#if defined(CAMERA_MODEL_M5STACK_WIDE) || defined(CAMERA_MODEL_M5STACK_ESP32CAM)
-  s->set_vflip(s, 1);
-  s->set_hmirror(s, 1);
-#endif
-
-#if defined(CAMERA_MODEL_ESP32S3_EYE)
-  s->set_vflip(s, 1);
-#endif
+//end camera settings
 
   WiFi.begin(ssid, password);
   WiFi.setSleep(false);
@@ -114,6 +95,12 @@ void setup() {
   Serial.println("");
   Serial.println("WiFi connected");
 
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+  Serial.println("Firebase Connected");
+  Firebase.reconnectWiFi(true);
+
+  pinMode(flashlightPin, OUTPUT);
+
   startCameraServer();
 
   Serial.print("Camera Ready! Use 'http://");
@@ -123,15 +110,17 @@ void setup() {
 
 void loop() {
   // Do nothing. Everything is done in another task by the web server
-  touchValue = touchRead(touchPin);
-  Serial.print(touchValue);
-  if(touchValue < threshold){
-    digitalWrite(ledPin, HIGH);
-    Serial.println(" - LED on");
+
+   if (Firebase.ready())
+  {
+      if (Firebase.getInt(fbdo, "messages/leds"))
+      {
+       int flash = fbdo.intData();
+       if(flash == 1)
+         digitalWrite(flashlightPin, HIGH);
+       else
+         digitalWrite(flashlightPin, LOW);
+      }
   }
-  else{
-    digitalWrite(ledPin, LOW);
-    Serial.println(" - LED off");
-  }
-  delay(500);
+  delay(20);
 }
