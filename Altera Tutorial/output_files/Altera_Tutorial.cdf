@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("D:/NPC_Mobile-main/Altera Tutorial/output_files/") File("Altera_Tutorial.pof") MfrSpec(OpMask(1) Child_OpMask(2 1 1));
+		Device PartName(10M50DAF484) Path("C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/") File("Altera_Tutorial.pof") MfrSpec(OpMask(1) Child_OpMask(2 1 1));
 
 ChainEnd;
 

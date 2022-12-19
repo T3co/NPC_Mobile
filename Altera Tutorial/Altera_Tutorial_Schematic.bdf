@@ -246,7 +246,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect -176 704 0 720)
+	(rect -96 712 80 728)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "laser" (rect 90 0 113 12)(font "Arial" ))
 	(pt 0 8)
@@ -1064,14 +1064,6 @@ agreement for further details.
 	(pt -184 640)
 )
 (connector
-	(pt -184 640)
-	(pt -184 712)
-)
-(connector
-	(pt -184 712)
-	(pt -176 712)
-)
-(connector
 	(pt 280 472)
 	(pt 296 472)
 )
@@ -1150,6 +1142,14 @@ agreement for further details.
 	(pt 784 496)
 	(pt 784 784)
 	(bus)
+)
+(connector
+	(pt -184 640)
+	(pt -184 720)
+)
+(connector
+	(pt -184 720)
+	(pt -96 720)
 )
 (junction (pt 784 496))
 (junction (pt 280 472))

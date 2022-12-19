@@ -78,7 +78,7 @@ void loop()
 
   if (Serial2.available())
   {
-    packet = leds * 16 + motors + ServoMotors;
+    packet =ServoMotprs +  leds * 16 + motors;
     Serial2.write(packet);
     delay(10);
   }

@@ -1,5 +1,5 @@
 Fitter report for Altera_Tutorial
-Wed Dec 14 13:19:02 2022
+Mon Dec 19 14:54:03 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -70,18 +70,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Dec 14 13:19:02 2022       ;
+; Fitter Status                      ; Successful - Mon Dec 19 14:54:03 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 432 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 409 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 213 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 213                                         ;
-; Total pins                         ; 40 / 360 ( 11 % )                           ;
+; Total logic elements               ; 427 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 404 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 205 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 205                                         ;
+; Total pins                         ; 41 / 360 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -153,16 +153,16 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
-; Maximum used               ; 6           ;
+; Average used               ; 1.06        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.0%      ;
-;     Processors 3-6         ;   2.0%      ;
+;     Processor 2            ;   2.2%      ;
+;     Processors 3-4         ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -189,8 +189,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 725 ) ; 0.00 % ( 0 / 725 )         ; 0.00 % ( 0 / 725 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 725 ) ; 0.00 % ( 0 / 725 )         ; 0.00 % ( 0 / 725 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 715 ) ; 0.00 % ( 0 / 715 )         ; 0.00 % ( 0 / 715 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 715 ) ; 0.00 % ( 0 / 715 )         ; 0.00 % ( 0 / 715 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -213,7 +213,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 709 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 699 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -221,7 +221,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.pin.
+The pin-out file can be found in C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.pin.
 
 
 +----------------------------------------------------------------------+
@@ -229,28 +229,28 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 432 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 219                    ;
+; Total logic elements                        ; 427 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 222                    ;
 ;     -- Register only                        ; 23                     ;
-;     -- Combinational with a register        ; 190                    ;
+;     -- Combinational with a register        ; 182                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 186                    ;
-;     -- 3 input functions                    ; 68                     ;
-;     -- <=2 input functions                  ; 155                    ;
+;     -- 4 input functions                    ; 190                    ;
+;     -- 3 input functions                    ; 58                     ;
+;     -- <=2 input functions                  ; 156                    ;
 ;     -- Register only                        ; 23                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 301                    ;
+;     -- normal mode                          ; 296                    ;
 ;     -- arithmetic mode                      ; 108                    ;
 ;                                             ;                        ;
-; Total registers*                            ; 213 / 51,509 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 213 / 49,760 ( < 1 % ) ;
+; Total registers*                            ; 205 / 51,509 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 205 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 36 / 3,110 ( 1 % )     ;
+; Total LABs:  partially or completely used   ; 33 / 3,110 ( 1 % )     ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 40 / 360 ( 11 % )      ;
+; I/O pins                                    ; 41 / 360 ( 11 % )      ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )         ;
 ;     -- Dedicated input pins                 ; 1 / 1 ( 100 % )        ;
 ;                                             ;                        ;
@@ -261,18 +261,18 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 ; Total block memory implementation bits      ; 0 / 1,677,312 ( 0 % )  ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )        ;
 ; PLLs                                        ; 0 / 4 ( 0 % )          ;
-; Global signals                              ; 3                      ;
-;     -- Global clocks                        ; 3 / 20 ( 15 % )        ;
+; Global signals                              ; 4                      ;
+;     -- Global clocks                        ; 4 / 20 ( 20 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.4%     ;
-; Peak interconnect usage (total/H/V)         ; 2.5% / 2.2% / 2.9%     ;
-; Maximum fan-out                             ; 174                    ;
-; Highest non-global fan-out                  ; 33                     ;
-; Total fan-out                               ; 1969                   ;
+; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.3%     ;
+; Peak interconnect usage (total/H/V)         ; 2.1% / 2.0% / 2.1%     ;
+; Maximum fan-out                             ; 169                    ;
+; Highest non-global fan-out                  ; 31                     ;
+; Total fan-out                               ; 1941                   ;
 ; Average fan-out                             ; 2.64                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -286,33 +286,33 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 432 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 219                   ; 0                              ;
+; Total logic elements                        ; 427 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 222                   ; 0                              ;
 ;     -- Register only                        ; 23                    ; 0                              ;
-;     -- Combinational with a register        ; 190                   ; 0                              ;
+;     -- Combinational with a register        ; 182                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 186                   ; 0                              ;
-;     -- 3 input functions                    ; 68                    ; 0                              ;
-;     -- <=2 input functions                  ; 155                   ; 0                              ;
+;     -- 4 input functions                    ; 190                   ; 0                              ;
+;     -- 3 input functions                    ; 58                    ; 0                              ;
+;     -- <=2 input functions                  ; 156                   ; 0                              ;
 ;     -- Register only                        ; 23                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 301                   ; 0                              ;
+;     -- normal mode                          ; 296                   ; 0                              ;
 ;     -- arithmetic mode                      ; 108                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 213                   ; 0                              ;
-;     -- Dedicated logic registers            ; 213 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 205                   ; 0                              ;
+;     -- Dedicated logic registers            ; 205 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 36 / 3110 ( 1 % )     ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 33 / 3110 ( 1 % )     ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 40                    ; 0                              ;
+; I/O pins                                    ; 41                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
-; Clock control block                         ; 3 / 24 ( 12 % )       ; 0 / 24 ( 0 % )                 ;
+; Clock control block                         ; 4 / 24 ( 16 % )       ; 0 / 24 ( 0 % )                 ;
 ; User Flash Memory                           ; 1 / 1 ( 100 % )       ; 0 / 1 ( 0 % )                  ;
 ; Analog-to-Digital Converter                 ; 2 / 2 ( 100 % )       ; 0 / 2 ( 0 % )                  ;
 ;                                             ;                       ;                                ;
@@ -323,8 +323,8 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1975                  ; 8                              ;
-;     -- Registered Connections               ; 901                   ; 0                              ;
+;     -- Total Connections                    ; 1947                  ; 8                              ;
+;     -- Registered Connections               ; 887                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 4                     ; 0                              ;
@@ -332,7 +332,7 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 2                     ; 0                              ;
-;     -- Output Ports                         ; 36                    ; 0                              ;
+;     -- Output Ports                         ; 37                    ; 0                              ;
 ;     -- Bidir Ports                          ; 2                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -356,7 +356,7 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk50Mhz ; P11   ; 3        ; 34           ; 0            ; 28           ; 177                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; clk50Mhz ; P11   ; 3        ; 34           ; 0            ; 28           ; 169                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; esp_tx   ; V10   ; 3        ; 31           ; 0            ; 21           ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -387,6 +387,7 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 ; breatheLED ; D22   ; 6        ; 78           ; 35           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; error_dp   ; L19   ; 6        ; 78           ; 37           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; esp_rx     ; W10   ; 3        ; 24           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; laser      ; AB12  ; 4        ; 40           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; r_segH[0]  ; F20   ; 6        ; 78           ; 35           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; r_segH[1]  ; F19   ; 6        ; 78           ; 40           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; r_segH[2]  ; H19   ; 6        ; 78           ; 45           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -440,7 +441,7 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 ; 1B       ; 4 / 24 ( 17 % )  ; 2.5V          ; --           ;
 ; 2        ; 0 / 36 ( 0 % )   ; 2.5V          ; --           ;
 ; 3        ; 6 / 48 ( 13 % )  ; 2.5V          ; --           ;
-; 4        ; 4 / 48 ( 8 % )   ; 2.5V          ; --           ;
+; 4        ; 5 / 48 ( 10 % )  ; 2.5V          ; --           ;
 ; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
 ; 6        ; 18 / 60 ( 30 % ) ; 2.5V          ; --           ;
 ; 7        ; 12 / 52 ( 23 % ) ; 2.5V          ; --           ;
@@ -508,7 +509,7 @@ The pin-out file can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files
 ; AB9      ; 171        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB10     ; 177        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB11     ; 179        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AB12     ; 181        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; AB12     ; 181        ; 4        ; laser                                          ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB13     ; 183        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB14     ; 199        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB15     ; 203        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -954,6 +955,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; RWheelF    ; Incomplete set of assignments ;
 ; error_dp   ; Incomplete set of assignments ;
 ; servo_pwm  ; Incomplete set of assignments ;
+; laser      ; Incomplete set of assignments ;
 ; M_segH[6]  ; Incomplete set of assignments ;
 ; M_segH[5]  ; Incomplete set of assignments ;
 ; M_segH[4]  ; Incomplete set of assignments ;
@@ -986,6 +988,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; sda_lm75   ; Incomplete set of assignments ;
 ; clk50Mhz   ; Incomplete set of assignments ;
 ; esp_tx     ; Incomplete set of assignments ;
+; laser      ; Missing location assignment   ;
 +------------+-------------------------------+
 
 
@@ -994,21 +997,20 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name               ; Library Name ;
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic          ; 432 (1)     ; 213 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 40   ; 0            ; 219 (1)      ; 23 (0)            ; 190 (0)          ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
+; |Altera_Tutorial_Schematic          ; 427 (1)     ; 205 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 41   ; 0            ; 222 (1)      ; 23 (0)            ; 182 (0)          ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
 ;    |BOUD_RATE:3|                    ; 12 (12)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 1 (1)             ; 8 (8)            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3                                            ; BOUD_RATE                 ; work         ;
-;    |Motor_Ctrl:inst13|              ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
-;    |PWM_Motor:inst9|                ; 28 (28)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 4 (4)             ; 13 (13)          ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
-;    |bin2hex:inst1|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
-;    |bin2hex:inst2|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
+;    |Motor_Ctrl:inst13|              ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 5 (5)            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
+;    |PWM_Motor:inst9|                ; 27 (27)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 3 (3)             ; 14 (14)          ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
+;    |bin2hex:inst1|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
+;    |bin2hex:inst2|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst4|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4                                          ; bin2hex                   ; work         ;
-;    |bin2hex:inst5|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5                                          ; bin2hex                   ; work         ;
-;    |fb2bin:inst10|                  ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0          ; |Altera_Tutorial_Schematic|fb2bin:inst10                                          ; fb2bin                    ; work         ;
+;    |bin2hex:inst5|                  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5                                          ; bin2hex                   ; work         ;
 ;    |led:inst7|                      ; 48 (48)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 27 (27)          ; 0          ; |Altera_Tutorial_Schematic|led:inst7                                              ; led                       ; work         ;
 ;    |my_tx:inst|                     ; 20 (20)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 9 (9)            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst                                             ; my_tx                     ; work         ;
-;    |pmod_temp_sensor_tcn75a:inst11| ; 174 (76)    ; 95 (50)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 79 (26)      ; 14 (7)            ; 81 (43)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
+;    |pmod_temp_sensor_tcn75a:inst11| ; 174 (76)    ; 95 (50)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 79 (26)      ; 16 (9)            ; 79 (41)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
 ;       |i2c_master:i2c_master_0|     ; 98 (98)     ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 53 (53)      ; 7 (7)             ; 38 (38)          ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
-;    |rx:5|                           ; 44 (44)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 4 (4)             ; 23 (23)          ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
-;    |servo_control:inst14|           ; 71 (71)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)      ; 0 (0)             ; 24 (24)          ; 0          ; |Altera_Tutorial_Schematic|servo_control:inst14                                   ; servo_control             ; work         ;
+;    |rx:5|                           ; 48 (48)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 3 (3)             ; 24 (24)          ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
+;    |servo_control:inst14|           ; 67 (67)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 43 (43)      ; 0 (0)             ; 24 (24)          ; 0          ; |Altera_Tutorial_Schematic|servo_control:inst14                                   ; servo_control             ; work         ;
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1026,6 +1028,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RWheelF    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; error_dp   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; servo_pwm  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; laser      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; M_segH[6]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; M_segH[5]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; M_segH[4]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -1054,10 +1057,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; r_segL[2]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; r_segL[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; r_segL[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; scl_lm75   ; Bidir    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sda_lm75   ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; clk50Mhz   ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
-; esp_tx     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; scl_lm75   ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; sda_lm75   ; Bidir    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; clk50Mhz   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; esp_tx     ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1067,33 +1070,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                        ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------------------------+-------------------+---------+
 ; scl_lm75                                                                   ;                   ;         ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|stretch~0    ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|stretch~0    ; 1                 ; 6       ;
 ; sda_lm75                                                                   ;                   ;         ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|Selector28~0 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[7]~0 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[0]~1 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[1]~2 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[2]~3 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[3]~4 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[4]~5 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[5]~6 ; 1                 ; 6       ;
-;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[6]~7 ; 1                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|Selector28~0 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[7]~0 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[0]~1 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[1]~2 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[2]~3 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[3]~4 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[4]~5 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[5]~6 ; 0                 ; 6       ;
+;      - pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rx[6]~7 ; 0                 ; 6       ;
 ; clk50Mhz                                                                   ;                   ;         ;
-;      - fb2bin:inst10|Ma1                                                   ; 1                 ; 0       ;
-;      - fb2bin:inst10|Mb0                                                   ; 1                 ; 0       ;
-;      - fb2bin:inst10|Mb1                                                   ; 1                 ; 0       ;
 ; esp_tx                                                                     ;                   ;         ;
-;      - rx:5|start                                                          ; 0                 ; 0       ;
-;      - rx:5|tmp[0]~5                                                       ; 0                 ; 0       ;
-;      - rx:5|stop_bit~0                                                     ; 0                 ; 0       ;
-;      - rx:5|start_bit~1                                                    ; 0                 ; 0       ;
-;      - rx:5|tmp[1]~7                                                       ; 0                 ; 0       ;
-;      - rx:5|tmp[2]~9                                                       ; 0                 ; 0       ;
-;      - rx:5|tmp[3]~11                                                      ; 0                 ; 0       ;
-;      - rx:5|tmp[4]~13                                                      ; 0                 ; 0       ;
-;      - rx:5|tmp[5]~14                                                      ; 0                 ; 0       ;
-;      - rx:5|tmp[6]~15                                                      ; 0                 ; 0       ;
-;      - rx:5|tmp[7]~16                                                      ; 0                 ; 0       ;
+;      - rx:5|tmp[4]~5                                                       ; 1                 ; 0       ;
+;      - rx:5|start_bit~1                                                    ; 1                 ; 0       ;
+;      - rx:5|stop_bit~0                                                     ; 1                 ; 0       ;
+;      - rx:5|tmp[0]~8                                                       ; 1                 ; 0       ;
+;      - rx:5|tmp[1]~9                                                       ; 1                 ; 0       ;
+;      - rx:5|tmp[2]~11                                                      ; 1                 ; 0       ;
+;      - rx:5|tmp[3]~13                                                      ; 1                 ; 0       ;
+;      - rx:5|tmp[5]~14                                                      ; 1                 ; 0       ;
+;      - rx:5|tmp[6]~15                                                      ; 1                 ; 0       ;
+;      - rx:5|tmp[7]~16                                                      ; 1                 ; 0       ;
 +----------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1102,44 +1101,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; BOUD_RATE:3|LessThan0~1                                             ; LCCOMB_X1_Y38_N30  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; BOUD_RATE:3|fout                                                    ; FF_X1_Y38_N11      ; 35      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~1                                         ; LCCOMB_X30_Y6_N10  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~2                                         ; LCCOMB_X30_Y6_N0   ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK16           ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~3                                         ; LCCOMB_X30_Y6_N12  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; PWM_Motor:inst9|LessThan0~3                                         ; LCCOMB_X34_Y10_N16 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; clk50Mhz                                                            ; PIN_P11            ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk50Mhz                                                            ; PIN_P11            ; 174     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; BOUD_RATE:3|LessThan0~1                                             ; LCCOMB_X41_Y4_N28  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; BOUD_RATE:3|fout                                                    ; FF_X41_Y4_N23      ; 5       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; BOUD_RATE:3|fout                                                    ; FF_X41_Y4_N23      ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~2                                         ; LCCOMB_X40_Y4_N10  ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK16           ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~4                                         ; LCCOMB_X40_Y4_N24  ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; PWM_Motor:inst9|LessThan0~3                                         ; LCCOMB_X45_Y19_N6  ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; clk50Mhz                                                            ; PIN_P11            ; 169     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 ; esp_tx                                                              ; PIN_V10            ; 11      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; fb2bin:inst10|Mb0~0                                                 ; LCCOMB_X30_Y6_N2   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; my_tx:inst|Equal0~2                                                 ; LCCOMB_X63_Y41_N24 ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; my_tx:inst|LessThan9~0                                              ; LCCOMB_X63_Y41_N22 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|LessThan0~5                          ; LCCOMB_X45_Y36_N26 ; 26      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[0]~0 ; LCCOMB_X46_Y31_N2  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[2]~5 ; LCCOMB_X45_Y31_N24 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rd[2]~3 ; LCCOMB_X46_Y32_N26 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~0  ; LCCOMB_X45_Y31_N28 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~1  ; LCCOMB_X45_Y31_N22 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|state.output_result                  ; FF_X46_Y36_N7      ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|state.start                          ; FF_X46_Y36_N3      ; 29      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_temp_sensor_tcn75a:inst11|temp_data[10]~1                      ; LCCOMB_X51_Y36_N10 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; rx:5|Equal11~1                                                      ; LCCOMB_X31_Y2_N4   ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; rx:5|LessThan0~0                                                    ; LCCOMB_X31_Y2_N10  ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; rx:5|data[3]~3                                                      ; LCCOMB_X30_Y2_N28  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; rx:5|start                                                          ; FF_X31_Y2_N1       ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; servo_control:inst14|LessThan0~4                                    ; LCCOMB_X26_Y1_N28  ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; my_tx:inst|Equal0~2                                                 ; LCCOMB_X70_Y52_N20 ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; my_tx:inst|LessThan9~0                                              ; LCCOMB_X70_Y52_N22 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|LessThan0~5                          ; LCCOMB_X67_Y48_N26 ; 26      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[0]~0 ; LCCOMB_X65_Y45_N26 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[2]~5 ; LCCOMB_X67_Y45_N20 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_rd[2]~3 ; LCCOMB_X66_Y45_N16 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~0  ; LCCOMB_X63_Y45_N28 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|process_1~1  ; LCCOMB_X63_Y45_N18 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|state.output_result                  ; FF_X66_Y48_N3      ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|state.start                          ; FF_X66_Y48_N7      ; 29      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_temp_sensor_tcn75a:inst11|temp_data[10]~1                      ; LCCOMB_X66_Y48_N22 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rx:5|Equal11~1                                                      ; LCCOMB_X39_Y4_N2   ; 9       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; rx:5|LessThan0~0                                                    ; LCCOMB_X38_Y4_N12  ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; rx:5|data[4]~3                                                      ; LCCOMB_X39_Y4_N6   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; rx:5|start                                                          ; FF_X39_Y4_N29      ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; servo_control:inst14|LessThan0~4                                    ; LCCOMB_X38_Y12_N20 ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 +---------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                           ;
-+-----------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                        ; Location         ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; BOUD_RATE:3|fout            ; FF_X1_Y38_N11    ; 35      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-; Motor_Ctrl:inst13|LwheelB~2 ; LCCOMB_X30_Y6_N0 ; 2       ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
-; clk50Mhz                    ; PIN_P11          ; 174     ; 9                                    ; Global Clock         ; GCLK19           ; --                        ;
-+-----------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                            ;
++-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                        ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; BOUD_RATE:3|fout            ; FF_X41_Y4_N23     ; 32      ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~2 ; LCCOMB_X40_Y4_N10 ; 2       ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
+; Motor_Ctrl:inst13|LwheelB~4 ; LCCOMB_X40_Y4_N24 ; 2       ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
+; clk50Mhz                    ; PIN_P11           ; 169     ; 11                                   ; Global Clock         ; GCLK19           ; --                        ;
++-----------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------+
@@ -1147,148 +1145,145 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 399 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 56 / 5,382 ( 1 % )      ;
-; C4 interconnects      ; 262 / 106,704 ( < 1 % ) ;
+; Block interconnects   ; 415 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 48 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 201 / 106,704 ( < 1 % ) ;
 ; Direct links          ; 163 / 148,641 ( < 1 % ) ;
-; Global clocks         ; 3 / 20 ( 15 % )         ;
-; Local interconnects   ; 305 / 49,760 ( < 1 % )  ;
+; Global clocks         ; 4 / 20 ( 20 % )         ;
+; Local interconnects   ; 283 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 51 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 262 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 38 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 260 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.00) ; Number of LABs  (Total = 36) ;
+; Number of Logic Elements  (Average = 12.94) ; Number of LABs  (Total = 33) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 5                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
+; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
+; 6                                           ; 1                            ;
 ; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
+; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 2                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 5                            ;
-; 16                                          ; 15                           ;
+; 10                                          ; 1                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 3                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 17                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.14) ; Number of LABs  (Total = 36) ;
+; LAB-wide Signals  (Average = 1.24) ; Number of LABs  (Total = 33) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 27                           ;
+; 1 Clock                            ; 25                           ;
 ; 1 Clock enable                     ; 9                            ;
-; 1 Sync. clear                      ; 3                            ;
-; 2 Clocks                           ; 2                            ;
+; 1 Sync. clear                      ; 4                            ;
+; 2 Clocks                           ; 3                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.81) ; Number of LABs  (Total = 36) ;
+; Number of Signals Sourced  (Average = 19.06) ; Number of LABs  (Total = 33) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 4                            ;
-; 2                                            ; 2                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 4                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 3                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 4                            ;
-; 25                                           ; 3                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 5                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 4                            ;
 ; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 2                            ;
+; 28                                           ; 3                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.19) ; Number of LABs  (Total = 36) ;
+; Number of Signals Sourced Out  (Average = 7.70) ; Number of LABs  (Total = 33) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 7                            ;
+; 1                                               ; 2                            ;
 ; 2                                               ; 3                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 2                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 3                            ;
-; 10                                              ; 3                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 6                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 4                            ;
 ; 11                                              ; 1                            ;
-; 12                                              ; 2                            ;
-; 13                                              ; 2                            ;
-; 14                                              ; 1                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 3                            ;
+; 14                                              ; 2                            ;
 ; 15                                              ; 0                            ;
-; 16                                              ; 1                            ;
+; 16                                              ; 0                            ;
 ; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 1                            ;
+; 18                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.17) ; Number of LABs  (Total = 36) ;
+; Number of Distinct Inputs  (Average = 8.64) ; Number of LABs  (Total = 33) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 1                            ;
-; 2                                           ; 5                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 4                            ;
-; 5                                           ; 1                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 4                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 2                            ;
 ; 6                                           ; 4                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 3                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 2                            ;
-; 12                                          ; 3                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 2                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 0                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 1                            ;
 ; 17                                          ; 2                            ;
 ; 18                                          ; 0                            ;
-; 19                                          ; 1                            ;
-; 20                                          ; 0                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 1                            ;
 ; 21                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
@@ -1345,56 +1340,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 40        ; 0            ; 40        ; 0            ; 0            ; 40        ; 40        ; 0            ; 40        ; 40        ; 0            ; 38           ; 0            ; 0            ; 4            ; 0            ; 38           ; 4            ; 0            ; 0            ; 2            ; 38           ; 0            ; 0            ; 0            ; 0            ; 0            ; 40        ; 0            ; 0            ;
-; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 40           ; 0         ; 40           ; 40           ; 0         ; 0         ; 40           ; 0         ; 0         ; 40           ; 2            ; 40           ; 40           ; 36           ; 40           ; 2            ; 36           ; 40           ; 40           ; 38           ; 2            ; 40           ; 40           ; 40           ; 40           ; 40           ; 0         ; 40           ; 40           ;
-; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; esp_rx             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; breatheLED         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LWheelB            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LWheelF            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; RWheelB            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; RWheelF            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; error_dp           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; servo_pwm          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segH[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M_segL[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segH[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; r_segL[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; scl_lm75           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; sda_lm75           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; clk50Mhz           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; esp_tx             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
+; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
+; Total Pass         ; 40           ; 0            ; 40           ; 0            ; 0            ; 41        ; 40           ; 0            ; 41        ; 41        ; 0            ; 39           ; 0            ; 0            ; 4            ; 0            ; 39           ; 4            ; 0            ; 0            ; 2            ; 39           ; 0            ; 0            ; 0            ; 0            ; 0            ; 41        ; 0            ; 0            ;
+; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; Total Inapplicable ; 1            ; 41           ; 1            ; 41           ; 41           ; 0         ; 1            ; 41           ; 0         ; 0         ; 41           ; 2            ; 41           ; 41           ; 37           ; 41           ; 2            ; 37           ; 41           ; 41           ; 39           ; 2            ; 41           ; 41           ; 41           ; 41           ; 41           ; 0         ; 41           ; 41           ;
+; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; esp_rx             ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; breatheLED         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; LWheelB            ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; LWheelF            ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; RWheelB            ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; RWheelF            ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; error_dp           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; servo_pwm          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; laser              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[6]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[5]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[4]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[3]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[2]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[1]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segH[0]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[6]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[5]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[4]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[3]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[2]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[1]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M_segL[0]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[6]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[5]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[4]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[3]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[2]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[1]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segH[0]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[6]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[5]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[4]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[3]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[2]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[1]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; r_segL[0]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; scl_lm75           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sda_lm75           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; clk50Mhz           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; esp_tx             ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
 +-------------------------------------------------------------------------------------------+
@@ -1434,17 +1430,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+----------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                        ;
-+---------------------------+----------------------+-------------------+
-; Source Clock(s)           ; Destination Clock(s) ; Delay Added in ns ;
-+---------------------------+----------------------+-------------------+
-; I/O                       ; BOUD_RATE:3|fout     ; 25.8              ;
-; clk50Mhz                  ; fb2bin:inst10|Ma0    ; 11.3              ;
-; BOUD_RATE:3|fout          ; clk50Mhz             ; 11.1              ;
-; clk50Mhz                  ; clk50Mhz             ; 4.7               ;
-; BOUD_RATE:3|fout,clk50Mhz ; clk50Mhz             ; 2.8               ;
-+---------------------------+----------------------+-------------------+
++------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                          ;
++-----------------------------+----------------------+-------------------+
+; Source Clock(s)             ; Destination Clock(s) ; Delay Added in ns ;
++-----------------------------+----------------------+-------------------+
+; BOUD_RATE:3|fout            ; rx:5|data[0]         ; 30.0              ;
+; I/O                         ; BOUD_RATE:3|fout     ; 26.8              ;
+; clk50Mhz                    ; clk50Mhz             ; 4.5               ;
+; BOUD_RATE:3|fout,clk50Mhz   ; rx:5|data[0]         ; 4.5               ;
+; BOUD_RATE:3|fout,esp_tx,I/O ; BOUD_RATE:3|fout     ; 4.2               ;
++-----------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
@@ -1454,56 +1450,50 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------+---------------------------+-------------------+
 ; Source Register              ; Destination Register      ; Delay Added in ns ;
 +------------------------------+---------------------------+-------------------+
-; fb2bin:inst10|Ma0            ; Motor_Ctrl:inst13|RwheelF ; 4.891             ;
-; BOUD_RATE:3|fout             ; BOUD_RATE:3|fout          ; 4.664             ;
-; fb2bin:inst10|Mb1            ; Motor_Ctrl:inst13|RwheelF ; 3.260             ;
-; fb2bin:inst10|Ma1            ; Motor_Ctrl:inst13|RwheelF ; 3.260             ;
-; PWM_Motor:inst9|pulse        ; Motor_Ctrl:inst13|RwheelF ; 3.260             ;
-; esp_tx                       ; rx:5|tmp[4]               ; 2.659             ;
-; BOUD_RATE:3|cnt[6]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; BOUD_RATE:3|cnt[5]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; BOUD_RATE:3|cnt[4]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; BOUD_RATE:3|cnt[3]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; BOUD_RATE:3|cnt[2]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; BOUD_RATE:3|cnt[1]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; BOUD_RATE:3|cnt[7]           ; BOUD_RATE:3|fout          ; 2.217             ;
-; fb2bin:inst10|Mb0            ; Motor_Ctrl:inst13|RwheelF ; 1.630             ;
-; rx:5|data[5]                 ; servo_control:inst14|fOut ; 1.216             ;
-; rx:5|data[6]                 ; servo_control:inst14|fOut ; 1.179             ;
-; rx:5|data[4]                 ; servo_control:inst14|fOut ; 0.892             ;
-; rx:5|data[0]                 ; fb2bin:inst10|DATA[0]     ; 0.891             ;
-; rx:5|data[3]                 ; fb2bin:inst10|DATA[3]     ; 0.857             ;
-; rx:5|data[2]                 ; fb2bin:inst10|DATA[2]     ; 0.857             ;
-; rx:5|data[1]                 ; fb2bin:inst10|DATA[1]     ; 0.857             ;
-; clk50Mhz                     ; fb2bin:inst10|Ma1         ; 0.610             ;
-; servo_control:inst14|cnt[18] ; servo_control:inst14|fOut ; 0.566             ;
-; servo_control:inst14|cnt[16] ; servo_control:inst14|fOut ; 0.566             ;
-; servo_control:inst14|cnt[19] ; servo_control:inst14|fOut ; 0.566             ;
-; servo_control:inst14|cnt[17] ; servo_control:inst14|fOut ; 0.566             ;
-; servo_control:inst14|cnt[5]  ; servo_control:inst14|fOut ; 0.404             ;
-; servo_control:inst14|cnt[2]  ; servo_control:inst14|fOut ; 0.281             ;
-; servo_control:inst14|cnt[1]  ; servo_control:inst14|fOut ; 0.281             ;
-; servo_control:inst14|cnt[10] ; servo_control:inst14|fOut ; 0.252             ;
-; servo_control:inst14|cnt[8]  ; servo_control:inst14|fOut ; 0.234             ;
-; servo_control:inst14|cnt[7]  ; servo_control:inst14|fOut ; 0.234             ;
-; servo_control:inst14|cnt[6]  ; servo_control:inst14|fOut ; 0.234             ;
-; servo_control:inst14|cnt[4]  ; servo_control:inst14|fOut ; 0.159             ;
-; servo_control:inst14|cnt[3]  ; servo_control:inst14|fOut ; 0.130             ;
-; servo_control:inst14|cnt[15] ; servo_control:inst14|fOut ; 0.114             ;
-; servo_control:inst14|cnt[14] ; servo_control:inst14|fOut ; 0.114             ;
-; servo_control:inst14|cnt[13] ; servo_control:inst14|fOut ; 0.114             ;
-; servo_control:inst14|cnt[12] ; servo_control:inst14|fOut ; 0.053             ;
-; servo_control:inst14|cnt[11] ; servo_control:inst14|fOut ; 0.032             ;
-; servo_control:inst14|cnt[9]  ; servo_control:inst14|fOut ; 0.016             ;
+; BOUD_RATE:3|fout             ; BOUD_RATE:3|fout          ; 4.549             ;
+; rx:5|data[0]                 ; Motor_Ctrl:inst13|LwheelB ; 4.492             ;
+; esp_tx                       ; rx:5|tmp[0]               ; 3.304             ;
+; rx:5|data[1]                 ; Motor_Ctrl:inst13|LwheelB ; 2.431             ;
+; rx:5|data[3]                 ; Motor_Ctrl:inst13|RwheelB ; 2.412             ;
+; rx:5|data[2]                 ; Motor_Ctrl:inst13|LwheelB ; 2.329             ;
+; BOUD_RATE:3|cnt[6]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; BOUD_RATE:3|cnt[5]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; BOUD_RATE:3|cnt[4]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; BOUD_RATE:3|cnt[3]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; BOUD_RATE:3|cnt[2]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; BOUD_RATE:3|cnt[1]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; BOUD_RATE:3|cnt[7]           ; BOUD_RATE:3|fout          ; 2.163             ;
+; rx:5|tmp[2]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[6]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[5]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[2]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[1]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[0]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[7]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[4]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|start                   ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|cnt[3]                  ; rx:5|tmp[2]               ; 1.438             ;
+; rx:5|tmp[3]                  ; rx:5|tmp[3]               ; 1.423             ;
+; rx:5|tmp[1]                  ; rx:5|tmp[1]               ; 1.352             ;
+; PWM_Motor:inst9|pulse        ; Motor_Ctrl:inst13|RwheelF ; 1.149             ;
+; rx:5|data[6]                 ; servo_control:inst14|fOut ; 0.685             ;
+; rx:5|data[7]                 ; servo_control:inst14|fOut ; 0.251             ;
+; servo_control:inst14|cnt[18] ; servo_control:inst14|fOut ; 0.251             ;
+; servo_control:inst14|cnt[16] ; servo_control:inst14|fOut ; 0.251             ;
+; servo_control:inst14|cnt[19] ; servo_control:inst14|fOut ; 0.251             ;
+; servo_control:inst14|cnt[17] ; servo_control:inst14|fOut ; 0.251             ;
+; rx:5|data[5]                 ; servo_control:inst14|fOut ; 0.215             ;
+; servo_control:inst14|cnt[5]  ; servo_control:inst14|fOut ; 0.215             ;
+; my_tx:inst|cnt[7]            ; my_tx:inst|cnt[7]         ; 0.054             ;
 +------------------------------+---------------------------+-------------------+
-Note: This table only shows the top 41 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 35 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1534,31 +1524,46 @@ Info (12825): Data[1]/ASDO dual-purpose pin not reserved
 Info (12825): nCSO dual-purpose pin not reserved
 Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 41 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Altera_Tutorial.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst13|LwheelB~1  from: dataa  to: combout
-    Info (332098): Cell: inst13|LwheelB~2  from: datab  to: combout
-    Info (332098): Cell: inst13|LwheelB~3  from: datad  to: combout
+    Info (332098): Cell: inst13|LwheelB~2  from: dataa  to: combout
+    Info (332098): Cell: inst13|LwheelB~4  from: datac  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk50Mhz~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node fb2bin:inst10|Ma1 File: D:/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 8
-        Info (176357): Destination node fb2bin:inst10|Mb0 File: D:/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 9
-        Info (176357): Destination node fb2bin:inst10|Mb1 File: D:/NPC_Mobile-main/Altera Tutorial/fb2bin.vhd Line: 10
-Info (176353): Automatically promoted node BOUD_RATE:3|fout  File: D:/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd Line: 5
+Info (176353): Automatically promoted node BOUD_RATE:3|fout  File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/BOUD_RATE.vhd Line: 5
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node BOUD_RATE:3|fout~0 File: D:/NPC_Mobile-main/Altera Tutorial/BOUD_RATE.vhd Line: 5
-Info (176353): Automatically promoted node Motor_Ctrl:inst13|LwheelB~2  File: D:/NPC_Mobile-main/Altera Tutorial/Motor_Ctrl.vhd Line: 9
+        Info (176357): Destination node rx:5|data[1] File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
+        Info (176357): Destination node rx:5|data[2] File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
+        Info (176357): Destination node rx:5|data[3] File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
+        Info (176357): Destination node BOUD_RATE:3|fout~0 File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/BOUD_RATE.vhd Line: 5
+Info (176353): Automatically promoted node Motor_Ctrl:inst13|LwheelB~2  File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 6
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node Motor_Ctrl:inst13|LwheelB~4  File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 6
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 1 (unused VREF, 2.5V VCCIO, 0 input, 1 output, 0 bidirectional)
+        Info (176212): I/O standards used: 2.5 V.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  16 pins available
+        Info (176213): I/O bank number 1B does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  20 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  36 pins available
+        Info (176213): I/O bank number 3 does not use VREF pins and has 2.5V VCCIO pins. 6 total pin(s) used --  42 pins available
+        Info (176213): I/O bank number 4 does not use VREF pins and has 2.5V VCCIO pins. 4 total pin(s) used --  44 pins available
+        Info (176213): I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
+        Info (176213): I/O bank number 6 does not use VREF pins and has 2.5V VCCIO pins. 18 total pin(s) used --  42 pins available
+        Info (176213): I/O bank number 7 does not use VREF pins and has 2.5V VCCIO pins. 12 total pin(s) used --  40 pins available
+        Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  32 pins available
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "d[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "d[1]" is assigned to location or region, but does not exist in design
@@ -1569,7 +1574,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "d[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "d[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "led_car" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1578,28 +1583,28 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.49 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.52 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file D:/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 5774 megabytes
-    Info: Processing ended: Wed Dec 14 13:19:02 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:17
+Info (144001): Generated suppressed messages file C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 5657 megabytes
+    Info: Processing ended: Mon Dec 19 14:54:04 2022
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg.
+The suppressed messages can be found in C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.fit.smsg.
 
 
