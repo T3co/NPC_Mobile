@@ -6,6 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.slider.Slider
+        android:id="@+id/servoSlider"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="75dp"
+        android:contentDescription="SliderServo"
+        android:stepSize="10"
+        android:value="40"
+        android:valueFrom="0"
+        android:valueTo="80"
+        app:haloColor="@color/white"
+        app:labelBehavior="floating"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537"
+        app:thumbColor="@color/purple_500"
+        app:tickColor="@color/white"
+        app:trackColor="@color/purple_500" />
+
     <WebView
         android:id="@+id/camView"
         android:layout_width="match_parent"
@@ -18,32 +41,16 @@
         android:id="@+id/tempText"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="@string/_255"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/camView" />
 
-    <Button
-        android:id="@+id/switchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="60dp"
-        android:text="@string/switch_view"
-        app:layout_constraintEnd_toStartOf="@+id/lightBox"
-        app:layout_constraintStart_toEndOf="@+id/tempText"
-        app:layout_constraintTop_toBottomOf="@+id/camView" />
-
     <CheckBox
         android:id="@+id/lightBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
         android:text="@string/lights"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/camView" />

@@ -41,8 +41,8 @@ agreement for further details.
 	(port
 		(pt 184 48)
 		(output)
-		(text "servo[7..5]" (rect 0 0 43 12)(font "Arial" ))
-		(text "servo[7..5]" (rect 120 43 163 55)(font "Arial" ))
+		(text "servo[6..4]" (rect 0 0 44 12)(font "Arial" ))
+		(text "servo[6..4]" (rect 119 43 163 55)(font "Arial" ))
 		(line (pt 184 48)(pt 168 48)(line_width 3))
 	)
 	(port

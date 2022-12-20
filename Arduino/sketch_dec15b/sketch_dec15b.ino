@@ -5,8 +5,8 @@
 #define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
 
-#define WIFI_SSID "ORYAM"
-#define WIFI_PASSWORD "12345678"
+#define WIFI_SSID "upstairs"
+#define WIFI_PASSWORD "10203040"
 
 #define RXD2 16
 #define TXD2 17
@@ -20,8 +20,7 @@ int motors, temperature, leds, packet, ServoMotors;
 bool a = false;
 void blink();
 
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
 
@@ -30,8 +29,7 @@ void setup()
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   Serial.print("Connecting to Wi-Fi");
 
-  while (WiFi.status() != WL_CONNECTED)
-  {
+  while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
     delay(300);
   }
@@ -43,42 +41,30 @@ void setup()
   Firebase.reconnectWiFi(true);
 }
 
-void loop()
-{
-   while (Serial2.available())
-  {
+void loop() {
+  while (Serial2.available()) {
     temperature = Serial2.read();
   }
 
-  
-  if (Firebase.ready())
-  {
-       Firebase.setInt(fbdo, "messages/temperature", temperature);
-    
-      if (Firebase.getInt(fbdo, "messages/motors"))
-      {
-       motors = fbdo.intData();
-      }
 
-      if (Firebase.getInt(fbdo, "messages/leds"))
-      {
-        leds = fbdo.intData();
-      }
-      
-      if (Firebase.getInt(fbdo, "messages/ServoMotors"))
-      {
-        ServoMotors = fbdo.intData();
-      }
+  if (Firebase.ready()) {
+    Firebase.setInt(fbdo, "messages/temperature", temperature);
 
+    if (Firebase.getInt(fbdo, "messages/motors")) {
+      motors = fbdo.intData();
+    }
 
-   
+    if (Firebase.getInt(fbdo, "messages/leds")) {
+      leds = fbdo.intData();
+    }
+
+    if (Firebase.getInt(fbdo, "messages/ServoMotors")) {
+      ServoMotors = fbdo.intData();
+    }
   }
-  
   delay(10);
-
-  if (Serial2.available())
-  {
-    packet =ServoMotprs +  leds * 16 + motors;
+  if (Serial2.available()) {
+    packet = motors + ServoMotors * 16 + leds * 256;
     Serial2.write(packet);
     delay(10);
   }
@@ -87,8 +73,7 @@ void loop()
   blink();
 }
 
-void blink()
-{
+void blink() {
   a = not a;
   if (a)
     digitalWrite(ledpin, HIGH);

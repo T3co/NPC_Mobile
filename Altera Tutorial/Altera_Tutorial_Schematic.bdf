@@ -704,42 +704,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -376 576 -192 688)
-	(text "data_spliter" (rect 5 0 61 12)(font "Arial" ))
-	(text "inst8" (rect 8 96 31 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "data[7..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "data[7..0]" (rect 21 27 68 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 184 32)
-		(output)
-		(text "motor[3..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "motor[3..0]" (rect 118 27 172 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32)(line_width 3))
-	)
-	(port
-		(pt 184 48)
-		(output)
-		(text "servo[7..5]" (rect 0 0 54 12)(font "Arial" ))
-		(text "servo[7..5]" (rect 118 43 172 55)(font "Arial" ))
-		(line (pt 184 48)(pt 168 48)(line_width 3))
-	)
-	(port
-		(pt 184 64)
-		(output)
-		(text "Laser" (rect 0 0 27 12)(font "Arial" ))
-		(text "Laser" (rect 141 59 168 71)(font "Arial" ))
-		(line (pt 184 64)(pt 168 64))
-	)
-	(drawing
-		(rectangle (rect 16 16 168 96))
-	)
-)
-(symbol
 	(rect 448 552 664 664)
 	(text "Motor_Ctrl" (rect 5 0 55 12)(font "Arial" ))
 	(text "inst13" (rect 8 96 37 108)(font "Arial" ))
@@ -787,6 +751,42 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 200 96))
+	)
+)
+(symbol
+	(rect -376 576 -192 688)
+	(text "data_spliter" (rect 5 0 61 12)(font "Arial" ))
+	(text "inst8" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "data[7..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "data[7..0]" (rect 21 27 68 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "motor[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "motor[3..0]" (rect 118 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "servo[6..4]" (rect 0 0 54 12)(font "Arial" ))
+		(text "servo[6..4]" (rect 118 43 163 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "Laser" (rect 0 0 27 12)(font "Arial" ))
+		(text "Laser" (rect 141 59 163 71)(font "Arial" ))
+		(line (pt 184 64)(pt 168 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 96))
 	)
 )
 (connector
