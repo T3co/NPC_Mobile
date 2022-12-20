@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
                     myRef.child("motors").setValue(1);
 
                 if(angle < 45 && angle > 0 || angle > 315 && angle < 360)//right
-                    myRef.child("motors").setValue(3);
+                    myRef.child("motors").setValue(4);
 
                 if(angle < 180 && angle > 135 || angle > 180 && angle < 225)//left
-                    myRef.child("motors").setValue(4);
+                    myRef.child("motors").setValue(3);
             }
         });
 
