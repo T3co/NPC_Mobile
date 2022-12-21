@@ -23,10 +23,10 @@ if Motor_Bits = "0001" then LwheelB <= '0'; LwheelF <= PWM_Motor_1KHz; RwheelB <
 if Motor_Bits = "0010" then LwheelB <= PWM_Motor_1KHz; LwheelF <= '0'; RwheelB <= PWM_Motor_1KHz; RwheelF <= '0'; end if;
 
 -------------------------------------------------------------------- right
-if Motor_Bits = "0101" then LwheelB <= '0'; LwheelF <= PWM_Motor_1KHz; RwheelB <= PWM_Motor_1KHz; RwheelF <= '0'; end if;
+if Motor_Bits = "0011" then LwheelB <= '0'; LwheelF <= PWM_Motor_1KHz; RwheelB <= PWM_Motor_1KHz; RwheelF <= '0'; end if;
 
 -------------------------------------------------------------------- left
-if Motor_Bits = "1001" then LwheelB <= PWM_Motor_1KHz; LwheelF <= '0'; RwheelB <= '0'; RwheelF <= PWM_Motor_1KHz; end if;
+if Motor_Bits = "0100" then LwheelB <= PWM_Motor_1KHz; LwheelF <= '0'; RwheelB <= '0'; RwheelF <= PWM_Motor_1KHz; end if;
 
 -------------------------------------------------------------------- no movement
 if Motor_Bits = "1111" then LwheelB <= '0'; LwheelF <= '0'; RwheelB <= '0'; RwheelF <= '0'; end if;
