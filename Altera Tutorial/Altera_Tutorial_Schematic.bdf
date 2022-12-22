@@ -549,28 +549,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 296 456 424 536)
-	(text "PWM_Motor" (rect 5 0 64 12)(font "Arial" ))
-	(text "inst9" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 128 32)
-		(output)
-		(text "pOut" (rect 0 0 23 12)(font "Arial" ))
-		(text "pOut" (rect 88 27 111 39)(font "Arial" ))
-		(line (pt 128 32)(pt 112 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 112 64))
-	)
-)
-(symbol
 	(rect 288 704 528 816)
 	(text "pmod_temp_sensor_tcn75a" (rect 5 0 140 12)(font "Arial" ))
 	(text "inst11" (rect 8 96 36 113)(font "Intel Clear" ))
@@ -688,7 +666,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 448 552 664 664)
+	(rect 560 552 776 664)
 	(text "Motor_Ctrl" (rect 5 0 55 12)(font "Arial" ))
 	(text "inst13" (rect 8 96 37 108)(font "Arial" ))
 	(port
@@ -771,6 +749,42 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 168 96))
+	)
+)
+(symbol
+	(rect 296 552 528 632)
+	(text "PWM_Motor" (rect 5 0 64 12)(font "Arial" ))
+	(text "inst9" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "motorInput[3..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "motorInput[3..0]" (rect 21 43 100 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "pOut" (rect 0 0 23 12)(font "Arial" ))
+		(text "pOut" (rect 192 27 211 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "motorOutput[3..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "motorOutput[3..0]" (rect 138 43 211 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 64))
 	)
 )
 (connector
@@ -967,21 +981,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt -176 560)
-	(pt -176 528)
-	(bus)
-)
-(connector
-	(pt -384 528)
-	(pt -176 528)
-	(bus)
-)
-(connector
-	(pt 264 560)
-	(pt -176 560)
-	(bus)
-)
-(connector
 	(pt 264 280)
 	(pt 264 560)
 	(bus)
@@ -989,11 +988,6 @@ agreement for further details.
 (connector
 	(pt -384 608)
 	(pt -376 608)
-	(bus)
-)
-(connector
-	(pt -384 528)
-	(pt -384 608)
 	(bus)
 )
 (connector
@@ -1030,41 +1024,6 @@ agreement for further details.
 (connector
 	(pt -192 640)
 	(pt -184 640)
-)
-(connector
-	(pt 664 632)
-	(pt 792 632)
-)
-(connector
-	(pt 432 584)
-	(pt 448 584)
-)
-(connector
-	(pt 664 584)
-	(pt 792 584)
-)
-(connector
-	(pt 664 600)
-	(pt 792 600)
-)
-(connector
-	(pt 664 616)
-	(pt 792 616)
-)
-(connector
-	(pt -184 608)
-	(pt -184 600)
-	(bus)
-)
-(connector
-	(pt -192 608)
-	(pt -184 608)
-	(bus)
-)
-(connector
-	(pt -184 600)
-	(pt 448 600)
-	(bus)
 )
 (connector
 	(pt 528 784)
@@ -1104,26 +1063,6 @@ agreement for further details.
 	(pt 288 752)
 )
 (connector
-	(pt 280 488)
-	(pt 296 488)
-)
-(connector
-	(pt 432 584)
-	(pt 432 488)
-)
-(connector
-	(pt 432 488)
-	(pt 424 488)
-)
-(connector
-	(pt 280 384)
-	(pt 280 488)
-)
-(connector
-	(pt 280 488)
-	(pt 280 736)
-)
-(connector
 	(pt 272 440)
 	(pt 272 752)
 )
@@ -1159,10 +1098,72 @@ agreement for further details.
 	(pt -112 544)
 	(pt -112 656)
 )
+(connector
+	(pt -384 608)
+	(pt -384 560)
+	(bus)
+)
+(connector
+	(pt -384 560)
+	(pt 264 560)
+	(bus)
+)
+(connector
+	(pt 792 584)
+	(pt 776 584)
+)
+(connector
+	(pt 792 600)
+	(pt 776 600)
+)
+(connector
+	(pt 792 616)
+	(pt 776 616)
+)
+(connector
+	(pt 792 632)
+	(pt 776 632)
+)
+(connector
+	(pt 280 584)
+	(pt 296 584)
+)
+(connector
+	(pt 280 384)
+	(pt 280 584)
+)
+(connector
+	(pt 280 584)
+	(pt 280 736)
+)
+(connector
+	(pt 528 584)
+	(pt 560 584)
+)
+(connector
+	(pt 528 600)
+	(pt 560 600)
+	(bus)
+)
+(connector
+	(pt -144 608)
+	(pt -144 600)
+	(bus)
+)
+(connector
+	(pt 296 600)
+	(pt -144 600)
+	(bus)
+)
+(connector
+	(pt -192 608)
+	(pt -144 608)
+	(bus)
+)
 (junction (pt 784 496))
 (junction (pt 768 208))
 (junction (pt 408 208))
 (junction (pt 280 208))
 (junction (pt 280 384))
-(junction (pt 280 488))
 (junction (pt 520 384))
+(junction (pt 280 584))
