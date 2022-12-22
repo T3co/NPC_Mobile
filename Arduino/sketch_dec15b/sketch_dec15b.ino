@@ -50,23 +50,12 @@ void loop() {
   if (Firebase.ready()) {
     Firebase.setInt(fbdo, "messages/temperature", temperature);
 
-    if (Firebase.getInt(fbdo, "messages/motors")) {
-      motors = fbdo.intData();
-    }
-
-    if (Firebase.getInt(fbdo, "messages/leds")) {
-      leds = fbdo.intData();
-    }
-
-    if (Firebase.getInt(fbdo, "messages/ServoMotors")) {
-      ServoMotors = fbdo.intData();
+    if (Firebase.getInt(fbdo, "messages/carControl")) {
+      packet = fbdo.intData();
     }
   }
   delay(10);
   if (Serial2.available()) {
-    ServoMotors *= 16;
-    leds *= 256;
-    packet = motors + ServoMotors + leds;
     Serial2.write(packet);
     delay(10);
   }

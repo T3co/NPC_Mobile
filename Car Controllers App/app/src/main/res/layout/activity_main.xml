@@ -10,11 +10,11 @@
         android:id="@+id/servoSlider"
         android:layout_width="259dp"
         android:layout_height="48dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="65dp"
         android:layout_marginEnd="75dp"
         android:contentDescription="SliderServo"
         android:stepSize="10"
-        android:value="40"
+        android:value="0"
         android:valueFrom="0"
         android:valueTo="70"
         app:haloColor="@color/white"
@@ -51,7 +51,8 @@
         android:id="@+id/lightBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lights"
+        android:layout_marginEnd="5dp"
+        android:text="led"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/camView" />
 
@@ -59,8 +60,7 @@
         android:id="@+id/joystick"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginStart="100dp"
         app:JV_backgroundColor="#000000"
         app:JV_borderColor="#454545"
         app:JV_borderWidth="4dp"
@@ -69,6 +69,16 @@
         app:JV_fixedCenter="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/shootButton"
+        android:layout_width="84dp"
+        android:layout_height="286dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="shoot"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
