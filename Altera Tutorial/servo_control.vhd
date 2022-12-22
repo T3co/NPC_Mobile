@@ -9,14 +9,14 @@ architecture b of servo_control  is
 signal cnt , cntMax : integer range 0 to 1000000 ;  --50hz to servo
 begin
 
-cntMax<=56250 when degree="000" else
-		  62500 when degree="001" else 
-		  68750 when degree="010" else 
-		  75000 when degree="011" else 
-		  81250 when degree="100" else 
-		  87500 when degree="101" else 
-		  93750 when degree="110" else
-		  100000 when degree="111";
+cntMax<=20000 when degree="000" else
+		  33125 when degree="001" else 
+		  46250 when degree="010" else 
+		  59375 when degree="011" else 
+		  72500 when degree="100" else 
+		  85625 when degree="101" else 
+		  98750 when degree="110" else
+		  111875 when degree="111";
 	 
 process (clk)
 begin

@@ -3,8 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("D:/GitHub/Project_Moob/Altera Tutorial/output_files/") File("Altera_Tutorial.pof") MfrSpec(OpMask(1) Child_OpMask(2 1 1));
+	P ActionCode(Ign)
+		Device PartName(10M50DAF484) MfrSpec(OpMask(0) Child_OpMask(2 1 1) FullPath("C:/Users/111/Downloads/NPC_Mobile-main/NPC_Mobile-main/Altera Tutorial/output_files/Altera_Tutorial.pof"));
 
 ChainEnd;
 
