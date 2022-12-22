@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 96)
+	(rect 16 16 248 128)
 	(text "PWM_Motor" (rect 5 0 59 12)(font "Arial" ))
-	(text "inst" (rect 8 64 20 76)(font "Arial" ))
+	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -34,9 +34,16 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "motorInput[3..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "motorInput[3..0]" (rect 21 43 83 55)(font "Arial" ))
+		(text "motorInput[2..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "motorInput[2..0]" (rect 21 43 83 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "speedMotor" (rect 0 0 47 12)(font "Arial" ))
+		(text "speedMotor" (rect 21 59 68 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
 		(pt 232 32)
@@ -48,11 +55,11 @@ agreement for further details.
 	(port
 		(pt 232 48)
 		(output)
-		(text "motorOutput[3..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "motorOutput[3..0]" (rect 142 43 211 55)(font "Arial" ))
+		(text "motorOutput[2..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "motorOutput[2..0]" (rect 142 43 211 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 64)(line_width 1))
+		(rectangle (rect 16 16 216 96)(line_width 1))
 	)
 )
