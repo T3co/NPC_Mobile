@@ -10,8 +10,8 @@ end;
 architecture behave of data_spliter is
 begin
 motor<=data(2 downto 0);
+speedMotor<=data(3);
 servo<=data(6 downto 4);
-speedMotor<=data(6);
 Laser<=data(7);
 
 end behave;

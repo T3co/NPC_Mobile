@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         return String.valueOf(tempInC - 25);
     }
     public void  CompilePacket(DatabaseReference dbRef){
-        packet = motors + speed * 4 + servo * 8 + laser * 64;
+        packet = laser * 128 + servo * 16 + speed * 8 + motors;
         dbRef.child("carControl").setValue(packet);
     }
 }
