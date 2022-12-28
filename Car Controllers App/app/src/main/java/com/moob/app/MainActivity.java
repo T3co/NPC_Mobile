@@ -29,6 +29,7 @@ import io.github.controlwear.virtual.joystick.android.JoystickView;
 public class MainActivity extends AppCompatActivity {
 
     CheckBox lightBox;
+    CheckBox speedBox;
     TextView tempText;
     WebView camView;
     Slider servoSlider;
@@ -43,30 +44,23 @@ public class MainActivity extends AppCompatActivity {
         camView = findViewById(R.id.camView);
         servoSlider = findViewById(R.id.servoSlider);
         shootButton = findViewById(R.id.shootButton);
-
+        speedBox = findViewById(R.id.speedBox);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference dbRef = database.getReference("kar98Info");
 
         JoystickView joystick = (JoystickView) findViewById(R.id.joystick);
+
+
+
         joystick.setOnMoveListener(new JoystickView.OnMoveListener() {
             @Override
             public void onMove(int angle, int strength) {
                 CompilePacket(dbRef);
-                if(strength < 30){ //stop car when no input
+                if(strength < 50){ //stop car when no input
                     motors = 0;
-                    speed = 0;
                     return;
                 }
-
-                if(strength > 35 && strength < 60){
-                    speed = 0;
-                }
-
-                if(strength > 60){
-                    speed = 1;
-                }
-
                 CompilePacket(dbRef);
                 if(angle < 135 && angle > 45) //forward
                     motors =2;
@@ -90,6 +84,20 @@ public class MainActivity extends AppCompatActivity {
                 }
                 CompilePacket(dbRef);
 
+            }
+        });
+
+        speedBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(speedBox.isChecked()){
+                    speed = 1;
+                    CompilePacket(dbRef);
+
+                }else {
+                    speed = 0;
+                    CompilePacket(dbRef);
+                }
             }
         });
 
