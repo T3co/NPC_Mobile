@@ -106,35 +106,35 @@ public class MainActivity extends AppCompatActivity {
             public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
                 switch((int)value) {
                     case 0:
-                        servo=0;
+                        servo=7;
                         CompilePacket(dbRef);
                         break;
                     case 10:
-                        servo=1;
-                        CompilePacket(dbRef);
-                        break;
-                    case 20:
-                        servo=2;
-                        CompilePacket(dbRef);
-                        break;
-                    case 30:
-                        servo=3;
-                        CompilePacket(dbRef);
-                        break;
-                    case 40:
-                        servo=4;
-                        CompilePacket(dbRef);
-                        break;
-                    case 50:
-                        servo=5;
-                        CompilePacket(dbRef);
-                        break;
-                    case 60:
                         servo=6;
                         CompilePacket(dbRef);
                         break;
+                    case 20:
+                        servo=5;
+                        CompilePacket(dbRef);
+                        break;
+                    case 30:
+                        servo=4;
+                        CompilePacket(dbRef);
+                        break;
+                    case 40:
+                        servo=3;
+                        CompilePacket(dbRef);
+                        break;
+                    case 50:
+                        servo=2;
+                        CompilePacket(dbRef);
+                        break;
+                    case 60:
+                        servo=1;
+                        CompilePacket(dbRef);
+                        break;
                     case 70:
-                        servo=7;
+                        servo=0;
                         CompilePacket(dbRef);
                         break;
                     default:

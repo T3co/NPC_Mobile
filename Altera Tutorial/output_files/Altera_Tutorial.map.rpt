@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Tue Dec 27 12:42:50 2022
+Wed Dec 28 14:25:41 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,15 +52,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 27 12:42:50 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 28 14:25:41 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 402                                         ;
-;     Total combinational functions  ; 366                                         ;
-;     Dedicated logic registers      ; 189                                         ;
-; Total registers                    ; 189                                         ;
+; Total logic elements               ; 470                                         ;
+;     Total combinational functions  ; 435                                         ;
+;     Dedicated logic registers      ; 229                                         ;
+; Total registers                    ; 229                                         ;
 ; Total pins                         ; 41                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -190,6 +190,7 @@ agreement for further details.
 ; BOUD_RATE.vhd                    ; yes             ; User VHDL File                     ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/BOUD_RATE.vhd                 ;         ;
 ; led.vhd                          ; yes             ; User VHDL File                     ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/led.vhd                       ;         ;
 ; LED_CAR.vhd                      ; yes             ; User VHDL File                     ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/LED_CAR.vhd                   ;         ;
+; output_files/lowfreqreset.vhd    ; yes             ; User VHDL File                     ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/lowfreqreset.vhd ;         ;
 ; pmod_temp_sensor_tcn75a.vhd      ; yes             ; Auto-Found VHDL File               ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd   ;         ;
 ; i2c_master.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/i2c_master.vhd                ;         ;
 ; servo_control.vhd                ; yes             ; Auto-Found VHDL File               ; C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/servo_control.vhd             ;         ;
@@ -203,20 +204,20 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 402            ;
+; Estimated Total logic elements              ; 470            ;
 ;                                             ;                ;
-; Total combinational functions               ; 366            ;
+; Total combinational functions               ; 435            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 144            ;
-;     -- 3 input functions                    ; 84             ;
-;     -- <=2 input functions                  ; 138            ;
+;     -- 4 input functions                    ; 156            ;
+;     -- 3 input functions                    ; 87             ;
+;     -- <=2 input functions                  ; 192            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 257            ;
-;     -- arithmetic mode                      ; 109            ;
+;     -- normal mode                          ; 289            ;
+;     -- arithmetic mode                      ; 146            ;
 ;                                             ;                ;
-; Total registers                             ; 189            ;
-;     -- Dedicated logic registers            ; 189            ;
+; Total registers                             ; 229            ;
+;     -- Dedicated logic registers            ; 229            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 41             ;
@@ -224,9 +225,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50Mhz~input ;
-; Maximum fan-out                             ; 153            ;
-; Total fan-out                               ; 1794           ;
-; Average fan-out                             ; 2.81           ;
+; Maximum fan-out                             ; 193            ;
+; Total fan-out                               ; 2051           ;
+; Average fan-out                             ; 2.74           ;
 +---------------------------------------------+----------------+
 
 
@@ -235,15 +236,16 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name               ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic          ; 366 (0)             ; 189 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
+; |Altera_Tutorial_Schematic          ; 435 (0)             ; 229 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
 ;    |BOUD_RATE:3|                    ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3                                            ; BOUD_RATE                 ; work         ;
 ;    |Motor_Ctrl:inst13|              ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13                                      ; Motor_Ctrl                ; work         ;
-;    |PWM_Motor:inst9|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
+;    |PWM_Motor:inst9|                ; 21 (21)             ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
 ;    |bin2hex:inst1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst1                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst2|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst2                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst4                                          ; bin2hex                   ; work         ;
 ;    |bin2hex:inst5|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|bin2hex:inst5                                          ; bin2hex                   ; work         ;
 ;    |led:inst7|                      ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|led:inst7                                              ; led                       ; work         ;
+;    |lowfreqreset:inst17|            ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|lowfreqreset:inst17                                    ; lowfreqreset              ; work         ;
 ;    |my_tx:inst|                     ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst                                             ; my_tx                     ; work         ;
 ;    |pmod_temp_sensor_tcn75a:inst11| ; 154 (62)            ; 95 (50)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
 ;       |i2c_master:i2c_master_0|     ; 92 (92)             ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
@@ -304,7 +306,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 ; Register name                                                          ; Reason for Removal                                                            ;
 +------------------------------------------------------------------------+-------------------------------------------------------------------------------+
-; PWM_Motor:inst9|cnt[0..12]                                             ; Stuck at GND due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_addr[3]                             ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_addr[0..2,4]                        ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_addr[5]                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[1..6]                       ; Merged with pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7]                     ;
@@ -317,7 +318,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[7]      ; Stuck at VCC due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_data_wr[7]                          ; Stuck at GND due to stuck port data_in                                        ;
 ; pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|data_tx[7]      ; Stuck at GND due to stuck port data_in                                        ;
-; Total Number of Removed Registers = 41                                 ;                                                                               ;
+; Total Number of Removed Registers = 28                                 ;                                                                               ;
 +------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 
@@ -336,8 +337,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 189   ;
-; Number of registers using Synchronous Clear  ; 67    ;
+; Total registers                              ; 229   ;
+; Number of registers using Synchronous Clear  ; 80    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 89    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -367,16 +368,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 ; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|addr_rw[6] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_addr[5]                        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[2] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_addr[6]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|bit_cnt[0] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[13]                                   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[2]                                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13|LwheelB                                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[14]                                   ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[8]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[12]                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst13|RwheelF                                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[1]                                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[3]                                    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[10]                                   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Altera_Tutorial_Schematic|servo_control:inst14|cntMax[1]                                    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|Selector1                          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|Selector0                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 
 
@@ -409,27 +410,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 41                          ;
-; cycloneiii_ff         ; 189                         ;
+; cycloneiii_ff         ; 229                         ;
 ;     CLR               ; 18                          ;
 ;     CLR SCLR          ; 8                           ;
 ;     ENA               ; 21                          ;
 ;     ENA CLR           ; 32                          ;
 ;     ENA CLR SCLR      ; 31                          ;
-;     SCLR              ; 28                          ;
-;     plain             ; 51                          ;
+;     SCLR              ; 41                          ;
+;     plain             ; 78                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 371                         ;
-;     arith             ; 109                         ;
-;         2 data inputs ; 92                          ;
+; cycloneiii_lcell_comb ; 440                         ;
+;     arith             ; 146                         ;
+;         2 data inputs ; 129                         ;
 ;         3 data inputs ; 17                          ;
-;     normal            ; 262                         ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 67                          ;
-;         4 data inputs ; 144                         ;
+;     normal            ; 294                         ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 53                          ;
+;         3 data inputs ; 70                          ;
+;         4 data inputs ; 156                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.89                        ;
+; Max LUT depth         ; 5.60                        ;
+; Average LUT depth     ; 2.90                        ;
 +-----------------------+-----------------------------+
 
 
@@ -448,7 +449,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Dec 27 12:42:39 2022
+    Info: Processing started: Wed Dec 28 14:25:31 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -490,6 +491,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file mt.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file led_car.vhd
     Info (12022): Found design unit 1: LED_CAR-behave File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/LED_CAR.vhd Line: 8
     Info (12023): Found entity 1: LED_CAR File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/LED_CAR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tmepledbreathe.vhd
+    Info (12022): Found design unit 1: tmepLedBreathe-behave File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/tmepLedBreathe.vhd Line: 10
+    Info (12023): Found entity 1: tmepLedBreathe File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/tmepLedBreathe.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/lowfreqreset.vhd
+    Info (12022): Found design unit 1: lowfreqreset-behave File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/lowfreqreset.vhd Line: 10
+    Info (12023): Found entity 1: lowfreqreset File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/output_files/lowfreqreset.vhd Line: 5
 Info (12127): Elaborating entity "Altera_Tutorial_Schematic" for the top level hierarchy
 Info (12128): Elaborating entity "my_tx" for hierarchy "my_tx:inst"
 Warning (10492): VHDL Process Statement warning at my_tx.vhd(14): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/my_tx.vhd Line: 14
@@ -503,6 +510,7 @@ Warning (12125): Using design file i2c_master.vhd, which is not specified as a d
     Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/i2c_master.vhd Line: 54
     Info (12023): Found entity 1: i2c_master File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/i2c_master.vhd Line: 36
 Info (12128): Elaborating entity "i2c_master" for hierarchy "pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0" File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/pmod_temp_sensor_tcn75a.vhd Line: 55
+Info (12128): Elaborating entity "lowfreqreset" for hierarchy "lowfreqreset:inst17"
 Info (12128): Elaborating entity "led" for hierarchy "led:inst7"
 Info (12128): Elaborating entity "Motor_Ctrl" for hierarchy "Motor_Ctrl:inst13"
 Warning (10631): VHDL Process Statement warning at Motor_Ctrl.vhd(14): inferring latch(es) for signal or variable "LwheelB", which holds its previous value in one or more paths through the process File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 14
@@ -514,20 +522,7 @@ Info (10041): Inferred latch for "RwheelB" at Motor_Ctrl.vhd(14) File: C:/Users/
 Info (10041): Inferred latch for "LwheelF" at Motor_Ctrl.vhd(14) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 14
 Info (10041): Inferred latch for "LwheelB" at Motor_Ctrl.vhd(14) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 14
 Info (12128): Elaborating entity "PWM_Motor" for hierarchy "PWM_Motor:inst9"
-Warning (10541): VHDL Signal Declaration warning at PWM_Motor.vhd(12): used implicit default value for signal "cntMax" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 12
-Info (10041): Inferred latch for "cnt80[0]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[1]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[2]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[3]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[4]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[5]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[6]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[7]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[8]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[9]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[10]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[11]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
-Info (10041): Inferred latch for "cnt80[12]" at PWM_Motor.vhd(16) File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 16
+Warning (10540): VHDL Signal Declaration warning at PWM_Motor.vhd(13): used explicit default value for signal "cntMax" because signal was never assigned a value File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/PWM_Motor.vhd Line: 13
 Info (12128): Elaborating entity "data_spliter" for hierarchy "data_spliter:inst8"
 Info (12128): Elaborating entity "rx" for hierarchy "rx:5"
 Warning (12125): Using design file servo_control.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
@@ -578,15 +573,15 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register my_tx:inst|so will power up to High File: C:/Users/oryam/Documents/GitHub/NPC_Mobile/Altera Tutorial/my_tx.vhd Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 516 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 407 logic cells
+    Info (21061): Implemented 475 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Tue Dec 27 12:42:50 2022
-    Info: Elapsed time: 00:00:11
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Wed Dec 28 14:25:41 2022
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:08
 
 

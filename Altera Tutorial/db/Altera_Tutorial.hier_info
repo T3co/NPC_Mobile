@@ -2,6 +2,7 @@
 esp_rx <= my_tx:inst.so
 clk50Mhz => BOUD_RATE:3.clk
 clk50Mhz => pmod_temp_sensor_tcn75a:inst11.clk
+clk50Mhz => lowfreqreset:inst17.clk
 clk50Mhz => led:inst7.clk
 clk50Mhz => PWM_Motor:inst9.clk
 clk50Mhz => servo_control:inst14.clk
@@ -416,6 +417,37 @@ sda <> sda
 scl <> scl
 
 
+|Altera_Tutorial_Schematic|lowfreqreset:inst17
+clk => pulse.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+clk => count[17].CLK
+clk => count[18].CLK
+clk => count[19].CLK
+clk => count[20].CLK
+clk => count[21].CLK
+clk => count[22].CLK
+clk => count[23].CLK
+clk => count[24].CLK
+clk => count[25].CLK
+ledOUT <= pulse.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Altera_Tutorial_Schematic|led:inst7
 clk => pulse.CLK
 clk => count[0].CLK
@@ -491,22 +523,11 @@ clk => cnt[10].CLK
 clk => cnt[11].CLK
 clk => cnt[12].CLK
 motorInput[0] => motorOutput[0].DATAIN
-motorInput[0] => Equal0.IN2
-motorInput[0] => Equal1.IN1
-motorInput[0] => Equal2.IN1
-motorInput[0] => Equal3.IN2
 motorInput[1] => motorOutput[1].DATAIN
-motorInput[1] => Equal0.IN1
-motorInput[1] => Equal1.IN2
-motorInput[1] => Equal2.IN0
-motorInput[1] => Equal3.IN1
 motorInput[2] => motorOutput[2].DATAIN
-motorInput[2] => Equal0.IN0
-motorInput[2] => Equal1.IN0
-motorInput[2] => Equal2.IN2
-motorInput[2] => Equal3.IN0
-speedMotor => cnt80.IN1
-speedMotor => cnt80.IN1
+s => LessThan1.IN26
+s => LessThan1.IN25
+s => LessThan1.IN24
 pOut <= pulse.DB_MAX_OUTPUT_PORT_TYPE
 motorOutput[0] <= motorInput[0].DB_MAX_OUTPUT_PORT_TYPE
 motorOutput[1] <= motorInput[1].DB_MAX_OUTPUT_PORT_TYPE
