@@ -5,8 +5,8 @@
 #define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
 
-#define WIFI_SSID "upstairs"
-#define WIFI_PASSWORD "10203040"
+#define WIFI_SSID "ORYAM"
+#define WIFI_PASSWORD "12345678"
 
 #define RXD2 16
 #define TXD2 17
@@ -48,9 +48,9 @@ void loop() {
 
 
   if (Firebase.ready()) {
-    Firebase.setInt(fbdo, "messages/temperature", temperature);
+    Firebase.setInt(fbdo, "kar98Info/temperature", temperature);
 
-    if (Firebase.getInt(fbdo, "messages/carControl")) {
+    if (Firebase.getInt(fbdo, "kar98Info/carControl")) {
       packet = fbdo.intData();
     }
   }
