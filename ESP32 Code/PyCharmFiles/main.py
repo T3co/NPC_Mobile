@@ -39,7 +39,7 @@ def getObjects(img, draw=True,objects=[]):
 
 
 if __name__ == "__main__":
-    cap = cv2.VideoCapture("http://192.168.1.34:81/stream")
+    cap = cv2.VideoCapture("http://10.0.0.20:81/stream")
     #cap.set(3, 1280)
     #cap.set(4, 720)
     #cap.set(10, 70)

@@ -169,10 +169,12 @@ importDocuments KEYWORD2
 createDocument  KEYWORD2
 patchDocument   KEYWORD2
 commitDocument  KEYWORD2
+batchWriteDocuments  KEYWORD2
 beginTransaction    KEYWORD2
 rollback    KEYWORD2
 commitDocumentAsync KEYWORD2
 getDocument KEYWORD2
+batchGetDocuments    KEYWORD2
 deleteDocument  KEYWORD2
 listDocuments   KEYWORD2
 listCollectionIds   KEYWORD2
@@ -240,6 +242,11 @@ getMetadata KEYWORD2
 deleteFile  KEYWORD2
 listFiles   KEYWORD2
 
+createIndex KEYWORD2
+listIndex   KEYWORD2
+getIndex    KEYWORD2
+deleteIndex KEYWORD2
+
 #############################################
 # Methods for Firebase Data object (KEYWORD2)
 #############################################
@@ -281,6 +288,7 @@ dataTypeEnum    KEYWORD2
 queryFilter KEYWORD2
 empty   KEYWORD2
 stopWiFiClient  KEYWORD2
+closeFile   KEYWORD2
 fileStream  KEYWORD2
 setResponseSize KEYWORD2
 bufferOverflow  KEYWORD2

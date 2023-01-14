@@ -34,7 +34,7 @@
 #define WIFI_SSID "WIFI_AP"
 #define WIFI_PASSWORD "WIFI_PASSWORD"
 
-/* 2. Define the Firebase storage bucket ID e.g bucket-name.appspot.com */
+/* 2. Define the Firebase storage bucket ID e.g bucket-name.appspot.com or Google Cloud Storage bucket name */
 #define STORAGE_BUCKET_ID "BUCKET-NAME.appspot.com"
 
 /* 3 The following Service Account credentials required for OAuth2.0 authen in Google Cloud Storage JSON API upload */
@@ -122,7 +122,7 @@ void gcsUploadCallback(UploadStatusInfo info)
         Serial.printf("Generation: %lu\n", meta.generation);
         Serial.printf("ETag: %s\n", meta.etag.c_str());
         Serial.printf("CRC32: %s\n", meta.crc32.c_str());
-        Serial.printf("Token: %s\n", meta.downloadTokens.c_str());       // only gcs_upload_type_multipart and gcs_upload_type_resumable upload types.
+        Serial.printf("Tokens: %s\n", meta.downloadTokens.c_str());       // only gcs_upload_type_multipart and gcs_upload_type_resumable upload types.
         Serial.printf("Download URL: %s\n", fbdo.downloadURL().c_str()); // only gcs_upload_type_multipart and gcs_upload_type_resumable upload types.
     }
     else if (info.status == fb_esp_gcs_upload_status_error)

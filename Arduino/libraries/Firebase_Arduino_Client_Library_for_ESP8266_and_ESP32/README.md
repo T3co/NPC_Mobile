@@ -5,7 +5,7 @@
 ![arduino-library-badge](https://www.ardu-badge.com/badge/Firebase%20Arduino%20Client%20Library%20for%20ESP8266%20and%20ESP32.svg) ![PlatformIO](https://badges.registry.platformio.org/packages/mobizt/library/Firebase%20Arduino%20Client%20Library%20for%20ESP8266%20and%20ESP32.svg)
 
 
-This library supports ESP8266 and ESP32 MCU from Espressif. The following are platforms in which the libraries are also available (RTDB only).
+The managed, complete, fast and secure Firebase Client Library that supports ESP8266 and ESP32 MCU from Espressif. The following are platforms in which the libraries are also available (RTDB only).
 
 
 * [Arduino MKR WiFi 1010, Arduino MKR VIDOR 4000 and Arduino UNO WiFi Rev.2](https://github.com/mobizt/Firebase-Arduino-WiFiNINA)
@@ -20,9 +20,20 @@ Since version 3.0.0, library allows you to use external Arduino Clients network 
 
 To use external Client, see the [ExternalClient examples](/examples/ExternalClient).
 
-The authentication with OAuth2.0 and custom auth tokens, RTDB error queue and downloadFileOTA features are not supported for other Arduino devices using external Clients.
+The authentication with OAuth2.0 and custom auth tokens, RTDB error queue features are not supported for other Arduino devices using external Clients.
 
-The flash and SD filesystems supports depend on the devices and third party filesystems libraries installed.
+
+## Known Issues
+
+There is known issue in Client class in ESP32 Arduino Core SDK v2.0.x which the Client may close the connection after the Connection "Close" header was sent which causes the incomplete response received. 
+
+This strange behavior was partly fixed in this library by sending Connection "Keep-Alive" header in HTTP request but this is not totally prevent the problem that will be happened when transferring the large payloads.
+
+This strange behavior also existed in WiFiClientSecure core library used in this library which was fixed by sending Connection Keep-Alive header.
+
+This issue can't be fixed in the external client that uses Arduino Client derived class until the change was made in the ESP32 core.
+
+This OTA download and file upload/download functions using external Client may affected by this issue.
 
 
 ## Tested Devices

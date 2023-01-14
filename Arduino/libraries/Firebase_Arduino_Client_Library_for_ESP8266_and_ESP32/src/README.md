@@ -3140,7 +3140,7 @@ param **`writes`** The dyamic array of write object fb_esp_firestore_document_wr
 
 For the write object, see https://firebase.google.com/docs/firestore/reference/rest/v1/Write
 
-param **`transaction`** A base64-encoded string.vIf set, applies all writes in this transaction, and commits it.
+param **`transaction`** A base64-encoded string. If set, applies all writes in this transaction, and commits it.
 
 return **`Boolean`** value, indicates the success of the operation.
 
@@ -3149,9 +3149,46 @@ Use FirebaseData.payload() to get the returned payload.
 This function requires Email/password, Custom token or OAuth2.0 authentication.
 
 ```cpp
-bool commitDocument(FirebaseData *fbdo, <string> projectId, <string> databaseId, std::vector<struct fb_esp_firestore_document_write_t> writes, <string> transaction = "");
+bool commitDocument(FirebaseData *fbdo, <string> projectId, <string> databaseId, 
+std::vector<struct fb_esp_firestore_document_write_t> writes, <string> transaction = "");
 
-bool commitDocumentAsync(FirebaseData *fbdo, <string> projectId, <string> databaseId, std::vector<struct fb_esp_firestore_document_write_t> writes, <string> transaction = "");
+bool commitDocumentAsync(FirebaseData *fbdo, <string> projectId, <string> databaseId, 
+std::vector<struct fb_esp_firestore_document_write_t> writes, <string> transaction = "");
+```
+
+
+
+####  Applies a batch of write operations.
+
+param **`fbdo`** The pointer to Firebase Data Object.
+
+param **`projectId`** The Firebase project id (only the name without the firebaseio.com).
+
+param **`databaseId`** The Firebase Cloud Firestore database id which is (default) or empty "".
+
+param **`writes`** The dyamic array of write object fb_esp_firestore_document_write_t.
+
+Method does not apply writes atomically and does not guarantee ordering.
+
+Each write succeeds or fails independently.
+
+You cannot write to the same document more than once per request.
+
+For the write object, see https://firebase.google.com/docs/firestore/reference/rest/v1/Write
+
+param **`labels`** The FirebaseJson pointer that represents the Labels (map) associated with this batch write.
+
+return **`Boolean`** value, indicates the success of the operation.
+
+Use FirebaseData.payload() to get the returned payload.
+
+This function requires Email/password, Custom token or OAuth2.0 authentication.
+
+For more description, see https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents/batchWrite
+
+```cpp
+bool batchWriteDocuments(FirebaseData *fbdo, <string> projectId, <string> databaseId, 
+std::vector<struct fb_esp_firestore_document_write_t> writes, FirebaseJson *labels = nullptr);
 ```
 
 
@@ -3189,6 +3226,57 @@ This function requires Email/password, Custom token or OAuth2.0 authentication.
 ```cpp
 bool getDocument(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> documentPath, <string> mask = "", <string> transaction = "", <string> readTime = "");
 ```
+
+
+
+
+#### Gets multiple documents.
+
+param **`fbdo`** The pointer to Firebase Data Object.
+
+param **`projectId`** The Firebase project id (only the name without the firebaseio.com).
+
+param **`databaseId`** The Firebase Cloud Firestore database id which is (default) or empty "".
+
+param **`documentPaths`** The list of relative path of documents to get. Use comma (,) to separate between the field names.
+
+param **`mask`** The fields to return. If not set, returns all fields. 
+
+If the document has a field that is not present in this mask, that field will not be returned in the response. 
+
+Use comma (,) to separate between the field names.
+
+param **`batchOperationCallback`** The callback fuction that accepts const char* as argument.
+
+Union field consistency_selector can be only one of the following.
+
+param **`transaction`** Reads the document in a transaction. A base64-encoded string.
+
+param **`newTransaction`** FirebaseJson pointer that represents TransactionOptions object.
+
+Starts a new transaction and reads the documents.
+
+Defaults to a read-only transaction.
+
+The new transaction ID will be returned as the first response in the stream.
+
+param **`readTime`** Reads the version of the document at the given time. This may not be older than 270 seconds.
+
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. 
+
+Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+
+return **`Boolean`** value, indicates the success of the operation.
+
+Use FirebaseData.payload() to get the returned payload.
+
+This function requires Email/password, Custom token or OAuth2.0 authentication.
+
+```cpp
+bool batchGetDocuments(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> documentPaths, <string> mask, FirebaseData::FirestoreBatchOperationsCallback batchOperationCallback, <string> transaction, 
+FirebaseJson *newTransaction, <string> readTime);
+```
+
 
 
 
@@ -3377,6 +3465,125 @@ This function requires Email/password, Custom token or OAuth2.0 authentication (
 ```cpp
 bool listCollectionIds(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> documentPath, int pageSize, <string> pageToken);
 ```
+
+
+
+#### Creates a composite index.
+
+param **`fbdo`** The pointer to Firebase Data Object.
+
+param **`projectId`** The Firebase project id (only the name without the firebaseio.com).
+
+param **`databaseId`** The Firebase Cloud Firestore database id which is (default) or empty "".
+
+param **`collectionId`** The relative path of document colection.
+
+param **`apiScope`** The API scope enum e.g., ANY_API and DATASTORE_MODE_API
+
+param **`queryScope`** The QueryScope enum string e.g., QUERY_SCOPE_UNSPECIFIED, COLLECTION, and COLLECTION_GROUP
+
+See https://cloud.google.com/firestore/docs/reference/rest/Shared.Types/QueryScope
+
+param **`fields`** The FirebaseJsonArray that represents array of fields (IndexField JSON object) of indexes.
+
+A IndexField object contains the keys "fieldPath" and the uinion field "value_mode" of "order" and "arrayConfig"
+
+Where the fieldPath value is the field path string of index.
+
+Where order is the enum string of ORDER_UNSPECIFIED, ASCENDING, and DESCENDING.
+
+And arrayConfig is the ArrayConfig enum string of ARRAY_CONFIG_UNSPECIFIED and CONTAINS
+
+return **`Boolean`** value, indicates the success of the operation.
+
+Note Use FirebaseData.payload() to get the returned payload.
+
+This function requires OAuth2.0 authentication.
+
+For more description, see https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes/create
+
+```cpp
+bool createIndex(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> collectionId, 
+<string> apiScope, <string> queryScope, FirebaseJsonArray *fields);
+```
+
+
+
+#### Deletes an index.
+
+param **`fbdo`** The pointer to Firebase Data Object.
+
+param **`projectId`** The Firebase project id (only the name without the firebaseio.com).
+
+param **`databaseId`** The Firebase Cloud Firestore database id which is (default) or empty "".
+
+param **`collectionId`** The relative path of document colection.
+
+param **`indexId`** The index to delete.
+
+Note Use FirebaseData.payload() to get the returned payload.
+
+This function requires OAuth2.0 authentication.
+
+For more description, see https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes/delete
+
+```cpp
+bool deleteIndex(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> collectionId, <string> indexId);
+```
+
+
+
+#### Lists the indexes that match the specified filters.
+
+param **`fbdo`** The pointer to Firebase Data Object.
+
+param **`projectId`** The Firebase project id (only the name without the firebaseio.com).
+
+param **`databaseId`** The Firebase Cloud Firestore database id which is (default) or empty "".
+
+param **`collectionId`** The relative path of document colection.
+
+param **`filter`** The filter to apply to list results.
+
+param **`pageSize`** The number of results to return.
+
+param **`pageToken`** A page token, returned from a previous call to FirestoreAdmin.ListIndexes, that may be used to get the next page of results.
+
+Note Use FirebaseData.payload() to get the returned payload.
+
+This function requires OAuth2.0 authentication.
+
+For more description, see https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes/list
+
+```cpp
+bool listIndex(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> collectionId, <string> filter,
+int pageSize, <string> pageToken);
+```
+
+
+
+#### Get an index.
+
+param **`fbdo`** The pointer to Firebase Data Object.
+
+param **`projectId`** The Firebase project id (only the name without the firebaseio.com).
+
+param **`databaseId`** The Firebase Cloud Firestore database id which is (default) or empty "".
+
+param **`collectionId`** The relative path of document colection.
+
+param **`indexId`** The index to get.
+
+Note Use FirebaseData.payload() to get the returned payload.
+
+This function requires OAuth2.0 authentication.
+
+For more description, see https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes/get
+
+```cpp
+bool getIndex(FirebaseData *fbdo, <string> projectId, <string> databaseId, <string> collectionId, <string> indexId);
+```
+
 
 
 
@@ -4319,6 +4526,24 @@ return **`WiFi client instance`**.
 WiFiClientSecure *getWiFiClient();
 ```
 
+
+
+#### Close the keep-alive connection of the internal SSL client.
+
+note: This will release the memory used by internal SSL client.
+
+```cpp
+void stopWiFiClient();
+```
+
+
+
+
+#### Close the internal flash temporary file.
+
+```cpp
+void closeFile();
+```
 
 
 #### Set the Root certificate for a FirebaseData object

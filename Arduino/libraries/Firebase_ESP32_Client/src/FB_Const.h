@@ -1,6 +1,6 @@
 
 /**
- * Created November 15, 2022
+ * Created December 12, 2022
  *
  * This work is a part of Firebase ESP Client library
  * Copyright (c) 2022 K. Suwatchai (Mobizt)
@@ -65,7 +65,6 @@
 #endif
 #endif
 #endif
-
 
 #if defined(FIREBASE_ESP_CLIENT)
 #define FIREBASE_STREAM_CLASS FirebaseStream
@@ -150,6 +149,7 @@ class FirebaseData;
 typedef void (*FB_TCPConnectionRequestCallback)(const char *, int);
 typedef void (*FB_NetworkConnectionRequestCallback)(void);
 typedef void (*FB_NetworkStatusRequestCallback)(void);
+typedef void (*FB_ResponseCallback)(const char *);
 
 typedef enum
 {
@@ -437,6 +437,7 @@ enum fb_esp_firestore_request_type
     fb_esp_firestore_request_type_export_docs,
     fb_esp_firestore_request_type_import_docs,
     fb_esp_firestore_request_type_get_doc,
+    fb_esp_firestore_request_type_batch_get_doc,
     fb_esp_firestore_request_type_create_doc,
     fb_esp_firestore_request_type_patch_doc,
     fb_esp_firestore_request_type_delete_doc,
@@ -445,7 +446,12 @@ enum fb_esp_firestore_request_type
     fb_esp_firestore_request_type_rollback,
     fb_esp_firestore_request_type_list_doc,
     fb_esp_firestore_request_type_list_collection,
-    fb_esp_firestore_request_type_commit_document
+    fb_esp_firestore_request_type_commit_document,
+    fb_esp_firestore_request_type_batch_write_doc,
+    fb_esp_firestore_request_type_create_index,
+    fb_esp_firestore_request_type_delete_index,
+    fb_esp_firestore_request_type_list_index,
+    fb_esp_firestore_request_type_get_index
 };
 
 enum fb_esp_firestore_document_write_type
@@ -554,9 +560,134 @@ enum fb_esp_functions_operation_status
 
 #endif
 
+template <typename T>
+struct fb_esp_base64_io_t
+{
+    // the total bytes of data in output buffer
+    int bufWrite = 0;
+    // the size of output buffer
+    size_t bufLen = 1024;
+    // for file, the type of filesystem to write
+    mbfs_file_type filetype = mb_fs_mem_storage_type_undefined;
+    // for T array
+    T *outT = nullptr;
+    // for T vector
+    MB_VECTOR<T> *outL = nullptr;
+    // for client
+    Client *outC = nullptr;
+    // for ota
+    bool ota = false;
+};
+
 struct fb_esp_response_t
 {
     int code = 0;
+};
+
+struct fb_esp_auth_token_error_t
+{
+    MB_String message;
+    int code = 0;
+};
+
+struct server_response_data_t
+{
+    int httpCode = 0;
+    // Must not be negative
+    int payloadLen = 0;
+    // The response content length, must not be negative as it uses to determine
+    // the available data to read in event-stream
+    // and content length specific read in http response
+    int contentLen = 0;
+    int chunkRange = 0;
+    fb_esp_data_type dataType = fb_esp_data_type::d_any;
+    int payloadOfs = 0;
+    bool boolData = false;
+    int intData = 0;
+    float floatData = 0.0f;
+    double doubleData = 0.0f;
+    MB_VECTOR<uint8_t> blobData;
+    bool isEvent = false;
+    bool noEvent = false;
+    bool isChunkedEnc = false;
+    bool hasEventData = false;
+    bool noContent = false;
+    bool eventPathChanged = false;
+    bool dataChanged = false;
+    bool redirect = false;
+    MB_String location;
+    MB_String contentType;
+    MB_String connection;
+    MB_String eventPath;
+    MB_String eventType;
+    MB_String eventData;
+    MB_String etag;
+    MB_String pushName;
+    MB_String fbError;
+    MB_String transferEnc;
+};
+
+struct fb_esp_chunk_state_info
+{
+    int state = 0;
+    int chunkedSize = 0;
+    int dataLen = 0;
+};
+
+struct fb_esp_tcp_response_handler_t
+{
+    // the chunk index of all data that is being process
+    int chunkIdx = 0;
+    // the payload chunk index that is being process
+    int pChunkIdx = 0;
+    // the total bytes of http response payload to read
+    int payloadLen = 0;
+    // the total bytes of base64 decoded data from response payload
+    int decodedPayloadLen = 0;
+    // the current size of chunk data to read from client
+    int chunkBufSize = 0;
+    // the amount of http response payload that read,
+    // compare with the content length header value for finishing check
+    int payloadRead = 0;
+    // status showed that the http headers was found and is being read
+    bool isHeader = false;
+    // status showed that the http headers was completely read
+    bool headerEnded = false;
+    // status for OTA request
+    bool downloadOTA = false;
+    // the prefered size of chunk data to read from client
+    size_t defaultChunkSize = 0;
+    // keep the auth token generation error
+    struct fb_esp_auth_token_error_t error;
+    // keep the http header or the first line of stream event data
+    MB_String header;
+    // time out checking for execution
+    unsigned long dataTime = 0;
+    // pointer to payload
+    MB_String *payload = nullptr;
+    // data is already in receive buffer
+    size_t bufferAvailable = 0;
+    // data in receive buffer is base64 file data
+    bool isBase64File = false;
+    // the base64 encoded string downloaded anount
+    int downloadByteLen = 0;
+    // pad (=) length checking from tail of encoded string of file/blob data
+    int base64PadLenTail = 0;
+    // pad (=) length checking from base64 encoded string signature (begins with "file,base64, and "blob,base64,)
+    // of file/blob data
+    int base64PadLenSignature = 0;
+    // the tcp client pointer
+    Client *client = nullptr;
+    // the chunk state info
+    fb_esp_chunk_state_info chunkState;
+
+public:
+    int available()
+    {
+        if (client)
+            return client->available();
+        return false;
+    }
 };
 
 #ifdef ENABLE_RTDB
@@ -630,25 +761,6 @@ struct fb_esp_rtdb_request_info_t
     RTDB_DownloadProgressCallback downloadCallback = NULL;
 };
 
-struct fb_esp_rtdb_queue_info_t
-{
-    fb_esp_method method = m_get;
-#if defined(FIREBASE_ESP_CLIENT)
-    fb_esp_mem_storage_type storageType = mem_storage_type_undefined;
-#elif defined(FIREBASE_ESP32_CLIENT) || defined(FIREBASE_ESP8266_CLIENT)
-    uint8_t storageType = StorageType::UNDEFINED;
-#endif
-    fb_esp_data_type dataType = fb_esp_data_type::d_any;
-    int subType = 0;
-    MB_String path;
-    MB_String filename;
-    MB_String payload;
-    MB_String etag;
-    struct fb_esp_rtdb_address_t address;
-    int blobSize = 0;
-    bool async = false;
-};
-
 #endif
 
 typedef struct fb_esp_spi_ethernet_module_t
@@ -666,44 +778,6 @@ typedef struct fb_esp_spi_ethernet_module_t
 #endif
 } SPI_ETH_Module;
 
-struct server_response_data_t
-{
-    int httpCode = -1;
-    int payloadLen = -1;
-    int contentLen = -1;
-    int chunkRange = 0;
-    fb_esp_data_type dataType = fb_esp_data_type::d_any;
-    int payloadOfs = 0;
-    bool boolData = false;
-    int intData = 0;
-    float floatData = 0.0f;
-    double doubleData = 0.0f;
-    MB_VECTOR<uint8_t> blobData;
-    bool isEvent = false;
-    bool noEvent = false;
-    bool isChunkedEnc = false;
-    bool hasEventData = false;
-    bool noContent = false;
-    bool eventPathChanged = false;
-    bool dataChanged = false;
-    MB_String location;
-    MB_String contentType;
-    MB_String connection;
-    MB_String eventPath;
-    MB_String eventType;
-    MB_String eventData;
-    MB_String etag;
-    MB_String pushName;
-    MB_String fbError;
-    MB_String transferEnc;
-};
-
-struct fb_esp_auth_token_error_t
-{
-    MB_String message;
-    int code = 0;
-};
-
 struct fb_esp_auth_token_info_t
 {
     const char *legacy_token = "";
@@ -711,6 +785,7 @@ struct fb_esp_auth_token_info_t
     MB_String jwt;
     MB_String scope;
     unsigned long expires = 0;
+    /* milliseconds count when last expiry time was set */
     unsigned long last_millis = 0;
     fb_esp_auth_token_type token_type = token_type_undefined;
     fb_esp_auth_token_status status = token_status_uninitialized;
@@ -781,9 +856,11 @@ struct fb_esp_token_signer_resources_t
     bool accessTokenCustomSet = false;
     bool customTokenCustomSet = false;
     bool tokenTaskRunning = false;
+    /* last token request milliseconds count */
     unsigned long lastReqMillis = 0;
     unsigned long preRefreshSeconds = DEFAULT_AUTH_TOKEN_PRE_REFRESH_SECONDS;
     unsigned long expiredSeconds = DEFAULT_AUTH_TOKEN_EXPIRED_SECONDS;
+    /* request time out period (interval) */
     unsigned long reqTO = DEFAULT_REQUEST_TIMEOUT;
     MB_String customHeaders;
     MB_String pk;
@@ -852,13 +929,14 @@ struct fb_esp_cfg_int_t
     unsigned long fb_last_time_sync_millis = 0;
     unsigned long fb_last_ntp_sync_timeout_millis = 0;
     bool fb_clock_rdy = false;
+    /* flag set when NTP time server synching has been started */
     bool fb_clock_synched = false;
     float fb_gmt_offset = 0;
     uint8_t fb_float_digits = 5;
     uint8_t fb_double_digits = 9;
     bool fb_auth_uri = false;
-    MB_VECTOR<uint32_t> fbdo_addr_list;
-    MB_VECTOR<uint32_t> queue_addr_list;
+    MB_VECTOR<uint32_t> sessions;
+    MB_VECTOR<uint32_t> queueSessions;
 
     MB_String auth_token;
     MB_String refresh_token;
@@ -934,6 +1012,7 @@ struct fb_esp_fcs_file_list_item_t
     MB_String bucket;
     MB_String contentType;
     size_t size = 0;
+    unsigned long generation = 0;
 };
 
 #endif
@@ -1148,7 +1227,6 @@ struct fb_esp_rtdb_info_t
     uint8_t storage_type = StorageType::UNDEFINED;
 #endif
     uint8_t redirect_count = 0;
-    int redirect = 0;
 
     uint16_t max_blob_size = MAX_BLOB_PAYLOAD_SIZE;
 
@@ -1653,6 +1731,7 @@ struct fb_esp_firestore_req_t
     fb_esp_firestore_request_type requestType = fb_esp_firestore_request_type_undefined;
     CFS_UploadStatusInfo *uploadStatusInfo = nullptr;
     CFS_UploadProgressCallback uploadCallback = NULL;
+    FB_ResponseCallback responseCallback = NULL;
     int progress = -1;
     unsigned long requestTime = 0;
 };
@@ -1710,7 +1789,7 @@ struct fb_esp_session_info_t
     bool classic_request = false;
     MB_String host;
     unsigned long last_conn_ms = 0;
-    int cert_addr = 0;
+    int cert_ptr = 0;
     bool cert_updated = false;
     uint32_t conn_timeout = DEFAULT_TCP_CONNECTION_TIMEOUT;
 
@@ -1776,7 +1855,7 @@ typedef std::function<void(void)> callback_function_t;
 #endif
 
 static const char fb_esp_pgm_str_1[] PROGMEM = "/";
-static const char fb_esp_pgm_str_2[] PROGMEM = ".json?auth=";
+// static const char fb_esp_pgm_str_2[] PROGMEM = "";
 static const char fb_esp_pgm_str_3[] PROGMEM = "\"";
 static const char fb_esp_pgm_str_4[] PROGMEM = ".";
 static const char fb_esp_pgm_str_5[] PROGMEM = "HTTP/1.1 ";
@@ -1905,7 +1984,7 @@ static const char fb_esp_pgm_str_127[] PROGMEM = "}";
 static const char fb_esp_pgm_str_128[] PROGMEM = "to";
 static const char fb_esp_pgm_str_129[] PROGMEM = "application/json";
 static const char fb_esp_pgm_str_130[] PROGMEM = "registration_ids";
-static const char fb_esp_pgm_str_131[] PROGMEM = "Authorization: key=";
+static const char fb_esp_pgm_str_131[] PROGMEM = "key=";
 static const char fb_esp_pgm_str_132[] PROGMEM = ",";
 static const char fb_esp_pgm_str_133[] PROGMEM = "]";
 static const char fb_esp_pgm_str_134[] PROGMEM = "/topics/";
@@ -2046,8 +2125,7 @@ static const char fb_esp_pgm_str_266[] PROGMEM = "/v0/b/";
 static const char fb_esp_pgm_str_267[] PROGMEM = "/o";
 static const char fb_esp_pgm_str_268[] PROGMEM = "name=";
 static const char fb_esp_pgm_str_269[] PROGMEM = "alt=media";
-static const char fb_esp_pgm_str_270[] PROGMEM = "Firebase ";
-// static const char fb_esp_pgm_str_271[] PROGMEM = "";
+static const char fb_esp_pgm_str_271[] PROGMEM = "collectionId";
 static const char fb_esp_pgm_str_272[] PROGMEM = "downloadTokens";
 static const char fb_esp_pgm_str_273[] PROGMEM = "token=";
 static const char fb_esp_pgm_str_274[] PROGMEM = "name";
@@ -2078,9 +2156,7 @@ static const char fb_esp_pgm_str_296[] PROGMEM = "topic";
 static const char fb_esp_pgm_str_297[] PROGMEM = "image";
 static const char fb_esp_pgm_str_298[] PROGMEM = "fcm_options";
 static const char fb_esp_pgm_str_299[] PROGMEM = "analytics_label";
-static const char fb_esp_pgm_str_300[] PROGMEM = "android";
-static const char fb_esp_pgm_str_301[] PROGMEM = "webpush";
-static const char fb_esp_pgm_str_302[] PROGMEM = "apns";
+
 static const char fb_esp_pgm_str_303[] PROGMEM = "ttl";
 static const char fb_esp_pgm_str_304[] PROGMEM = "channel_id";
 static const char fb_esp_pgm_str_305[] PROGMEM = "ticker";
@@ -2122,7 +2198,7 @@ static const char fb_esp_pgm_str_339[] PROGMEM = "apns_tokens";
 static const char fb_esp_pgm_str_340[] PROGMEM = "firestore.";
 static const char fb_esp_pgm_str_341[] PROGMEM = "/databases/";
 static const char fb_esp_pgm_str_342[] PROGMEM = "(default)";
-static const char fb_esp_pgm_str_343[] PROGMEM = "?documentId=";
+static const char fb_esp_pgm_str_343[] PROGMEM = "documentId=";
 static const char fb_esp_pgm_str_344[] PROGMEM = ":exportDocuments";
 static const char fb_esp_pgm_str_345[] PROGMEM = ":importDocuments";
 static const char fb_esp_pgm_str_346[] PROGMEM = "collectionIds";
@@ -2140,7 +2216,6 @@ static const char fb_esp_pgm_str_357[] PROGMEM = "pageSize";
 static const char fb_esp_pgm_str_358[] PROGMEM = "pageToken";
 static const char fb_esp_pgm_str_359[] PROGMEM = "orderBy=";
 static const char fb_esp_pgm_str_360[] PROGMEM = "showMissing=";
-static const char fb_esp_pgm_str_361[] PROGMEM = "=";
 static const char fb_esp_pgm_str_362[] PROGMEM = ":listCollectionIds";
 static const char fb_esp_pgm_str_363[] PROGMEM = "cloudfunctions.";
 static const char fb_esp_pgm_str_364[] PROGMEM = "/locations/";
@@ -2222,6 +2297,11 @@ static const char fb_esp_pgm_str_438[] PROGMEM = ":generateDownloadUrl";
 static const char fb_esp_pgm_str_439[] PROGMEM = ":generateUploadUrl";
 static const char fb_esp_pgm_str_440[] PROGMEM = "uploadUrl";
 #endif
+static const char fb_esp_pgm_str_300[] PROGMEM = "android";
+static const char fb_esp_pgm_str_301[] PROGMEM = "webpush";
+static const char fb_esp_pgm_str_302[] PROGMEM = "apns";
+static const char fb_esp_pgm_str_270[] PROGMEM = "Firebase ";
+static const char fb_esp_pgm_str_361[] PROGMEM = "=";
 static const char fb_esp_pgm_str_441[] PROGMEM = "https://%[^/]/%s";
 static const char fb_esp_pgm_str_442[] PROGMEM = "http://%[^/]/%s";
 static const char fb_esp_pgm_str_443[] PROGMEM = "%[^/]/%s";
@@ -2245,7 +2325,7 @@ static const char fb_esp_pgm_str_459[] PROGMEM = "nodejs12";
 static const char fb_esp_pgm_str_460[] PROGMEM = "ALLOW_ALL";
 static const char fb_esp_pgm_str_461[] PROGMEM = "roles/cloudfunctions.invoker";
 static const char fb_esp_pgm_str_462[] PROGMEM = "allUsers";
-// static const char fb_esp_pgm_str_463[] PROGMEM = "\"sourceUploadUrl\":";
+static const char fb_esp_pgm_str_463[] PROGMEM = "fields";
 static const char fb_esp_pgm_str_464[] PROGMEM = "\",";
 static const char fb_esp_pgm_str_465[] PROGMEM = ":getIamPolicy";
 static const char fb_esp_pgm_str_466[] PROGMEM = "options.requestedPolicyVersion";
@@ -2258,14 +2338,18 @@ static const char fb_esp_pgm_str_472[] PROGMEM = "eventTrigger";
 static const char fb_esp_pgm_str_473[] PROGMEM = "policy";
 static const char fb_esp_pgm_str_474[] PROGMEM = "The function deployment timeout";
 static const char fb_esp_pgm_str_475[] PROGMEM = "deployTask";
-static const char fb_esp_pgm_str_476[] PROGMEM = "\"name\": \"";
-static const char fb_esp_pgm_str_477[] PROGMEM = "\"bucket\": \"";
+
+static const char fb_esp_pgm_str_476[] PROGMEM = "/indexes";
+static const char fb_esp_pgm_str_477[] PROGMEM = "/v1beta1/projects/";
+
 static const char fb_esp_pgm_str_478[] PROGMEM = "crc32c";
 static const char fb_esp_pgm_str_479[] PROGMEM = "metadata/firebaseStorageDownloadTokens";
 static const char fb_esp_pgm_str_480[] PROGMEM = "resumableUploadTask";
 static const char fb_esp_pgm_str_481[] PROGMEM = "Range: bytes=0-";
-static const char fb_esp_pgm_str_482[] PROGMEM = "\"contentType\": \"";
-static const char fb_esp_pgm_str_483[] PROGMEM = "\"size\": \"";
+
+static const char fb_esp_pgm_str_482[] PROGMEM = "filter";
+static const char fb_esp_pgm_str_483[] PROGMEM = "apiScope";
+
 static const char fb_esp_pgm_str_484[] PROGMEM = "maxResults=";
 static const char fb_esp_pgm_str_485[] PROGMEM = "delimiter=";
 static const char fb_esp_pgm_str_486[] PROGMEM = "endOffset=";
@@ -2280,11 +2364,11 @@ static const char fb_esp_pgm_str_494[] PROGMEM = "ifGenerationMatch=";
 static const char fb_esp_pgm_str_495[] PROGMEM = "ifGenerationNotMatch=";
 static const char fb_esp_pgm_str_496[] PROGMEM = "ifMetagenerationMatch=";
 static const char fb_esp_pgm_str_497[] PROGMEM = "ifMetagenerationNotMatch=";
-static const char fb_esp_pgm_str_498[] PROGMEM = "projection=";
+static const char fb_esp_pgm_str_498[] PROGMEM = "queryScope";
 static const char fb_esp_pgm_str_499[] PROGMEM = "contentEncoding=";
 static const char fb_esp_pgm_str_500[] PROGMEM = "kmsKeyName=";
 static const char fb_esp_pgm_str_501[] PROGMEM = "predefinedAcl=";
-static const char fb_esp_pgm_str_502[] PROGMEM = "projection=";
+static const char fb_esp_pgm_str_502[] PROGMEM = "/collectionGroups/";
 static const char fb_esp_pgm_str_503[] PROGMEM = "metageneration";
 static const char fb_esp_pgm_str_504[] PROGMEM = "acl";
 static const char fb_esp_pgm_str_505[] PROGMEM = "cacheControl";
@@ -2360,10 +2444,15 @@ static const char fb_esp_pgm_str_571[] PROGMEM = "options/readOnly/readTime";
 static const char fb_esp_pgm_str_572[] PROGMEM = "options/readWrite/retryTransaction";
 static const char fb_esp_pgm_str_573[] PROGMEM = ":beginTransaction";
 static const char fb_esp_pgm_str_574[] PROGMEM = ":rollback";
+static const char fb_esp_pgm_str_598[] PROGMEM = ":batchGet";
+static const char fb_esp_pgm_str_599[] PROGMEM = ":batchWrite";
+static const char fb_esp_pgm_str_600[] PROGMEM = "mask";
+static const char fb_esp_pgm_str_601[] PROGMEM = "newTransaction";
+
 #endif
 
-#if defined(FIREBASE_ESP32_CLIENT) || defined(FIREBASE_ESP8266_CLIENT)
 static const char fb_esp_pgm_str_575[] PROGMEM = "msg";
+#if defined(FIREBASE_ESP32_CLIENT) || defined(FIREBASE_ESP8266_CLIENT)
 static const char fb_esp_pgm_str_576[] PROGMEM = "topic";
 static const char fb_esp_pgm_str_577[] PROGMEM = "server_key";
 #endif
@@ -2375,7 +2464,7 @@ static const char fb_esp_pgm_str_578[] PROGMEM = "\n** WARNING!, in stream conne
 #endif
 
 static const char fb_esp_pgm_str_579[] PROGMEM = "Missing data.";
-static const char fb_esp_pgm_str_580[] PROGMEM = "Missing required credentials.";
+static const char fb_esp_pgm_str_580[] PROGMEM = "Missing required credentials e.g., database URL, host and tokens.";
 static const char fb_esp_pgm_str_581[] PROGMEM = "Security rules is not a valid JSON";
 static const char fb_esp_pgm_str_582[] PROGMEM = "/v1/accounts:delete?key=";
 static const char fb_esp_pgm_str_583[] PROGMEM = "error_description";

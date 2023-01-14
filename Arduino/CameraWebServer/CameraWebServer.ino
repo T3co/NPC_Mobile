@@ -1,16 +1,31 @@
 #include "esp_camera.h"
 #include <WiFi.h>
+#include <WebSocketsServer.h>
 #include <FirebaseESP32.h>
+#include <WiFiUdp.h>
+#include "camera_wrap.h"
+
+
+
+
 #define flashlightPin 4
 #define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
+
+
 FirebaseData fbdo;
 #define CAMERA_MODEL_AI_THINKER // Has PSRAM
 #include "camera_pins.h"
-const char* ssid = "upstairs";
-const char* password = "10203040";
+
+
+const char* ssid = "Ams_2.4GHz";
+const char* password = "0523993253A";
+
+
 void startCameraServer();
+
 void setup() {
+  
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
@@ -35,28 +50,34 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_JPEG;
+
   if(psramFound()){
     config.frame_size = FRAMESIZE_UXGA;
     config.jpeg_quality = 10;
     config.fb_count = 2;
+
   } else {
     config.frame_size = FRAMESIZE_SVGA;
     config.jpeg_quality = 12;
     config.fb_count = 1;
   }
   esp_err_t err = esp_camera_init(&config);
+  
   if (err != ESP_OK) {
     Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
   sensor_t * s = esp_camera_sensor_get();
+
   if (s->id.PID == OV3660_PID) {
     s->set_vflip(s, 1); // flip it back
     s->set_brightness(s, 1); // up the brightness just a bit
     s->set_saturation(s, -2); // lower the saturation
   }
   s->set_framesize(s, FRAMESIZE_QVGA);
+
   WiFi.begin(ssid, password);
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
