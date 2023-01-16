@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ESP32 AI Camera</string>
+    <string name="camera_permission_title">Camera permission required</string>
+    <string name="camera_permission_message">This app uses camera only for object detection and segmentation, the information from your camera is not sent or collected anywhere else</string>
+    <string name="sliderservo">sliderservo</string>
+    <string name="SliderServo">SliderServo</string>
+    <string name="_255">255</string>
+
+</resources>
