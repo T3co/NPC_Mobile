@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -76,7 +78,17 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("LwheelB")
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ledOUT")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -86,187 +98,21 @@ SIGNAL("LwheelB")
 	PARENT = "";
 }
 
-SIGNAL("LwheelF")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("Ma0")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Ma1")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Mb0")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("Mb1")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("PWM_Motor_1KHz")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("RwheelB")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("RwheelF")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-TRANSITION_LIST("LwheelB")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("LwheelF")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("Ma0")
+TRANSITION_LIST("clk")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 6;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-		}
-		LEVEL 0 FOR 40.0;
-	}
-}
-
-TRANSITION_LIST("Ma1")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 8;
-			LEVEL 0 FOR 60.0;
-			LEVEL 1 FOR 60.0;
-		}
-		LEVEL 0 FOR 40.0;
-	}
-}
-
-TRANSITION_LIST("Mb0")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-		}
-		LEVEL 0 FOR 40.0;
-	}
-}
-
-TRANSITION_LIST("Mb1")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
+			REPEAT = 200;
+			LEVEL 0 FOR 2.5;
+			LEVEL 1 FOR 2.5;
 		}
 	}
 }
 
-TRANSITION_LIST("PWM_Motor_1KHz")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 50;
-			LEVEL 0 FOR 4.0;
-			LEVEL 1 FOR 16.0;
-		}
-	}
-}
-
-TRANSITION_LIST("RwheelB")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("RwheelF")
+TRANSITION_LIST("ledOUT")
 {
 	NODE
 	{
@@ -277,7 +123,7 @@ TRANSITION_LIST("RwheelF")
 
 DISPLAY_LINE
 {
-	CHANNEL = "PWM_Motor_1KHz";
+	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -286,73 +132,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Ma0";
+	CHANNEL = "ledOUT";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Ma1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 2;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Mb0";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 3;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Mb1";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 4;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "LwheelB";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 5;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "LwheelF";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "RwheelB";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 7;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "RwheelF";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 8;
 	TREE_LEVEL = 0;
 }
 

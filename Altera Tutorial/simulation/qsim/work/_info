@@ -98,15 +98,249 @@ R23
 !i113 1
 R17
 R18
+Eblock2
+Z24 w1673981846
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+Z25 dD:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim
+R10
+R11
+l0
+L37
+Vf;24Q:DSzbF_RDTTajJbS2
+!s100 K@T^R[[;W`hoDM@]nl5P92
+R12
+32
+Z26 !s110 1673981847
+!i10b 1
+Z27 !s108 1673981847.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 6 block2 0 22 f;24Q:DSzbF_RDTTajJbS2
+l134
+L44
+Vci_Va@ikmc99]ndNNKXAL1
+!s100 RMffLj8Te?eH2EXoc[z701
+R12
+32
+R26
+!i10b 1
+R27
+R15
+R16
+!i113 1
+R17
+R18
+Eblock2_vhd_vec_tst
+R24
+R7
+R8
+R25
+Z28 8Waveform2.vwf.vht
+Z29 FWaveform2.vwf.vht
+l0
+L32
+VlP_Dl9<729_MLKKBK_MA]2
+!s100 >2@go7;mKDZ;PW>0[1X[M2
+R12
+32
+R26
+!i10b 1
+R27
+Z30 !s90 -work|work|Waveform2.vwf.vht|
+Z31 !s107 Waveform2.vwf.vht|
+!i113 1
+R17
+R18
+Ediagrams_1
+Z32 w1673982089
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R25
+R10
+R11
+l0
+L37
+V>ZZ<[Z>>Ya?G`AeQ=^VTh3
+!s100 _=L5Tm6^=VN1PR>L3T`W71
+R12
+32
+Z33 !s110 1673982090
+!i10b 1
+Z34 !s108 1673982090.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 diagrams_1 0 22 >ZZ<[Z>>Ya?G`AeQ=^VTh3
+l134
+L44
+VZ3kDQCgO8ZF7jMX7`ZR3h2
+!s100 aH@_9_k9@;09WeOdKIFNn3
+R12
+32
+R33
+!i10b 1
+R34
+R15
+R16
+!i113 1
+R17
+R18
+Ediagrams_1_vhd_vec_tst
+w1673982088
+R7
+R8
+R25
+R28
+R29
+l0
+L32
+V^=m]IO6R;1hD5U=jnZ68g2
+!s100 ;IGC8BW[6oX]feS38A5;X0
+R12
+32
+R33
+!i10b 1
+R34
+R30
+R31
+!i113 1
+R17
+R18
+Eled
+Z35 w1673982370
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R25
+R10
+R11
+l0
+L39
+VcRidT;jH::7;7eIE@zDWS3
+!s100 KDZ`:eFgTF`_CWhJ:]KDj3
+R12
+32
+Z36 !s110 1673982371
+!i10b 1
+Z37 !s108 1673982371.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 3 led 0 22 cRidT;jH::7;7eIE@zDWS3
+l136
+L46
+VQJf?A`Ae[[?G4HHAhOW6g3
+!s100 GUDO][zHLK@e_ammRUV;j1
+R12
+32
+R36
+!i10b 1
+R37
+R15
+R16
+!i113 1
+R17
+R18
+Eled_vhd_vec_tst
+Z38 w1673982369
+R7
+R8
+R25
+Z39 8Waveform4.vwf.vht
+Z40 FWaveform4.vwf.vht
+l0
+L32
+VSaf4MXKb:ZK`9=Jf?TzNz2
+!s100 SXHJ2J^hLN?:AU89A916T0
+R12
+32
+R36
+!i10b 1
+R37
+Z41 !s90 -work|work|Waveform4.vwf.vht|
+Z42 !s107 Waveform4.vwf.vht|
+!i113 1
+R17
+R18
+Aled_arch
+R7
+R8
+Z43 DEx4 work 15 led_vhd_vec_tst 0 22 Saf4MXKb:ZK`9=Jf?TzNz2
+l45
+L34
+Z44 V_?n>l3Q__6z1a389QC@6>3
+Z45 !s100 N]Ik];TCU_BM>NlSK=U=61
+R12
+32
+R36
+!i10b 1
+R37
+R41
+R42
+!i113 1
+R17
+R18
 Emotor_ctrl
-Z24 w1666345806
+Z46 w1666345806
 R4
 R2
 R6
 R7
 R8
 R3
-Z25 dD:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim
+Z47 dD:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim
 R10
 R11
 l0
@@ -115,9 +349,9 @@ VF:TDOD75W7_U<G7bK8eCJ3
 !s100 f>b@D<A[mVa2KRkzWAReA2
 R12
 32
-Z26 !s110 1666345807
+Z48 !s110 1666345807
 !i10b 1
-Z27 !s108 1666345807.000000
+Z49 !s108 1666345807.000000
 R15
 R16
 !i113 1
@@ -137,32 +371,32 @@ VcK[N4SOlKl0=UYZ97Sb300
 !s100 kg14NJij0D?9nY63TT:S21
 R12
 32
-R26
+R48
 !i10b 1
-R27
+R49
 R15
 R16
 !i113 1
 R17
 R18
 Emotor_ctrl_vhd_vec_tst
-Z28 w1666345805
+Z50 w1666345805
 R7
 R8
-R25
-Z29 8Waveform1.vwf.vht
-Z30 FWaveform1.vwf.vht
+R47
+Z51 8Waveform1.vwf.vht
+Z52 FWaveform1.vwf.vht
 l0
 L32
 V71oD]P0if:i9RMiPA6L?T2
 !s100 ]ZYUJHmP0IdQJ2P9i:>fD0
 R12
 32
-R26
+R48
 !i10b 1
-R27
-Z31 !s90 -work|work|Waveform1.vwf.vht|
-Z32 !s107 Waveform1.vwf.vht|
+R49
+Z53 !s90 -work|work|Waveform1.vwf.vht|
+Z54 !s107 Waveform1.vwf.vht|
 !i113 1
 R17
 R18
@@ -176,23 +410,23 @@ VShoZkN47LIM:X;KbGbmd71
 !s100 ;eiHS7SL=0:S>URS@lAR11
 R12
 32
-R26
+R48
 !i10b 1
-R27
-R31
-R32
+R49
+R53
+R54
 !i113 1
 R17
 R18
 Epwm_ctrl_example
-Z33 w1671289503
+Z55 w1671289503
 R4
 R2
 R6
 R7
 R8
 R3
-Z34 dD:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim
+R25
 R10
 R11
 l0
@@ -201,9 +435,9 @@ VNRF?n:;YaoZ:E7c4^7BJ`2
 !s100 U`k3FmGSYRQJNY2JjimlF2
 R12
 32
-Z35 !s110 1671289503
+Z56 !s110 1671289503
 !i10b 1
-Z36 !s108 1671289503.000000
+Z57 !s108 1671289503.000000
 R15
 R16
 !i113 1
@@ -223,50 +457,50 @@ VaDI7OmAj4Yl1FOH3E7Mm`1
 !s100 Y<oZ:ckQO?UN9I@Z2KMkS2
 R12
 32
-R35
+R56
 !i10b 1
-R36
+R57
 R15
 R16
 !i113 1
 R17
 R18
 Epwm_ctrl_example_vhd_vec_tst
-Z37 w1671289502
+Z58 w1671289502
 R7
 R8
-R34
-R29
-R30
+R25
+R51
+R52
 l0
 L32
 VeeZAIi3d[m0mQK>5nF5<J2
 !s100 95ERO8<e<]F;1of:SnQPj2
 R12
 32
-R35
+R56
 !i10b 1
-R36
-R31
-R32
+R57
+R53
+R54
 !i113 1
 R17
 R18
 Apwm_ctrl_example_arch
 R7
 R8
-Z38 DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
+DEx4 work 28 pwm_ctrl_example_vhd_vec_tst 0 22 eeZAIi3d[m0mQK>5nF5<J2
 l53
 L34
 V:??dBK2Zh6dO@TgjfG=e>2
 !s100 0ToH1_J3GAK6Z`ULlTL`^1
 R12
 32
-R35
+R56
 !i10b 1
-R36
-R31
-R32
+R57
+R53
+R54
 !i113 1
 R17
 R18

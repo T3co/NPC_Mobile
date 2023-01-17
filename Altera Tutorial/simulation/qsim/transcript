@@ -1,43 +1,47 @@
 # do Altera_Tutorial.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:05:03 on Dec 17,2022
+# Start time: 21:06:11 on Jan 17,2023
 # vcom -work work Altera_Tutorial.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
 # -- Loading package fiftyfivenm_atom_pack
 # -- Loading package fiftyfivenm_components
-# -- Compiling entity PWM_ctrl_example
-# -- Compiling architecture structure of PWM_ctrl_example
-# End time: 17:05:03 on Dec 17,2022, Elapsed time: 0:00:00
+# -- Compiling entity led
+# -- Compiling architecture structure of led
+# End time: 21:06:11 on Jan 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:05:03 on Dec 17,2022
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 21:06:11 on Jan 17,2023
+# vcom -work work Waveform4.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity PWM_ctrl_example_vhd_vec_tst
-# -- Compiling architecture PWM_ctrl_example_arch of PWM_ctrl_example_vhd_vec_tst
-# End time: 17:05:03 on Dec 17,2022, Elapsed time: 0:00:00
+# -- Compiling entity led_vhd_vec_tst
+# -- Compiling architecture led_arch of led_vhd_vec_tst
+# End time: 21:06:11 on Jan 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.PWM_ctrl_example_vhd_vec_tst 
-# Start time: 17:05:04 on Dec 17,2022
+# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.led_vhd_vec_tst 
+# Start time: 21:06:11 on Jan 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.pwm_ctrl_example_vhd_vec_tst(pwm_ctrl_example_arch)
+# Loading work.led_vhd_vec_tst(led_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
 # Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
 # Loading fiftyfivenm.fiftyfivenm_components
-# Loading work.pwm_ctrl_example(structure)
-# Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
-# Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
-# Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
-# after#31
-# End time: 17:05:04 on Dec 17,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# Loading work.led(structure)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "ledOUT".
+#    Time: 0 ps  Iteration: 0  Instance: /led_vhd_vec_tst/i1 File: Altera_Tutorial.vho Line: 42
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 21:06:11 on Jan 17,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

@@ -1,14 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
-
 entity led is
 port(clk : in bit;
-     ledOUT : out STD_LOGIC);
+     ledOUT : out bit);
 end;
 
 architecture behave of led is 
-  signal pulse : STD_LOGIC := '0';
+  signal pulse : bit := '0';
   signal count : integer range 0 to 50000000 := 0;  
 
 begin 
