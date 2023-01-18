@@ -1,15 +1,15 @@
 /**
- * Google's Firebase Cloud Messaging class, FCM.cpp version 1.0.24
+ * Google's Firebase Cloud Messaging class, FCM.cpp version 1.0.26
  *
  * This library supports Espressif ESP8266 and ESP32
  *
- * Created December 20, 2022
+ * Created January 7, 2023
  *
  * This work is a part of Firebase ESP Client library
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -194,9 +194,9 @@ bool FB_CM::sendHeader(FirebaseData *fbdo, fb_esp_fcm_msg_mode mode, const char 
 
     MB_String header;
     if (mode == fb_esp_fcm_msg_mode_app_instance_info)
-        HttpHelper::addRequestHeaderFirst(header, m_get);
+        HttpHelper::addRequestHeaderFirst(header, http_get);
     else
-        HttpHelper::addRequestHeaderFirst(header, m_post);
+        HttpHelper::addRequestHeaderFirst(header, http_post);
 
     if (msgMode)
     {
@@ -878,7 +878,7 @@ bool FB_CM::fcm_send(FirebaseData *fbdo, fb_esp_fcm_msg_mode mode, const char *m
             }
     }
 
-#if !defined(FB_ENABLE_EXTERNAL_CLIENT) && (defined(ESP32) || defined(ESP8266))
+#if !defined(FB_ENABLE_EXTERNAL_CLIENT) && (defined(ESP32) || defined(ESP8266) || defined(PICO_RP2040))
     // in legacy http fcm, the Signer.config was not set yet, then no SSL certificate is appliable
     // set the SSL client to skip server SSL certificate verification
 #if defined(ESP32)
@@ -952,8 +952,8 @@ bool FB_CM::handleResponse(FirebaseData *fbdo)
 
 void FB_CM::rescon(FirebaseData *fbdo, const char *host)
 {
-     fbdo->_responseCallback = NULL;
-    
+    fbdo->_responseCallback = NULL;
+
     if (fbdo->session.cert_updated || !fbdo->session.connected ||
         millis() - fbdo->session.last_conn_ms > fbdo->session.conn_timeout ||
         fbdo->session.con_mode != fb_esp_con_mode_fcm ||

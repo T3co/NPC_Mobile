@@ -3,7 +3,7 @@
 
 <br/>
 
-# The Programmable Data Logging and IO Control library v1.0.12
+# The Programmable Data Logging and IO Control library v1.0.13
 
 
 This library supports ESP8266 and ESP32 MCU from Espressif. 
@@ -252,7 +252,7 @@ return **`String`** The unique id String of device.
 
 The MIT License (MIT)
 
-Copyright (c) 2021 K. Suwatchai (Mobizt)
+Copyright (c) 2023 K. Suwatchai (Mobizt)
 
 
 Permission is hereby granted, free of charge, to any person returning a copy of

@@ -30,6 +30,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #include "camera_wrap.h"
+#include <vector>
 
 // #define DEBUG
 // #define SAVE_IMG
@@ -42,8 +43,8 @@ enum TRACK{
   TRACK_STOP
 };
 
-const char* ssid = "p4f";    // <<< change this as yours
-const char* password = "roboticslearner"; // <<< change this as yours
+const char* ssid = "Ams_2.4GHz";    // <<< change this as yours
+const char* password = "0523993253A"; // <<< change this as yours
 //holds the current upload
 int cameraInitState = -1;
 uint8_t* jpgBuff = new uint8_t[68123];

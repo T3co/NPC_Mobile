@@ -5,14 +5,15 @@
  *
  * Github: https://github.com/mobizt/Firebase-ESP-Client
  *
- * Copyright (c) 2022 mobizt
+ * Copyright (c) 2023 mobizt
  *
  */
 
 // This example shows how to list all files in Firebase and Google Cloud storage bucket via Google Cloud Storage JSON API.
 // The Google Cloud Storage JSON API function required OAuth2.0 authen.
 
-#if defined(ESP32)
+#include <Arduino.h>
+#if defined(ESP32) || defined(PICO_RP2040)
 #include <WiFi.h>
 #elif defined(ESP8266)
 #include <ESP8266WiFi.h>
@@ -102,7 +103,7 @@ void loop()
             Serial.println("ok");
             FileList *files = fbdo.fileList();
             for (size_t i = 0; i < files->items.size(); i++)
-                Serial.printf("name: %s, bucket: %s, generation: %d, contentType: %s, size: %d\n", files->items[i].name.c_str(), files->items[i].bucket.c_str(), files->items[i].generation, files->items[i].contentType.c_str(), files->items[i].size);
+                 Serial.printf("name: %s, bucket: %s, generation: %d, contentType: %s, size: %d\n", files->items[i].name.c_str(), files->items[i].bucket.c_str(), (int)files->items[i].generation, files->items[i].contentType.c_str(), (int)files->items[i].size);
         }
         else
             Serial.println(fbdo.errorReason());

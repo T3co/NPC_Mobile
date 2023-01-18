@@ -1,4 +1,4 @@
-# Firebase Arduino Client Library for ESP8266 and ESP32
+# Firebase Arduino Client Library for ESP8266, ESP32 and RP2040 Pico
 
 
 Google's Firebase Arduino Client Library for ESP8266 and ESP32
@@ -2704,6 +2704,19 @@ void removeMultiPathStreamCallback(FirebaseData *fbdo);
 
 
 
+
+#### Run Stream manually.
+
+To manually triggering the stream callback function, 
+this should call repeatedly in loop().
+
+```cpp
+void runStream();
+```
+
+
+
+
 #### Backup (download) the database at the defined node to the storage memory.
 
 param **`fbdo`** The pointer to Firebase Data Object.
@@ -4227,6 +4240,19 @@ This function requires OAuth2.0 authentication.
 ```cpp
 bool patchFunction(FirebaseData *fbdo, <string> functionId, FunctionsConfig *patchData);
 ```
+
+
+
+
+#### Run Functions deploying tasks manually.
+  
+To manually triggering the deploy task callback function, 
+this should call repeatedly in loop().
+
+```cpp
+void runDeployTasks();
+```
+
 
 
 
@@ -5854,7 +5880,7 @@ e.g. to<String>(), to<int>(), to<bool>()
 
 The MIT License (MIT)
 
-Copyright (c) 2022 K. Suwatchai (Mobizt)
+Copyright (c) 2023 K. Suwatchai (Mobizt)
 
 
 Permission is hereby granted, free of charge, to any person returning a copy of

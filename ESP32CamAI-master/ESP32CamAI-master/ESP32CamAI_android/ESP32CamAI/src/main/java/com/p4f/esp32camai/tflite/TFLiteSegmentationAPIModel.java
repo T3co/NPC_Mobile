@@ -264,12 +264,12 @@ public class TFLiteSegmentationAPIModel extends Classifier{
                 if (modelTypeSeg == MyConstants.MODEL_TYPE.UINT8) {
                     // Quantized model
                     imgDataSeg.put((byte) (pixelValue & 0xFF));
-                    imgDataSeg.put((byte) ((pixelValue >> 8) & 0xFF));
                     imgDataSeg.put((byte) ((pixelValue >> 16) & 0xFF));
+                    imgDataSeg.put((byte) ((pixelValue >> 32) & 0xFF));
                 } else if (modelTypeSeg == MyConstants.MODEL_TYPE.FLOAT32) { // Float model
                     imgDataSeg.putFloat((float)(pixelValue & 0xFF) / IMAGE_STD);
-                    imgDataSeg.putFloat((float)((pixelValue >> 8) & 0xFF) / IMAGE_STD);
-                    imgDataSeg.putFloat((float)((pixelValue >> 16) & 0xFF)/ IMAGE_STD);
+                    imgDataSeg.putFloat((float)((pixelValue >> 16) & 0xFF) / IMAGE_STD);
+                    imgDataSeg.putFloat((float)((pixelValue >> 32) & 0xFF)/ IMAGE_STD);
                 }
             }
         }

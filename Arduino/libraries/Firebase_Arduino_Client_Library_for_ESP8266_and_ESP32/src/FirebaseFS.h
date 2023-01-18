@@ -7,13 +7,15 @@
 
 #define FIREBASE_ESP_CLIENT 1
 
+#define FB_DEFAULT_DEBUG_PORT Serial
+
 /**
  * To use other flash file systems
  *
  * LittleFS File system
  *
  * #include <LittleFS.h>
- * #define DEFAULT_FLASH_FS LittleFS //For ESP8266 LitteFS
+ * #define DEFAULT_FLASH_FS LittleFS //For ESP8266 or RPI2040 LitteFS
  *
  *
  * FAT File system
@@ -27,6 +29,9 @@
 #endif
 #if defined(ESP32) || defined(ESP8266)
 #define DEFAULT_FLASH_FS SPIFFS
+#elif defined(PICO_RP2040)
+#include <LittleFS.h>
+#define DEFAULT_FLASH_FS LittleFS
 #endif
 
 /**
@@ -52,12 +57,12 @@ static SdFat sd_fat_fs;   // should declare as static here
 #define SD_FS_FILE SdFile
 #endif
 
-* The SdFat (https://github.com/greiman/SdFat) is already implemented as wrapper class in ESP8266 core library.
-* Do not include SdFat.h library in ESP8266 target code which it conflicts with the wrapper one.
+* The SdFat (https://github.com/greiman/SdFat) is already implemented as wrapper class in ESP8266 and RP2040 core libraries.
+* Do not include SdFat.h library in ESP8266 and RP2040 target codes which it conflicts with the wrapper one.
 
 */
 
-#if defined(ESP32) || defined(ESP8266)
+#if defined(ESP32) || defined(ESP8266) || defined(PICO_RP2040)
 #include <SD.h>
 #define DEFAULT_SD_FS SD
 #define CARD_TYPE_SD 1
@@ -102,12 +107,12 @@ static SdFat sd_fat_fs;   // should declare as static here
 // #define ENABLE_ESP8266_W5100_ETH
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
-// You can create your own header file "CustomFirebaseFS.h" in the same diectory of 
-// "FirebaseFS.h" and put your own custom config to overwrite or 
+// You can create your own header file "CustomFirebaseFS.h" in the same diectory of
+// "FirebaseFS.h" and put your own custom config to overwrite or
 // change the default config in "FirebaseFS.h".
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 
-/** This is an example of "CustomFirebaseFS.h" 
+/** This is an example of "CustomFirebaseFS.h"
 
 #pragma once
 
@@ -148,3 +153,8 @@ static SdFat sd_fat_fs;   // should declare as static here
 #endif
 
 #endif
+
+/////////////////////////////////// WARNING ///////////////////////////////////
+// Using RP2040 Pico Arduino SDK, FreeRTOS with LittleFS will cause device hangs 
+// when write the data to flash filesystem.
+// Do not include FreeRTOS.h or even it excluded from compilation by using macro, it  issue.

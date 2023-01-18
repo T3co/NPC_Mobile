@@ -1,15 +1,15 @@
 /**
- * Google's Firebase Token Management class, Signer.cpp version 1.3.4
+ * Google's Firebase Token Management class, Signer.cpp version 1.3.6
  *
- * This library supports Espressif ESP8266 and ESP32
+ * This library supports Espressif ESP8266, ESP32 and RP2040 Pico
  *
- * Created December 19, 2022
+ * Created January 6, 2023
  *
  * This work is a part of Firebase ESP Client library
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -266,13 +266,18 @@ time_t Firebase_Signer::getTime()
 bool Firebase_Signer::setTime(time_t ts)
 {
 
-#if defined(ESP8266) || defined(ESP32)
+#if defined(ESP8266) || defined(ESP32) || defined(PICO_RP2040)
 
     if (TimeHelper::setTimestamp(ts) == 0)
     {
         this->ts = time(nullptr);
         *mb_ts = this->ts;
         return true;
+    }
+    else
+    {
+        this->ts = time(nullptr);
+        *mb_ts = this->ts;
     }
 
 #else
@@ -571,7 +576,7 @@ void Firebase_Signer::tokenProcessingTask()
     // flag set for valid time required
     bool sslValidTime = false;
 
-#if defined(ESP8266)
+#if defined(ESP8266) || defined(PICO_RP2040)
     // valid time required for SSL handshake using server certificate in ESP8266
     if (config->cert.data != NULL || config->cert.file.length() > 0)
         sslValidTime = true;
@@ -690,7 +695,7 @@ bool Firebase_Signer::refreshToken()
     jsonPtr->add(pgm2Str(fb_esp_pgm_str_207 /* "refreshToken" */), config->internal.refresh_token.c_str());
 
     MB_String req;
-    HttpHelper::addRequestHeaderFirst(req, m_post);
+    HttpHelper::addRequestHeaderFirst(req, http_post);
 
     req += fb_esp_pgm_str_204; // "/v1/token?Key=""
     req += config->api_key;
@@ -1145,7 +1150,7 @@ bool Firebase_Signer::createJWT()
             MemoryHelper::freeBuffer(mbfs, config->signer.hash);
             return false;
         }
-#elif defined(ESP8266)
+#elif defined(ESP8266) || defined(PICO_RP2040)
         config->signer.hash = MemoryHelper::createBuffer<char *>(Signer.mbfs, config->signer.hashSize);
         br_sha256_context mc;
         br_sha256_init(&mc);
@@ -1246,7 +1251,7 @@ bool Firebase_Signer::createJWT()
 
         if (ret != 0)
             return false;
-#elif defined(ESP8266)
+#elif defined(ESP8266) || defined(PICO_RP2040)
         // RSA private key
         BearSSL::PrivateKey *pk = nullptr;
         Utils::idle();
@@ -1352,7 +1357,7 @@ bool Firebase_Signer::getIdToken(bool createUser, MB_StringPtr email, MB_StringP
     jsonPtr->add(pgm2Str(fb_esp_pgm_str_198 /* "returnSecureToken" */), true);
 
     MB_String req;
-    HttpHelper::addRequestHeaderFirst(req, m_post);
+    HttpHelper::addRequestHeaderFirst(req, http_post);
 
     if (createUser)
         req += fb_esp_pgm_str_259; // "/v1/accounts:signUp?key="
@@ -1473,7 +1478,7 @@ bool Firebase_Signer::deleteIdToken(MB_StringPtr idToken)
         jsonPtr->add(pgm2Str(fb_esp_pgm_str_200 /* "idToken" */), config->internal.auth_token);
 
     MB_String req;
-    HttpHelper::addRequestHeaderFirst(req, m_post);
+    HttpHelper::addRequestHeaderFirst(req, http_post);
     req += fb_esp_pgm_str_582; //"/v1/accounts:delete?key="
     req += config->api_key;
     HttpHelper::addRequestHeaderLast(req);
@@ -1611,16 +1616,16 @@ bool Firebase_Signer::initClient(PGM_P subDomain, fb_esp_auth_token_status statu
         return handleTaskError(FIREBASE_ERROR_HTTP_CODE_REQUEST_TIMEOUT, FIREBASE_ERROR_EXTERNAL_CLIENT_NOT_INITIALIZED);
 
 #if defined(ESP8266) && !defined(FB_ENABLE_EXTERNAL_CLIENT)
-    tcpClient->setBufferSizes(1024, 1024);
+    tcpClient->setBufferSizes(2048, 1024);
 #endif
+
+    // use for authentication task
+    tcpClient->reserved = true;
 
     initJson();
 
     MB_String host;
     HttpHelper::addGAPIsHost(host, subDomain);
-
-    // use for authentication task
-    tcpClient->reserved = true;
 
     Utils::idle();
     tcpClient->begin(host.c_str(), 443, &response_code);
@@ -1648,7 +1653,7 @@ bool Firebase_Signer::requestTokens(bool refresh)
         return false;
 
     MB_String req;
-    HttpHelper::addRequestHeaderFirst(req, m_post);
+    HttpHelper::addRequestHeaderFirst(req, http_post);
 
     if (config->signer.tokens.token_type == token_type_custom_token)
     {
@@ -1838,7 +1843,7 @@ bool Firebase_Signer::handleEmailSending(MB_StringPtr payload, fb_esp_user_email
     }
 
     MB_String req;
-    HttpHelper::addRequestHeaderFirst(req, m_post);
+    HttpHelper::addRequestHeaderFirst(req, http_post);
     req += fb_esp_pgm_str_194; // "/identitytoolkit/v3/relyingparty/"
     req += fb_esp_pgm_str_262; // "getOobConfirmationCode?key="
     req += config->api_key;

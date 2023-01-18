@@ -4,7 +4,7 @@
  * Created November 10, 2022
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -139,7 +139,7 @@ public:
     }
 
     virtual int write(uint8_t *data, int len)
-    {
+    {       
         if (!data || !client)
             return setError(FIREBASE_ERROR_TCP_ERROR_SEND_REQUEST_FAILED);
 

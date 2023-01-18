@@ -1,14 +1,14 @@
 /**
  *
- * This library supports Espressif ESP8266 and ESP32
+ * This library supports Espressif ESP8266, ESP32 and Raspberry Pi Pico (RP2040)
  *
- * Created December 20, 2022
+ * Created January 8, 2023
  *
  * This work is a part of Firebase ESP Client library
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -31,12 +31,14 @@
 
 #ifndef FB_UTILS_H
 #define FB_UTILS_H
+#include "FirebaseFS.h"
 
 #include <Arduino.h>
 #include "FB_Const.h"
 #if defined(ESP8266)
 #include <Schedule.h>
 #endif
+
 using namespace mb_string;
 
 #define stringPtr2Str(p) (MB_String().appendPtr(p).c_str())
@@ -711,29 +713,29 @@ namespace HttpHelper
     }
 
     /* Append the string with first request line (HTTP method) */
-    inline bool addRequestHeaderFirst(MB_String &header, fb_esp_method method)
+    inline bool addRequestHeaderFirst(MB_String &header, fb_esp_request_method method)
     {
         bool post = false;
         switch (method)
         {
-        case fb_esp_method::m_get:
+        case http_get:
             header += fb_esp_pgm_str_25; // "GET"
             break;
-        case fb_esp_method::m_post:
+        case http_post:
             header += fb_esp_pgm_str_24; // "POST"
             post = true;
             break;
 
-        case fb_esp_method::m_patch:
+        case http_patch:
             header += fb_esp_pgm_str_26; // "PATCH"
             post = true;
             break;
 
-        case fb_esp_method::m_delete:
+        case http_delete:
             header += fb_esp_pgm_str_27; // "DELETE"
             break;
 
-        case fb_esp_method::m_put:
+        case http_put:
             header += fb_esp_pgm_str_23; // "PUT"
             break;
 
@@ -741,7 +743,7 @@ namespace HttpHelper
             break;
         }
 
-        if (method == m_get || method == m_post || method == m_patch || method == m_delete || method == m_put)
+        if (method == http_get || method == http_post || method == http_patch || method == http_delete || method == http_put)
             header += fb_esp_pgm_str_6; // " "
 
         return post;
@@ -1029,7 +1031,7 @@ namespace HttpHelper
             session.fcs.files.items.clear();
 #endif
 
-        session.response.code = FIREBASE_ERROR_HTTP_CODE_OK;
+        session.response.code = FIREBASE_ERROR_HTTP_CODE_UNDEFINED;
         session.content_length = -1;
         session.payload_length = 0;
         session.chunked_encoding = false;
@@ -1352,7 +1354,7 @@ namespace Base64Helper
 
     inline bool updateWrite(uint8_t *data, size_t len)
     {
-#if defined(ESP32) || defined(ESP8266)
+#if defined(ESP32) || defined(ESP8266) || defined(PICO_RP2040)
         return Update.write(data, len) == len;
 #endif
         return false;
@@ -1685,11 +1687,10 @@ namespace TimeHelper
     {
         uint32_t &tm = *mb_ts;
 
-#if defined(ESP8266) || defined(ESP32)
-        if (tm < ESP_DEFAULT_TS)
+#if defined(ESP8266) || defined(ESP32) || defined(PICO_RP2040)
             tm = time(nullptr);
 #else
-        tm += millis() / 1000;
+        tm = millis() / 1000;
 #endif
 
         return tm;
@@ -1713,7 +1714,7 @@ namespace TimeHelper
             if (config->internal.fb_clock_rdy && gmtOffset != config->internal.fb_gmt_offset)
                 config->internal.fb_clock_synched = false;
 
-#if defined(ESP32) || defined(ESP8266)
+#if defined(ESP32) || defined(ESP8266) || defined(PICO_RP2040)
             if (!config->internal.fb_clock_synched)
             {
                 config->internal.fb_clock_synched = true;
@@ -1843,7 +1844,7 @@ namespace Utils
         if (!config)
             return true;
 
-#if defined(ESP32)
+#if defined(ESP32) || defined(PICO_RP2040)
         if (config->internal.fb_multiple_requests)
             return true;
 
@@ -1955,10 +1956,10 @@ namespace Utils
             path += sub;
         return path;
     }
-#if defined(FIREBASE_ESP_CLIENT)
+#if defined(FIREBASE_ESP_CLIENT) && defined(ENABLE_FIRESTORE)
     inline MB_String makeDocPath(struct fb_esp_firestore_req_t &req, const MB_String &projectId)
     {
-         MB_String str = fb_esp_pgm_str_395; // "projects/"
+        MB_String str = fb_esp_pgm_str_395; // "projects/"
         str += req.projectId.length() == 0 ? projectId : req.projectId;
         str += fb_esp_pgm_str_341; // "/databases/"
         str += req.databaseId.length() > 0 ? req.databaseId : fb_esp_pgm_str_342 /* "(default)" */;
@@ -1994,7 +1995,6 @@ namespace Utils
 
         return bufLen;
     }
-
 };
 
 #endif

@@ -1,15 +1,15 @@
 /**
- * Google's Firebase Storage class, FCS.cpp version 1.2.3
+ * Google's Firebase Storage class, FCS.cpp version 1.2.5
  *
- * This library supports Espressif ESP8266 and ESP32
+ * This library supports Espressif ESP8266, ESP32 and RP2040 Pico
  *
- * Created December 12, 2022
+ * Created January 6, 2023
  *
  * This work is a part of Firebase ESP Client library
- * Copyright (c) 2021 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  * The MIT License (MIT)
- * Copyright (c) 2021 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -186,7 +186,7 @@ bool FB_Storage::mDownload(FirebaseData *fbdo, MB_StringPtr bucketID, MB_StringP
 bool FB_Storage::mDownloadOTA(FirebaseData *fbdo, MB_StringPtr bucketID, MB_StringPtr remoteFileName,
                               FCS_DownloadProgressCallback callback)
 {
-#if defined(OTA_UPDATE_ENABLED) && (defined(ESP32) || defined(ESP8266))
+#if defined(OTA_UPDATE_ENABLED) && (defined(ESP32) || defined(ESP8266) || defined(PICO_RP2040))
     struct fb_esp_fcs_req_t req;
     req.remoteFileName = remoteFileName;
     req.requestType = fb_esp_fcs_request_type_download_ota;
@@ -378,19 +378,19 @@ bool FB_Storage::fcs_sendRequest(FirebaseData *fbdo, struct fb_esp_fcs_req_t *re
     size_t len = 0;
     bool hasParams = false;
     ret = -1;
-    fb_esp_method method = m_undefined;
+    fb_esp_request_method method = http_undefined;
 
     if (req->requestType == fb_esp_fcs_request_type_upload || req->requestType == fb_esp_fcs_request_type_upload_pgm_data)
-        method = fb_esp_method::m_post;
+        method = http_post;
     else if (req->requestType == fb_esp_fcs_request_type_download ||
              req->requestType == fb_esp_fcs_request_type_download_ota ||
              req->requestType == fb_esp_fcs_request_type_get_meta ||
              req->requestType == fb_esp_fcs_request_type_list)
-        method = fb_esp_method::m_get;
+        method = http_get;
     else if (req->requestType == fb_esp_fcs_request_type_delete)
-        method = fb_esp_method::m_delete;
+        method = http_delete;
 
-    if (method != m_undefined)
+    if (method != http_undefined)
         HttpHelper::addRequestHeaderFirst(header, method);
 
     header += fb_esp_pgm_str_266; // "/v0/b/"
@@ -493,7 +493,7 @@ bool FB_Storage::fcs_sendRequest(FirebaseData *fbdo, struct fb_esp_fcs_req_t *re
             }
 
             MemoryHelper::freeBuffer(Signer.mbfs, buf);
-            Signer.mbfs->close(mbfs_type req->storageType);
+           // Signer.mbfs->close(mbfs_type req->storageType);
             reportUploadProgress(fbdo, req, req->fileSize);
         }
         else if (req->requestType == fb_esp_fcs_request_type_upload_pgm_data)
@@ -526,8 +526,8 @@ bool FB_Storage::fcs_sendRequest(FirebaseData *fbdo, struct fb_esp_fcs_req_t *re
         bool res = handleResponse(fbdo, req);
         fbdo->closeSession();
 
-        if (req->requestType == fb_esp_fcs_request_type_download)
-            Signer.mbfs->close(mbfs_type req->storageType);
+       // if (req->requestType == fb_esp_fcs_request_type_download)
+        //    Signer.mbfs->close(mbfs_type req->storageType);
 
         if (res)
         {
@@ -553,8 +553,8 @@ bool FB_Storage::fcs_sendRequest(FirebaseData *fbdo, struct fb_esp_fcs_req_t *re
     else
         fbdo->session.connected = false;
 
-    if (req->requestType == fb_esp_fcs_request_type_download)
-        Signer.mbfs->close(mbfs_type req->storageType);
+    //if (req->requestType == fb_esp_fcs_request_type_download)
+    //   Signer.mbfs->close(mbfs_type req->storageType);
 
     Signer.config->internal.fb_processing = false;
     return true;

@@ -24,6 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -316,68 +318,81 @@ public class Esp32CameraFragment extends Fragment{
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setBackgroundResource(R.drawable.my_button_bg_2);
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setTextColor(Color.rgb(0,0,255));
                     dbRef.child("led").setValue(1);
+                    mUdpClient.sendBytes(mServerAddr, mServerPort, mLedOn);
                 }else{
                     mLed = false;
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setBackgroundResource(R.drawable.my_button_bg);
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setTextColor(Color.rgb(255,255,255));
                     dbRef.child("led").setValue(0);
+                    mUdpClient.sendBytes(mServerAddr, mServerPort, mLedOff);
                 }
             }
         });
 
-        Button shootBtn = (Button) rootView.findViewById(R.id.shootBtn);
-        shootBtn.setOnClickListener(new View.OnClickListener(){
+        ImageButton ShootBtn = (ImageButton) rootView.findViewById(R.id.shootBtn);
+        ImageButton.OnTouchListener listener = new ImageButton.OnTouchListener() {
             @Override
-            public void onClick(View v){
-                if (!mLaser) {
-                    mLaser = true;
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg_2);
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setTextColor(Color.rgb(0,0,255));
-                    laser =1;
-                }else{
-                    mLaser = false;
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg);
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setTextColor(Color.rgb(255,255,255));
-                    laser =0;
-                }
-                CompilePacket(dbRef);
+            public boolean onTouch(View arg0, MotionEvent event){
+                    if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                        if (((ImageButton) arg0).getId() == R.id.shootBtn);
+                        {
+                            mLaser = true;
+                            ((ImageButton) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg_2);
+                            laser = 1;
+                            CompilePacket(dbRef);
+                        }
+                        return true;
+
+                    }
+                        else if(event.getAction() == MotionEvent.ACTION_UP) {
+                            if (((ImageButton) arg0).getId() == R.id.shootBtn) {
+                                mLaser = false;
+                                ((ImageButton) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg);
+                                laser =0;
+                                CompilePacket(dbRef);
+                            }
+                            return true;
+                        }
+                        return true;
             }
-        });
+        };
+        ShootBtn.setOnTouchListener(listener);
+
 
         servoSlider.addOnChangeListener(new Slider.OnChangeListener() {
             @Override
             public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
                 switch((int)value) {
                     case 0:
-                        servo=0;
+                        servo=7;
                         CompilePacket(dbRef);
                         break;
                     case 10:
-                        servo=1;
-                        CompilePacket(dbRef);
-                        break;
-                    case 20:
-                        servo=2;
-                        CompilePacket(dbRef);
-                        break;
-                    case 30:
-                        servo=3;
-                        CompilePacket(dbRef);
-                        break;
-                    case 40:
-                        servo=4;
-                        CompilePacket(dbRef);
-                        break;
-                    case 50:
-                        servo=5;
-                        CompilePacket(dbRef);
-                        break;
-                    case 60:
                         servo=6;
                         CompilePacket(dbRef);
                         break;
+                    case 20:
+                        servo=5;
+                        CompilePacket(dbRef);
+                        break;
+                    case 30:
+                        servo=4;
+                        CompilePacket(dbRef);
+                        break;
+                    case 40:
+                        servo=3;
+                        CompilePacket(dbRef);
+                        break;
+                    case 50:
+                        servo=2;
+                        CompilePacket(dbRef);
+                        break;
+                    case 60:
+                        servo=1;
+                        CompilePacket(dbRef);
+                        break;
                     case 70:
-                        servo=7;
+                        servo=0;
                         CompilePacket(dbRef);
                         break;
                     default:
@@ -596,18 +611,11 @@ public class Esp32CameraFragment extends Fragment{
                             mInitTrackObj = false;
                             //TODO
                             if(!mInitStream){
-                                Paint paintText = new Paint();
-                                paintText.setColor(Color.YELLOW);
-                                paintText.setStrokeWidth(2);
-                                paintText.setStyle(Paint.Style.FILL);
-                                paintText.setTextSize(mTrackingOverlay.getWidth()/20);
                                 canvas.save();
                                 canvas.rotate(90, mTrackingOverlay.getWidth()*5/6, mTrackingOverlay.getHeight()/8);
-                                canvas.drawText("Touch upper half screen to move camera up !", mTrackingOverlay.getWidth()*5/6, mTrackingOverlay.getHeight()/8, paintText);
                                 canvas.restore();
                                 canvas.save();
                                 canvas.rotate(90, mTrackingOverlay.getWidth()/6, mTrackingOverlay.getHeight()/8);
-                                canvas.drawText("Touch lower half screen to move camera down !", mTrackingOverlay.getWidth()/6, mTrackingOverlay.getHeight()/8, paintText);
                                 canvas.restore();
                             }
                         }
@@ -825,21 +833,21 @@ public class Esp32CameraFragment extends Fragment{
         builder.setView(lay);
 
         // Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                mSelectedTrackerPre = mSelectedTracker;
-                mSelectedTracker = mRadioBtnNames[mRadioIndex];
-                if (!mSelectedTracker.equals("None")) {
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg_2);
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setTextColor(Color.rgb(0,0,255));
-                } else {
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg);
-                    ((Button) getActivity().findViewById(R.id.shootBtn)).setTextColor(Color.rgb(255,255,255));
-                }
-                mBinaryThreshold = Integer.parseInt(binThresh.getText().toString());
-            }
-        });
+//        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                mSelectedTrackerPre = mSelectedTracker;
+//                mSelectedTracker = mRadioBtnNames[mRadioIndex];
+//                if (!mSelectedTracker.equals("None")) {
+//                    ((Button) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg_2);
+//                    ((Button) getActivity().findViewById(R.id.shootBtn)).setTextColor(Color.rgb(0,0,255));
+//                } else {
+//                    ((Button) getActivity().findViewById(R.id.shootBtn)).setBackgroundResource(R.drawable.my_button_bg);
+//                    ((Button) getActivity().findViewById(R.id.shootBtn)).setTextColor(Color.rgb(255,255,255));
+//                }
+//                mBinaryThreshold = Integer.parseInt(binThresh.getText().toString());
+//            }
+//        });
 
 
         builder.setCancelable(false);

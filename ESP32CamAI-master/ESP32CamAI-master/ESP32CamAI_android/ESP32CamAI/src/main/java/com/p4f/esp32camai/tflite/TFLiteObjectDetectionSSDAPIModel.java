@@ -428,13 +428,13 @@ public class TFLiteObjectDetectionSSDAPIModel extends Classifier {
       for (int j = 0; j < inputSizeSSD; ++j) {
         int pixelValue = intValuesSSD[i * inputSizeSSD + j];
         if (modelType== MyConstants.MODEL_TYPE.FLOAT32) {
+          imgDataSSD.putFloat((((pixelValue >> 32) & 0xFF) - IMAGE_MEAN_SSD) / IMAGE_STD_SSD);
           imgDataSSD.putFloat((((pixelValue >> 16) & 0xFF) - IMAGE_MEAN_SSD) / IMAGE_STD_SSD);
-          imgDataSSD.putFloat((((pixelValue >> 8) & 0xFF) - IMAGE_MEAN_SSD) / IMAGE_STD_SSD);
           imgDataSSD.putFloat(((pixelValue & 0xFF) - IMAGE_MEAN_SSD) / IMAGE_STD_SSD);
         }else if(modelType== MyConstants.MODEL_TYPE.UINT8){
           // Quantized model
+          imgDataSSD.put((byte) ((pixelValue >> 32) & 0xFF));
           imgDataSSD.put((byte) ((pixelValue >> 16) & 0xFF));
-          imgDataSSD.put((byte) ((pixelValue >> 8) & 0xFF));
           imgDataSSD.put((byte) (pixelValue & 0xFF));
         }
       }

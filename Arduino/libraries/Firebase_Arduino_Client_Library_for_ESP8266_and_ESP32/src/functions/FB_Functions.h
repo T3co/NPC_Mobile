@@ -1,15 +1,15 @@
 /**
- * Google's Cloud Functions class, Functions.h version 1.1.18
+ * Google's Cloud Functions class, Functions.h version 1.1.19
  *
  * This library supports Espressif ESP8266 and ESP32
  *
- * Created December 12, 2022
+ * Created December 25, 2022
  *
  * This work is a part of Firebase ESP Client library
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -133,6 +133,11 @@ public:
     {
         return mPatchFunction(fbdo, toStringPtr(functionId), patchData);
     }
+
+    /** Run Functions deploying tasks manually
+     * To manually triggering the deploy task callback function, this should call repeatedly in loop().
+     */
+    void runDeployTasks() { mRunDeployTasks(); };
 
     /** Sets the IAM access control policy on the specified function. Replaces any existing policy.
      *
@@ -327,6 +332,7 @@ private:
     TaskHandle_t function_check_task_handle = NULL;
 #endif
     bool _creation_task_enable = false;
+    bool _creation_task_running = false;
     size_t _deployIndex = 0;
     MB_VECTOR<fb_esp_deploy_task_info_t> _deployTasks;
     void makeRequest(struct fb_esp_functions_req_t &req, fb_esp_functions_request_type type,
@@ -362,11 +368,13 @@ private:
                         MB_StringPtr pageSize, MB_StringPtr pageToken);
     bool mListOperations(FirebaseData *fbdo, MB_StringPtr filter, MB_StringPtr pageSize, MB_StringPtr pageToken);
 
-#if defined(ESP32)
+#if defined(ESP32) || defined(ENABLE_PICO_FREE_RTOS)
     void runDeployTask(const char *taskName);
-#elif defined(ESP8266) || defined(FB_ENABLE_EXTERNAL_CLIENT)
+#else
     void runDeployTask();
 #endif
+    void mDeployTasks();
+    void mRunDeployTasks();
 };
 
 #endif

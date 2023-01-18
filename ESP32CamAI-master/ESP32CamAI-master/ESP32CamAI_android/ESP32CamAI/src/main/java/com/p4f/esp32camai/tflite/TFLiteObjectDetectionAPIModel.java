@@ -372,8 +372,8 @@ public class TFLiteObjectDetectionAPIModel extends Classifier {
         int pixelValue = intValuesYolo[i * inputSize + j];
           if (modelType== MyConstants.MODEL_TYPE.FLOAT32) {
               imgDataYolo.putFloat((float) (pixelValue & 0xFF) / IMAGE_STD);
-              imgDataYolo.putFloat((float) ((pixelValue >> 8) & 0xFF) / IMAGE_STD);
               imgDataYolo.putFloat((float) ((pixelValue >> 16) & 0xFF) / IMAGE_STD);
+              imgDataYolo.putFloat((float) ((pixelValue >> 32) & 0xFF) / IMAGE_STD);
           }else{
             //TODO
           }

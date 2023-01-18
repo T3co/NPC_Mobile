@@ -2659,6 +2659,17 @@ void removeMultiPathStreamCallback(FirebaseData &fbdo);
 
 
 
+#### Run Stream manually.
+
+To manually triggering the stream callback function, 
+this should call repeatedly in loop().
+
+```cpp
+void runStream();
+```
+
+
+
 #### Backup (download) database at defined database path to SD card/Flash memory
 
 param **`fbdo`** Firebase Data Object to hold data and instances.
@@ -4725,7 +4736,7 @@ e.g. to<String>(), to<int>(), to<bool>()
 
 The MIT License (MIT)
 
-Copyright (c) 2022 K. Suwatchai (Mobizt)
+Copyright (c) 2023 K. Suwatchai (Mobizt)
 
 
 Permission is hereby granted, free of charge, to any person returning a copy of

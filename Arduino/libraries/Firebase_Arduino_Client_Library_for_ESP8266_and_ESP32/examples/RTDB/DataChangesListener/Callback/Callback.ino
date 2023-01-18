@@ -5,11 +5,12 @@
  *
  * Github: https://github.com/mobizt/Firebase-ESP-Client
  *
- * Copyright (c) 2022 mobizt
+ * Copyright (c) 2023 mobizt
  *
  */
 
-#if defined(ESP32)
+#include <Arduino.h>
+#if defined(ESP32) || defined(PICO_RP2040)
 #include <WiFi.h>
 #elif defined(ESP8266)
 #include <ESP8266WiFi.h>
@@ -166,6 +167,10 @@ void loop()
 {
 
   // Firebase.ready() should be called repeatedly to handle authentication tasks.
+
+#if defined(PICO_RP2040)
+  Firebase.RTDB.runStream();
+#endif
 
   if (Firebase.ready() && (millis() - sendDataPrevMillis > 15000 || sendDataPrevMillis == 0))
   {

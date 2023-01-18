@@ -11,23 +11,26 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
         android:gravity="center|center_vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tracking_overlay"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.p4f.esp32camai.OverlayView
         android:id="@+id/tracking_overlay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.109" />
 
     <io.github.controlwear.virtual.joystick.android.JoystickView
         android:id="@+id/joystick"
@@ -42,30 +45,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-    <com.google.android.material.slider.Slider
-        android:id="@+id/servoSlider"
-        android:layout_width="304dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="240dp"
-        android:contentDescription="@string/sliderservo"
-        android:rotation="90"
-        android:stepSize="10"
-        android:value="0"
-        android:valueFrom="0"
-        android:valueTo="70"
-        app:haloColor="@android:color/white"
-        app:labelBehavior="floating"
-        app:layout_constraintBottom_toBottomOf="@+id/tracking_overlay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tracking_overlay"
-        app:layout_constraintVertical_bias="0.245"
-        app:thumbColor="@android:color/black"
-        app:thumbRadius="11dp"
-        app:tickColor="@android:color/white"
-        app:tickVisible="false"
-        app:trackColor="@android:color/black"
-        app:trackHeight="9dp" />
 
     <com.p4f.esp32camai.VerticalButton
         android:id="@+id/objDetBtn"
@@ -82,7 +61,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.981" />
 
-
     <com.p4f.esp32camai.VerticalButton
         android:id="@+id/streamBtn"
         android:layout_width="68dp"
@@ -91,7 +69,7 @@
         android:minHeight="80dip"
         android:text="Stream"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="@+id/tracking_overlay"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,27 +84,27 @@
         android:minHeight="80dip"
         android:text="LED"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="@+id/tracking_overlay"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.838" />
 
-    <com.p4f.esp32camai.VerticalButton
-        android:id="@+id/shootBtn"
-        android:layout_width="68dp"
-        android:layout_height="87dp"
-        android:background="@drawable/my_button_bg"
-        android:minHeight="80dip"
-        android:text="Shoot"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981" />
+<!--    <com.p4f.esp32camai.VerticalButton-->
+<!--        android:id="@+id/shootBtn"-->
+<!--        android:layout_width="68dp"-->
+<!--        android:layout_height="87dp"-->
+<!--        android:background="@drawable/my_button_bg"-->
+<!--        android:minHeight="80dip"-->
+<!--        android:text="Shoot"-->
+<!--        android:textColor="#ffffff"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.906"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.981" />-->
 
     <TextView
         android:id="@+id/tempView"
@@ -137,12 +115,49 @@
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tracking_overlay"
-        app:layout_constraintHorizontal_bias="0.952"
-        app:layout_constraintStart_toStartOf="@+id/tracking_overlay"
-        app:layout_constraintTop_toTopOf="@+id/tracking_overlay"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
 
+    <ImageButton
+        android:id="@+id/shootBtn"
+        android:layout_width="68dp"
+        android:layout_height="87dp"
+        android:contentDescription="Shoot button"
+        android:tooltipText="Shoot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
+        app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/servoSlider"
+        android:layout_width="304dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="232dp"
+        android:contentDescription="@string/sliderservo"
+        android:rotation="90"
+        android:stepSize="10"
+        android:value="0"
+        android:valueFrom="0"
+        android:valueTo="70"
+        app:haloColor="@android:color/white"
+        app:labelBehavior="floating"
+        app:layout_constraintBottom_toBottomOf="@+id/tracking_overlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tracking_overlay"
+        app:layout_constraintVertical_bias="0.254"
+        app:thumbColor="@color/colorAccent"
+        app:thumbRadius="11dp"
+        app:tickColor="@android:color/white"
+        app:tickVisible="false"
+        app:trackColor="@color/colorAccent"
+        app:trackHeight="9dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

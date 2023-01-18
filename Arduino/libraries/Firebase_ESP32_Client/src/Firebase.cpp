@@ -1,10 +1,10 @@
 /**
- * The Firebase class, Firebase.cpp v1.2.2
+ * The Firebase class, Firebase.cpp v1.2.4
  *
- *  Created December 19, 2022
+ *  Created January 8, 2023
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -30,7 +30,7 @@
 
 #include "Firebase.h"
 
-#if defined(ESP8266) || defined(ESP32) || defined(FB_ENABLE_EXTERNAL_CLIENT)
+#if defined(ESP8266) || defined(ESP32) || defined(PICO_RP2040) || defined(FB_ENABLE_EXTERNAL_CLIENT)
 
 #if defined(FIREBASE_ESP_CLIENT)
 
@@ -125,21 +125,27 @@ struct token_info_t Firebase_ESP_Client::authTokenInfo()
 
 bool Firebase_ESP_Client::ready()
 {
-    // We need to close all data object TCP sessions when token was expired.
+#if defined(ESP32) || defined(ESP8266)
+    // Stop the session only for ESPs to free the memory when token 
+    // expired (actually nearly expired) as the Signer needs memory 
+    // to open another secure TCP session to request new orrefresh token.
+    // We don't stop session to free memory on other devices e,g, Pico as it uses 
+    // BearSSL engine that required less memory then it has enough free memory 
+    //to do other things. 
     if (Signer.isExpired())
     {
         if (Signer.config)
         {
             for (size_t id = 0; id < Signer.config->internal.sessions.size(); id++)
             {
-
                 FirebaseData *fbdo = addrTo<FirebaseData *>(Signer.config->internal.sessions[id]);
-                if (fbdo && !fbdo->tcpClient.reserved)
+                // non-stream used session will stop
+                if (fbdo && !fbdo->tcpClient.reserved && fbdo->session.con_mode != fb_esp_con_mode_rtdb_stream) 
                     fbdo->closeSession();
             }
         }
     }
-
+#endif
     return Signer.tokenReady();
 }
 
@@ -537,6 +543,7 @@ struct token_info_t FIREBASE_CLASS::authTokenInfo()
 
 bool FIREBASE_CLASS::ready()
 {
+#if defined(ESP32) || defined(ESP8266)
     // We need to close all data object TCP sessions when token was expired.
     if (Signer.isExpired())
     {
@@ -544,14 +551,13 @@ bool FIREBASE_CLASS::ready()
         {
             for (size_t id = 0; id < Signer.config->internal.sessions.size(); id++)
             {
-
                 FirebaseData *fbdo = addrTo<FirebaseData *>(Signer.config->internal.sessions[id]);
                 if (fbdo && !fbdo->tcpClient.reserved)
                     fbdo->closeSession();
             }
         }
     }
-
+#endif
     return Signer.tokenReady();
 }
 

@@ -1,15 +1,15 @@
 /**
- * Google's Firebase Token Management class, Signer.h version 1.3.4
+ * Google's Firebase Token Management class, Signer.h version 1.3.6
  *
- * This library supports Espressif ESP8266 and ESP32
+ * This library supports Espressif ESP8266, ESP32 and RP2040 Pico
  *
- * Created December 19, 2022
+ * Created January 6, 2023
  *
  * This work is a part of Firebase ESP Client library
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  * The MIT License (MIT)
- * Copyright (c) 2022 K. Suwatchai (Mobizt)
+ * Copyright (c) 2023 K. Suwatchai (Mobizt)
  *
  *
  * Permission is hereby granted, free of charge, to any person returning a copy of
@@ -39,6 +39,7 @@
 #include "./FirebaseFS.h"
 #include "./mbfs/MB_FS.h"
 
+
 using namespace mb_string;
 
 class Firebase_Signer
@@ -60,7 +61,7 @@ class Firebase_Signer
 
 #if defined(ESP32)
 #define FIREBASE_CLASS FirebaseESP32
-#elif defined(ES8266)
+#elif defined(ES8266) || defined(PICO_RP2040)
 #define FIREBASE_CLASS FirebaseESP8266
 #endif
 
@@ -201,7 +202,7 @@ private:
     void set_scheduled_callback(callback_function_t callback)
     {
         esp8266_cb = std::move([callback]()
-                        { schedule_function(callback); });
+                               { schedule_function(callback); });
         esp8266_cb();
     }
 #endif
