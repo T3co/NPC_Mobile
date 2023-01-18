@@ -31,6 +31,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <WiFiUdp.h>
 #include "camera_wrap.h"
 #include <vector>
+#include <WiFiMulti.h>
+
+
+  WiFiMulti wifiMulti;
+
 
 // #define DEBUG
 // #define SAVE_IMG
@@ -43,8 +48,10 @@ enum TRACK{
   TRACK_STOP
 };
 
-const char* ssid = "Ams_2.4GHz";    // <<< change this as yours
-const char* password = "0523993253A"; // <<< change this as yours
+
+
+// const char* ssid = "Ams_2.4GHz";    // <<< change this as yours
+// const char* password = "0523993253A"; // <<< change this as yours
 //holds the current upload
 int cameraInitState = -1;
 uint8_t* jpgBuff = new uint8_t[68123];
@@ -232,9 +239,16 @@ void setup(void) {
 
   Serial.begin(115200);
   Serial.print("\n");
+  WiFi.mode(WIFI_STA);
   #ifdef DEBUG
   Serial.setDebugOutput(true);
   #endif
+
+
+
+  wifiMulti.addAP("Ams_2.4GHz", "0523993253A");
+  wifiMulti.addAP("ORYAM", "12345678");
+  wifiMulti.addAP("upstairs", "10203040");
 
   pinMode(LED_BUILT_IN, OUTPUT);
   digitalWrite(LED_BUILT_IN, LOW);
@@ -267,17 +281,45 @@ void setup(void) {
     return;
   }
 
-  //WIFI INIT
-  Serial.printf("Connecting to %s\n", ssid);
-  if (String(WiFi.SSID()) != String(ssid)) {
-    WiFi.mode(WIFI_STA);
-    WiFi.begin(ssid, password);
+
+  // WiFi.scanNetworks will return the number of networks found
+  int n = WiFi.scanNetworks();
+  Serial.println("scan done");
+  if (n == 0) {
+      Serial.println("no networks found");
+  } 
+  else {
+    Serial.print(n);
+    Serial.println(" networks found");
+    for (int i = 0; i < n; ++i) {
+      // Print SSID and RSSI for each network found
+      Serial.print(i + 1);
+      Serial.print(": ");
+      Serial.print(WiFi.SSID(i));
+      Serial.print(" (");
+      Serial.print(WiFi.RSSI(i));
+      Serial.print(")");
+      Serial.println((WiFi.encryptionType(i) == WIFI_AUTH_OPEN)?" ":"*");
+      delay(10);
+    }
+      
   }
+
+ 
+
+  if(wifiMulti.run() != WL_CONNECTED) {
+  Serial.println("WiFi not connected!");
+  delay(1000);
+}
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
+  Serial.println("");
+  Serial.println("");
+  Serial.print("Connecting To: " );
+  Serial.print(WiFi.SSID());
   Serial.println("");
   Serial.print("Connected! IP address: ");
   String ipAddress = WiFi.localIP().toString();;
