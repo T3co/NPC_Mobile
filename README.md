@@ -6,12 +6,12 @@ programing languages : c++,Java,VHDL
 
 
 
-CAR : 
+Car Design: 
 
 ![alt text](https://github.com/T3co/NPC_Mobile/blob/main/npcCar.png?raw=true)
 
 
-Circut :
+Full Circut Design:
 
 ![alt text](https://github.com/T3co/NPC_Mobile/blob/main/Schematic_All%20eletrical%20circuits_2023-01-22.png?raw=true)
 
