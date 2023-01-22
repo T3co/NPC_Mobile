@@ -15,11 +15,12 @@ begin
   process (clk)
 begin 
   if clk'event and clk = '1' then
-    if(count = 450000000) then 
+    if(count > 450000000) then 
        count <= 0;
-       pulse <= not pulse;
+       pulse <= '0';
     else
     count <= count + 1;
+	 pulse <= '1';
     end if;
   end if;
 end process;
