@@ -445,6 +445,9 @@ clk => count[22].CLK
 clk => count[23].CLK
 clk => count[24].CLK
 clk => count[25].CLK
+clk => count[26].CLK
+clk => count[27].CLK
+clk => count[28].CLK
 ledOUT <= pulse.DB_MAX_OUTPUT_PORT_TYPE
 
 

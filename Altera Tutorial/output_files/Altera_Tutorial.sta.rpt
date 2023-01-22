@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Altera_Tutorial
-Wed Dec 28 14:25:58 2022
+Sun Jan 22 22:52:07 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -92,16 +92,16 @@ agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.20        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.15        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.9%      ;
-;     Processor 3            ;   6.5%      ;
-;     Processor 4            ;   6.4%      ;
+;     Processor 2            ;   2.3%      ;
+;     Processor 3            ;   2.2%      ;
+;     Processors 4-8         ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -122,9 +122,9 @@ agreement for further details.
 +------------+-----------------+------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name       ; Note ;
 +------------+-----------------+------------------+------+
-; 150.74 MHz ; 150.74 MHz      ; rx:5|data[2]     ;      ;
-; 214.13 MHz ; 214.13 MHz      ; clk50Mhz         ;      ;
-; 226.65 MHz ; 226.65 MHz      ; BOUD_RATE:3|fout ;      ;
+; 142.41 MHz ; 142.41 MHz      ; rx:5|data[2]     ;      ;
+; 186.39 MHz ; 186.39 MHz      ; BOUD_RATE:3|fout ;      ;
+; 205.85 MHz ; 205.85 MHz      ; clk50Mhz         ;      ;
 +------------+-----------------+------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -134,9 +134,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; clk50Mhz         ; -3.670 ; -401.457      ;
-; BOUD_RATE:3|fout ; -3.412 ; -72.295       ;
-; rx:5|data[2]     ; -3.027 ; -11.220       ;
+; BOUD_RATE:3|fout ; -4.365 ; -75.028       ;
+; clk50Mhz         ; -3.858 ; -477.384      ;
+; rx:5|data[2]     ; -3.403 ; -12.017       ;
 +------------------+--------+---------------+
 
 
@@ -145,9 +145,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; clk50Mhz         ; 0.322 ; 0.000         ;
-; BOUD_RATE:3|fout ; 0.341 ; 0.000         ;
-; rx:5|data[2]     ; 1.393 ; 0.000         ;
+; clk50Mhz         ; 0.340 ; 0.000         ;
+; BOUD_RATE:3|fout ; 0.342 ; 0.000         ;
+; rx:5|data[2]     ; 1.536 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -156,10 +156,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; rx:5|data[2]     ; -2.619 ; -4.860        ;
-; esp_tx           ; -2.453 ; -2.453        ;
-; BOUD_RATE:3|fout ; -1.572 ; -26.409       ;
-; clk50Mhz         ; -1.223 ; -58.124       ;
+; rx:5|data[2]     ; -2.580 ; -5.159        ;
+; esp_tx           ; -2.501 ; -2.501        ;
+; clk50Mhz         ; -1.736 ; -67.919       ;
+; BOUD_RATE:3|fout ; -1.552 ; -26.204       ;
 +------------------+--------+---------------+
 
 
@@ -168,10 +168,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; clk50Mhz         ; 0.983 ; 0.000         ;
-; rx:5|data[2]     ; 1.448 ; 0.000         ;
-; BOUD_RATE:3|fout ; 1.626 ; 0.000         ;
-; esp_tx           ; 2.362 ; 0.000         ;
+; clk50Mhz         ; 0.981 ; 0.000         ;
+; rx:5|data[2]     ; 1.535 ; 0.000         ;
+; BOUD_RATE:3|fout ; 1.608 ; 0.000         ;
+; esp_tx           ; 2.383 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -180,10 +180,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+-----------------------+
 ; Clock            ; Slack  ; End Point TNS         ;
 +------------------+--------+-----------------------+
-; clk50Mhz         ; -3.000 ; -273.779              ;
+; clk50Mhz         ; -3.000 ; -277.988              ;
 ; esp_tx           ; -3.000 ; -4.403                ;
 ; BOUD_RATE:3|fout ; -1.403 ; -49.105               ;
-; rx:5|data[2]     ; 0.385  ; 0.000                 ;
+; rx:5|data[2]     ; 0.391  ; 0.000                 ;
 +------------------+--------+-----------------------+
 
 
@@ -198,9 +198,9 @@ No synchronizer chains to report.
 +------------+-----------------+------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name       ; Note ;
 +------------+-----------------+------------------+------+
-; 162.39 MHz ; 162.39 MHz      ; rx:5|data[2]     ;      ;
-; 232.83 MHz ; 232.83 MHz      ; clk50Mhz         ;      ;
-; 250.75 MHz ; 250.75 MHz      ; BOUD_RATE:3|fout ;      ;
+; 154.99 MHz ; 154.99 MHz      ; rx:5|data[2]     ;      ;
+; 203.58 MHz ; 203.58 MHz      ; BOUD_RATE:3|fout ;      ;
+; 222.97 MHz ; 222.97 MHz      ; clk50Mhz         ;      ;
 +------------+-----------------+------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -210,9 +210,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; clk50Mhz         ; -3.295 ; -351.389      ;
-; BOUD_RATE:3|fout ; -2.988 ; -63.236       ;
-; rx:5|data[2]     ; -2.795 ; -10.283       ;
+; BOUD_RATE:3|fout ; -3.912 ; -66.324       ;
+; clk50Mhz         ; -3.485 ; -422.806      ;
+; rx:5|data[2]     ; -3.162 ; -11.104       ;
 +------------------+--------+---------------+
 
 
@@ -221,9 +221,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; clk50Mhz         ; 0.289 ; 0.000         ;
-; BOUD_RATE:3|fout ; 0.306 ; 0.000         ;
-; rx:5|data[2]     ; 1.357 ; 0.000         ;
+; clk50Mhz         ; 0.305 ; 0.000         ;
+; BOUD_RATE:3|fout ; 0.307 ; 0.000         ;
+; rx:5|data[2]     ; 1.513 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -232,10 +232,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; rx:5|data[2]     ; -2.299 ; -4.221        ;
-; esp_tx           ; -2.152 ; -2.152        ;
-; BOUD_RATE:3|fout ; -1.345 ; -22.694       ;
-; clk50Mhz         ; -1.071 ; -48.230       ;
+; rx:5|data[2]     ; -2.222 ; -4.444        ;
+; esp_tx           ; -2.203 ; -2.203        ;
+; clk50Mhz         ; -1.554 ; -56.856       ;
+; BOUD_RATE:3|fout ; -1.330 ; -22.538       ;
 +------------------+--------+---------------+
 
 
@@ -244,10 +244,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; clk50Mhz         ; 0.903 ; 0.000         ;
-; rx:5|data[2]     ; 1.359 ; 0.000         ;
-; BOUD_RATE:3|fout ; 1.484 ; 0.000         ;
-; esp_tx           ; 2.151 ; 0.000         ;
+; clk50Mhz         ; 0.904 ; 0.000         ;
+; rx:5|data[2]     ; 1.432 ; 0.000         ;
+; BOUD_RATE:3|fout ; 1.472 ; 0.000         ;
+; esp_tx           ; 2.177 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -256,10 +256,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+----------------------+
 ; Clock            ; Slack  ; End Point TNS        ;
 +------------------+--------+----------------------+
-; clk50Mhz         ; -3.000 ; -273.779             ;
+; clk50Mhz         ; -3.000 ; -277.988             ;
 ; esp_tx           ; -3.000 ; -4.403               ;
 ; BOUD_RATE:3|fout ; -1.403 ; -49.105              ;
-; rx:5|data[2]     ; 0.320  ; 0.000                ;
+; rx:5|data[2]     ; 0.355  ; 0.000                ;
 +------------------+--------+----------------------+
 
 
@@ -274,9 +274,9 @@ No synchronizer chains to report.
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; BOUD_RATE:3|fout ; -1.295 ; -19.593       ;
-; clk50Mhz         ; -1.138 ; -64.330       ;
-; rx:5|data[2]     ; -1.072 ; -3.520        ;
+; BOUD_RATE:3|fout ; -1.829 ; -22.165       ;
+; rx:5|data[2]     ; -1.158 ; -3.533        ;
+; clk50Mhz         ; -1.087 ; -95.371       ;
 +------------------+--------+---------------+
 
 
@@ -285,9 +285,9 @@ No synchronizer chains to report.
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; clk50Mhz         ; 0.140 ; 0.000         ;
-; BOUD_RATE:3|fout ; 0.149 ; 0.000         ;
-; rx:5|data[2]     ; 0.473 ; 0.000         ;
+; BOUD_RATE:3|fout ; 0.148 ; 0.000         ;
+; clk50Mhz         ; 0.148 ; 0.000         ;
+; rx:5|data[2]     ; 0.482 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -296,10 +296,10 @@ No synchronizer chains to report.
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; rx:5|data[2]     ; -1.001 ; -1.824        ;
-; esp_tx           ; -0.625 ; -0.625        ;
-; BOUD_RATE:3|fout ; -0.108 ; -1.512        ;
-; clk50Mhz         ; -0.086 ; -0.708        ;
+; rx:5|data[2]     ; -1.021 ; -2.041        ;
+; esp_tx           ; -0.688 ; -0.688        ;
+; clk50Mhz         ; -0.310 ; -2.646        ;
+; BOUD_RATE:3|fout ; -0.096 ; -1.389        ;
 +------------------+--------+---------------+
 
 
@@ -308,10 +308,10 @@ No synchronizer chains to report.
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; clk50Mhz         ; 0.429 ; 0.000         ;
-; rx:5|data[2]     ; 0.462 ; 0.000         ;
-; BOUD_RATE:3|fout ; 0.682 ; 0.000         ;
-; esp_tx           ; 1.122 ; 0.000         ;
+; clk50Mhz         ; 0.428 ; 0.000         ;
+; rx:5|data[2]     ; 0.486 ; 0.000         ;
+; BOUD_RATE:3|fout ; 0.689 ; 0.000         ;
+; esp_tx           ; 1.175 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -320,10 +320,10 @@ No synchronizer chains to report.
 +------------------+--------+----------------------+
 ; Clock            ; Slack  ; End Point TNS        ;
 +------------------+--------+----------------------+
-; clk50Mhz         ; -3.000 ; -202.493             ;
-; esp_tx           ; -3.000 ; -4.013               ;
+; clk50Mhz         ; -3.000 ; -206.533             ;
+; esp_tx           ; -3.000 ; -4.157               ;
 ; BOUD_RATE:3|fout ; -1.000 ; -35.000              ;
-; rx:5|data[2]     ; 0.365  ; 0.000                ;
+; rx:5|data[2]     ; 0.343  ; 0.000                ;
 +------------------+--------+----------------------+
 
 
@@ -338,16 +338,16 @@ No synchronizer chains to report.
 +-------------------+----------+-------+----------+---------+---------------------+
 ; Clock             ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack  ; -3.670   ; 0.140 ; -2.619   ; 0.429   ; -3.000              ;
-;  BOUD_RATE:3|fout ; -3.412   ; 0.149 ; -1.572   ; 0.682   ; -1.403              ;
-;  clk50Mhz         ; -3.670   ; 0.140 ; -1.223   ; 0.429   ; -3.000              ;
-;  esp_tx           ; N/A      ; N/A   ; -2.453   ; 1.122   ; -3.000              ;
-;  rx:5|data[2]     ; -3.027   ; 0.473 ; -2.619   ; 0.462   ; 0.320               ;
-; Design-wide TNS   ; -484.972 ; 0.0   ; -91.846  ; 0.0     ; -327.287            ;
-;  BOUD_RATE:3|fout ; -72.295  ; 0.000 ; -26.409  ; 0.000   ; -49.105             ;
-;  clk50Mhz         ; -401.457 ; 0.000 ; -58.124  ; 0.000   ; -273.779            ;
-;  esp_tx           ; N/A      ; N/A   ; -2.453   ; 0.000   ; -4.403              ;
-;  rx:5|data[2]     ; -11.220  ; 0.000 ; -4.860   ; 0.000   ; 0.000               ;
+; Worst-case Slack  ; -4.365   ; 0.148 ; -2.580   ; 0.428   ; -3.000              ;
+;  BOUD_RATE:3|fout ; -4.365   ; 0.148 ; -1.552   ; 0.689   ; -1.403              ;
+;  clk50Mhz         ; -3.858   ; 0.148 ; -1.736   ; 0.428   ; -3.000              ;
+;  esp_tx           ; N/A      ; N/A   ; -2.501   ; 1.175   ; -3.000              ;
+;  rx:5|data[2]     ; -3.403   ; 0.482 ; -2.580   ; 0.486   ; 0.343               ;
+; Design-wide TNS   ; -564.429 ; 0.0   ; -101.783 ; 0.0     ; -331.496            ;
+;  BOUD_RATE:3|fout ; -75.028  ; 0.000 ; -26.204  ; 0.000   ; -49.105             ;
+;  clk50Mhz         ; -477.384 ; 0.000 ; -67.919  ; 0.000   ; -277.988            ;
+;  esp_tx           ; N/A      ; N/A   ; -2.501   ; 0.000   ; -4.403              ;
+;  rx:5|data[2]     ; -12.017  ; 0.000 ; -5.159   ; 0.000   ; 0.000               ;
 +-------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -571,7 +571,7 @@ No synchronizer chains to report.
 ; clk50Mhz         ; BOUD_RATE:3|fout ; 8        ; 0        ; 0        ; 0        ;
 ; esp_tx           ; BOUD_RATE:3|fout ; 10       ; 36       ; 0        ; 0        ;
 ; BOUD_RATE:3|fout ; clk50Mhz         ; 47       ; 1        ; 0        ; 0        ;
-; clk50Mhz         ; clk50Mhz         ; 3912     ; 0        ; 0        ; 0        ;
+; clk50Mhz         ; clk50Mhz         ; 4632     ; 0        ; 0        ; 0        ;
 ; BOUD_RATE:3|fout ; rx:5|data[2]     ; 6        ; 0        ; 0        ; 0        ;
 ; clk50Mhz         ; rx:5|data[2]     ; 4        ; 0        ; 0        ; 0        ;
 ; rx:5|data[2]     ; rx:5|data[2]     ; 2        ; 2        ; 0        ; 0        ;
@@ -588,7 +588,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clk50Mhz         ; BOUD_RATE:3|fout ; 8        ; 0        ; 0        ; 0        ;
 ; esp_tx           ; BOUD_RATE:3|fout ; 10       ; 36       ; 0        ; 0        ;
 ; BOUD_RATE:3|fout ; clk50Mhz         ; 47       ; 1        ; 0        ; 0        ;
-; clk50Mhz         ; clk50Mhz         ; 3912     ; 0        ; 0        ; 0        ;
+; clk50Mhz         ; clk50Mhz         ; 4632     ; 0        ; 0        ; 0        ;
 ; BOUD_RATE:3|fout ; rx:5|data[2]     ; 6        ; 0        ; 0        ; 0        ;
 ; clk50Mhz         ; rx:5|data[2]     ; 4        ; 0        ; 0        ; 0        ;
 ; rx:5|data[2]     ; rx:5|data[2]     ; 2        ; 2        ; 0        ; 0        ;
@@ -782,11 +782,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Dec 28 14:25:55 2022
+    Info: Processing started: Sun Jan 22 22:52:03 2023
 Info: Command: quartus_sta Altera_Tutorial -c Altera_Tutorial
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -803,119 +803,119 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.670
+Info (332146): Worst-case setup slack is -4.365
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.670            -401.457 clk50Mhz 
-    Info (332119):    -3.412             -72.295 BOUD_RATE:3|fout 
-    Info (332119):    -3.027             -11.220 rx:5|data[2] 
-Info (332146): Worst-case hold slack is 0.322
+    Info (332119):    -4.365             -75.028 BOUD_RATE:3|fout 
+    Info (332119):    -3.858            -477.384 clk50Mhz 
+    Info (332119):    -3.403             -12.017 rx:5|data[2] 
+Info (332146): Worst-case hold slack is 0.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.322               0.000 clk50Mhz 
-    Info (332119):     0.341               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.393               0.000 rx:5|data[2] 
-Info (332146): Worst-case recovery slack is -2.619
+    Info (332119):     0.340               0.000 clk50Mhz 
+    Info (332119):     0.342               0.000 BOUD_RATE:3|fout 
+    Info (332119):     1.536               0.000 rx:5|data[2] 
+Info (332146): Worst-case recovery slack is -2.580
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.619              -4.860 rx:5|data[2] 
-    Info (332119):    -2.453              -2.453 esp_tx 
-    Info (332119):    -1.572             -26.409 BOUD_RATE:3|fout 
-    Info (332119):    -1.223             -58.124 clk50Mhz 
-Info (332146): Worst-case removal slack is 0.983
+    Info (332119):    -2.580              -5.159 rx:5|data[2] 
+    Info (332119):    -2.501              -2.501 esp_tx 
+    Info (332119):    -1.736             -67.919 clk50Mhz 
+    Info (332119):    -1.552             -26.204 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 0.981
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.983               0.000 clk50Mhz 
-    Info (332119):     1.448               0.000 rx:5|data[2] 
-    Info (332119):     1.626               0.000 BOUD_RATE:3|fout 
-    Info (332119):     2.362               0.000 esp_tx 
+    Info (332119):     0.981               0.000 clk50Mhz 
+    Info (332119):     1.535               0.000 rx:5|data[2] 
+    Info (332119):     1.608               0.000 BOUD_RATE:3|fout 
+    Info (332119):     2.383               0.000 esp_tx 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -273.779 clk50Mhz 
+    Info (332119):    -3.000            -277.988 clk50Mhz 
     Info (332119):    -3.000              -4.403 esp_tx 
     Info (332119):    -1.403             -49.105 BOUD_RATE:3|fout 
-    Info (332119):     0.385               0.000 rx:5|data[2] 
+    Info (332119):     0.391               0.000 rx:5|data[2] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.295
+Info (332146): Worst-case setup slack is -3.912
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.295            -351.389 clk50Mhz 
-    Info (332119):    -2.988             -63.236 BOUD_RATE:3|fout 
-    Info (332119):    -2.795             -10.283 rx:5|data[2] 
-Info (332146): Worst-case hold slack is 0.289
+    Info (332119):    -3.912             -66.324 BOUD_RATE:3|fout 
+    Info (332119):    -3.485            -422.806 clk50Mhz 
+    Info (332119):    -3.162             -11.104 rx:5|data[2] 
+Info (332146): Worst-case hold slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.289               0.000 clk50Mhz 
-    Info (332119):     0.306               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.357               0.000 rx:5|data[2] 
-Info (332146): Worst-case recovery slack is -2.299
+    Info (332119):     0.305               0.000 clk50Mhz 
+    Info (332119):     0.307               0.000 BOUD_RATE:3|fout 
+    Info (332119):     1.513               0.000 rx:5|data[2] 
+Info (332146): Worst-case recovery slack is -2.222
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.299              -4.221 rx:5|data[2] 
-    Info (332119):    -2.152              -2.152 esp_tx 
-    Info (332119):    -1.345             -22.694 BOUD_RATE:3|fout 
-    Info (332119):    -1.071             -48.230 clk50Mhz 
-Info (332146): Worst-case removal slack is 0.903
+    Info (332119):    -2.222              -4.444 rx:5|data[2] 
+    Info (332119):    -2.203              -2.203 esp_tx 
+    Info (332119):    -1.554             -56.856 clk50Mhz 
+    Info (332119):    -1.330             -22.538 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 0.904
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.903               0.000 clk50Mhz 
-    Info (332119):     1.359               0.000 rx:5|data[2] 
-    Info (332119):     1.484               0.000 BOUD_RATE:3|fout 
-    Info (332119):     2.151               0.000 esp_tx 
+    Info (332119):     0.904               0.000 clk50Mhz 
+    Info (332119):     1.432               0.000 rx:5|data[2] 
+    Info (332119):     1.472               0.000 BOUD_RATE:3|fout 
+    Info (332119):     2.177               0.000 esp_tx 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -273.779 clk50Mhz 
+    Info (332119):    -3.000            -277.988 clk50Mhz 
     Info (332119):    -3.000              -4.403 esp_tx 
     Info (332119):    -1.403             -49.105 BOUD_RATE:3|fout 
-    Info (332119):     0.320               0.000 rx:5|data[2] 
+    Info (332119):     0.355               0.000 rx:5|data[2] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.295
+Info (332146): Worst-case setup slack is -1.829
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.295             -19.593 BOUD_RATE:3|fout 
-    Info (332119):    -1.138             -64.330 clk50Mhz 
-    Info (332119):    -1.072              -3.520 rx:5|data[2] 
-Info (332146): Worst-case hold slack is 0.140
+    Info (332119):    -1.829             -22.165 BOUD_RATE:3|fout 
+    Info (332119):    -1.158              -3.533 rx:5|data[2] 
+    Info (332119):    -1.087             -95.371 clk50Mhz 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.140               0.000 clk50Mhz 
-    Info (332119):     0.149               0.000 BOUD_RATE:3|fout 
-    Info (332119):     0.473               0.000 rx:5|data[2] 
-Info (332146): Worst-case recovery slack is -1.001
+    Info (332119):     0.148               0.000 BOUD_RATE:3|fout 
+    Info (332119):     0.148               0.000 clk50Mhz 
+    Info (332119):     0.482               0.000 rx:5|data[2] 
+Info (332146): Worst-case recovery slack is -1.021
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.001              -1.824 rx:5|data[2] 
-    Info (332119):    -0.625              -0.625 esp_tx 
-    Info (332119):    -0.108              -1.512 BOUD_RATE:3|fout 
-    Info (332119):    -0.086              -0.708 clk50Mhz 
-Info (332146): Worst-case removal slack is 0.429
+    Info (332119):    -1.021              -2.041 rx:5|data[2] 
+    Info (332119):    -0.688              -0.688 esp_tx 
+    Info (332119):    -0.310              -2.646 clk50Mhz 
+    Info (332119):    -0.096              -1.389 BOUD_RATE:3|fout 
+Info (332146): Worst-case removal slack is 0.428
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.429               0.000 clk50Mhz 
-    Info (332119):     0.462               0.000 rx:5|data[2] 
-    Info (332119):     0.682               0.000 BOUD_RATE:3|fout 
-    Info (332119):     1.122               0.000 esp_tx 
+    Info (332119):     0.428               0.000 clk50Mhz 
+    Info (332119):     0.486               0.000 rx:5|data[2] 
+    Info (332119):     0.689               0.000 BOUD_RATE:3|fout 
+    Info (332119):     1.175               0.000 esp_tx 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -202.493 clk50Mhz 
-    Info (332119):    -3.000              -4.013 esp_tx 
+    Info (332119):    -3.000            -206.533 clk50Mhz 
+    Info (332119):    -3.000              -4.157 esp_tx 
     Info (332119):    -1.000             -35.000 BOUD_RATE:3|fout 
-    Info (332119):     0.365               0.000 rx:5|data[2] 
+    Info (332119):     0.343               0.000 rx:5|data[2] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Wed Dec 28 14:25:58 2022
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Sun Jan 22 22:52:07 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:01
 
 
