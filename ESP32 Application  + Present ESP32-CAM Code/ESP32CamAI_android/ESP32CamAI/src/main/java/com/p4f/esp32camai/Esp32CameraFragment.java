@@ -317,13 +317,11 @@ public class Esp32CameraFragment extends Fragment{
                     mLed = true;
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setBackgroundResource(R.drawable.my_button_bg_2);
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setTextColor(Color.rgb(0,0,255));
-                    dbRef.child("led").setValue(1);
                     mUdpClient.sendBytes(mServerAddr, mServerPort, mLedOn);
                 }else{
                     mLed = false;
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setBackgroundResource(R.drawable.my_button_bg);
                     ((Button) getActivity().findViewById(R.id.ledBtn)).setTextColor(Color.rgb(255,255,255));
-                    dbRef.child("led").setValue(0);
                     mUdpClient.sendBytes(mServerAddr, mServerPort, mLedOff);
                 }
             }

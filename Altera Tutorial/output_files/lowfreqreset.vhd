@@ -9,13 +9,13 @@ end;
 
 architecture behave of lowfreqreset is 
   signal pulse : STD_LOGIC := '0';
-  signal count : integer range 0 to 50000000 := 0;  
+  signal count : integer range 0 to 500000000 := 0;  
 
 begin 
   process (clk)
 begin 
   if clk'event and clk = '1' then
-    if(count = 45000000) then 
+    if(count = 450000000) then 
        count <= 0;
        pulse <= not pulse;
     else

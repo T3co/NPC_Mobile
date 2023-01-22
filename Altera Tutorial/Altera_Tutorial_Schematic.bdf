@@ -809,14 +809,14 @@ agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "pOut" (rect 0 0 23 12)(font "Arial" ))
-		(text "pOut" (rect 192 27 211 39)(font "Arial" ))
+		(text "pOut" (rect 192 27 215 39)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "motorOutput[2..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "motorOutput[2..0]" (rect 138 43 211 55)(font "Arial" ))
+		(text "motorOutput[2..0]" (rect 138 43 225 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(drawing
@@ -824,7 +824,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -32 792 112 872)
+	(rect -32 808 112 888)
 	(text "lowfreqreset" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst17" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
@@ -1199,16 +1199,8 @@ agreement for further details.
 	(pt 256 752)
 )
 (connector
-	(pt 144 824)
-	(pt 144 800)
-)
-(connector
 	(pt 456 384)
 	(pt 576 384)
-)
-(connector
-	(pt 112 824)
-	(pt 144 824)
 )
 (connector
 	(pt 144 800)
@@ -1231,8 +1223,16 @@ agreement for further details.
 	(pt 96 736)
 )
 (connector
-	(pt -32 824)
-	(pt -112 824)
+	(pt 144 800)
+	(pt 144 840)
+)
+(connector
+	(pt 144 840)
+	(pt 112 840)
+)
+(connector
+	(pt -112 840)
+	(pt -32 840)
 )
 (connector
 	(pt -112 544)
@@ -1240,7 +1240,7 @@ agreement for further details.
 )
 (connector
 	(pt -112 656)
-	(pt -112 824)
+	(pt -112 840)
 )
 (junction (pt 784 496))
 (junction (pt 768 208))
