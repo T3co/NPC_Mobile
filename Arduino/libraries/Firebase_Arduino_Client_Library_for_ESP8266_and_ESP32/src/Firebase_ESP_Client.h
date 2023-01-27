@@ -1,16 +1,17 @@
 #ifndef FIREBASE_CLIENT_VERSION
-#define FIREBASE_CLIENT_VERSION "4.3.2"
+#define FIREBASE_CLIENT_VERSION "4.3.4"
 #endif
 
 /**
- * Google's Firebase ESP Client Main class, Firebase_ESP_Client.h v4.3.2
+ * Google's Firebase ESP Client Main class, Firebase_ESP_Client.h v4.3.4
  *
  * This library supports Espressif ESP8266 and ESP32 MCUs and Raspberry Pi RP2040 Pico MCUs.
  *
- * Created January 8, 2023
+ * Created January 22, 2023
  *
  *   Updates:
- * - Fix Token expiry bug for issue #461 which introduced in v4.3.0.
+ * - Fix NTP issue and update.
+ * - Fix netwok management task issue.
  *
  *
  * This work is a part of Firebase ESP Client library
