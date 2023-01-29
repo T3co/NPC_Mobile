@@ -11,7 +11,7 @@ char XML[512];
 char buf[32];
 
 int temp = 20;
-int car = 0;
+int packet = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -31,6 +31,7 @@ void setup() {
 
   server.on("/", SendWebsite);
   server.on("/xml", SXML);
+  server.on("/upacket", upacket);
 
   server.begin();
 }
@@ -46,7 +47,21 @@ void SXML(){
   strcpy(XML, "<?xml version = '1.0'?>\n<Data>\n");
   sprintf(buf, "<temp>%d</temp>\n", temp);
   strcat(XML, buf);
+  sprintf(buf, "<packet>%d</packet>\n", packet);
+  strcat(XML, buf);
   strcat(XML, "</Data>\n");
-  Serial.println(XML);
   server.send(200, "text/xml", XML);
+}
+
+void upacket(){
+  String t_state = server.arg("VALUE");
+  Serial.println(t_state);
+  packet = t_state.toInt();
+  strcpy(XML, "<?xml version = '1.0'?>\n<Data>\n");
+  sprintf(buf, "<temp>%d</temp>\n", temp);
+  strcat(XML, buf);
+  sprintf(buf, "<packet>%d</packet>\n", packet);
+  strcat(XML, buf);
+  strcat(XML, "</Data>\n");  
+  server.send(200, "text/plain", buf);
 }

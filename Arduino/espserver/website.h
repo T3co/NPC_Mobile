@@ -1,11 +1,12 @@
 const char PAGE_MAIN[] PROGMEM = R"=====(
 <!DOCTYPE html>
 <html lang="en" class="js-focus-visible">
-  <title>Web Page Update Demo</title>
+
+<title>Project Moob</title>
   <style>
     table {
       position: relative;
-      width: 100%;
+      width:100%;
       border-spacing: 0px;
     }
     tr {
@@ -17,23 +18,23 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       height: 20px;
       padding: 3px 15px;
       background-color: #343a40;
-      color: #ffffff !important;
-    }
+      color: #FFFFFF !important;
+      }
     td {
       height: 20px;
-      padding: 3px 15px;
+       padding: 3px 15px;
     }
     .tabledata {
       font-size: 24px;
       position: relative;
       padding-left: 5px;
       padding-top: 5px;
-      height: 25px;
+      height:   25px;
       border-radius: 5px;
-      color: #ffffff;
+      color: #FFFFFF;
       line-height: 20px;
       transition: all 200ms ease-in-out;
-      background-color: #00aa00;
+      background-color: #00AA00;
     }
     .fanrpmslider {
       width: 30%;
@@ -47,14 +48,14 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       text-align: left;
       font-weight: light;
       border-radius: 5px;
-      display: inline;
+      display:inline;
     }
     .navbar {
       width: 100%;
       height: 50px;
       margin: 0;
       padding: 10px 0px;
-      background-color: #fff;
+      background-color: #FFF;
       color: #000000;
       border-bottom: 5px solid #293578;
     }
@@ -74,17 +75,17 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       line-height: 50px;
       padding-left: 20px;
     }
-    .navheading {
-      position: fixed;
-      left: 60%;
-      height: 50px;
-      font-family: "Verdana", "Arial", sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 20px;
-      padding-right: 20px;
-    }
-    .navdata {
+   .navheading {
+     position: fixed;
+     left: 60%;
+     height: 50px;
+     font-family: "Verdana", "Arial", sans-serif;
+     font-size: 20px;
+     font-weight: bold;
+     line-height: 20px;
+     padding-right: 20px;
+   }
+   .navdata {
       justify-content: flex-end;
       position: fixed;
       left: 70%;
@@ -94,7 +95,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       font-weight: bold;
       line-height: 20px;
       padding-right: 20px;
-    }
+   }
     .category {
       font-family: "Verdana", "Arial", sans-serif;
       font-weight: bold;
@@ -109,7 +110,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       font-size: 28px;
       text-align: left;
     }
-
+  
     .btn {
       background-color: #444444;
       border: none;
@@ -126,9 +127,9 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       font-family: "Verdana", "Arial", sans-serif;
       font-size: 20px;
       position: relative;
-      height: 30px;
-      text-align: center;
-      color: #aaaaaa;
+      height:   30px;
+      text-align: center;   
+      color: #AAAAAA;
       line-height: 20px;
     }
     .container {
@@ -147,81 +148,131 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
     table tr:last-child td:last-child {
       border-bottom-right-radius: 5px;
     }
+    .foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+inner {
+    margin: 0 auto;
+}
   </style>
+
   <body style="background-color: #efefef" onload="process()">
+  
     <header>
       <div class="navbar fixed-top">
-        <div class="container">
-          <div class="navtitle">Info Monitor</div>
-        </div>
+          <div class="container">
+            <div class="navtitle">Sensor Monitor</div>
+            <div class="navdata" id = "date">mm/dd/yyyy</div>
+            <div class="navheading">DATE</div><br>
+            <div class="navdata" id = "time">00:00:00</div>
+            <div class="navheading">TIME</div>
+            
+          </div>
       </div>
     </header>
-    <main class="container" style="margin-top: 70px">
-      <div class="category">Info Readings</div>
-      <div style="border-radius: 10px !important">
-        <table style="width: 50%">
-          <tr>
-            <th colspan="1">
-              <div class="heading">Branch</div>
-            </th>
-            <th colspan="1">
-              <div class="heading">Value</div>
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <div class="bodytext">Temperature</div>
-            </td>
-            <td>
-              <div class="tabledata" id="b0">
-                <span id="switch">0</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="bodytext">Car Info</div>
-            </td>
-            <td>
-              <div class="tabledata" id="b1">
-                <span id="RC">0</span>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </main>
+  
+    <main class="container" style="margin-top:70px">
+      <div class="category">IOT Data</div>
+      <div style="border-radius: 10px !important;">
+      <table style="width:50%">
+      <colgroup>
+        <col span="1" style="background-color:rgb(230,230,230); width: 20%; color:#000000 ;">
+        <col span="1" style="background-color:rgb(200,200,200); width: 15%; color:#000000 ;">
+        <col span="1" style="background-color:rgb(180,180,180); width: 15%; color:#000000 ;">
+      </colgroup>
+      <col span="2"style="background-color:rgb(0,0,0); color:#FFFFFF">
+      <col span="2"style="background-color:rgb(0,0,0); color:#FFFFFF">
+      <col span="2"style="background-color:rgb(0,0,0); color:#FFFFFF">
+      <tr>
+        <th colspan="1"><div class="heading">Branch</div></th>
+        <th colspan="1"><div class="heading">Value</div></th>
+      </tr>
+      <tr>
+        <td><div class="bodytext">Temperature</div></td>
+        <td><div class="tabledata" id = "temper">0</div></td>
+      </tr>
+      <tr>
+        <td><div class="bodytext">Packet</div></td>
+        <td><div class="tabledata" id = "packet">0</div></td>
+      </tr>
+      </table>
+    </div>
+  </main>
 
-    <script  type = "text/javascript">
-      function createXmlHttpObject() {
-        if (window.XMLHttpRequest) {
-          xmlHttp = new XMLHttpRequest();
-        } else {
-          xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        return xmlHttp;
-      }
-      function response() {
-        var message;
-        var barwidth;
-        var currentsensor;
-        var xmlResponse;
-        var color = "#e8e8e8";
-        parser = new DOMParser();
-        xmlResponse = xmlHttp.responseXML;
-
-        document.getElementById("switch").innerHTML = "25";
-      }
-
-      function process() {
-        if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
-          xmlHttp.open("PUT", "xml", true);
-          xmlHttp.onreadystatechange = response;
-          xmlHttp.send(null);
-        }
-        setTimeout("process()", 100);
-      }
-    </script>
+  <footer div class="foot" id = "temp" >ESP32 Web Page Created By Oryam And Idan</div></footer>
+  
   </body>
+
+
+  <script type = "text/javascript">
+  
+    // global variable visible to all java functions
+    var xmlHttp=createXmlHttpObject();
+
+    // function to create XML object
+    function createXmlHttpObject(){
+      if(window.XMLHttpRequest){
+        xmlHttp=new XMLHttpRequest();
+      }
+      else{
+        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      return xmlHttp;
+    }
+
+    function updatePacket(value) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("PUT", "upacket?VALUE="+value, true);
+      xhttp.send();
+    }
+    
+    // function to handle the response from the ESP
+    function response(){
+      var message;
+      var barwidth;
+      var currentsensor;
+      var xmlResponse;
+      var xmldoc;
+      var dt = new Date();
+      var color = "#e8e8e8";
+     
+      // get the xml stream
+      xmlResponse=xmlHttp.responseXML;
+  
+      // get host date and time
+      document.getElementById("time").innerHTML = dt.toLocaleTimeString();
+      document.getElementById("date").innerHTML = dt.toLocaleDateString();
+  
+      xmldoc = xmlResponse.getElementsByTagName("temp");
+      message = xmldoc[0].firstChild.nodeValue;
+      document.getElementById("temper").innerHTML=message;
+
+      const urlParams = new URLSearchParams(window.location.search);
+
+      if(urlParams != null){
+        const userInput = urlParams.get('userInput');
+
+        if(userInput != null){
+          document.getElementById("packet").innerHTML=userInput;
+          if(userInput >= 0){
+            updatePacket(userInput);
+          }
+        }
+      }
+     }
+  
+    function process(){
+     
+     if(xmlHttp.readyState==0 || xmlHttp.readyState==4) {
+        xmlHttp.open("PUT","xml",true);
+        xmlHttp.onreadystatechange=response;
+        xmlHttp.send(null);
+      }       
+        setTimeout("process()",100);
+    }
+  </script>
 </html>
 )=====";
