@@ -153,11 +153,6 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       <div class="navbar fixed-top">
         <div class="container">
           <div class="navtitle">Info Monitor</div>
-          <div class="navdata" id="date">mm/dd/yyyy</div>
-          <div class="navheading">DATE</div>
-          <br />
-          <div class="navdata" id="time">00:00:00</div>
-          <div class="navheading">TIME</div>
         </div>
       </div>
     </header>
@@ -170,7 +165,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
               <div class="heading">Branch</div>
             </th>
             <th colspan="1">
-              <div class="heading">Decimal</div>
+              <div class="heading">Value</div>
             </th>
           </tr>
           <tr>
@@ -179,7 +174,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
             </td>
             <td>
               <div class="tabledata" id="b0">
-                <span id="temp">0</span>
+                <span id="switch">0</span>
               </div>
             </td>
           </tr>
@@ -189,7 +184,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
             </td>
             <td>
               <div class="tabledata" id="b1">
-                <span id="car">0</span>
+                <span id="RC">0</span>
               </div>
             </td>
           </tr>
@@ -197,7 +192,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
       </div>
     </main>
 
-    <script>
+    <script  type = "text/javascript">
       function createXmlHttpObject() {
         if (window.XMLHttpRequest) {
           xmlHttp = new XMLHttpRequest();
@@ -211,27 +206,11 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
         var barwidth;
         var currentsensor;
         var xmlResponse;
-        var xmldoc;
-        var dt = new Date();
         var color = "#e8e8e8";
-
+        parser = new DOMParser();
         xmlResponse = xmlHttp.responseXML;
 
-        document.getElementById("time").innerHTML = dt.toLocaleTimeString();
-        document.getElementById("date").innerHTML = dt.toLocaleDateString();
-
-        temp = xmlResponse.getElementsByTagName("temp");
-        document.getElementById("temp").innerHTML =
-          temp[0].childNodes[0].nodeValue;
-
-        car = xmlResponse.getElementsByTagName("car");
-        document.getElementById("car").innerHTML =
-          car[0].childNodes[0].nodeValue;
-
-        carNumbers = document.location.search();
-        document.getElementById("car").innerHTML = carNumbers;
-
-        updateCar(carNumbers);
+        document.getElementById("switch").innerHTML = "25";
       }
 
       function process() {
@@ -242,14 +221,7 @@ const char PAGE_MAIN[] PROGMEM = R"=====(
         }
         setTimeout("process()", 100);
       }
-
-      function updateCar(value) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("PUT", "VALUE=" + value, true);
-        xhttp.send();
-      }
     </script>
   </body>
 </html>
-
 )=====";
