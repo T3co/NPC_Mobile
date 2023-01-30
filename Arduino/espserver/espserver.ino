@@ -8,22 +8,25 @@
 #define TXD2 17
 
 #define ledpin 2
-
-#define LOCAL_SSID "upstairs"
-#define LOCAL_PASSWORD "10203040"
-
 WiFiMulti wifiMulti;
 
 
 WebServer server(80);
 char XML[512];
-char buf[32];
+char buf[64];
 
-int temp = 20;
+int temp = 0;
 int packet = 0;
 bool a = false;
 
-
+void UXML(){//updates the char array of the XML (the "file")
+   strcpy(XML, "<?xml version = '1.0'?>\n<Data>\n");
+  sprintf(buf, "<temp>%d</temp>\n", temp);
+  strcat(XML, buf);
+  sprintf(buf, "<packet>%d</packet>\n", packet);
+  strcat(XML, buf);
+  strcat(XML, "</Data>\n");
+}
 
 void setup() {
 
@@ -35,7 +38,6 @@ void setup() {
   wifiMulti.addAP("Ams_2.4GHz", "0523993253A");
   wifiMulti.addAP("ORYAM", "12345678");
   wifiMulti.addAP("upstairs", "10203040");
-  wifiMulti.addAP("DARCA", "");
 
   // WiFi.scanNetworks will return the number of networks found
   int n = WiFi.scanNetworks();
@@ -78,9 +80,6 @@ if(wifiMulti.run() != WL_CONNECTED) {
   String ipAddress = WiFi.localIP().toString();;
   Serial.println(ipAddress);
 
-
-  Serial.println("IP address :"); Serial.print(WiFi.localIP());
-
   server.on("/", SendWebsite);
   server.on("/xml", SXML);
   server.on("/upacket", upacket);
@@ -89,13 +88,26 @@ if(wifiMulti.run() != WL_CONNECTED) {
 }
 
 void loop() {
+
+     if(Serial2.available()){
+    Serial2.write(packet);
+    delay(10);
+  }
+  
+    while (Serial2.available()) {
+    temp = Serial2.read();
+    UXML();   
+  }
+
+  blink();
+  delay(50);
   server.handleClient();
 }
 
 void SendWebsite(){
-  server.send(200, "text/html", PAGE_MAIN);
+  server.send(200, "text/html", PAGE_MAIN);//sends the client the HTML + JS file
 }
-void SXML(){
+void SXML(){//creates a displayable XML file for the webpage
   strcpy(XML, "<?xml version = '1.0'?>\n<Data>\n");
   sprintf(buf, "<temp>%d</temp>\n", temp);
   strcat(XML, buf);
@@ -106,19 +118,18 @@ void SXML(){
 }
 
 void upacket(){
+  //this function gets called when the server sends a packet update from the users input
   String t_state = server.arg("VALUE");
-  Serial.println(t_state);
   packet = t_state.toInt();
-  strcpy(XML, "<?xml version = '1.0'?>\n<Data>\n");
-  sprintf(buf, "<temp>%d</temp>\n", temp);
-  strcat(XML, buf);
-  sprintf(buf, "<packet>%d</packet>\n", packet);
-  strcat(XML, buf);
-  strcat(XML, "</Data>\n");  
+  
+ 
+
+  Serial.print("Packet Info :"); Serial.println(packet);
+
   server.send(200, "text/plain", buf);
 }
 
-void blink() {
+void blink() {//makes the blue LED of the esp blink for each loop it completes
   a = not a;
   if (a)
     digitalWrite(ledpin, HIGH);
