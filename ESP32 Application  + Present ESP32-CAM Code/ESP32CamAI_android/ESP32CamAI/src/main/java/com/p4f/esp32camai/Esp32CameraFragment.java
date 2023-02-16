@@ -2,6 +2,7 @@ package com.p4f.esp32camai;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -11,6 +12,9 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputType;
@@ -71,18 +75,22 @@ import org.opencv.tracking.TrackerMIL;
 import org.opencv.tracking.TrackerMOSSE;
 import org.opencv.tracking.TrackerMedianFlow;
 import org.opencv.tracking.TrackerTLD;
+import static com.p4f.esp32camai.activity_1.ip_address;
 
 import io.github.controlwear.virtual.joystick.android.JoystickView;
 
-public class Esp32CameraFragment extends Fragment{
+public class Esp32CameraFragment extends Fragment {
+
 
     public enum STATE {
         STOP,
         RUN,
         PAUSE
-    };
+    }
 
-    enum Drawing{
+    ;
+
+    enum Drawing {
         DRAWING,
         TRACKING,
         CLEAR,
@@ -94,24 +102,24 @@ public class Esp32CameraFragment extends Fragment{
     private String mServerAddressBroadCast = "255.255.255.255";
     InetAddress mServerAddr;
     int mServerPort = 6868;
-    final byte[] mRequestConnect      = new byte[]{'w','h','o','a','m','i'};
-    final byte[] mRequestForward      = new byte[]{'f','o','r','w','a','r','d'};
-    final byte[] mRequestForwardTrack = new byte[]{'f','w','t','r','a','c','k'};
-    final byte[] mRequestBackward    = new byte[]{'b','a','c','k','w','a','r','d'};
-    final byte[] mRequestLeft        = new byte[]{'l','e','f','t'};
-    final byte[] mRequestLeftTrack   = new byte[]{'l','e','f','t','t','r','a','c','k'};
-    final byte[] mRequestRight       = new byte[]{'r','i','g','h','t'};
-    final byte[] mRequestRightTrack  = new byte[]{'r','i','g','h','t','t','r','a','c','k'};
-    final byte[] mRequestStop        = new byte[]{'s','t','o','p'};
-    final byte[] mRequestCamUp       = new byte[]{'c','a','m','u','p'};
-    final byte[] mRequestCamDown     = new byte[]{'c','a','m','d','o','w','n'};
-    final byte[] mRequestCamLeft     = new byte[]{'c','a','m','l','e','f','t'};
-    final byte[] mRequestCamRight    = new byte[]{'c','a','m','r','i','g','h','t'};
-    final byte[] mRequestCamStill    = new byte[]{'c','a','m','s','t','i','l','l'};
-    final byte[] mLedOn = new byte[]{'l','e','d','o','n'};
-    final byte[] mLaserOn = new byte[]{'s','p','e','e','d','o','n'};
-    final byte[] mLaserOff = new byte[]{'s','p','e','e','d','o','f','f'};
-    final byte[] mLedOff = new byte[]{'l','e','d','o','f','f'};
+    final byte[] mRequestConnect = new byte[]{'w', 'h', 'o', 'a', 'm', 'i'};
+    final byte[] mRequestForward = new byte[]{'f', 'o', 'r', 'w', 'a', 'r', 'd'};
+    final byte[] mRequestForwardTrack = new byte[]{'f', 'w', 't', 'r', 'a', 'c', 'k'};
+    final byte[] mRequestBackward = new byte[]{'b', 'a', 'c', 'k', 'w', 'a', 'r', 'd'};
+    final byte[] mRequestLeft = new byte[]{'l', 'e', 'f', 't'};
+    final byte[] mRequestLeftTrack = new byte[]{'l', 'e', 'f', 't', 't', 'r', 'a', 'c', 'k'};
+    final byte[] mRequestRight = new byte[]{'r', 'i', 'g', 'h', 't'};
+    final byte[] mRequestRightTrack = new byte[]{'r', 'i', 'g', 'h', 't', 't', 'r', 'a', 'c', 'k'};
+    final byte[] mRequestStop = new byte[]{'s', 't', 'o', 'p'};
+    final byte[] mRequestCamUp = new byte[]{'c', 'a', 'm', 'u', 'p'};
+    final byte[] mRequestCamDown = new byte[]{'c', 'a', 'm', 'd', 'o', 'w', 'n'};
+    final byte[] mRequestCamLeft = new byte[]{'c', 'a', 'm', 'l', 'e', 'f', 't'};
+    final byte[] mRequestCamRight = new byte[]{'c', 'a', 'm', 'r', 'i', 'g', 'h', 't'};
+    final byte[] mRequestCamStill = new byte[]{'c', 'a', 'm', 's', 't', 'i', 'l', 'l'};
+    final byte[] mLedOn = new byte[]{'l', 'e', 'd', 'o', 'n'};
+    final byte[] mLaserOn = new byte[]{'s', 'p', 'e', 'e', 'd', 'o', 'n'};
+    final byte[] mLaserOff = new byte[]{'s', 'p', 'e', 'e', 'd', 'o', 'f', 'f'};
+    final byte[] mLedOff = new byte[]{'l', 'e', 'd', 'o', 'f', 'f'};
     private Handler handler = new Handler();
     private Bitmap mBitmap;
 
@@ -151,10 +159,10 @@ public class Esp32CameraFragment extends Fragment{
     private org.opencv.core.Rect2d mInitRectangle = null;
     private int mBinaryThreshold = 80;
     private int mRadioIndex = 0;
-    int packet,motors,servo,speed,laser;
+    int packet, motors, servo, speed, laser;
     TextView tempText;
     Slider servoSlider;
-
+    boolean statusdevice = true;
 
 
     private Bitmap mBitmapLaneTracking = null;
@@ -174,7 +182,7 @@ public class Esp32CameraFragment extends Fragment{
             "LaneTracking"
     };
 
-    public void onWindowFocusChanged(){
+    public void onWindowFocusChanged() {
         int testW = mTrackingOverlay.getWidth();
         int testH = mTrackingOverlay.getHeight();
 //        mTrackingOverlay.setLayoutParams(new FrameLayout.LayoutParams(testW, CamResolution.getWidth()/CamResolution.getHeight()*testW));
@@ -190,7 +198,7 @@ public class Esp32CameraFragment extends Fragment{
 
         try {
             mServerAddr = InetAddress.getByName(mServerAddressBroadCast);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -209,6 +217,54 @@ public class Esp32CameraFragment extends Fragment{
             Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_4_0, getActivity(), null);
         }
+
+
+    }
+
+    public void request_to_url(String command) {
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        if (networkInfo != null || networkInfo.isConnected()) {
+            new request_data().execute("http://" + ip_adress + "/" + command);
+        }
+    }
+
+    private class request_data extends AsyncTask<String, void, String> {
+        @Override
+        protected String doInbackground(String... url) {
+            return Connectivity.geturl(url[0]);
+        }
+
+    }
+
+
+
+
+    private Runnable status_data = new Runnable() {
+        @Override
+        public void run() {
+            if (statusdevice) {
+                request_to_url("");
+                handler.postDelayed(this, 1000)
+
+            } else {
+                handler.removeCallbacks(status_data);
+            }
+        }
+
+    };
+
+
+
+
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        statusdevice = false;
     }
 
     @Override
@@ -1052,13 +1108,13 @@ public class Esp32CameraFragment extends Fragment{
         mTrackingOverlay.invalidate();
     }
 
-    public void onDestroy() {
-        Log.e(TAG, "onDestroy");
-        detectorSSD.requestStop();
-        detectorSSD.waitForExit();
-        mWebSocketClient.close();
-        super.onDestroy();
-    }
+//    public void onDestroy() {
+//        Log.e(TAG, "onDestroy");
+//        detectorSSD.requestStop();
+//        detectorSSD.waitForExit();
+//        mWebSocketClient.close();
+//        super.onDestroy();
+//    }
     public String CalculateCel(int tempInC){
         tempInC -= 32;
         tempInC /= 1.8000;
