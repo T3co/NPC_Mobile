@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY Altera_Tutorial_Schematic
+set_global_assignment -name TOP_LEVEL_ENTITY led
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:34:41  SEPTEMBER 19, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -97,6 +97,13 @@ set_location_assignment PIN_Y11 -to sda_lm75
 set_location_assignment PIN_W11 -to scl_lm75
 set_location_assignment PIN_L19 -to error_dp
 set_location_assignment PIN_Y7 -to led_car
+set_location_assignment PIN_AA2 -to servo_pwm
+set_location_assignment PIN_Y3 -to laser
+set_global_assignment -name VHDL_FILE spliter.vhd
+set_global_assignment -name VHDL_FILE servo_control.vhd
+set_global_assignment -name VHDL_FILE pmod_temp_sensor_tcn75a.vhd
+set_global_assignment -name VHDL_FILE i2c_master.vhd
+set_global_assignment -name VHDL_FILE bin2hex.vhd
 set_global_assignment -name VHDL_FILE data_spliter.vhd
 set_global_assignment -name VHDL_FILE fb2bin.vhd
 set_global_assignment -name VHDL_FILE bit_9_to_8.vhd
@@ -113,8 +120,6 @@ set_global_assignment -name BDF_FILE PWM_ctrl_example.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE MT.vhd
 set_global_assignment -name VHDL_FILE LED_CAR.vhd
-set_location_assignment PIN_AA2 -to servo_pwm
-set_location_assignment PIN_Y3 -to laser
 set_global_assignment -name VHDL_FILE tmepLedBreathe.vhd
 set_global_assignment -name VHDL_FILE output_files/lowfreqreset.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf

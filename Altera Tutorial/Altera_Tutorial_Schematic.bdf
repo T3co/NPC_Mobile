@@ -527,28 +527,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 312 352 456 432)
-	(text "led" (rect 5 0 19 12)(font "Arial" ))
-	(text "inst7" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 144 32)
-		(output)
-		(text "ledOUT" (rect 0 0 36 12)(font "Arial" ))
-		(text "ledOUT" (rect 93 27 129 39)(font "Arial" ))
-		(line (pt 144 32)(pt 128 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 128 64))
-	)
-)
-(symbol
 	(rect 288 704 528 816)
 	(text "pmod_temp_sensor_tcn75a" (rect 5 0 140 12)(font "Arial" ))
 	(text "inst11" (rect 8 96 36 113)(font "Intel Clear" ))
@@ -839,6 +817,28 @@ agreement for further details.
 		(output)
 		(text "ledOUT" (rect 0 0 36 12)(font "Arial" ))
 		(text "ledOUT" (rect 93 27 129 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 128 64))
+	)
+)
+(symbol
+	(rect 312 352 456 432)
+	(text "led" (rect 5 0 19 12)(font "Arial" ))
+	(text "inst7" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "ledOUT" (rect 0 0 36 12)(font "Arial" ))
+		(text "ledOUT" (rect 93 27 123 39)(font "Arial" ))
 		(line (pt 144 32)(pt 128 32))
 	)
 	(drawing
@@ -1199,10 +1199,6 @@ agreement for further details.
 	(pt 256 752)
 )
 (connector
-	(pt 456 384)
-	(pt 576 384)
-)
-(connector
 	(pt 144 800)
 	(pt 256 800)
 )
@@ -1241,6 +1237,10 @@ agreement for further details.
 (connector
 	(pt -112 656)
 	(pt -112 840)
+)
+(connector
+	(pt 456 384)
+	(pt 576 384)
 )
 (junction (pt 784 496))
 (junction (pt 768 208))

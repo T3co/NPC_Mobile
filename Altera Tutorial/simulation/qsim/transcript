@@ -1,7 +1,7 @@
 # do Altera_Tutorial.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:06:11 on Jan 17,2023
+# Start time: 16:31:14 on Mar 26,2023
 # vcom -work work Altera_Tutorial.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,20 +14,20 @@
 # -- Loading package fiftyfivenm_components
 # -- Compiling entity led
 # -- Compiling architecture structure of led
-# End time: 21:06:11 on Jan 17,2023, Elapsed time: 0:00:00
+# End time: 16:31:14 on Mar 26,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:06:11 on Jan 17,2023
-# vcom -work work Waveform4.vwf.vht 
+# Start time: 16:31:14 on Mar 26,2023
+# vcom -work work Waveform3.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity led_vhd_vec_tst
 # -- Compiling architecture led_arch of led_vhd_vec_tst
-# End time: 21:06:11 on Jan 17,2023, Elapsed time: 0:00:00
+# End time: 16:31:14 on Mar 26,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.led_vhd_vec_tst 
-# Start time: 21:06:11 on Jan 17,2023
+# Start time: 16:31:14 on Mar 26,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -39,9 +39,12 @@
 # Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
 # Loading fiftyfivenm.fiftyfivenm_components
 # Loading work.led(structure)
-# ** Fatal: (vsim-3807) Types do not match between component and entity for port "ledOUT".
-#    Time: 0 ps  Iteration: 0  Instance: /led_vhd_vec_tst/i1 File: Altera_Tutorial.vho Line: 42
-# FATAL ERROR while loading design
-# Error loading design
-# End time: 21:06:11 on Jan 17,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 10639 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#33
+# End time: 16:31:15 on Mar 26,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

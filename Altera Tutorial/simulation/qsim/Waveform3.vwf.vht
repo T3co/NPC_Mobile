@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "01/17/2023 21:05:32"
+-- Generated on "03/26/2023 16:31:12"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          led
 -- 
@@ -35,11 +35,11 @@ ARCHITECTURE led_arch OF led_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
-SIGNAL ledOUT : STD_LOGIC;
+SIGNAL outp : STD_LOGIC;
 COMPONENT led
 	PORT (
 	clk : IN STD_LOGIC;
-	ledOUT : OUT STD_LOGIC
+	outp : BUFFER STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -47,7 +47,7 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
-	ledOUT => ledOUT
+	outp => outp
 	);
 
 -- clk
@@ -55,10 +55,10 @@ t_prcs_clk: PROCESS
 BEGIN
 LOOP
 	clk <= '0';
-	WAIT FOR 5000 ps;
+	WAIT FOR 50000 ps;
 	clk <= '1';
-	WAIT FOR 5000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	WAIT FOR 50000 ps;
+	IF (NOW >= 20000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 END led_arch;

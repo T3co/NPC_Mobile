@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "01/17/2023 21:03:33"
+-- Generated on "03/26/2023 16:05:34"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          led
+-- Vhdl Test Bench(with test vectors) for design  :          pmod_temp_sensor_tcn75a
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,36 +29,36 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY led_vhd_vec_tst IS
-END led_vhd_vec_tst;
-ARCHITECTURE led_arch OF led_vhd_vec_tst IS
+ENTITY pmod_temp_sensor_tcn75a_vhd_vec_tst IS
+END pmod_temp_sensor_tcn75a_vhd_vec_tst;
+ARCHITECTURE pmod_temp_sensor_tcn75a_arch OF pmod_temp_sensor_tcn75a_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
-SIGNAL ledOUT : STD_LOGIC;
-COMPONENT led
+SIGNAL i2c_ack_err : STD_LOGIC;
+SIGNAL reset_n : STD_LOGIC;
+SIGNAL scl : STD_LOGIC;
+SIGNAL sda : STD_LOGIC;
+SIGNAL temperature : STD_LOGIC_VECTOR(8 DOWNTO 0);
+COMPONENT pmod_temp_sensor_tcn75a
 	PORT (
 	clk : IN STD_LOGIC;
-	ledOUT : BUFFER STD_LOGIC
+	i2c_ack_err : OUT STD_LOGIC;
+	reset_n : IN STD_LOGIC;
+	scl : INOUT STD_LOGIC;
+	sda : INOUT STD_LOGIC;
+	temperature : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : led
+	i1 : pmod_temp_sensor_tcn75a
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
-	ledOUT => ledOUT
+	i2c_ack_err => i2c_ack_err,
+	reset_n => reset_n,
+	scl => scl,
+	sda => sda,
+	temperature => temperature
 	);
-
--- clk
-t_prcs_clk: PROCESS
-BEGIN
-LOOP
-	clk <= '0';
-	WAIT FOR 5000 ps;
-	clk <= '1';
-	WAIT FOR 5000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_clk;
-END led_arch;
+END pmod_temp_sensor_tcn75a_arch;

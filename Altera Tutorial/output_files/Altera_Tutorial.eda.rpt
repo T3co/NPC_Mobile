@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Altera_Tutorial
-Tue Jan 17 21:06:10 2023
+Sun Mar 26 16:31:13 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jan 17 21:06:10 2023 ;
+; EDA Netlist Writer Status ; Successful - Sun Mar 26 16:31:13 2023 ;
 ; Revision Name             ; Altera_Tutorial                       ;
 ; Top-level Entity Name     ; led                                   ;
 ; Family                    ; MAX 10                                ;
@@ -95,15 +95,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Jan 17 21:06:09 2023
+    Info: Processing started: Sun Mar 26 16:31:13 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Altera_Tutorial.vho in folder "D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Tue Jan 17 21:06:10 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun Mar 26 16:31:13 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
