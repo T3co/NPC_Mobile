@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Sun Mar 26 16:32:29 2023
+Wed Mar 29 12:52:55 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 26 16:32:29 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 29 12:52:55 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
-; Top-level Entity Name              ; led                                         ;
+; Top-level Entity Name              ; data_spliter                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 48                                          ;
-;     Total combinational functions  ; 48                                          ;
-;     Dedicated logic registers      ; 27                                          ;
-; Total registers                    ; 27                                          ;
-; Total pins                         ; 2                                           ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                                      ; led                ; Altera_Tutorial    ;
+; Top-level entity name                                                      ; data_spliter       ; Altera_Tutorial    ;
 ; Family name                                                                ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,62 +157,60 @@ agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; led.vhd                          ; yes             ; User VHDL File  ; D:/Quartus Projects/NPC_Mobile/Altera Tutorial/led.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; data_spliter.vhd                 ; yes             ; User VHDL File  ; D:/Quartus Projects/NPC_Mobile/Altera Tutorial/data_spliter.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 48        ;
-;                                             ;           ;
-; Total combinational functions               ; 48        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 40        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 23        ;
-;     -- arithmetic mode                      ; 25        ;
-;                                             ;           ;
-; Total registers                             ; 27        ;
-;     -- Dedicated logic registers            ; 27        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 2         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 168       ;
-; Average fan-out                             ; 2.13      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+;                                             ;                 ;
+; Total combinational functions               ; 0               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 0               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 0               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 16              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; motor[0]~output ;
+; Maximum fan-out                             ; 1               ;
+; Total fan-out                               ; 24              ;
+; Average fan-out                             ; 0.75            ;
++---------------------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |led                       ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 2    ; 0            ; 0          ; |led                ; led         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
+; |data_spliter              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |data_spliter       ; data_spliter ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -221,7 +219,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -233,23 +231,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 2                           ;
-; cycloneiii_ff         ; 27                          ;
-;     plain             ; 27                          ;
-; cycloneiii_lcell_comb ; 48                          ;
-;     arith             ; 25                          ;
-;         2 data inputs ; 25                          ;
-;     normal            ; 23                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 14                          ;
-;         4 data inputs ; 8                           ;
-;                       ;                             ;
-; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 3.62                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 16                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -267,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Mar 26 16:32:20 2023
+    Info: Processing started: Wed Mar 29 12:52:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -332,18 +321,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file output_
     Info (12023): Found entity 1: lowfreqreset File: D:/Quartus Projects/NPC_Mobile/Altera Tutorial/output_files/lowfreqreset.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file diagrams_1.bdf
     Info (12023): Found entity 1: Diagrams_1
-Info (12127): Elaborating entity "led" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Info (12127): Elaborating entity "data_spliter" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 48 logic cells
+Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 8 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Sun Mar 26 16:32:29 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Wed Mar 29 12:52:55 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -4,11 +4,67 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ledOUT",
+					"name" : "motor[0]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "motor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "motor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "servo[3]",
+					"strict" : false
+				},
+				{
+					"name" : "servo[4]",
+					"strict" : false
+				},
+				{
+					"name" : "servo[5]",
+					"strict" : false
+				},
+				{
+					"name" : "speedMotor",
+					"strict" : false
+				},
+				{
+					"name" : "Laser",
+					"strict" : false
+				},
+				{
+					"name" : "data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data[7]",
 					"strict" : false
 				}
 			]

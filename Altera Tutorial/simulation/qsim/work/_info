@@ -170,8 +170,94 @@ R23
 !i113 1
 R17
 R18
+Edata_spliter
+Z27 w1680083971
+R3
+R1
+R5
+R6
+R7
+R2
+R9
+R10
+R11
+l0
+L35
+V=CTDVczQNNnRW4Rz6XD7f2
+!s100 YDlBHGS^^dbZUNQTm[e^@0
+R12
+32
+Z28 !s110 1680083971
+!i10b 1
+Z29 !s108 1680083971.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R3
+R1
+R5
+R6
+R7
+R2
+DEx4 work 12 data_spliter 0 22 =CTDVczQNNnRW4Rz6XD7f2
+l77
+L45
+VZNAUh`JWon0koIW:T5?@80
+!s100 cBlYiEBCGdB=5N@GSEGKk0
+R12
+32
+R28
+!i10b 1
+R29
+R15
+R16
+!i113 1
+R17
+R18
+Edata_spliter_vhd_vec_tst
+Z30 w1680083970
+R6
+R7
+R9
+Z31 8Waveform4.vwf.vht
+Z32 FWaveform4.vwf.vht
+l0
+L32
+V14d692T1C3V0=RD<U`c@<2
+!s100 nVeBfeb[HXcbm[AZ`ajgn2
+R12
+32
+R28
+!i10b 1
+R29
+Z33 !s90 -work|work|Waveform4.vwf.vht|
+Z34 !s107 Waveform4.vwf.vht|
+!i113 1
+R17
+R18
+Adata_spliter_arch
+R6
+R7
+Z35 DEx4 work 24 data_spliter_vhd_vec_tst 0 22 14d692T1C3V0=RD<U`c@<2
+l51
+L34
+VIm3GI;nCT<GMh6_of_c]]2
+!s100 =k[okJ`CTL?UTBYmf0:@]0
+R12
+32
+R28
+!i10b 1
+R29
+R33
+R34
+!i113 1
+R17
+R18
 Ediagrams_1
-Z27 w1673982089
+Z36 w1673982089
 R1
 R2
 R3
@@ -189,9 +275,9 @@ V>ZZ<[Z>>Ya?G`AeQ=^VTh3
 !s100 _=L5Tm6^=VN1PR>L3T`W71
 R12
 32
-Z28 !s110 1673982090
+Z37 !s110 1673982090
 !i10b 1
-Z29 !s108 1673982090.000000
+Z38 !s108 1673982090.000000
 R15
 R16
 !i113 1
@@ -213,9 +299,9 @@ VZ3kDQCgO8ZF7jMX7`ZR3h2
 !s100 aH@_9_k9@;09WeOdKIFNn3
 R12
 32
-R28
+R37
 !i10b 1
-R29
+R38
 R15
 R16
 !i113 1
@@ -234,9 +320,9 @@ V^=m]IO6R;1hD5U=jnZ68g2
 !s100 ;IGC8BW[6oX]feS38A5;X0
 R12
 32
-R28
+R37
 !i10b 1
-R29
+R38
 R22
 R23
 !i113 1
@@ -290,7 +376,7 @@ R16
 R17
 R18
 Eled
-Z30 w1679837473
+Z39 w1679837473
 R1
 R2
 R3
@@ -308,9 +394,9 @@ VRAA<3CoaEozQ3P?CM7KbS3
 !s100 oDBbB<^ennPh1k`@dm0gb3
 R12
 32
-Z31 !s110 1679837474
+Z40 !s110 1679837474
 !i10b 1
-Z32 !s108 1679837474.000000
+Z41 !s108 1679837474.000000
 R15
 R16
 !i113 1
@@ -332,62 +418,62 @@ VLSPRGcPjKFH603n::b=iW1
 !s100 dlUSZ;FKGnNhc1g3BDDL30
 R12
 32
-R31
+R40
 !i10b 1
-R32
+R41
 R15
 R16
 !i113 1
 R17
 R18
 Eled_vhd_vec_tst
-Z33 w1679837472
+Z42 w1679837472
 R6
 R7
 R9
-Z34 8Waveform3.vwf.vht
-Z35 FWaveform3.vwf.vht
+Z43 8Waveform3.vwf.vht
+Z44 FWaveform3.vwf.vht
 l0
 L32
 VSaf4MXKb:ZK`9=Jf?TzNz2
 !s100 SXHJ2J^hLN?:AU89A916T0
 R12
 32
-R31
+R40
 !i10b 1
-R32
-Z36 !s90 -work|work|Waveform3.vwf.vht|
-Z37 !s107 Waveform3.vwf.vht|
+R41
+Z45 !s90 -work|work|Waveform3.vwf.vht|
+Z46 !s107 Waveform3.vwf.vht|
 !i113 1
 R17
 R18
 Aled_arch
 R6
 R7
-Z38 DEx4 work 15 led_vhd_vec_tst 0 22 Saf4MXKb:ZK`9=Jf?TzNz2
+DEx4 work 15 led_vhd_vec_tst 0 22 Saf4MXKb:ZK`9=Jf?TzNz2
 l45
 L34
 VEcTbZQC^Gz?CMhDX<8=Q=3
 !s100 P]Mh4GYVl;<g;ic@S6i?j2
 R12
 32
-R31
+R40
 !i10b 1
-R32
-R36
-R37
+R41
+R45
+R46
 !i113 1
 R17
 R18
 Emotor_ctrl
-Z39 w1666345806
+Z47 w1666345806
 R3
 R1
 R5
 R6
 R7
 R2
-Z40 dD:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim
+Z48 dD:/Quartus Projects/Project_Moob/Altera Tutorial/simulation/qsim
 R10
 R11
 l0
@@ -396,9 +482,9 @@ VF:TDOD75W7_U<G7bK8eCJ3
 !s100 f>b@D<A[mVa2KRkzWAReA2
 R12
 32
-Z41 !s110 1666345807
+Z49 !s110 1666345807
 !i10b 1
-Z42 !s108 1666345807.000000
+Z50 !s108 1666345807.000000
 R15
 R16
 !i113 1
@@ -418,32 +504,32 @@ VcK[N4SOlKl0=UYZ97Sb300
 !s100 kg14NJij0D?9nY63TT:S21
 R12
 32
-R41
+R49
 !i10b 1
-R42
+R50
 R15
 R16
 !i113 1
 R17
 R18
 Emotor_ctrl_vhd_vec_tst
-Z43 w1666345805
+Z51 w1666345805
 R6
 R7
-R40
-Z44 8Waveform1.vwf.vht
-Z45 FWaveform1.vwf.vht
+R48
+Z52 8Waveform1.vwf.vht
+Z53 FWaveform1.vwf.vht
 l0
 L32
 V71oD]P0if:i9RMiPA6L?T2
 !s100 ]ZYUJHmP0IdQJ2P9i:>fD0
 R12
 32
-R41
+R49
 !i10b 1
-R42
-Z46 !s90 -work|work|Waveform1.vwf.vht|
-Z47 !s107 Waveform1.vwf.vht|
+R50
+Z54 !s90 -work|work|Waveform1.vwf.vht|
+Z55 !s107 Waveform1.vwf.vht|
 !i113 1
 R17
 R18
@@ -457,16 +543,16 @@ VShoZkN47LIM:X;KbGbmd71
 !s100 ;eiHS7SL=0:S>URS@lAR11
 R12
 32
-R41
+R49
 !i10b 1
-R42
-R46
-R47
+R50
+R54
+R55
 !i113 1
 R17
 R18
 Epmod_temp_sensor_tcn75a
-Z48 w1679836287
+Z56 w1679836287
 R1
 R2
 R3
@@ -484,9 +570,9 @@ VkJ[fNVF7imKC1L;hdVY3?3
 !s100 E6OP6T`E<:>NdNg1WYVn]2
 R12
 32
-Z49 !s110 1679836287
+Z57 !s110 1679836287
 !i10b 1
-Z50 !s108 1679836287.000000
+Z58 !s108 1679836287.000000
 R15
 R16
 !i113 1
@@ -508,32 +594,32 @@ Vkkcn8_:2WPN]4BS?DSZM30
 !s100 ^jEGzQC;E`YV:33@inj^]3
 R12
 32
-R49
+R57
 !i10b 1
-R50
+R58
 R15
 R16
 !i113 1
 R17
 R18
 Epmod_temp_sensor_tcn75a_vhd_vec_tst
-Z51 w1679836286
+Z59 w1679836286
 R6
 R7
 R9
-R34
-R35
+R43
+R44
 l0
 L32
 VnM>_^UF8U[DJ;7W8X`nlZ1
 !s100 S]28S@z2D71jPoLKVTKPQ3
 R12
 32
-R49
+R57
 !i10b 1
-R50
-R36
-R37
+R58
+R45
+R46
 !i113 1
 R17
 R18
@@ -547,16 +633,16 @@ VoTRZ[aaaDF_hgeRo4fJ_N0
 !s100 S5ke08N0PjT0geDL_gCjE0
 R12
 32
-R49
+R57
 !i10b 1
-R50
-R36
-R37
+R58
+R45
+R46
 !i113 1
 R17
 R18
 Epwm_ctrl_example
-Z52 w1671289503
+Z60 w1671289503
 R3
 R1
 R5
@@ -572,9 +658,9 @@ VNRF?n:;YaoZ:E7c4^7BJ`2
 !s100 U`k3FmGSYRQJNY2JjimlF2
 R12
 32
-Z53 !s110 1671289503
+Z61 !s110 1671289503
 !i10b 1
-Z54 !s108 1671289503.000000
+Z62 !s108 1671289503.000000
 R15
 R16
 !i113 1
@@ -594,32 +680,32 @@ VaDI7OmAj4Yl1FOH3E7Mm`1
 !s100 Y<oZ:ckQO?UN9I@Z2KMkS2
 R12
 32
-R53
+R61
 !i10b 1
-R54
+R62
 R15
 R16
 !i113 1
 R17
 R18
 Epwm_ctrl_example_vhd_vec_tst
-Z55 w1671289502
+Z63 w1671289502
 R6
 R7
 R9
-R44
-R45
+R52
+R53
 l0
 L32
 VeeZAIi3d[m0mQK>5nF5<J2
 !s100 95ERO8<e<]F;1of:SnQPj2
 R12
 32
-R53
+R61
 !i10b 1
+R62
 R54
-R46
-R47
+R55
 !i113 1
 R17
 R18
@@ -633,11 +719,11 @@ V:??dBK2Zh6dO@TgjfG=e>2
 !s100 0ToH1_J3GAK6Z`ULlTL`^1
 R12
 32
-R53
+R61
 !i10b 1
+R62
 R54
-R46
-R47
+R55
 !i113 1
 R17
 R18
