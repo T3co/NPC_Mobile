@@ -1,5 +1,5 @@
 
-State Machine - |pmod_temp_sensor_tcn75a|state
+State Machine - |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|state
 Name state.output_result state.read_data state.set_reg_pointer state.set_resolution state.start 
 state.start 0 0 0 0 0 
 state.set_resolution 0 0 0 1 1 
@@ -7,7 +7,7 @@ state.set_reg_pointer 0 0 1 0 1
 state.read_data 0 1 0 0 1 
 state.output_result 1 0 0 0 1 
 
-State Machine - |pmod_temp_sensor_tcn75a|i2c_master:i2c_master_0|state
+State Machine - |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0|state
 Name state.stop state.mstr_ack state.slv_ack2 state.rd state.wr state.slv_ack1 state.command state.start state.ready 
 state.ready 0 0 0 0 0 0 0 0 0 
 state.start 0 0 0 0 0 0 0 1 1 
