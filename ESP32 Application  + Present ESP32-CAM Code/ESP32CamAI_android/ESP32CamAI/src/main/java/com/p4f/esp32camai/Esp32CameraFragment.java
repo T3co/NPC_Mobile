@@ -221,44 +221,6 @@ public class Esp32CameraFragment extends Fragment {
 
     }
 
-    public void request_to_url(String command) {
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-
-        if (networkInfo != null || networkInfo.isConnected()) {
-            new request_data().execute("http://" + ip_adress + "/" + command);
-        }
-    }
-
-    private class request_data extends AsyncTask<String, void, String> {
-        @Override
-        protected String doInbackground(String... url) {
-            return Connectivity.geturl(url[0]);
-        }
-
-    }
-
-
-
-
-    private Runnable status_data = new Runnable() {
-        @Override
-        public void run() {
-            if (statusdevice) {
-                request_to_url("");
-                handler.postDelayed(this, 1000)
-
-            } else {
-                handler.removeCallbacks(status_data);
-            }
-        }
-
-    };
-
-
-
-
 
 
     @Override
