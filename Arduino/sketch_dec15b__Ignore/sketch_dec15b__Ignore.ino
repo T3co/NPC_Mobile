@@ -6,9 +6,6 @@
 #define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
 
-// #define WIFI_SSID "ORYAM"
-// #define WIFI_PASSWORD "12345678"
-
 #define RXD2 16
 #define TXD2 17
 
@@ -17,11 +14,10 @@
 WiFiMulti wifiMulti;
 
 FirebaseData fbdo;
-int rx0;
-int motors, temperature, leds, packet, ServoMotors;
+int temperature,packet;
 
 bool a = false;
-void blink();git
+void blink();
 
 void setup() {
   Serial.begin(115200);
@@ -57,8 +53,6 @@ void setup() {
       
   }
 
- 
-
   if(wifiMulti.run() != WL_CONNECTED) {
   Serial.println("WiFi not connected!");
   delay(1000);
@@ -83,12 +77,32 @@ void setup() {
 }
 
 void loop() {
-  while (Serial2.available()) {
-    temperature = Serial2.read();
+
+    if(Firebase.ready())
+    {
+   
+      if (Firebase.getInt(fbdo,"Kar98Info/CarControl"))
+           {
+           packet = fbdo.intData();
+           }
+      delay(10);
+  
+      Firebase.setInt(fbdo, "kar98Info", temperature);
+
+      delay(2);
+    }
+
+   if(Serial2.available())
+  {
+    Serial2.write(packet);
   }
 
-
+  while (Serial2.available())
+  {
+    temperature=Serial2.read();
+  }
   
+  fbdo.clear();
   blink();
 }
 
