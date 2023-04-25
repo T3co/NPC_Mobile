@@ -77,31 +77,23 @@ void setup() {
 }
 
 void loop() {
+  while (Serial2.available()) {
+    temperature = Serial2.read();
+  }
 
-    if(Firebase.ready())
-    {
-   
-      if (Firebase.getInt(fbdo,"Kar98Info/CarControl"))
-           {
-           packet = fbdo.intData();
-           }
-      delay(10);
-  
-      Firebase.setInt(fbdo, "kar98Info", temperature);
+  if (Firebase.ready()) {
+    Firebase.setInt(fbdo, "kar98Info/temperature", temperature);
 
-      delay(2);
+    if (Firebase.getInt(fbdo, "kar98Info/carControl")) {
+      packet = fbdo.intData();
     }
-
-   if(Serial2.available())
-  {
+  }
+  delay(10);
+  if (Serial2.available()) {
     Serial2.write(packet);
+    delay(10);
   }
 
-  while (Serial2.available())
-  {
-    temperature=Serial2.read();
-  }
-  
   fbdo.clear();
   blink();
 }
