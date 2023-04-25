@@ -20,14 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "RWheelB",
-					"strict" : false
-				},
-				{
-					"name" : "RWheelF",
-					"strict" : false
-				},
-				{
 					"name" : "error_dp",
 					"strict" : false
 				},
@@ -37,6 +29,14 @@
 				},
 				{
 					"name" : "laser",
+					"strict" : false
+				},
+				{
+					"name" : "RWheelF",
+					"strict" : false
+				},
+				{
+					"name" : "RWheelB",
 					"strict" : false
 				},
 				{
@@ -157,22 +157,6 @@
 				},
 				{
 					"name" : "sda_lm75",
-					"strict" : false
-				},
-				{
-					"name" : "SRB",
-					"strict" : false
-				},
-				{
-					"name" : "SRF",
-					"strict" : false
-				},
-				{
-					"name" : "SLB",
-					"strict" : false
-				},
-				{
-					"name" : "SLF",
 					"strict" : false
 				},
 				{
