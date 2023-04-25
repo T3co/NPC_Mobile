@@ -1,5 +1,5 @@
 Assembler report for Altera_Tutorial
-Tue Apr 25 13:44:51 2023
+Tue Apr 25 17:13:58 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Apr 25 13:44:51 2023 ;
+; Assembler Status      ; Successful - Tue Apr 25 17:13:58 2023 ;
 ; Revision Name         ; Altera_Tutorial                       ;
 ; Top-level Entity Name ; Altera_Tutorial_Schematic             ;
 ; Family                ; MAX 10                                ;
@@ -67,8 +67,8 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                        ;
 +----------------+--------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x002B0161                                                                     ;
-; Checksum       ; 0x002B0161                                                                     ;
+; JTAG usercode  ; 0x002AF8D8                                                                     ;
+; Checksum       ; 0x002AF8D8                                                                     ;
 +----------------+--------------------------------------------------------------------------------+
 
 
@@ -78,15 +78,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 25 13:44:49 2023
+    Info: Processing started: Tue Apr 25 17:13:55 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Tue Apr 25 13:44:51 2023
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4682 megabytes
+    Info: Processing ended: Tue Apr 25 17:13:58 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 
