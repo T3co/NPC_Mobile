@@ -164,6 +164,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "RX_RESET",
+					"strict" : false
+				},
+				{
 					"name" : "esp_tx",
 					"strict" : false
 				}

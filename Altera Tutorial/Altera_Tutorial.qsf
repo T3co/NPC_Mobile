@@ -76,8 +76,8 @@ set_location_assignment PIN_J18 -to r_segH[3]
 set_location_assignment PIN_E19 -to r_segH[4]
 set_location_assignment PIN_E20 -to r_segH[5]
 set_location_assignment PIN_F18 -to r_segH[6]
-set_location_assignment PIN_W10 -to esp_rx
-set_location_assignment PIN_V10 -to esp_tx
+set_location_assignment PIN_Y11 -to esp_rx
+set_location_assignment PIN_AB13 -to esp_tx
 set_location_assignment PIN_D22 -to breatheLED
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -115,13 +115,14 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name BDF_FILE Diagrams_1.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_C11 -to SLB
 set_location_assignment PIN_D12 -to SLF
 set_location_assignment PIN_B14 -to SRB
 set_location_assignment PIN_A14 -to SRF
 set_location_assignment PIN_AA7 -to servo_pwm
 set_location_assignment PIN_Y4 -to laser
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_C10 -to RX_RESET
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

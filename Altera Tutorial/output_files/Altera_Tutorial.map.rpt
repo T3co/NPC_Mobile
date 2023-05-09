@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera_Tutorial
-Tue Apr 25 17:13:44 2023
+Thu May 04 18:40:11 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,16 +52,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 25 17:13:44 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 04 18:40:11 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
 ; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 466                                         ;
-;     Total combinational functions  ; 431                                         ;
+; Total logic elements               ; 463                                         ;
+;     Total combinational functions  ; 428                                         ;
 ;     Dedicated logic registers      ; 232                                         ;
 ; Total registers                    ; 232                                         ;
-; Total pins                         ; 41                                          ;
+; Total pins                         ; 42                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -204,29 +204,29 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 466            ;
+; Estimated Total logic elements              ; 463            ;
 ;                                             ;                ;
-; Total combinational functions               ; 431            ;
+; Total combinational functions               ; 428            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 157            ;
-;     -- 3 input functions                    ; 93             ;
-;     -- <=2 input functions                  ; 181            ;
+;     -- 4 input functions                    ; 154            ;
+;     -- 3 input functions                    ; 100            ;
+;     -- <=2 input functions                  ; 174            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 282            ;
+;     -- normal mode                          ; 279            ;
 ;     -- arithmetic mode                      ; 149            ;
 ;                                             ;                ;
 ; Total registers                             ; 232            ;
 ;     -- Dedicated logic registers            ; 232            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 41             ;
+; I/O pins                                    ; 42             ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk50Mhz~input ;
 ; Maximum fan-out                             ; 196            ;
-; Total fan-out                               ; 2085           ;
+; Total fan-out                               ; 2081           ;
 ; Average fan-out                             ; 2.79           ;
 +---------------------------------------------+----------------+
 
@@ -236,7 +236,7 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name               ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
-; |Altera_Tutorial_Schematic          ; 431 (0)             ; 232 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
+; |Altera_Tutorial_Schematic          ; 428 (0)             ; 232 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |Altera_Tutorial_Schematic                                                        ; Altera_Tutorial_Schematic ; work         ;
 ;    |BOUD_RATE:3|                    ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|BOUD_RATE:3                                            ; BOUD_RATE                 ; work         ;
 ;    |Motor_Ctrl:inst12|              ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|Motor_Ctrl:inst12                                      ; Motor_Ctrl                ; work         ;
 ;    |PWM_Motor:inst9|                ; 21 (21)             ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|PWM_Motor:inst9                                        ; PWM_Motor                 ; work         ;
@@ -249,7 +249,7 @@ agreement for further details.
 ;    |my_tx:inst|                     ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|my_tx:inst                                             ; my_tx                     ; work         ;
 ;    |pmod_temp_sensor_tcn75a:inst11| ; 155 (63)            ; 95 (50)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11                         ; pmod_temp_sensor_tcn75a   ; work         ;
 ;       |i2c_master:i2c_master_0|     ; 92 (92)             ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|pmod_temp_sensor_tcn75a:inst11|i2c_master:i2c_master_0 ; i2c_master                ; work         ;
-;    |rx:5|                           ; 39 (39)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
+;    |rx:5|                           ; 36 (36)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|rx:5                                                   ; rx                        ; work         ;
 ;    |servo_control:inst14|           ; 57 (57)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Altera_Tutorial_Schematic|servo_control:inst14                                   ; servo_control             ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -408,7 +408,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
+; boundary_port         ; 42                          ;
 ; cycloneiii_ff         ; 232                         ;
 ;     CLR               ; 18                          ;
 ;     CLR SCLR          ; 8                           ;
@@ -418,18 +418,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 70                          ;
 ;     plain             ; 52                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 436                         ;
+; cycloneiii_lcell_comb ; 433                         ;
 ;     arith             ; 149                         ;
 ;         2 data inputs ; 132                         ;
 ;         3 data inputs ; 17                          ;
-;     normal            ; 287                         ;
+;     normal            ; 284                         ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 76                          ;
-;         4 data inputs ; 157                         ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 83                          ;
+;         4 data inputs ; 154                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 2.98                        ;
+; Average LUT depth     ; 3.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -438,7 +438,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -448,7 +448,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 25 17:13:35 2023
+    Info: Processing started: Thu May 04 18:40:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -562,13 +562,13 @@ Info (12128): Elaborating entity "SPLITER" for hierarchy "SPLITER:inst3"
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "Motor_Ctrl:inst12|RwheelB" merged with LATCH primitive "Motor_Ctrl:inst12|LwheelB" File: D:/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 8
 Warning (13012): Latch Motor_Ctrl:inst12|LwheelB has unsafe behavior File: D:/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 6
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal rx:5|data[0] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal rx:5|data[1] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rx:5|data[2] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 24
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal rx:5|data[2] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 24
 Warning (13012): Latch Motor_Ctrl:inst12|LwheelF has unsafe behavior File: D:/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 7
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal rx:5|data[1] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal rx:5|data[0] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rx:5|data[1] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 24
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal rx:5|data[2] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 24
 Warning (13012): Latch Motor_Ctrl:inst12|RwheelF has unsafe behavior File: D:/GitHub/NPC_Mobile/Altera Tutorial/Motor_Ctrl.vhd Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal rx:5|data[0] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rx:5|data[0] File: D:/GitHub/NPC_Mobile/Altera Tutorial/rx.vhd Line: 24
 Info (13000): Registers with preset signals will power-up high File: D:/GitHub/NPC_Mobile/Altera Tutorial/my_tx.vhd Line: 6
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
@@ -576,15 +576,15 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register my_tx:inst|so will power up to High File: D:/GitHub/NPC_Mobile/Altera Tutorial/my_tx.vhd Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 512 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 510 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 37 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 471 logic cells
+    Info (21061): Implemented 468 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Tue Apr 25 17:13:44 2023
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Thu May 04 18:40:11 2023
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:07
 
 

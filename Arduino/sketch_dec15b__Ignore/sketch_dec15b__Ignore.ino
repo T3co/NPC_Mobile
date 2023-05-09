@@ -6,96 +6,74 @@
 #define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ"
 
-#define RXD2 16
-#define TXD2 17
-
+#define RX2 16
+#define TX2 17
 #define ledpin 2
 
 WiFiMulti wifiMulti;
-
 FirebaseData fbdo;
-int temperature,packet;
+int temperature, packet;
 
 bool a = false;
 void blink();
+void connectToWiFi();
 
 void setup() {
   Serial.begin(115200);
-  Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
+  Serial2.begin(9600, SERIAL_8N1, RX2, TX2);
 
   pinMode(ledpin, OUTPUT);
 
+  connectToWiFi();
+
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+  Firebase.reconnectWiFi(true);
+}
+
+void connectToWiFi() {
   wifiMulti.addAP("Ams_2.4GHz", "0523993253A");
   wifiMulti.addAP("ORYAM", "12345678");
   wifiMulti.addAP("upstairs", "10203040");
 
-
-  // WiFi.scanNetworks will return the number of networks found
-  int n = WiFi.scanNetworks();
-  Serial.println("scan done");
-  if (n == 0) {
-      Serial.println("no networks found");
-  } 
-  else {
-    Serial.print(n);
-    Serial.println(" networks found");
-    for (int i = 0; i < n; ++i) {
-      // Print SSID and RSSI for each network found
-      Serial.print(i + 1);
-      Serial.print(": ");
-      Serial.print(WiFi.SSID(i));
-      Serial.print(" (");
-      Serial.print(WiFi.RSSI(i));
-      Serial.print(")");
-      Serial.println((WiFi.encryptionType(i) == WIFI_AUTH_OPEN)?" ":"*");
-      delay(10);
-    }
-      
+  while (wifiMulti.run() != WL_CONNECTED) {
+    Serial.println("WiFi not connected. Retrying...");
+    delay(1000);
   }
 
-  if(wifiMulti.run() != WL_CONNECTED) {
-  Serial.println("WiFi not connected!");
-  delay(1000);
+  Serial.printf("Connected to %s\nIP address: %s\n", WiFi.SSID().c_str(),
+                WiFi.localIP().toString().c_str());
 }
 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("");
-  Serial.print("Connecting To: " );
-  Serial.print(WiFi.SSID());
-  Serial.println("");
-  Serial.print("Connected! IP address: ");
-  String ipAddress = WiFi.localIP().toString();;
-  Serial.println(ipAddress);
-
-
-  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  Serial.println("Firebase Connected");
-  Firebase.reconnectWiFi(true);
-}
+const char* TEMPERATURE_PATH = "/kar98Info/temperature";
+const char* CAR_CONTROL_PATH = "/kar98Info/carControl";
 
 void loop() {
+  readTemperature();
+  checkCarControl();
+  sendPacket();
+  blink();
+}
+
+void readTemperature() {
   while (Serial2.available()) {
     temperature = Serial2.read();
   }
+}
 
+void checkCarControl() {
   if (Firebase.ready()) {
-    Firebase.setInt(fbdo, "kar98Info/temperature", temperature);
-
-    if (Firebase.getInt(fbdo, "kar98Info/carControl")) {
+    if (Firebase.getInt(fbdo, CAR_CONTROL_PATH)) {
       packet = fbdo.intData();
+      Serial.println(packet);
     }
+    fbdo.clear();
   }
-  delay(10);
+}
+
+void sendPacket() {
   if (Serial2.available()) {
     Serial2.write(packet);
-    delay(10);
   }
-
-  fbdo.clear();
-  blink();
 }
 
 void blink() {

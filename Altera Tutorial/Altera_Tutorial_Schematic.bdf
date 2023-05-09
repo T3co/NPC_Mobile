@@ -53,6 +53,22 @@ agreement for further details.
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 464 264 632 280)
+	(text "INPUT" (rect 133 -1 161 9)(font "Arial" (font_size 6)))
+	(text "RX_RESET" (rect 5 1 56 18)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 168 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 1632 232 1808 248)
 	(text "OUTPUT" (rect 1 -1 39 9)(font "Arial" (font_size 6)))
@@ -317,38 +333,6 @@ agreement for further details.
 		(line (pt 16 16)(pt 88 16))
 		(line (pt 16 32)(pt 16 16))
 		(line (pt 88 32)(pt 88 16))
-	)
-)
-(symbol
-	(rect 968 152 1120 216)
-	(text "RX" (rect 68 -1 86 15)(font "Courier New" (font_size 10)(bold)))
-	(text "5" (rect 0 55 5 67)(font "Courier New" (bold)))
-	(port
-		(pt 0 24)
-		(input)
-		(text "clk" (rect 20 20 37 32)(font "Courier New" (bold)))
-		(text "clk" (rect 20 20 37 32)(font "Courier New" (bold)))
-		(line (pt 0 24)(pt 16 24))
-	)
-	(port
-		(pt 0 40)
-		(input)
-		(text "si" (rect 20 36 31 48)(font "Courier New" (bold)))
-		(text "si" (rect 20 36 31 48)(font "Courier New" (bold)))
-		(line (pt 0 40)(pt 16 40))
-	)
-	(port
-		(pt 152 24)
-		(output)
-		(text "data[7..0]" (rect 84 20 143 32)(font "Courier New" (bold)))
-		(text "data[7..0]" (rect 84 20 143 32)(font "Courier New" (bold)))
-		(line (pt 136 24)(pt 152 24)(line_width 3))
-	)
-	(drawing
-		(line (pt 16 48)(pt 136 48))
-		(line (pt 16 16)(pt 136 16))
-		(line (pt 16 48)(pt 16 16))
-		(line (pt 136 48)(pt 136 16))
 	)
 )
 (symbol
@@ -817,32 +801,68 @@ agreement for further details.
 		(pt 216 32)
 		(output)
 		(text "LwheelB" (rect 0 0 40 12)(font "Arial" ))
-		(text "LwheelB" (rect 162 27 195 39)(font "Arial" ))
+		(text "LwheelB" (rect 162 27 202 39)(font "Arial" ))
 		(line (pt 216 32)(pt 200 32))
 	)
 	(port
 		(pt 216 48)
 		(output)
 		(text "LwheelF" (rect 0 0 40 12)(font "Arial" ))
-		(text "LwheelF" (rect 162 43 195 55)(font "Arial" ))
+		(text "LwheelF" (rect 162 43 202 55)(font "Arial" ))
 		(line (pt 216 48)(pt 200 48))
 	)
 	(port
 		(pt 216 64)
 		(output)
 		(text "RwheelB" (rect 0 0 42 12)(font "Arial" ))
-		(text "RwheelB" (rect 160 59 195 71)(font "Arial" ))
+		(text "RwheelB" (rect 160 59 202 71)(font "Arial" ))
 		(line (pt 216 64)(pt 200 64))
 	)
 	(port
 		(pt 216 80)
 		(output)
 		(text "RwheelF" (rect 0 0 42 12)(font "Arial" ))
-		(text "RwheelF" (rect 160 75 195 87)(font "Arial" ))
+		(text "RwheelF" (rect 160 75 202 87)(font "Arial" ))
 		(line (pt 216 80)(pt 200 80))
 	)
 	(drawing
 		(rectangle (rect 16 16 200 96))
+	)
+)
+(symbol
+	(rect 960 144 1112 256)
+	(text "rx" (rect 5 0 14 12)(font "Arial" ))
+	(text "5" (rect 8 96 13 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst" (rect 0 0 12 12)(font "Arial" ))
+		(text "rst" (rect 21 43 33 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "si" (rect 0 0 8 12)(font "Arial" ))
+		(text "si" (rect 21 59 29 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "data[7..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "data[7..0]" (rect 92 27 131 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 96))
 	)
 )
 (connector
@@ -900,10 +920,6 @@ agreement for further details.
 (connector
 	(pt 1240 280)
 	(pt 848 280)
-)
-(connector
-	(pt 936 192)
-	(pt 968 192)
 )
 (connector
 	(pt 848 176)
@@ -1095,28 +1111,6 @@ agreement for further details.
 	(pt 936 216)
 )
 (connector
-	(pt 936 192)
-	(pt 936 216)
-)
-(connector
-	(pt 840 176)
-	(pt 848 176)
-)
-(connector
-	(pt 848 176)
-	(pt 968 176)
-)
-(connector
-	(pt 1120 176)
-	(pt 1208 176)
-	(bus)
-)
-(connector
-	(pt 1208 176)
-	(pt 1240 176)
-	(bus)
-)
-(connector
 	(pt 328 464)
 	(pt 328 576)
 )
@@ -1287,6 +1281,52 @@ agreement for further details.
 (connector
 	(pt 1208 512)
 	(pt 1240 512)
+)
+(connector
+	(pt 840 176)
+	(pt 848 176)
+)
+(connector
+	(pt 848 176)
+	(pt 960 176)
+)
+(connector
+	(pt 1208 176)
+	(pt 1240 176)
+	(bus)
+)
+(connector
+	(pt 1112 176)
+	(pt 1208 176)
+	(bus)
+)
+(connector
+	(pt 936 216)
+	(pt 936 208)
+)
+(connector
+	(pt 928 192)
+	(pt 960 192)
+)
+(connector
+	(pt 928 192)
+	(pt 928 232)
+)
+(connector
+	(pt 648 232)
+	(pt 928 232)
+)
+(connector
+	(pt 648 232)
+	(pt 648 272)
+)
+(connector
+	(pt 648 272)
+	(pt 632 272)
+)
+(connector
+	(pt 960 208)
+	(pt 936 208)
 )
 (junction (pt 848 176))
 (junction (pt 1208 176))
