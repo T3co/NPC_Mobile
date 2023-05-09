@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 entity PWM_Motor is
 port ( clk: in bit;
 		 motorInput : in bit_vector(2 downto 0);
-		 s : in bit;
+		 speed : in bit;
 		 pOut : out bit;
 		 motorOutput : out bit_vector(2 downto 0));
 end;
@@ -15,8 +15,8 @@ architecture RTL of PWM_Motor is
 begin 
 --checks if the car is going left or right to reduce the speed by half(aka making the pwm 40% and not 80%
 
-cntChange <= 4000 when s = '1' else
-			3000 when s = '0' else
+cntChange <= 4000 when speed = '1' else
+			3000 when speed = '0' else
 			2500 when motorInput = "011" else
 			2500 when motorInput = "100";
 

@@ -1,11 +1,11 @@
 Library ieee;
 use ieee.std_logic_1164.all;
 
-entity LED_CAR is 
+entity Laser_Bit is 
 port( Leds: in bit;
 		Lout: out bit);
 end;
-architecture behave of LED_CAR is 
+architecture behave of Laser_Bit is 
 begin 
 process(Leds)
 begin

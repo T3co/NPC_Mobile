@@ -1,5 +1,5 @@
 Flow report for Altera_Tutorial
-Thu May 04 18:40:26 2023
+Tue May 09 10:58:01 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 04 18:40:23 2023       ;
+; Flow Status                        ; Successful - Tue May 09 10:58:01 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Altera_Tutorial                             ;
-; Top-level Entity Name              ; Altera_Tutorial_Schematic                   ;
+; Top-level Entity Name              ; PWM_Motor                                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 457 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 430 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 232 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 232                                         ;
-; Total pins                         ; 42 / 360 ( 12 % )                           ;
+; Total logic elements               ; 20                                          ;
+;     Total combinational functions  ; 20                                          ;
+;     Dedicated logic registers      ; 14                                          ;
+; Total registers                    ; 14                                          ;
+; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -67,62 +67,53 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/04/2023 18:40:02 ;
+; Start date & time ; 05/09/2023 10:57:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Altera_Tutorial     ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                        ;
-+-------------------------------------+----------------------------------------+-----------------+---------------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name               ; Section Id ;
-+-------------------------------------+----------------------------------------+-----------------+---------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 5311868110993.168321480117640          ; --              ; --                        ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --                        ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --                        ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; Altera_Tutorial_Schematic ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; Altera_Tutorial_Schematic ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; Altera_Tutorial_Schematic ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --                        ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --                        ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --                        ; --         ;
-; TOP_LEVEL_ENTITY                    ; Altera_Tutorial_Schematic              ; Altera_Tutorial ; --                        ; --         ;
-+-------------------------------------+----------------------------------------+-----------------+---------------------------+------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                          ;
++-------------------------------------+----------------------------------------+-----------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+-----------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 136411534990579.168361907310684        ; --              ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; PWM_Motor   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; PWM_Motor   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; PWM_Motor   ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; PWM_Motor                              ; Altera_Tutorial ; --          ; --         ;
++-------------------------------------+----------------------------------------+-----------------+-------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4823 MB             ; 00:00:07                           ;
-; Fitter                    ; 00:00:09     ; 1.1                     ; 5924 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4686 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 4872 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:18                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4806 MB             ; 00:00:06                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:06                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-QV2P73F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-QV2P73F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-QV2P73F  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-QV2P73F  ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Korzack          ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
-quartus_fit --read_settings_files=off --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
-quartus_asm --read_settings_files=off --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
-quartus_sta Altera_Tutorial -c Altera_Tutorial
 
 
 

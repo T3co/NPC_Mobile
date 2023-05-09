@@ -41,8 +41,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "s" (rect 0 0 4 12)(font "Arial" ))
-		(text "s" (rect 21 59 25 71)(font "Arial" ))
+		(text "speed" (rect 0 0 23 12)(font "Arial" ))
+		(text "speed" (rect 21 59 44 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
