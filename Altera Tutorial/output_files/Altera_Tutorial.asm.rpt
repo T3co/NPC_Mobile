@@ -1,5 +1,5 @@
 Assembler report for Altera_Tutorial
-Thu May 04 18:40:23 2023
+Wed May 10 17:36:35 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/GitHub/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.sof
+  5. Assembler Device Options: D:/Quartus Projects/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 04 18:40:23 2023 ;
+; Assembler Status      ; Successful - Wed May 10 17:36:35 2023 ;
 ; Revision Name         ; Altera_Tutorial                       ;
 ; Top-level Entity Name ; Altera_Tutorial_Schematic             ;
 ; Family                ; MAX 10                                ;
@@ -53,23 +53,23 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Assembler Generated Files                                             ;
-+-----------------------------------------------------------------------+
-; File Name                                                             ;
-+-----------------------------------------------------------------------+
-; D:/GitHub/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.sof ;
-+-----------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Assembler Generated Files                                                       ;
++---------------------------------------------------------------------------------+
+; File Name                                                                       ;
++---------------------------------------------------------------------------------+
+; D:/Quartus Projects/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.sof ;
++---------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/GitHub/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.sof ;
-+----------------+--------------------------------------------------------------------------------+
-; Option         ; Setting                                                                        ;
-+----------------+--------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x002AF91A                                                                     ;
-; Checksum       ; 0x002AF91A                                                                     ;
-+----------------+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Quartus Projects/NPC_Mobile/Altera Tutorial/output_files/Altera_Tutorial.sof ;
++----------------+------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                  ;
++----------------+------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x002AC1FA                                                                               ;
+; Checksum       ; 0x002AC1FA                                                                               ;
++----------------+------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,15 +78,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu May 04 18:40:21 2023
+    Info: Processing started: Wed May 10 17:36:31 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Altera_Tutorial -c Altera_Tutorial
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4687 megabytes
-    Info: Processing ended: Thu May 04 18:40:24 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4686 megabytes
+    Info: Processing ended: Wed May 10 17:36:35 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 
