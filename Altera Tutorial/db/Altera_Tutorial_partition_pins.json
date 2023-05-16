@@ -4,167 +4,67 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "esp_rx",
+					"name" : "motor[0]",
 					"strict" : false
 				},
 				{
-					"name" : "breatheLED",
+					"name" : "motor[1]",
 					"strict" : false
 				},
 				{
-					"name" : "LWheelB",
+					"name" : "motor[2]",
 					"strict" : false
 				},
 				{
-					"name" : "LWheelF",
+					"name" : "servo[3]",
 					"strict" : false
 				},
 				{
-					"name" : "error_dp",
+					"name" : "servo[4]",
 					"strict" : false
 				},
 				{
-					"name" : "servo_pwm",
+					"name" : "servo[5]",
 					"strict" : false
 				},
 				{
-					"name" : "laser",
+					"name" : "speedMotor",
 					"strict" : false
 				},
 				{
-					"name" : "RWheelF",
+					"name" : "Laser",
 					"strict" : false
 				},
 				{
-					"name" : "RWheelB",
+					"name" : "data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[6]",
+					"name" : "data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[5]",
+					"name" : "data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[4]",
+					"name" : "data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[3]",
+					"name" : "data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[2]",
+					"name" : "data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[1]",
+					"name" : "data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "M_segH[0]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[6]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[5]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[4]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[3]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[2]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[1]",
-					"strict" : false
-				},
-				{
-					"name" : "M_segL[0]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[6]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[5]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[4]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[3]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[2]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[1]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segH[0]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[6]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[5]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[4]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[3]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[2]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[1]",
-					"strict" : false
-				},
-				{
-					"name" : "r_segL[0]",
-					"strict" : false
-				},
-				{
-					"name" : "scl_lm75",
-					"strict" : false
-				},
-				{
-					"name" : "sda_lm75",
-					"strict" : false
-				},
-				{
-					"name" : "clk50Mhz",
-					"strict" : false
-				},
-				{
-					"name" : "esp_tx",
+					"name" : "data[7]",
 					"strict" : false
 				}
 			]

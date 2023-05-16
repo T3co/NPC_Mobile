@@ -1,6 +1,6 @@
 Determining the location of the ModelSim executable...
 
-Using: c:/intelfpga_lite/17.0/modelsim_ase/win32aloem/
+Using: d:/intelfpga_lite/17.0/modelsim_ase/win32aloem/
 
 To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
 Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Mar 29 12:59:29 2023
+    Info: Processing started: Wed May 17 01:36:18 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Altera_Tutorial -c Altera_Tutorial --vector_source="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/Waveform4.vwf" --testbench_file="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/Waveform4.vwf.vht"
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -54,14 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Mar 29 12:59:30 2023
+    Info: Processing started: Wed May 17 01:36:18 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/" Altera_Tutorial -c Altera_Tutorial
 Info (119006): Selected device 10M50DAF484C7G for design "Altera_Tutorial"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Altera_Tutorial.vho in folder "D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Wed Mar 29 12:59:31 2023
+    Info: Processing ended: Wed May 17 01:36:19 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -75,18 +75,17 @@ Completed successfully.
 
 **** Running the ModelSim simulation ****
 
-c:/intelfpga_lite/17.0/modelsim_ase/win32aloem//vsim -c -do Altera_Tutorial.do
+d:/intelfpga_lite/17.0/modelsim_ase/win32aloem//vsim -c -do Altera_Tutorial.do
 
-Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
-
+Reading D:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
 # do Altera_Tutorial.do
-# ** Warning: (vlib-34) Library already exists at "work".
 
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:59:31 on Mar 29,2023
+# Start time: 01:36:19 on May 17,2023
 # vcom -work work Altera_Tutorial.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -97,22 +96,22 @@ Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package fiftyfivenm_components
 # -- Compiling entity data_spliter
 # -- Compiling architecture structure of data_spliter
-# End time: 12:59:31 on Mar 29,2023, Elapsed time: 0:00:00
+# End time: 01:36:20 on May 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:59:31 on Mar 29,2023
+# Start time: 01:36:20 on May 17,2023
 # vcom -work work Waveform4.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity data_spliter_vhd_vec_tst
 # -- Compiling architecture data_spliter_arch of data_spliter_vhd_vec_tst
-
-# End time: 12:59:31 on Mar 29,2023, Elapsed time: 0:00:00
+# End time: 01:36:20 on May 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.data_spliter_vhd_vec_tst 
-# Start time: 12:59:32 on Mar 29,2023
+# Start time: 01:36:20 on May 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -124,10 +123,9 @@ Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 # Loading work.data_spliter(structure)
 # Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
 # Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
-
 # after#31
 
-# End time: 12:59:32 on Mar 29,2023, Elapsed time: 0:00:00
+# End time: 01:36:20 on May 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -140,7 +138,7 @@ Reading D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/Altera_Tu
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/Altera_Tutorial_20230329125932.sim.vwf
+Writing the resulting VWF to D:/Quartus Projects/NPC_Mobile/Altera Tutorial/simulation/qsim/Altera_Tutorial_20230517013620.sim.vwf
 
 Finished VCD to VWF conversion.
 

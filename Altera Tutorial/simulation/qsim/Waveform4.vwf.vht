@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "03/29/2023 12:59:30"
+-- Generated on "05/17/2023 01:36:18"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          data_spliter
 -- 
@@ -62,17 +62,39 @@ BEGIN
 t_prcs_data_7: PROCESS
 BEGIN
 	data(7) <= '0';
+	WAIT FOR 2560000 ps;
+	data(7) <= '1';
+	WAIT FOR 2560000 ps;
+	data(7) <= '0';
+	WAIT FOR 2560000 ps;
+	data(7) <= '1';
 WAIT;
 END PROCESS t_prcs_data_7;
 -- data[6]
 t_prcs_data_6: PROCESS
 BEGIN
+	FOR i IN 1 TO 3
+	LOOP
+		data(6) <= '0';
+		WAIT FOR 1280000 ps;
+		data(6) <= '1';
+		WAIT FOR 1280000 ps;
+	END LOOP;
 	data(6) <= '0';
+	WAIT FOR 1280000 ps;
+	data(6) <= '1';
 WAIT;
 END PROCESS t_prcs_data_6;
 -- data[5]
 t_prcs_data_5: PROCESS
 BEGIN
+	FOR i IN 1 TO 7
+	LOOP
+		data(5) <= '0';
+		WAIT FOR 640000 ps;
+		data(5) <= '1';
+		WAIT FOR 640000 ps;
+	END LOOP;
 	data(5) <= '0';
 	WAIT FOR 640000 ps;
 	data(5) <= '1';
@@ -81,10 +103,13 @@ END PROCESS t_prcs_data_5;
 -- data[4]
 t_prcs_data_4: PROCESS
 BEGIN
-	data(4) <= '0';
-	WAIT FOR 320000 ps;
-	data(4) <= '1';
-	WAIT FOR 320000 ps;
+	FOR i IN 1 TO 15
+	LOOP
+		data(4) <= '0';
+		WAIT FOR 320000 ps;
+		data(4) <= '1';
+		WAIT FOR 320000 ps;
+	END LOOP;
 	data(4) <= '0';
 	WAIT FOR 320000 ps;
 	data(4) <= '1';
@@ -93,7 +118,7 @@ END PROCESS t_prcs_data_4;
 -- data[3]
 t_prcs_data_3: PROCESS
 BEGIN
-	FOR i IN 1 TO 3
+	FOR i IN 1 TO 31
 	LOOP
 		data(3) <= '0';
 		WAIT FOR 160000 ps;
@@ -106,7 +131,7 @@ END PROCESS t_prcs_data_3;
 -- data[2]
 t_prcs_data_2: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
+	FOR i IN 1 TO 62
 	LOOP
 		data(2) <= '0';
 		WAIT FOR 80000 ps;
@@ -119,15 +144,13 @@ END PROCESS t_prcs_data_2;
 -- data[1]
 t_prcs_data_1: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		data(1) <= '0';
-		WAIT FOR 40000 ps;
-		data(1) <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+LOOP
 	data(1) <= '0';
-WAIT;
+	WAIT FOR 40000 ps;
+	data(1) <= '1';
+	WAIT FOR 40000 ps;
+	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_data_1;
 -- data[0]
 t_prcs_data_0: PROCESS
@@ -137,7 +160,7 @@ LOOP
 	WAIT FOR 20000 ps;
 	data(0) <= '1';
 	WAIT FOR 20000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_data_0;
 END data_spliter_arch;
