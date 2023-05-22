@@ -1,0 +1,111 @@
+#include <Arduino.h>
+#include <WiFi.h>
+#include <FirebaseESP32.h>
+
+//Change to your Firebase RTDB project ID e.g. Your_Project_ID.firebaseio.com
+#define FIREBASE_HOST "alteratutorial-default-rtdb.europe-west1.firebasedatabase.app" 
+//Change to your Firebase RTDB secret password
+#define FIREBASE_AUTH "9U5cGGnuLfcHWckDeVCA5hvMSf1Ki55yUNlVU6BQ" 
+
+//What WIFI we are using to send and receive.
+#define WIFI_SSID "ORYAM"
+#define WIFI_PASSWORD "12345678"
+
+#define ledpin 2
+#define RXD2 16
+#define TXD2 17
+
+//Define Firebase Data objects
+FirebaseData fbdo;
+int rx0;
+int Temp,packet;
+bool a=false;
+
+int espRX,espTX;
+
+/*  ------------- functions decleration---------------------*/
+void blink1();
+int read_from_altera();
+void write_to_altera(int espTX);
+/*-----------------------------------------------------------*/
+
+void setup()
+{
+  pinMode(ledpin,OUTPUT);
+  Serial.begin(115200);
+  Serial2.begin(9600,SERIAL_8N1,RXD2,TXD2);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  Serial.print("Connecting to Wi-Fi");
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    delay(300);
+  }
+  Serial.println();
+  Serial.print("Connected with IP: ");
+  Serial.println(WiFi.localIP());
+  Serial.println();
+
+ Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+ Firebase.reconnectWiFi(true);
+
+}
+
+void loop()
+{
+ 
+    if (Firebase.getInt(fbdo,"/kar98Info/temperature"))
+   {
+           Temp = fbdo.intData();
+      }
+  delay(10);
+  
+ 
+    if(Serial2.available())
+  {
+    Serial2.write(Temp);
+  }
+  delay(2);
+
+ 
+  
+  blink1();
+  delay(50); 
+}
+
+/*------------------------functions---------------------------*/
+int read_from_altera()
+{
+  while (Serial2.available())
+  {
+    espRX=Serial2.read();
+    delay(2);
+    Serial.println(espRX);
+  }
+  return espRX;
+}
+
+void write_to_altera(int espTX)
+{
+  while (Serial2.available())
+  {
+    Serial2.write(espTX);
+    delay(2);
+  }
+ }
+
+void blink1()
+{
+  a=not a;
+  if (a==true)
+  {
+    digitalWrite(ledpin,HIGH);
+
+  }
+  else
+  {
+    digitalWrite(ledpin,LOW);
+
+  }
+}
