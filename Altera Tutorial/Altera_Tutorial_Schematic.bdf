@@ -561,7 +561,7 @@ agreement for further details.
 	(annotation_block (parameter)(rect 720 744 976 824))
 )
 (symbol
-	(rect 1008 672 1216 752)
+	(rect 1008 680 1216 760)
 	(text "bit_9_to_8" (rect 5 0 55 12)(font "Arial" ))
 	(text "inst20" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
@@ -835,7 +835,7 @@ agreement for further details.
 		(pt 144 32)
 		(output)
 		(text "do[7..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "do[7..0]" (rect 92 27 123 39)(font "Arial" ))
+		(text "do[7..0]" (rect 92 27 129 39)(font "Arial" ))
 		(line (pt 144 32)(pt 128 32)(line_width 3))
 	)
 	(drawing
@@ -950,11 +950,6 @@ agreement for further details.
 (connector
 	(pt 320 544)
 	(pt 320 592)
-	(bus)
-)
-(connector
-	(pt 1216 704)
-	(pt 1224 704)
 	(bus)
 )
 (connector
@@ -1088,21 +1083,6 @@ agreement for further details.
 	(pt 728 664)
 )
 (connector
-	(pt 976 704)
-	(pt 976 712)
-	(bus)
-)
-(connector
-	(pt 1008 704)
-	(pt 976 704)
-	(bus)
-)
-(connector
-	(pt 976 712)
-	(pt 968 712)
-	(bus)
-)
-(connector
 	(pt 696 680)
 	(pt 728 680)
 )
@@ -1127,10 +1107,6 @@ agreement for further details.
 	(pt 1240 496)
 )
 (connector
-	(pt 1192 560)
-	(pt 1240 560)
-)
-(connector
 	(pt 968 504)
 	(pt 976 504)
 )
@@ -1148,14 +1124,6 @@ agreement for further details.
 	(pt 1200 504)
 )
 (connector
-	(pt 1208 512)
-	(pt 1208 520)
-)
-(connector
-	(pt 1208 520)
-	(pt 1192 520)
-)
-(connector
 	(pt 1200 536)
 	(pt 1192 536)
 )
@@ -1164,31 +1132,13 @@ agreement for further details.
 	(pt 1200 536)
 )
 (connector
-	(pt 1192 560)
-	(pt 1192 552)
-)
-(connector
 	(pt 1256 416)
 	(pt 1224 416)
 	(bus)
 )
 (connector
-	(pt 1224 344)
-	(pt 1224 416)
-	(bus)
-)
-(connector
-	(pt 1224 416)
-	(pt 1224 704)
-	(bus)
-)
-(connector
 	(pt 1200 544)
 	(pt 1240 544)
-)
-(connector
-	(pt 1208 512)
-	(pt 1240 512)
 )
 (connector
 	(pt 840 176)
@@ -1285,6 +1235,50 @@ agreement for further details.
 (connector
 	(pt 1120 176)
 	(pt 1104 176)
+	(bus)
+)
+(connector
+	(pt 1192 520)
+	(pt 1200 520)
+)
+(connector
+	(pt 1240 512)
+	(pt 1200 512)
+)
+(connector
+	(pt 1200 512)
+	(pt 1200 520)
+)
+(connector
+	(pt 1240 560)
+	(pt 1200 560)
+)
+(connector
+	(pt 1192 552)
+	(pt 1200 552)
+)
+(connector
+	(pt 1200 552)
+	(pt 1200 560)
+)
+(connector
+	(pt 1224 712)
+	(pt 1216 712)
+	(bus)
+)
+(connector
+	(pt 968 712)
+	(pt 1008 712)
+	(bus)
+)
+(connector
+	(pt 1224 344)
+	(pt 1224 416)
+	(bus)
+)
+(connector
+	(pt 1224 416)
+	(pt 1224 712)
 	(bus)
 )
 (junction (pt 848 176))
