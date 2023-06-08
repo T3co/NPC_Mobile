@@ -267,14 +267,14 @@ public class Esp32CameraFragment extends Fragment {
                 if(angle < 45 && angle > 0 || angle > 315 && angle < 360)
                 {
                     //right
-                    motors =1;
+                    motors =2;
                 }
                 CompilePacket(dbRef);
 
                 if(angle < 180 && angle > 135 || angle > 180 && angle < 225)
                 {
                     //left
-                    motors =2;
+                    motors =1;
                 }
                 CompilePacket(dbRef);
 

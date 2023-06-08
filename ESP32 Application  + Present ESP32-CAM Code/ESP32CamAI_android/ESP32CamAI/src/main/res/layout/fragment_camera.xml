@@ -36,6 +36,7 @@
         android:id="@+id/joystick"
         android:layout_width="234dp"
         android:layout_height="229dp"
+        android:rotation="90"
         app:JV_backgroundColor="#000000"
         app:JV_borderColor="#454545"
         app:JV_borderWidth="4dp"

@@ -17,6 +17,7 @@ int temperature, packet;
 bool a = false;
 void blink();
 void connectToWiFi();
+void sendTemperatureToFirebase(float temp); 
 
 void setup() {
   Serial.begin(115200);
@@ -49,6 +50,7 @@ const char* CAR_CONTROL_PATH = "/kar98Info/carControl";
 
 void loop() {
   readTemperature();
+  sendTemperatureToFirebase(temperature);
   checkCarControl();
   sendPacket();
   blink();
@@ -57,6 +59,16 @@ void loop() {
 void readTemperature() {
   while (Serial2.available()) {
     temperature = Serial2.read();
+  }
+}
+
+void sendTemperatureToFirebase(float temp) {
+  if (Firebase.ready()) {
+    if (Firebase.setFloat(fbdo, TEMPERATURE_PATH, temp)) {
+      Serial.println("Temperature sent to Firebase: " + String(temp));
+    } else {
+      Serial.println("Failed to send temperature to Firebase");
+    }
   }
 }
 
